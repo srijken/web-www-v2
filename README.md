@@ -1,3 +1,11 @@
+# Setup
+```sh
+yarn
+yarn dev
+```
+[open browser](http://localhost:3000)
+
+
 # Local development
 
 in a seperate terminal:
