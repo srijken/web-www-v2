@@ -1,14 +1,12 @@
-import { Component } from "react";
 import { attributes, react as HomeContent } from "../content/home.md";
 import { NextPageWithLayout } from "./_app";
-import { MainLayout } from "../ui/layout/MainLayout";
-import { Button } from "../ui/button/Button";
+import { MainLayout } from "../components/layout/MainLayout";
 const HomePage: NextPageWithLayout = () => {
   let { title, cats } = attributes as any;
   return (
     <article>
       <h1>{title}</h1>
-      <Button>Click me</Button>
+
       <HomeContent />
       <ul>
         {cats.map((cat, k) => (

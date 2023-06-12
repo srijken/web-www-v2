@@ -1,0 +1,25 @@
+nav.main {
+  background-color: gold;
+
+  position: fixed;
+  top: 10px;
+  left: 0;
+  right: 150px;
+  height: 123px;
+  border-top-right-radius: 62px;
+  border-bottom-right-radius: 62px;
+  background-color: #000; 
+
+
+  display: flex;
+  align-items: center;
+
+  padding-left: 128px;
+}
+
+.logo {
+  width: 96px;
+  height: 48px;
+
+  fill: var(--brand);
+}
