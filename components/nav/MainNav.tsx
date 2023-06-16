@@ -10,45 +10,51 @@ export interface MainNavProps {}
 export function MainNav({}: MainNavProps) {
   return (
     <nav className={styles.main}>
-      <Logo className={styles.logo} />
+      <article>
+        <section>
+          <Logo className={styles.logo} />
+        </section>
+        <section>
+          <MainNavItem
+            href="/about"
+            onClick={() => {
+              console.log("click");
+            }}
+            isActive={true}
+          >
+            About DIVD
+          </MainNavItem>
 
-      <MainNavItem
-        href="/about"
-        onClick={() => {
-          console.log("click");
-        }}
-        isActive={true}
-      >
-        About DIVD
-      </MainNavItem>
+          <MainNavItem
+            href="/community"
+            onClick={() => {
+              console.log("click");
+            }}
+            isActive={true}
+          >
+            DIVD Community
+          </MainNavItem>
 
-      <MainNavItem
-        href="/community"
-        onClick={() => {
-          console.log("click");
-        }}
-        isActive={true}
-      >
-        DIVD Community
-      </MainNavItem>
+          <MainNavItem
+            href="/security"
+            onClick={() => {
+              console.log("click");
+            }}
+            isActive={true}
+          >
+            Security
+          </MainNavItem>
+        </section>
+        <section>
+          <Button size="md" isInverse leftIcon={<IconSearch />}>
+            Search
+          </Button>
 
-      <MainNavItem
-        href="/security"
-        onClick={() => {
-          console.log("click");
-        }}
-        isActive={true}
-      >
-        Security
-      </MainNavItem>
-
-      <Button size="md" isInverse leftIcon={<IconSearch />}>
-        Search
-      </Button>
-
-      <Button size="md" isSecondary leftIcon={<IconEmail />}>
-        Warning Email
-      </Button>
+          <Button size="md" isSecondary leftIcon={<IconEmail />}>
+            Warning Email
+          </Button>
+        </section>
+      </article>
     </nav>
   );
 }

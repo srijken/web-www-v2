@@ -1,8 +1,5 @@
 module.exports = {
-  i18n: {
-    locales: ["en", "nl"],
-    defaultLocale: "en"
-  },
+  output: "export",
   webpack: (cfg) => {
     cfg.module.rules.push({
       test: /\.md$/,
