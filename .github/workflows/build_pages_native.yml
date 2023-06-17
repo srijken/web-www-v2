@@ -10,7 +10,7 @@ on:
 
 jobs:
   build_and_test:
-    runs-on: node:16-alpine
+    runs-on: node:20-alpine
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
