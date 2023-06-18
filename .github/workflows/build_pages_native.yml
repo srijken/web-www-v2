@@ -42,6 +42,8 @@ jobs:
         run:  yarn build
       - name: "Fix security.txt"
         run: mkdir out/.well-known && (cd out/.well-known && ln -s ../security.txt) && ls -al out/.well-known
+      - name: ".htaccess"
+        run: cp .htaccess out/
 #      - name: Test HTML code
 #        run:  ./proof_html.sh
       - name: rsync deploy
