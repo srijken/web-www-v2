@@ -35,11 +35,31 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 20
-          cache: yarn
+      - name: Get yarn cache dir
+        id: yarn-cache
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - uses: actions/cache@v1
+        with:
+          path: |
+            ${{ steps.yarn-cache.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
       - name: Yarn
-        run:  yarn config set cache-folder /home/runner/.cache/yarn/v6 && yarn 
+        run:  yarn 
       - name: Build
-        run:  yarn config set cache-folder /home/runner/.cache/yarn/v6 && yarn build
+        run:  yarn build
+      - name: Cache yarn
+        uses: actions/cache@v3
+        with:
+          path: |
+            .next
+            node_modules
+          restore-keys: |
+  npm-feature-${{ hashFiles('package-lock.json') }}
+  npm-feature-
+  npm-
+
       - name: "Fix security.txt"
         run: mkdir out/.well-known && (cd out/.well-known && ln -s ../security.txt) && ls -al out/.well-known
       - name: ".htaccess"
