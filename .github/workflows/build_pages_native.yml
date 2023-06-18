@@ -39,7 +39,7 @@ jobs:
       - name: Yarn
         run:  yarn config set cache-folder /home/runner/.cache/yarn/v6 && yarn 
       - name: Build
-        run:  yarn build
+        run:  yarn config set cache-folder /home/runner/.cache/yarn/v6 && yarn build
       - name: "Fix security.txt"
         run: mkdir out/.well-known && (cd out/.well-known && ln -s ../security.txt) && ls -al out/.well-known
       - name: ".htaccess"
