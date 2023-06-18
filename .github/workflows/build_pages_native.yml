@@ -49,17 +49,6 @@ jobs:
         run:  yarn 
       - name: Build
         run:  yarn build
-      - name: Cache yarn
-        uses: actions/cache@v3
-        with:
-          path: |
-            .next
-            node_modules
-          restore-keys: |
-  npm-feature-${{ hashFiles('package-lock.json') }}
-  npm-feature-
-  npm-
-
       - name: "Fix security.txt"
         run: mkdir out/.well-known && (cd out/.well-known && ln -s ../security.txt) && ls -al out/.well-known
       - name: ".htaccess"
