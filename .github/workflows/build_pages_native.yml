@@ -37,7 +37,7 @@ jobs:
           node-version: 20
           cache: yarn
       - name: Yarn
-        run:  yarn config set cache-folder && yarn 
+        run:  yarn config set cache-folder /home/runner/.cache/yarn/v6 && yarn 
       - name: Build
         run:  yarn build
       - name: "Fix security.txt"
