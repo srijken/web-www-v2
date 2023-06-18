@@ -1,0 +1,58 @@
+name: build_test_deploy
+run-name: Build, test and deploy website (if needed)
+on: 
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with: 
+          fetch-depth: 0
+#      - name: Install ruby
+#        uses: ruby/setup-ruby@v1
+#        with:
+#          ruby-version: '3.0' 
+#          bundler-cache: true
+#      - name: Install python
+#        uses: actions/setup-python@v4
+#        with:
+#          python-version: '3.7'
+#      - name: install prerequisites
+#        run:  pip3 install html5validator requests && gem install --no-document html-proofer
+#      - name: Update external content
+#        run:  ./update.sh
+#      - name: Clean up stubs
+#        run:  rm -rf _cases/3000 _cves/CVE-3000-*
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: yarn
+      - name: Yarn
+        run:  yarn config set cache-folder /home/runner/.cache/yarn/v6 && yarn 
+      - name: Build
+        run:  yarn config set cache-folder /home/runner/.cache/yarn/v6 && yarn build
+      - name: "Fix security.txt"
+        run: mkdir out/.well-known && (cd out/.well-known && ln -s ../security.txt) && ls -al out/.well-known
+      - name: ".htaccess"
+        run: cp .htaccess out/
+#      - name: Test HTML code
+#        run:  ./proof_html.sh
+      - name: rsync deploy
+        uses: burnett01/rsync-deployments@5.2.1
+        if:   ${{ github.ref == 'refs/heads/main' }}
+        with:
+          switches: -avzr --delete
+          path: out/
+          remote_path: htdocs/beta
+          remote_host: ${{ secrets.DEPLOY_HOST }}
+          remote_user: ${{ secrets.DEPLOY_USER }}
+          remote_key: ${{ secrets.DEPLOY_KEY }}
