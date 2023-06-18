@@ -11,19 +11,6 @@ on:
 jobs:
   build_and_test:
       runs-on: ubuntu-latest
-
-
-
-        - name: Install packages
-          run: yarn install --frozen-lockfile
-
-        - name: Test
-          run: yarn test
-
-          env:
-            CI: true
-
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -48,9 +35,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 20
-          cache: 'npm', 'yarn'
+          cache: [ 'npm', 'yarn' ]
       - name: Build
-        run:  yarn export
+        run:  yarn build
       - name: "Fix security.txt"
         run: mkdir out/.well-known && (cd out/.well-known && ln -s ../security.txt) && ls -al out/.well-known
 #      - name: Test HTML code
