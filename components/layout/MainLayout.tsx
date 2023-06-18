@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 import styles from "./mainlayout.module.scss";
 import { MainNav } from "../nav/MainNav";
@@ -9,10 +11,15 @@ export interface MainLayoutProps {
 
 export function MainLayout({ children }: MainLayoutProps) {
   return (
-    <main className={styles.mainlayout}>
-      <MainNav />
-      <div className={styles.content}>{children}</div>=
-      <Footer />
-    </main>
+    <html>
+      <head></head>
+      <body>
+        <main className={styles.mainlayout}>
+          <MainNav />
+          <div className={styles.content}>{children}</div>=
+          <Footer />
+        </main>
+      </body>
+    </html>
   );
 }
