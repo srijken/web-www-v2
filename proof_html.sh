@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #set -e # Need to fail on error
 set +e # Do not fail on error for now, we are stil building
 #
