@@ -55,8 +55,8 @@ jobs:
         run: mkdir out/.well-known && (cd out/.well-known && ln -s ../security.txt) && ls -al out/.well-known
       - name: ".htaccess"
         run: cp .htaccess out/
-#      - name: Test HTML code
-#        run:  ./proof_html.sh
+      - name: Test HTML code
+        run:  ./proof_html.sh || exit 0
       - name: rsync deploy
         uses: burnett01/rsync-deployments@5.2.1
         if:   ${{ github.ref == 'refs/heads/main' }}

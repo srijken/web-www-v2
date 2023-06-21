@@ -23,7 +23,7 @@ docker run \
 	--volume="$PWD:/root/project:delegated" \
 	--entrypoint /bin/sh \
 	--publish $PORT:$PORT \
-	-ti node:16-alpine \
+	-ti node:20-alpine \
 	-c "
 	  set -x
 		cd /root/project/;
