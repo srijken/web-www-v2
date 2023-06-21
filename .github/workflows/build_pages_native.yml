@@ -57,8 +57,8 @@ jobs:
         run: cp .htaccess out/
       - name: Test HTML code
         run:  |
-          apt-get update -y
-          apt-get install python3-pip libcurl4 -y
+          sudo apt-get update -y
+          sudo apt-get install python3-pip libcurl4 -y
           pip3 install html5validator 
           gem install --no-document html-proofer
           ./proof_html.sh || exit 0
