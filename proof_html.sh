@@ -16,7 +16,7 @@ htmlproofer \
 	--disable_external \
 	--allow-hash-href  \
 	--ignore-urls="" \
-	--file-ignore out/admin/index.html \
+	--ignore-files="out/admin/index.html" \
 	out
 (
 	find out -path out/admin -prune -o -name "*.html" -exec html5validator "{}" \;
