@@ -4,15 +4,13 @@ import { Logo } from "./Logo";
 import { MainNavItem } from "../../ui/nav/MainNavItem";
 import { Button } from "../../ui/button/Button";
 import { IconSearch, IconEmail } from "../../ui/icons";
-import classnames from "classnames/bind";
-import { SubNav } from "./SubNav";
 
-const cx = classnames.bind(styles);
+import { SubNav } from "./SubNav";
 
 export interface MainNavProps {}
 
 export function MainNav({}: MainNavProps) {
-  const [subNavOpen, setSubNavOpen] = React.useState(true);
+  const [subNavOpen, setSubNavOpen] = React.useState(false);
 
   const toggle = () => {
     setSubNavOpen((b) => !b);

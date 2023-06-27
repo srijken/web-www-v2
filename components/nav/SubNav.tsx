@@ -81,9 +81,6 @@ export function SubNav({ isOpen }: SubNavProps) {
           </div>
         </section>
         <section>
-          <h3>Language</h3>
-          <p>switch</p>
-
           <Toggle label="Language" value="Dutch" onChange={(v) => console.log(v)} items={["English", "Dutch"]} />
           <Toggle
             dir="vertical"
@@ -92,8 +89,6 @@ export function SubNav({ isOpen }: SubNavProps) {
             onChange={(v) => console.log(v)}
             items={["Lightmode", "Darkmode", "Terminal"]}
           />
-          <h3>Screenmode</h3>
-          <p>switch</p>
         </section>
       </article>
     </nav>
