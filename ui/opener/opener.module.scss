@@ -1,0 +1,30 @@
+.opener {
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  article {
+    flex: 1;
+    max-width: 1200px;
+    display: flex;
+
+    section {
+      flex: 0 0 50%;
+      padding: 128px 0;
+
+      p {
+        margin-bottom: 32px; /* VAR */
+      }
+    }
+  }
+
+  aside {
+    position: absolute;
+    height: 100%;
+    top: 32px;
+    left: 50%;
+    width: calc(100vw - 50%);
+    display: flex;
+    justify-content: flex-end;
+  }
+}
