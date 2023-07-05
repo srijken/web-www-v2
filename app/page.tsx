@@ -1,7 +1,8 @@
 import { attributes, react as HomeContent } from "../content/home.md";
 import { CtaLink } from "../ui/button/CtaLink";
+import { Card } from "../ui/card/Card";
 import { Opener } from "../ui/opener/Opener";
-import { ColorShift } from "../ui/section/ColorShift";
+import { PageSection } from "../ui/page/PageSection";
 
 export default function Home() {
   let { title, cats } = attributes as any;
@@ -15,13 +16,34 @@ export default function Home() {
         </p>
         <CtaLink href={"/who-we-are"}>Who we are</CtaLink>
       </Opener>
-      <ColorShift overlap={64}>
-        <div style={{ width: 100, height: 100, backgroundColor: "red" }}>bla</div>
-        <h2>Our mission</h2>
-        <p>bla bla </p>
-        <p>bla bla </p>
-        <p>bla bla </p>
-      </ColorShift>
+      <PageSection overlap>
+        <div className="card-layout">
+          <div className="content">
+            <Card imgSrc="/static/test.png" imgAlt="Test">
+              <h2>A race between Russion criminals and Dutch hackers.</h2>
+              <CtaLink href="/temp">Read more</CtaLink>
+            </Card>
+            <Card imgSrc="/static/test.png" imgAlt="Test">
+              <h2>A race between Russion criminals and Dutch hackers.</h2>
+              <CtaLink href="/temp">Read more</CtaLink>
+            </Card>
+            <Card imgSrc="/static/test.png" imgAlt="Test">
+              <h2>A race between Russion criminals and Dutch hackers.</h2>
+              <CtaLink href="/temp">Read more</CtaLink>
+            </Card>
+          </div>
+        </div>
+
+        <p>Test</p>
+        <p>Test</p>
+        <p>Test</p>
+        <p>Test</p>
+        <p>Test</p>
+        <p>Test</p>
+        <p>Test</p>
+        <p>Test</p>
+        <p>Test</p>
+      </PageSection>
 
       <HomeContent />
       <ul>
