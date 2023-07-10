@@ -5,30 +5,38 @@ import classnames from "classnames/bind";
 
 const cx = classnames.bind(styles);
 
-export interface ButtonProps extends AriaButtonProps {
-  size: "sm" | "md" | "lg";
+export interface IconButtonProps extends AriaButtonProps {
+  icon: React.ReactNode;
+  size?: "sm" | "md" | "lg";
   isInverse?: boolean;
   isPrimary?: boolean;
   isSecondary?: boolean;
-  leftIcon?: React.ReactNode;
+  isRound?: boolean;
 }
 
-export function Button({ size, isInverse, isPrimary, isSecondary, leftIcon, children, ...props }: ButtonProps) {
+export function IconButton({
+  icon,
+  size = "md",
+  isInverse,
+  isPrimary,
+  isSecondary,
+  isRound,
+  children,
+  ...props
+}: IconButtonProps) {
   return (
     <AriaButton
       className={cx({
         "button-base": true,
-        button: true,
+        "icon-button": true,
         inverse: isInverse,
         primary: isPrimary,
-        secondary: isSecondary
+        secondary: isSecondary,
+        round: isRound
       })}
       {...props}
     >
-      <>
-        {leftIcon && <span className={styles.icon}>{leftIcon}</span>}
-        {children}
-      </>
+      <>{icon}</>
     </AriaButton>
   );
 }

@@ -1,0 +1,18 @@
+.sideintro {
+  margin-top: 128px;
+  margin-bottom: 128px;
+  flex: 1;
+  max-width: 1200px; /* TODO VAR */
+  display: flex;
+  justify-content: space-between;
+
+  height: 400px;
+  .intro {
+    flex: 0 0 30%;
+  }
+
+  .content {
+    flex: 0 0 65%;
+  }
+  
+}

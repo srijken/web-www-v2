@@ -11,10 +11,33 @@ h1 {
   line-height: 1em;
 }
 
+h2 {
+  font-weight: 900;
+  font-size: 2.6em;
+  font-family: var(--font-header);
+  line-height: 1em;
+  margin-bottom: 0.4em;
+}
+
 p.opener {
   font-weight: 400;
   font-size: 2em;
   font-family: var(--font-header);
   color: #545454;
-  line-height: 1.2em;
+  line-height: 1em;
+}
+
+p {
+  font-family: var(--font-text);
+  font-size: 1.2em;
+  line-height: 1.6em;
+  margin-bottom: 16px;
+}
+
+
+.reverse {
+
+  h1, h2, p {
+    color: #fff; /* TODO VAR */
+  }
 }

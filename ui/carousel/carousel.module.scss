@@ -1,0 +1,39 @@
+.carousel {
+
+  position: relative;
+  height: 424px;
+  
+
+  .outer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: min(100vw, 1200px);
+    overflow: hidden;
+    height: 400px;
+  }
+
+  .inner {
+    width: min(100vw, 1200px);
+    display: flex;
+    justify-content: space-between;
+
+    > section {
+      flex: 0 0 30%;
+    }
+  }
+
+  .pages {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    color: white;
+
+
+    div {
+      margin-left: 16px;
+    }
+  }
+}
