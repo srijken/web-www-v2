@@ -1,22 +1,37 @@
 import * as React from "react";
-import styles from "./pagesection.module.scss";
-import classnames from "classnames/bind";
+import "./pagesection.scss";
+import cx from "classnames";
 
-const cx = classnames.bind(styles);
+type Corners = "topleft" | "topright" | "bottomleft" | "bottomright";
 
 export interface PageSectionProps {
-  overlap?: boolean;
   children: React.ReactNode;
+  type?: "gradient" | "gradient-reverse" | "inverse" | "primary";
+  overlap?: "top" | "bottom";
+  round?: Corners[];
+  hide?: boolean;
 }
 
-export function PageSection({ overlap, children }: PageSectionProps) {
+export function PageSection({ children, type, overlap, round, hide }: PageSectionProps) {
   return (
     <article
       className={cx({
-        overlap: !!overlap
+        "page-section": true,
+        "page-section-gradient": type === "gradient",
+        "page-section-gradient-reverse": type === "gradient-reverse",
+        "page-section-inverse": type === "inverse",
+        "page-section-primary": type === "primary",
+        "page-section-overlap-top": overlap === "top",
+        "page-section-overlap-bottom": overlap === "bottom",
+        "page-section-round": round && round.length > 0,
+        "page-section-round-topleft": round && round.includes("topleft"),
+        "page-section-round-topright": round && round.includes("topright"),
+        "page-section-round-bottomleft": round && round.includes("bottomleft"),
+        "page-section-round-bottomright": round && round.includes("bottomright"),
+        "page-section-hide": hide
       })}
     >
-      <div className={styles["overlap-container"]}>{children}</div>
+      <div className="page-section-container">{children}</div>
     </article>
   );
 }

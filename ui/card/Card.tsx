@@ -28,7 +28,14 @@ export function Card({ imgSrc, imgAlt, children, tag, fit = "cover", article, ct
       })}
     >
       <figure>
-        <ExportedImage src={imgSrc} alt={imgAlt} fill priority style={{ objectFit: fit }} />
+        <ExportedImage
+          src={imgSrc}
+          alt={imgAlt}
+          fill
+          priority
+          style={{ objectFit: fit }}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
         {tag && <figcaption>{tag}</figcaption>}
       </figure>
       <header>{children}</header>

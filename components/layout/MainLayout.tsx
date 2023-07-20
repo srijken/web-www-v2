@@ -13,7 +13,7 @@ export function MainLayout({ children }: MainLayoutProps) {
   return (
     <main className={styles.mainlayout}>
       <MainNav />
-      <div className={styles.content}>{children}</div>=
+      <div className={styles.content}>{children}</div>
       <Footer />
     </main>
   );

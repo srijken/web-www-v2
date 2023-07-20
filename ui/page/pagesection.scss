@@ -1,0 +1,69 @@
+.page-section {
+    
+
+  &.page-section-hide {
+    overflow-x: hidden;
+  }
+
+  &.page-section-inverse {
+    background-color:#1D1D1D; 
+  }
+
+  &.page-section-primary {
+    background-color: var(--brand);
+  }
+
+  &.page-section-gradient {
+    background: linear-gradient(3.3deg, #FFFFFF 59.39%, rgba(61, 220, 235, 0.2) 97.41%);
+  }
+
+  &.page-section-gradient-reverse {
+    background: linear-gradient(to top, rgba(61, 220, 235, 0.2) 80%, #fff 100%);
+  }
+
+
+  &.page-section-overlap {  
+    background: linear-gradient(to bottom, #fff 0%, #fff 64px, #1D1D1D 64px, #1D1D1D 100%);
+    .page-section-container {
+      
+      background: transparent url("/assets/bubble.png") no-repeat 60% 120px;
+    }
+  }
+
+
+  &.page-section-overlap-top {
+    .page-section-container {
+      position: relative;
+      top: -32px;
+    }
+  }
+
+  &.page-section-overlap-bottom {
+    .page-section-container {
+      position: relative;
+      bottom: -96px;
+    }
+  }
+
+
+  &.page-section-round {
+    
+    &.page-section-round-topright {
+      border-top-right-radius: 300px; /* TODO: var */
+    }
+    
+    &.page-section-round-topleft {
+      border-top-left-radius: 300px;
+    }
+    
+    &.page-section-round-bottomright {
+      border-bottom-right-radius: 300px;
+    }
+    
+    &.page-section-round-bottomleft {
+      border-bottom-left-radius: 300px;
+    }
+  }
+
+}
+

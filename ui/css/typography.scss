@@ -19,6 +19,20 @@ h2 {
   margin-bottom: 0.4em;
 }
 
+h3 {
+  font-size: 1.4em;
+  font-family: var(--font-text);
+  font-weight: 700;
+}
+
+h6 {
+  text-transform: uppercase;
+  font-family: var(--font-text);
+  font-weight: 400;
+  font-size: 0.8em;
+  color: #545454;
+}
+
 p.opener {
   font-weight: 400;
   font-size: 2em;
@@ -33,6 +47,7 @@ p {
   line-height: 1.6em;
   margin-bottom: 16px;
 }
+
 
 
 .reverse {

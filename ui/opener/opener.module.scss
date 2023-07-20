@@ -28,3 +28,24 @@
     justify-content: flex-end;
   }
 }
+
+.sub-opener {
+  display: flex;
+  justify-content: space-around;
+
+
+  article {
+    max-width: 800px;
+
+
+    h2 {
+      color: #fff;
+      text-align: center;
+    }
+
+    p {
+      color: var(--brand);
+      text-align: center;
+    }
+  }
+}

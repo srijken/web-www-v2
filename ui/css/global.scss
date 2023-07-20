@@ -13,30 +13,3 @@ body {
 }
 
 
-
-
-.card-layout {
-  display: flex;
-  justify-content: space-around;
-
-  .content {
-    flex: 1;
-    max-width: 1200px; /* TODO VAR */
-    display: flex;
-    justify-content: space-between;
-
-    > section {
-      flex: 0 0 30%;
-    }
-  
-  }
-}
-
-.layout-left {
-
-  display: flex;
-  justify-content: space-around;
-
-  overflow-x: hidden;
-
-}

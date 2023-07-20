@@ -16,24 +16,36 @@ export function Carousel({ children }: CarouselProps) {
 
   React.useEffect(() => {
     if (ref.current) {
-      ref.current.style.transform = `translateX(-${(page - 1) * 35}%)`;
+      let el: HTMLElement = ref.current.querySelector(`:nth-child(${page - 1})`);
+      if (el) {
+        let left = el.offsetLeft;
+        ref.current.scrollTo({ left, behavior: "smooth" });
+      } else {
+        console.log("No element found");
+      }
     }
   }, [page, count]);
 
   const nextPage = () => {
-    setPage((old) => page + 1);
+    if (page < count) {
+      setPage(page + 1);
+    } else {
+      setPage(1);
+    }
   };
 
   const prevPage = () => {
-    setPage((old) => page - 1);
+    if (page > 1) {
+      setPage(page - 1);
+    } else {
+      setPage(count);
+    }
   };
 
   return (
     <div className={styles.carousel}>
-      <div className={styles.outer}>
-        <div className={styles.inner} ref={ref}>
-          {children}
-        </div>
+      <div className={styles.slides} ref={ref}>
+        {children}
       </div>
       <div className={styles.pages}>
         <IconButton onClick={prevPage} icon={<IconChevronLeft />} isRound isInverse />
