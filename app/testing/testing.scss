@@ -1,0 +1,36 @@
+
+
+
+
+.testing {
+  --bla: calc(min(100vw, 1200px));
+  --rest: calc((100vw - var(--bla)) / 2);
+
+  display: flex;
+  min-height: 400px;
+}
+
+
+.filler {
+  flex: 0 0 var(--rest);
+  background-color: green;
+}
+
+.container {
+  flex: 0 0 calc(var(--bla) + var(--rest));
+  
+}
+
+.aa {
+  background-color: red;
+  
+}
+
+.bb {
+  background-color: blue;
+  grid-column: span 2;
+}
+
+.cc {
+ 
+}

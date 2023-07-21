@@ -35,7 +35,7 @@ export default function Home() {
             <CtaLink href="/temp">Read more</CtaLink>
           </Card>
         </PageLayout>
-        <PageLayout layout="left" hide>
+        <PageLayout layout="left" extend>
           <div className="reverse">
             <h2>What we do</h2>
             <p>
@@ -111,8 +111,8 @@ export default function Home() {
         </PageLayout>
       </PageSection>
 
-      <PageSection hide>
-        <PageLayout>
+      <PageSection>
+        <PageLayout extend>
           <h2>Testemonials</h2>
           <Carousel>
             <CardPerson name="John Doe" title="CEO" imgSrc="/static/deckard.webp">

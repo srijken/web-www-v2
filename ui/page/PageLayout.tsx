@@ -6,12 +6,13 @@ export interface PageLayoutProps {
   children: React.ReactNode;
   columns?: number;
   layout?: "default" | "left" | "right";
-  hide?: boolean;
+  extend?: boolean;
 }
 
-export function PageLayout({ children, columns = 0, layout = "default", hide }: PageLayoutProps) {
+export function PageLayout({ children, columns = 0, layout = "default", extend }: PageLayoutProps) {
   return (
     <article className="page-layout">
+      <div className="page-layout-filler"></div>
       <div
         className={cx({
           "page-layout-content": true,
@@ -21,7 +22,7 @@ export function PageLayout({ children, columns = 0, layout = "default", hide }: 
           "page-layout-columns-4": columns === 4,
           "page-layout-left": layout === "left",
           "page-layout-right": layout === "right",
-          "page-layout-hide": hide
+          "page-layout-extend": extend
         })}
       >
         {children}
