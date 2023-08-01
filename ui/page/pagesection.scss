@@ -1,5 +1,4 @@
 .page-section {
-    
 
   &.page-section-hide {
     overflow-x: hidden;
@@ -47,7 +46,8 @@
 
 
   &.page-section-round {
-    
+    padding-top: 64px;
+
     &.page-section-round-topright {
       border-top-right-radius: 300px; /* TODO: var */
     }

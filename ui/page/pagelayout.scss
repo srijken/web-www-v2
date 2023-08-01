@@ -12,10 +12,12 @@
 
   .page-layout-content {
     flex: 0 0 var(--cw);
+    padding: 0 32px;
 
     &.page-layout-extend {
       flex: 0 0 calc(var(--cw) + var(--rest));
       overflow-x: hidden;
+      padding-right: 0;
     }
 
 

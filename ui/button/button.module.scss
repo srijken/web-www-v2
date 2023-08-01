@@ -1,5 +1,14 @@
 .cta-link {
   display: inline-block;
+  margin-right: 8px;
+
+  &.external {
+    svg {
+      margin-left: 8px;
+      width: 12px;
+      height: 12px;
+    }
+  }
 }
 
 
@@ -70,7 +79,6 @@
   align-items: center;
   justify-content: space-around;
   svg {
-   
    height: 32px;
   }
 

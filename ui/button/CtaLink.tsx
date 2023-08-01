@@ -5,15 +5,17 @@ import classnames from "classnames/bind";
 const cx = classnames.bind(styles);
 
 import * as React from "react";
+import { IconExternalLink } from "../icons";
 
 export interface CtaLinkProps extends LinkProps {
+  children: React.ReactNode;
   isPrimary?: boolean;
   isSecondary?: boolean;
   isInverse?: boolean;
-  children: React.ReactNode;
+  isExternal?: boolean;
 }
 
-export function CtaLink({ isPrimary, isSecondary, isInverse, children, ...props }: CtaLinkProps) {
+export function CtaLink({ children, isPrimary, isSecondary, isInverse, isExternal, ...props }: CtaLinkProps) {
   return (
     <Link
       {...props}
@@ -22,10 +24,12 @@ export function CtaLink({ isPrimary, isSecondary, isInverse, children, ...props 
         "button-base": true,
         inverse: isInverse,
         primary: isPrimary,
-        secondary: isSecondary
+        secondary: isSecondary,
+        external: isExternal
       })}
     >
       {children}
+      {!!isExternal && <IconExternalLink />}
     </Link>
   );
 }

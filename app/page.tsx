@@ -8,6 +8,7 @@ import { SubOpener } from "../ui/opener/SubOpener";
 import { PageLayout } from "../ui/page/PageLayout";
 import { PageSection } from "../ui/page/PageSection";
 import { Stats, StatsItem } from "../ui/stats/Stats";
+import { CarouselSmall } from "../ui/carousel/CarouselSmall";
 
 export default function Home() {
   return (
@@ -155,20 +156,69 @@ export default function Home() {
       </PageSection>
 
       <PageSection type="primary" round={["topleft"]}>
-        <PageLayout>
-          <h2>Want to become a volunteer?</h2>
+        <PageLayout columns={2}>
+          <div>
+            <h2>Want to become a volunteer?</h2>
+            <p>Test yo</p>
+            <p>Test yo</p>
+            <p>Test yo</p>
+            <CtaLink href="/temp">Become a volunteer</CtaLink>
+            <CtaLink href="/temp" isInverse isExternal>
+              Open Roles
+            </CtaLink>
+          </div>
+          <div style={{ position: "relative" }}>
+            <ExportedImage
+              src="/static/volunteers.png"
+              alt="Become a volunteer"
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              style={{ objectFit: "contain" }}
+            />
+          </div>
         </PageLayout>
       </PageSection>
 
       <PageSection type="inverse" round={["bottomright"]}>
         <PageLayout>
-          <h2>Our partners</h2>
+          <div className="reverse">
+            <h2>Our partners</h2>
+
+            <CarouselSmall>
+              <div>A</div>
+              <div>B</div>
+              <div>C</div>
+              <div>D</div>
+            </CarouselSmall>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Sagittis volutpat risus euismod venenatis gravida purus non.
+              Maecenas tortor tempor nulla bibendum. A sem velit tellus tortor risus.
+            </p>
+
+            <CtaLink isSecondary href="/temp">
+              Become a partner
+            </CtaLink>
+          </div>
         </PageLayout>
       </PageSection>
 
       <PageSection type="gradient-reverse">
-        <PageLayout>
-          <h2>Frequently asked questions</h2>
+        <PageLayout columns={2}>
+          <div>
+            <h2>Frequently asked questions</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, ex asperiores. In itaque totam magni quas,
+              eum temporibus et quos. Voluptatem debitis magni at ad tenetur dolores eum cupiditate et.
+            </p>
+
+            <CtaLink href="/temp">Contact</CtaLink>
+            <CtaLink href="/temp" isInverse>
+              All faq
+            </CtaLink>
+          </div>
+          <div>Accordion</div>
         </PageLayout>
       </PageSection>
     </div>
