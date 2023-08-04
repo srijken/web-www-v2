@@ -1,14 +1,11 @@
 ---
-title: Awesome kitties2
-date: 2019-03-17T19:31:20.591Z
-cats:
-  - description: Maru is a Scottish Fold from Japan, and he loves boxes.
-    name: Maru (まる)
-  - description: Lil Bub is an American celebrity cat known for her unique appearance.
-    name: Lil Bub
-  - description: Grumpy cat is an American celebrity cat known for her grumpy appearance.
-    name: Grumpy cat (Tardar Sauce)
+en:
+  title: A watchful eye in the digital world
+  intro: We aim to make the digital world safer by reporting vulnerabilities we
+    find in digital systems to the people who can fix them.
+nl:
+  title: Een waakzaam oog in de digitale wereld
+  intro: We streven ernaar de digitale wereld veiliger te maken door de
+    kwetsbaarheden die we in digitale systemen vinden te rapporteren aan de
+    mensen die ze kunnen repareren.
 ---
-Welcome to my awesome page about cats of the internet.
-
-This page is built with NextJS, and content is managed in Decap CMS

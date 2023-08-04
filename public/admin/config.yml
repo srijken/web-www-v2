@@ -1,10 +1,11 @@
 local_backend: true
-
+publish_mode: editorial_workflow
+site_url: https://beta.divd.nl
 backend:
   name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
-media_folder: public/img
-public_folder: img
+media_folder: public/static
+public_folder: static
 i18n:
   structure: multiple_folders
   locales: [en, nl]
@@ -13,17 +14,40 @@ i18n:
 collections:
   - name: "pages"
     label: "Pages"
+    i18n:
+      structure: single_file
     files:
       - label: "Home"
         name: "home"
         file: "content/home.md"
+        i18n: true
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Publish Date", name: "date", widget: "datetime" }
-          - { label: "Body", name: "body", widget: "markdown" }
-          - label: "Cats"
-            name: "cats"
+          - { label: "Title", name: "title", widget: "string", i18n: true }
+          - { label: "Intro", name: "intro", widget: "text", i18n: true }
+      - label: "FAQ"
+        name: "faq"
+        file: "content/faq.md"
+        i18n: true
+        fields:
+          - { label: "Title", name: "title", widget: "string", i18n: true }
+          - { label: "Contact", name: "contact", widget: "string", i18n: true }
+          - { label: "Intro", name: "intro", widget: "markdown", i18n: true }
+          - label: "FAQS"
+            name: "faqs"
             widget: list
+            i18n: true
             fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Title", name: "title", widget: "string", i18n: true }
+              - { label: "Description", name: "description", widget: "markdown", i18n: true }
+  - name: "cases"
+    label: "Cases"
+    i18n:
+      structure: multiple_folders
+    folder: "content/cases"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Image", name: "image", widget: "image", media_folder: "/public/static/cases" }
+      - { label: "Body", name: "body", widget: "markdown", i18n: true }
