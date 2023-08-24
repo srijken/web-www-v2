@@ -49,5 +49,55 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string", i18n: true }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Image", name: "image", widget: "image", media_folder: "/public/static/cases" }
+      - { label: "Case link", name: "link", widget: "string" }
+      - { label: "Case lead", name: "caselead", widget: "string" }
+      - { label: "Image", name: "image", widget: "image", media_folder: "/public/static/cases", required: false }
+      - label: "Researchers"
+        name: "researchers"
+        widget: list
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown", i18n: true }
+
+  - name: "people"
+    label: "People"
+    i18n:
+      structure: multiple_folders
+    folder: "content/people"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: name
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Image", name: "image", widget: "image", media_folder: "/public/static/people", required: false }
+      - { label: "Role", name: "role", widget: "string" }
+      - {
+          label: "Articles",
+          name: "articles",
+          widget: "relation",
+          collection: "articles",
+          multiple: true,
+          value_field: "title",
+          search_fields: ["title"]
+        }
+      - {
+          label: "Cases",
+          name: "cases",
+          widget: "relation",
+          collection: "cases",
+          multiple: true,
+          value_field: "title",
+          search_fields: ["title"]
+        }
+
+  - name: "articles"
+    label: "Articles"
+    i18n:
+      structure: multiple_folders
+    folder: "content/articles"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown", i18n: true }

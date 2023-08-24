@@ -20,7 +20,7 @@ yarn run dev
 
 Run the admin
 ```
-http://localhost:3000/admin
+http://localhost:3000/admin/index.html
 ```
 or
 ```sh
