@@ -29,26 +29,37 @@ collections:
         file: "content/faq.md"
         i18n: true
         fields:
-          - { label: "Title", name: "title", widget: "string", i18n: true }
-          - { label: "Contact", name: "contact", widget: "string", i18n: true }
-          - { label: "Intro", name: "intro", widget: "markdown", i18n: true }
-          - label: "FAQS"
-            name: "faqs"
+          - label: "FAQ groups"
+            name: "faqgroups"
             widget: list
             i18n: true
             fields:
-              - { label: "Title", name: "title", widget: "string", i18n: true }
-              - { label: "Description", name: "description", widget: "markdown", i18n: true }
+              - { label: "heading", name: "heading", widget: "string", i18n: true }
+              - {
+                  label: "FAQs",
+                  name: "faqs",
+                  widget: list,
+                  i18n: true,
+                  fields:
+                    [
+                      { label: "Title", name: "title", widget: "string", i18n: true },
+                      { label: "Description", name: "description", widget: "markdown", i18n: true }
+                    ]
+                }
+
   - name: "cases"
     label: "Cases"
     i18n:
       structure: multiple_folders
     folder: "content/cases"
     create: true
+    identifier_field: caseid
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Case ID", name: "caseid", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Case closed", name: "closed", widget: "boolean" }
       - { label: "Case link", name: "link", widget: "string" }
       - { label: "Case lead", name: "caselead", widget: "string" }
       - { label: "Image", name: "image", widget: "image", media_folder: "/public/static/cases", required: false }
@@ -71,14 +82,18 @@ collections:
       - { label: "Name", name: "name", widget: "string" }
       - { label: "Image", name: "image", widget: "image", media_folder: "/public/static/people", required: false }
       - { label: "Role", name: "role", widget: "string" }
+      - { label: "Bio", name: "bio", widget: "text", i18n: true }
+      - { label: "Links", name: "links", widget: "list", fields: [{ label: "Link", name: "link", widget: "string" }] }
       - {
           label: "Articles",
           name: "articles",
           widget: "relation",
           collection: "articles",
           multiple: true,
-          value_field: "title",
-          search_fields: ["title"]
+          value_field: "{{slug}}|{{title}}",
+          search_fields: ["title"],
+          display_fields: ["title"],
+          required: false
         }
       - {
           label: "Cases",
@@ -86,8 +101,10 @@ collections:
           widget: "relation",
           collection: "cases",
           multiple: true,
-          value_field: "title",
-          search_fields: ["title"]
+          value_field: "{{slug}}|{{title}}",
+          search_fields: ["title", "caseid"],
+          display_fields: ["title", "caseid"],
+          required: false
         }
 
   - name: "articles"
@@ -100,4 +117,13 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string", i18n: true }
       - { label: "Publish Date", name: "date", widget: "datetime" }
+      - {
+          label: "Author",
+          name: "author",
+          widget: "relation",
+          collection: "people",
+          value_field: "{{slug}}|{{name}}",
+          search_fields: ["name"],
+          default: "string"
+        }
       - { label: "Body", name: "body", widget: "markdown", i18n: true }

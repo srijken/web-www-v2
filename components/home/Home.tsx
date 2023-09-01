@@ -25,7 +25,7 @@ export function Home({ lang = "en" }: HomeProps) {
   let t = i18n(lang);
 
   return (
-    <div>
+    <div className="home-layout">
       <Opener imgSrc="/static/test.png" imgAlt="Test">
         <h1>{content.title}</h1>
         <p className="opener">{content.intro}</p>
@@ -214,9 +214,7 @@ export function Home({ lang = "en" }: HomeProps) {
         </PageLayout>
       </PageSection>
 
-      <PageSection type="gradient-reverse">
-        <FaqHome lang={lang} />
-      </PageSection>
+      <PageSection type="gradient-reverse">{/* <FaqHome lang={lang} /> */}</PageSection>
     </div>
   );
 }

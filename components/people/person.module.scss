@@ -1,0 +1,27 @@
+.person {
+
+  display: flex;
+
+
+  section {
+    flex: 0 0 55%;
+    padding-right: 32px;
+
+
+    &:last-of-type {
+      padding-right: 0;
+      flex: 0 0 45%
+    }
+  }
+}
+
+
+.person-image {
+  position: relative;
+  background-color: #eee;
+  width: 100%;
+  height: 340px;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 270px;
+}

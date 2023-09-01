@@ -1,15 +1,28 @@
 ---
 en:
-  title: Frequently Asked Questions
-  contact: info@divd.nl
-  intro: T﻿he english intro
-  faqs:
-    - title: do you speak english?
-      description: y﻿es
+  faqgroups:
+    - heading: Home
+      faqs:
+        - title: Is this a question
+          description: y﻿es it is
+        - title: This is not a question
+          description: n﻿ope
+    - heading: Subgroup
+      faqs:
+        - title: asd
+          description: d﻿dsdasd
+        - title: adass
+          description: d﻿sddsdsds
 nl:
-  title: Veel gestelde vragen
-  intro: t﻿he Dutch intro
-  faqs:
-    - title: Spreek je nederlands
-      description: J﻿a
+  faqgroups:
+    - heading: Thuis
+      faqs:
+        - title: asd
+          description: a﻿sd
+        - title: asd
+          description: s﻿d
+    - heading: subgroep
+      faqs:
+        - title: asd
+          description: a﻿d
 ---

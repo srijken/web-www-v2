@@ -1,4 +1,4 @@
-import { MainLayout } from "../components/layout/MainLayout";
+import { RootLayout as Layout } from "../ui/layout/RootLayout";
 import "../ui/css/reset.scss";
 import "../ui/css/variables.scss";
 import "../ui/css/global.scss";
@@ -23,7 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html className={`${headerFont.variable} ${textFont.variable}`}>
       <head></head>
       <body>
-        <MainLayout>{children}</MainLayout>
+        <Layout>{children}</Layout>
       </body>
     </html>
   );

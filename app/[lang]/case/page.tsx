@@ -1,6 +1,6 @@
-import { ArticleHome } from "components/article/ArticleHome";
+import { CaseHome } from "components/case/CaseHome";
 import { importMultiMarkdownFileList } from "lib/utils";
-import { ArticleAttributes } from "types";
+import { CaseAttributes } from "types";
 import { PageLayout } from "ui/page/PageLayout";
 import { PageSection } from "ui/page/PageSection";
 
@@ -8,15 +8,15 @@ export async function generateStaticParams() {
   return [{ lang: "en" }, { lang: "nl" }];
 }
 
-export default async function ArticlePage({ params }: { params: any }) {
+export default async function CaseHomePage({ params }: { params: any }) {
   const { lang } = params;
-  const articles = await importMultiMarkdownFileList<ArticleAttributes>(`articles`, lang);
+  const cases = await importMultiMarkdownFileList<CaseAttributes>(`cases`, lang);
 
   return (
     <div className="article-layout">
       <PageSection>
         <PageLayout layout="left" type="article">
-          <ArticleHome lang={lang} articles={articles} />
+          <CaseHome lang={lang} cases={cases} />
         </PageLayout>
       </PageSection>
     </div>

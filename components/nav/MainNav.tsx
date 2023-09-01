@@ -4,13 +4,16 @@ import { Logo } from "./Logo";
 import { MainNavItem } from "../../ui/nav/MainNavItem";
 import { Button } from "../../ui/button/Button";
 import { IconSearch, IconEmail } from "../../ui/icons";
+import { useParams } from "next/navigation";
 
 import { SubNav } from "./SubNav";
+import { Lang } from "types";
 
 export interface MainNavProps {}
 
 export function MainNav({}: MainNavProps) {
   const [subNavOpen, setSubNavOpen] = React.useState(false);
+  const { lang } = useParams() as { lang: Lang };
 
   const toggle = () => {
     setSubNavOpen((b) => !b);
@@ -46,7 +49,7 @@ export function MainNav({}: MainNavProps) {
           </section>
         </article>
       </nav>
-      <SubNav isOpen={subNavOpen} />
+      <SubNav isOpen={subNavOpen} lang={lang} />
     </>
   );
 }

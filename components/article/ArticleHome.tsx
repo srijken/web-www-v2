@@ -1,9 +1,10 @@
-import { MarkdownArticle } from "types";
+import { ArticleAttributes, MarkdownImport } from "types";
 import * as React from "react";
+import Link from "next/link";
 
 export interface ArticleHomeProps {
   lang: "en" | "nl";
-  articles: MarkdownArticle[];
+  articles: MarkdownImport<ArticleAttributes>[];
 }
 
 export function ArticleHome({ lang, articles }: ArticleHomeProps) {
@@ -13,10 +14,9 @@ export function ArticleHome({ lang, articles }: ArticleHomeProps) {
 
       {articles.map((article) => (
         <div key={article.slug}>
-          <h1>{article.attributes.title}</h1>
-          <div>
-            <article.react />
-          </div>
+          <h3>
+            <Link href={`/${lang}/article/${article.slug}`}>{article.attributes.title}</Link>
+          </h3>
         </div>
       ))}
     </div>

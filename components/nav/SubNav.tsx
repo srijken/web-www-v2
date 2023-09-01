@@ -3,13 +3,28 @@ import classnames from "classnames/bind";
 import styles from "./nav.module.scss";
 import { IconExternalLink } from "../../ui/icons";
 import { Toggle } from "../../ui/toggle";
+import { Lang } from "types";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
+
 const cx = classnames.bind(styles);
 
 export interface SubNavProps {
   isOpen: boolean;
+  lang: Lang;
 }
 
-export function SubNav({ isOpen }: SubNavProps) {
+export function SubNav({ isOpen, lang }: SubNavProps) {
+  const p = usePathname();
+  const router = useRouter();
+
+  const switchLanguage = (l: Lang) => {
+    if (l !== lang) {
+      let base = p.substring(3);
+      router.push(`/${l}${base}`);
+    }
+  };
+
   return (
     <nav
       className={cx({
@@ -36,7 +51,7 @@ export function SubNav({ isOpen }: SubNavProps) {
                 <a href="#contact">Contact</a>
               </li>
               <li>
-                <a href="#faq">FAQ</a>
+                <Link href={`/${lang}/faq`}>FAQ</Link>
               </li>
             </ul>
           </div>
@@ -81,14 +96,22 @@ export function SubNav({ isOpen }: SubNavProps) {
           </div>
         </section>
         <section>
-          <Toggle label="Language" value="Dutch" onChange={(v) => console.log(v)} items={["English", "Dutch"]} />
           <Toggle
+            label="Language"
+            value={lang}
+            onChange={(v) => switchLanguage(v as Lang)}
+            items={[
+              { label: "English", value: "en" },
+              { label: "Dutch", value: "nl" }
+            ]}
+          />
+          {/* <Toggle
             dir="vertical"
             label="Screenmode"
             value="Lightmode"
             onChange={(v) => console.log(v)}
             items={["Lightmode", "Darkmode", "Terminal"]}
-          />
+          /> */}
         </section>
       </article>
     </nav>

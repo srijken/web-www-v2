@@ -1,30 +1,31 @@
 import * as React from "react";
-import { PageLayout } from "../../ui/page/PageLayout";
-import { CtaLink } from "../../ui/button/CtaLink";
-import { attributes } from "../../content/faq.md";
-let { en, nl } = attributes as any;
+import { FaqAttributes, Lang } from "types";
 
-export function FaqHome({ lang = "en" }: { lang?: string }) {
-  let content = lang === "en" ? en : nl;
+export interface FaqHomeProps {
+  lang: Lang;
+  faq: FaqAttributes;
+}
+
+export function FaqHome({ faq }: FaqHomeProps) {
+  if (!faq) {
+    console.log("faq is undefined");
+    return null;
+  }
   return (
-    <PageLayout columns={2}>
-      <div>
-        <h2>{content.title}</h2>
-        <p>{content.intro}</p>
-
-        <CtaLink href={`mailto:${content.contact}`}>Contact</CtaLink>
-        <CtaLink href="/temp" isInverse>
-          All faq
-        </CtaLink>
-      </div>
-      <div>
-        {content.faqs.map((faq, n) => (
-          <div key={n}>
-            <h3>{faq.title}</h3>
-            <div>{faq.description}</div>
+    <div>
+      {faq.faqgroups.map((faqgroup, n) => (
+        <div key={n}>
+          <h2>{faqgroup.heading}</h2>
+          <div>
+            {faqgroup.faqs.map((faq, ni) => (
+              <div key={ni}>
+                <h3>{faq.title}</h3>
+                <p>{faq.description}</p>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-    </PageLayout>
+        </div>
+      ))}
+    </div>
   );
 }

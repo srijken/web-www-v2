@@ -53,5 +53,14 @@
       grid-gap: 32px;
       grid-template-columns: 2fr 1fr;
     }
+
+
+    &.page-layout-article {
+      background-color: white;
+      padding-top: 32px;
+      padding-bottom: 32px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 300px;
+    }
   }
 }

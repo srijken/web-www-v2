@@ -7,9 +7,10 @@ export interface PageLayoutProps {
   columns?: number;
   layout?: "default" | "left" | "right";
   extend?: boolean;
+  type?: "article";
 }
 
-export function PageLayout({ children, columns = 0, layout = "default", extend }: PageLayoutProps) {
+export function PageLayout({ children, columns = 0, layout = "default", extend, type }: PageLayoutProps) {
   return (
     <article className="page-layout">
       <div className="page-layout-filler"></div>
@@ -22,7 +23,8 @@ export function PageLayout({ children, columns = 0, layout = "default", extend }
           "page-layout-columns-4": columns === 4,
           "page-layout-left": layout === "left",
           "page-layout-right": layout === "right",
-          "page-layout-extend": extend
+          "page-layout-extend": extend,
+          "page-layout-article": type === "article"
         })}
       >
         {children}

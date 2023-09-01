@@ -6,7 +6,7 @@ type Corners = "topleft" | "topright" | "bottomleft" | "bottomright";
 
 export interface PageSectionProps {
   children: React.ReactNode;
-  type?: "gradient" | "gradient-reverse" | "inverse" | "primary";
+  type?: "gradient" | "gradient-reverse" | "inverse" | "primary" | "article";
   overlap?: "top" | "bottom";
   round?: Corners[];
   hide?: boolean;
@@ -28,7 +28,8 @@ export function PageSection({ children, type, overlap, round, hide }: PageSectio
         "page-section-round-topright": round && round.includes("topright"),
         "page-section-round-bottomleft": round && round.includes("bottomleft"),
         "page-section-round-bottomright": round && round.includes("bottomright"),
-        "page-section-hide": hide
+        "page-section-hide": hide,
+        "page-section-article": type === "article"
       })}
     >
       <div className="page-section-container">{children}</div>

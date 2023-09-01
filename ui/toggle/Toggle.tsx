@@ -2,6 +2,7 @@ import * as React from "react";
 import styles from "./toggle.module.scss";
 import * as Ariakit from "@ariakit/react";
 import classnames from "classnames/bind";
+import { OptionItem } from "types";
 
 const cx = classnames.bind(styles);
 
@@ -9,13 +10,13 @@ export interface ToggleProps {
   label: string;
   value: string;
   onChange: (value: string) => void;
-  items: string[];
+  items: OptionItem[];
   dir?: "horizontal" | "vertical";
 }
 
 export function Toggle({ label, value, onChange, items, dir = "horizontal" }: ToggleProps) {
   const radio = Ariakit.useRadioStore({
-    defaultValue: value
+    value: value
   });
   return (
     <div>
@@ -32,9 +33,9 @@ export function Toggle({ label, value, onChange, items, dir = "horizontal" }: To
         }}
       >
         {items.map((item, index) => (
-          <label key={item}>
-            <Ariakit.Radio className="radio" value={item} />
-            {item}
+          <label key={item.value}>
+            <Ariakit.Radio className="radio" value={item.value} />
+            {item.label}
           </label>
         ))}
       </Ariakit.RadioGroup>
