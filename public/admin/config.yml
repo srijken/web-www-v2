@@ -2,8 +2,9 @@ local_backend: true
 publish_mode: editorial_workflow
 site_url: https://beta.divd.nl
 backend:
-  name: git-gateway
-  branch: main # Branch to update (optional; defaults to master)
+  name: git
+  repo: DIVD-NL/web-www-v2
+  branch: main
 media_folder: public/static
 public_folder: static
 i18n:

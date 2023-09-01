@@ -15,7 +15,7 @@ export function PeopleHome({ lang, peoples }: PeopleHomeProps) {
       {peoples.map((p) => (
         <div key={p.slug}>
           <h3>
-            <Link href={`/${lang}/peoples/${p.slug}`}>{p.attributes.name}</Link>
+            <Link href={`/${lang}/people/${p.slug}`}>{p.attributes.name}</Link>
           </h3>
         </div>
       ))}
