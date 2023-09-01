@@ -1,11 +1,11 @@
 import { Case } from "components/case/Case";
-import { importMultiMarkdownFile } from "lib/utils";
+import { importMultiMarkdownFile, staticParams } from "lib/utils";
 import { CaseAttributes } from "types";
 import { PageLayout } from "ui/page/PageLayout";
 import { PageSection } from "ui/page/PageSection";
 
 export async function generateStaticParams() {
-  return [{ lang: "en" }, { lang: "nl" }];
+  return staticParams("cases");
 }
 
 export default async function CasePage({ params }: { params: { lang: "en" | "nl"; slug: string } }) {

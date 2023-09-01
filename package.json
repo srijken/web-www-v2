@@ -10,7 +10,8 @@
     "dev": "next",
     "build": "next build && next-image-export-optimizer",
     "start": "next start",
-    "export": "yarn run build && next export"
+    "export": "yarn run build && next export",
+    "localtest": "python3 -m http.server --directory ./out"
   },
   "dependencies": {
     "@ariakit/react": "^0.2.10",

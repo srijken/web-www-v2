@@ -1,11 +1,11 @@
 import { Article } from "components/article/Article";
-import { importMultiMarkdownFile } from "lib/utils";
+import { importMultiMarkdownFile, staticParams } from "lib/utils";
 import { ArticleAttributes } from "types";
 import { PageLayout } from "ui/page/PageLayout";
 import { PageSection } from "ui/page/PageSection";
 
 export async function generateStaticParams() {
-  return [{ lang: "en" }, { lang: "nl" }];
+  return staticParams("articles");
 }
 
 export default async function ArticlePage({ params }: { params: { lang: "en" | "nl"; slug: string } }) {

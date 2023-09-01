@@ -15,6 +15,11 @@ export interface PersonProps {
 export function Person({ lang, person }: PersonProps) {
   let imgSrc = workingImageURL(person.attributes.image);
   let imgAlt = person.attributes.name;
+
+  let links = person.attributes.links || [];
+  let articles = person.attributes.articles || [];
+  let cases = person.attributes.cases || [];
+
   return (
     <div
       className={cx({
@@ -26,18 +31,18 @@ export function Person({ lang, person }: PersonProps) {
         <h5>{person.attributes.role}</h5>
         <p>{person.attributes.bio}</p>
 
-        {person.attributes.links.map((l) => (
+        {links.map((l) => (
           <div key={l.link}>
             <a href={l.link}>{l.link}</a>
           </div>
         ))}
 
-        {person.attributes.articles.map((l) => (
+        {articles.map((l) => (
           <div key={l}>
             <a href={l}>{l}</a>
           </div>
         ))}
-        {person.attributes.cases.map((l) => (
+        {cases.map((l) => (
           <div key={l}>
             <a href={l}>{l}</a>
           </div>
@@ -45,14 +50,16 @@ export function Person({ lang, person }: PersonProps) {
       </section>
       <section>
         <div className={cx({ "person-image": true })}>
-          <ExportedImage
-            src={imgSrc}
-            alt={imgAlt}
-            fill
-            priority
-            style={{ objectFit: "cover" }}
-            sizes="(max-width: 768px) 40vw, (max-width: 1200px) 50vw, 33vw"
-          />
+          {imgSrc && (
+            <ExportedImage
+              src={imgSrc}
+              alt={imgAlt}
+              fill
+              priority
+              style={{ objectFit: "cover" }}
+              sizes="(max-width: 768px) 40vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          )}
         </div>
       </section>
     </div>

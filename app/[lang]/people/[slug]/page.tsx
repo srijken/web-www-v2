@@ -1,12 +1,11 @@
-import { ArticleHome } from "components/article/ArticleHome";
 import { Person } from "components/people/Person";
-import { importMultiMarkdownFile } from "lib/utils";
+import { _DEFAULT_LANG, importMultiMarkdownFile, staticParams } from "lib/utils";
 import { Lang, PeopleAttributes } from "types";
 import { PageLayout } from "ui/page/PageLayout";
 import { PageSection } from "ui/page/PageSection";
 
 export async function generateStaticParams() {
-  return [{ lang: "en" }, { lang: "nl" }];
+  return staticParams("people");
 }
 
 export default async function PersonPage({ params }: { params: { lang: Lang; slug: string } }) {

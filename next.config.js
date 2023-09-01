@@ -1,5 +1,6 @@
 module.exports = {
   output: "export",
+  trailingSlash: true,
   webpack: (cfg) => {
     cfg.module.rules.push({
       test: /\.md$/,

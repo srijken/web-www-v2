@@ -4,16 +4,20 @@ import { MarkdownImport, MarkdownPage } from "types";
 
 const _PATH = join(process.cwd(), "content");
 
-const _DEFAULT_LANG = "en";
+export const _DEFAULT_LANG = "en";
 
-export async function importMultiMarkdownFileList<T>(path: string, lang: string): Promise<MarkdownImport<T>[]> {
+export async function getSlugs(path: string, lang: string) {
   let src = `${_PATH}/${path}/${lang}`;
 
   const filePaths = readdirSync(src);
+  return filePaths.map((p) => p.substring(0, p.length - 3));
+}
 
+export async function importMultiMarkdownFileList<T>(path: string, lang: string): Promise<MarkdownImport<T>[]> {
+  let slugs = await getSlugs(path, lang);
   return Promise.all(
-    filePaths.map(async (filePath) => {
-      return importMultiMarkdownFile<T>(path, filePath.substring(0, filePath.length - 3), lang);
+    slugs.map(async (slug) => {
+      return importMultiMarkdownFile<T>(path, slug, lang);
     })
   );
 }
@@ -53,6 +57,13 @@ export function mergeI18Attributes<T>(primary: T, target: Partial<T>) {
   });
 }
 
-export function workingImageURL(src: string) {
-  return src.replace("/public", "");
+export async function staticParams(path: string) {
+  let slugs = await getSlugs(path, _DEFAULT_LANG);
+  let results = [...slugs.map((slug) => ({ lang: "en", slug })), ...slugs.map((slug) => ({ lang: "nl", slug }))];
+  return results;
+}
+
+export function workingImageURL(src: string | null | undefined) {
+  if (src) return src.replace("/public", "");
+  return null;
 }
