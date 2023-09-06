@@ -1,5 +1,5 @@
 publish_mode: editorial_workflow
-site_url: https://beta.divd.nl
+site_url: https://divd-nl.github.io/web-www-v2/#/
 backend:
   name: github
   repo: DIVD-NL/web-www-v2
