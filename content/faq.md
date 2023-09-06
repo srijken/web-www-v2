@@ -6,7 +6,7 @@ en:
         - title: Is this a question
           description: y﻿es it is
         - title: This is not a question
-          description: n﻿ope
+          description: So why is it here then?
     - heading: Subgroup
       faqs:
         - title: asd
