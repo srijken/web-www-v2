@@ -13,16 +13,17 @@ import { PageSection } from "ui/page/PageSection";
 import { Stats, StatsItem } from "ui/stats/Stats";
 import i18n from "i18n/i18n";
 
-import { attributes } from "../../content/home.md";
-let { en, nl } = attributes as any;
+import { HomeAttributes, Lang } from "types";
+import { CaseCard } from "components/case/CaseCard";
 
 export interface HomeProps {
-  lang?: "en" | "nl";
+  lang: Lang;
+  content: HomeAttributes;
 }
 
-export function Home({ lang = "en" }: HomeProps) {
-  let content = lang === "en" ? en : nl;
+export function Home({ lang = "en", content }: HomeProps) {
   let t = i18n(lang);
+  if (!content) return null;
 
   return (
     <div className="home-layout">
@@ -33,43 +34,34 @@ export function Home({ lang = "en" }: HomeProps) {
       </Opener>
       <PageSection type="inverse" overlap="top">
         <PageLayout columns={3}>
-          <Card imgSrc="/static/test.png" imgAlt="Test">
-            <h2>A race between Russion criminals and Dutch hackers.</h2>
-            <CtaLink href="/temp">Read more</CtaLink>
-          </Card>
-          <Card imgSrc="/static/test.png" imgAlt="Test">
-            <h2>A race between Russion criminals and Dutch hackers.</h2>
+          <CaseCard str={content.fold.showcase} cta={t("readmore")} />
+          <Card imgSrc="/static/received_email.png" imgAlt="Test">
+            <h2>{content.fold.received}</h2>
             <CtaLink href="/temp">Read more</CtaLink>
           </Card>
           <Card imgSrc="/static/divd_family.png" imgAlt="Test" cta fit="contain">
-            <h2>A race between Russion criminals and Dutch hackers.</h2>
+            <h2>{content.fold.family}</h2>
             <CtaLink href="/temp">Read more</CtaLink>
           </Card>
         </PageLayout>
         <PageLayout layout="left" extend>
           <div className="reverse">
-            <h2>What we do</h2>
-            <p>
-              We aim to make the digital world safer by reporting vulnerabilities we find in digital systems to the
-              people who can fix them.
-            </p>
+            <h2>{content.whatwedo.title}</h2>
+            <p>{content.whatwedo.description}</p>
             <CtaLink href="/temp" isSecondary>
-              Learn more
+              {t("learnmore")}
             </CtaLink>
           </div>
 
           <Carousel>
-            <Card imgSrc="/static/test.png" imgAlt="Test">
-              <h2>A race between Russion criminals and Dutch hackers.</h2>
-              <CtaLink href="/temp">Read more</CtaLink>
+            <Card imgSrc="/assets/scout.png" imgAlt="Scout" cta>
+              <h2>{content.whatwedo.t1}</h2>
             </Card>
             <Card imgSrc="/static/test.png" imgAlt="Test">
-              <h2>A race between Russion criminals and Dutch hackers.</h2>
-              <CtaLink href="/temp">Read more</CtaLink>
+              <h2>{content.whatwedo.t2}</h2>
             </Card>
             <Card imgSrc="/static/divd_family.png" imgAlt="Test" cta fit="contain">
-              <h2>A race between Russion criminals and Dutch hackers.</h2>
-              <CtaLink href="/temp">Read more</CtaLink>
+              <h2>{content.whatwedo.t3}</h2>
             </Card>
           </Carousel>
         </PageLayout>
@@ -77,7 +69,7 @@ export function Home({ lang = "en" }: HomeProps) {
 
       <PageSection type="gradient">
         <PageLayout columns={3}>
-          <h2>Our proudest work</h2>
+          <h2>{t("ourproudestwork")}</h2>
           <Card imgSrc="/static/test.png" imgAlt="Test">
             <h2>A race between Russion criminals and Dutch hackers.</h2>
             <CtaLink href="/temp">Read more</CtaLink>
@@ -96,27 +88,23 @@ export function Home({ lang = "en" }: HomeProps) {
       <PageSection type="inverse" overlap="bottom" round={["topright"]}>
         <PageLayout>
           <SubOpener>
-            <h2>Our Mission</h2>
-            <p>
-              We aim to make the digital world safer by reporting vulnerabilities we find in digital systems to the
-              people who can fix them. We have a global reach, but do it Dutch style: open, honest, collaborative and
-              for free.
-            </p>
+            <h2>{content.ourmission.title}</h2>
+            <p>{content.ourmission.description}</p>
           </SubOpener>
         </PageLayout>
         <PageLayout>
           <Stats>
             <StatsItem>
-              <h2>100+</h2>
-              <h6>members</h6>
+              <h2>{content.ourmission.members}</h2>
+              <h6>{t("members")}</h6>
             </StatsItem>
             <StatsItem>
-              <h2>86</h2>
-              <h6>total cases</h6>
+              <h2>{content.ourmission.totalcases}</h2>
+              <h6>{t("totalcases")}</h6>
             </StatsItem>
             <StatsItem>
-              <h2>356.781</h2>
-              <h6>vulnerable ip's notified</h6>
+              <h2>{content.ourmission.ips}</h2>
+              <h6>{t("ipsnotified")}</h6>
             </StatsItem>
           </Stats>
         </PageLayout>
@@ -124,7 +112,7 @@ export function Home({ lang = "en" }: HomeProps) {
 
       <PageSection>
         <PageLayout extend>
-          <h2>Testemonials</h2>
+          <h2>{t("testimonials")}</h2>
           <Carousel>
             <CardPerson name="John Doe" title="CEO" imgSrc="/static/deckard.webp">
               <p>Lorem ipsum</p>
@@ -142,12 +130,8 @@ export function Home({ lang = "en" }: HomeProps) {
         </PageLayout>
         <PageLayout columns={2}>
           <div>
-            <h2>Help us, help you!</h2>
-            <p>
-              Make our work easier by putting our security.txt in the code of your website and our IP 194.5.73.0-255 on
-              your allow list. This way you make sure that our research team can look for vulnerabilities without
-              alarming your cyber security systems. And we know who to talk to when we find vulnerabilities.
-            </p>
+            <h2>{content.helpushelpyou.title}</h2>
+            <p>{content.helpushelpyou.description}</p>
             <p>&nbsp;</p>
             <CtaLink href="/temp">Download Security.txt</CtaLink>
             <p>&nbsp;</p>
@@ -168,10 +152,11 @@ export function Home({ lang = "en" }: HomeProps) {
       <PageSection type="primary" round={["topleft"]}>
         <PageLayout columns={2}>
           <div>
-            <h2>Want to become a volunteer?</h2>
-            <p>Test yo</p>
-            <p>Test yo</p>
-            <p>Test yo</p>
+            <h2>{content.volunteer.title}</h2>
+            {content.volunteer.checklist.map((o, i) => (
+              <p key={`volunteer${i}`}>Test yo</p>
+            ))}
+
             <CtaLink href="/temp">Become a volunteer</CtaLink>
             <CtaLink href="/temp" isInverse isExternal>
               Open Roles

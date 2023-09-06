@@ -48,6 +48,44 @@ export type FaqAttributes = {
   }[];
 };
 
+export type HomeAttributes = {
+  title: string;
+  intro: string;
+  fold: {
+    showcase: string;
+    received: string;
+    family: string;
+  };
+  whatwedo: {
+    title: string;
+    description: string;
+    t1: string;
+    t2: string;
+    t3: string;
+  };
+  ourproudestwork: string[];
+  ourmission: {
+    title: string;
+    description: string;
+    members: string;
+    totalcases: string;
+    ips: string;
+  };
+  helpushelpyou: {
+    title: string;
+    description: string;
+  };
+  volunteer: {
+    title: string;
+    checklist: {
+      item: string;
+    }[];
+  };
+  partners: {
+    description: string;
+  };
+};
+
 export type OptionItem = {
   label: string;
   value: string | number;

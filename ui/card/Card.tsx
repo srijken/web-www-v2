@@ -34,7 +34,7 @@ export function Card({ imgSrc, imgAlt, children, tag, fit = "cover", article, ct
           fill
           priority
           style={{ objectFit: fit }}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          sizes="(max-width: 768px) 50vw, (max-width: 1200px) 30vw, 20vw"
         />
         {tag && <figcaption>{tag}</figcaption>}
       </figure>

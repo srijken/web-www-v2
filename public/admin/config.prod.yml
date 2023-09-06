@@ -1,0 +1,6 @@
+publish_mode: editorial_workflow
+site_url: https://beta.divd.nl
+backend:
+  name: github
+  repo: DIVD-NL/web-www-v2
+  branch: main

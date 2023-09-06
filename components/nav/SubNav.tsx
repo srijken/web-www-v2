@@ -20,6 +20,10 @@ export function SubNav({ isOpen, lang }: SubNavProps) {
 
   const switchLanguage = (l: Lang) => {
     if (l !== lang) {
+      if (!p.startsWith("/nl") && !p.startsWith("/en")) {
+        router.push(`/${l}${p}`);
+        return;
+      }
       let base = p.substring(3);
       router.push(`/${l}${base}`);
     }

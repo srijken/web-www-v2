@@ -15,9 +15,10 @@ export function MainNav({}: MainNavProps) {
   const [subNavOpen, setSubNavOpen] = React.useState(false);
   const { lang } = useParams() as { lang: Lang };
 
-  const toggle = () => {
+  const toggle = React.useCallback(() => {
     setSubNavOpen((b) => !b);
-  };
+  }, []);
+
   return (
     <>
       <nav className={styles.main}>

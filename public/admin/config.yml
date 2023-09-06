@@ -1,8 +1,8 @@
+local_backend: true
 publish_mode: editorial_workflow
-site_url: https://beta.divd.nl
+site_url: http://localhost:3000
 backend:
-  name: github
-  repo: DIVD-NL/web-www-v2
+  name: git-gateway
   branch: main
 media_folder: public/static
 public_folder: static
@@ -21,9 +21,106 @@ collections:
         name: "home"
         file: "content/home.md"
         i18n: true
+        delete: false
         fields:
           - { label: "Title", name: "title", widget: "string", i18n: true }
           - { label: "Intro", name: "intro", widget: "text", i18n: true }
+          - label: "fold"
+            name: "fold"
+            i18n: true
+            widget: "object"
+            fields:
+              - label: "Showcase"
+                name: "showcase"
+                widget: "relation"
+                collection: "cases"
+                search_fields: ["title", "caseid"]
+                value_field: "{{slug}}|{{title}}|{{image}}"
+                display_fields: ["title", "caseid"]
+                multiple: false
+              - { label: "Received an email", name: "received", widget: "string", i18n: true }
+              - { label: "Family", name: "family", widget: "string", i18n: true }
+          - label: "What we do"
+            name: "whatwedo"
+            widget: "object"
+            collapsed: true
+            i18n: true
+            fields:
+              - { label: title, name: title, widget: string, i18n: true }
+              - { label: description, name: description, widget: text, i18n: true }
+              - { label: t1, name: t1, widget: string, i18n: true }
+              - { label: t2, name: t2, widget: string, i18n: true }
+              - { label: t3, name: t3, widget: string, i18n: true }
+          - label: "Our proudest work"
+            name: "ourproudestwork"
+            widget: "relation"
+            collection: "cases"
+            search_fields: ["title", "caseid"]
+            value_field: "{{slug}}"
+            display_fields: ["title", "caseid"]
+            multiple: true
+          - label: "Our mission"
+            name: "ourmission"
+            widget: "object"
+            collapsed: true
+            i18n: true
+            fields:
+              - { label: title, name: title, widget: string, i18n: true }
+              - { label: description, name: description, widget: text, i18n: true }
+              - { label: "Members", name: members, widget: string }
+              - { label: "Total cases", name: totalcases, widget: string }
+              - { label: "Vulnerable ips", name: ips, widget: string }
+          - label: "Help us, help you"
+            name: "helpushelpyou"
+            widget: "object"
+            collapsed: true
+            i18n: true
+            fields:
+              - { label: title, name: title, widget: string, i18n: true }
+              - { label: description, name: description, widget: text, i18n: true }
+          - label: "Volunteer"
+            name: "volunteer"
+            widget: "object"
+            collapsed: true
+            i18n: true
+            fields:
+              - { label: title, name: title, widget: string, i18n: true }
+              - {
+                  label: checklist,
+                  name: checklist,
+                  widget: list,
+                  allow_add: true,
+                  i18n: true,
+                  fields: [{ label: "Item", name: "item", widget: string }]
+                }
+          - label: "Partners"
+            name: "partners"
+            widget: "object"
+            collapsed: true
+            i18n: true
+            fields:
+              - { label: description, name: description, widget: text, i18n: true }
+      - label: "Testimonials"
+        name: "testimonials"
+        file: "content/testimonials.md"
+        i18n: true
+        fields:
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: list
+            i18n: true
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "role", name: "role", widget: "string", i18n: true }
+              - { label: "Quote", name: "quote", widget: "text", i18n: true }
+              - {
+                  label: "Image",
+                  name: "image",
+                  widget: "image",
+                  media_folder: "/public/static/testimonials",
+                  required: false
+                }
+
       - label: "FAQ"
         name: "faq"
         file: "content/faq.md"
@@ -47,8 +144,8 @@ collections:
                     ]
                 }
 
-  - name: "cases"
-    label: "Cases"
+  - label: "Cases"
+    name: "cases"
     i18n:
       structure: multiple_folders
     folder: "content/cases"
@@ -59,7 +156,7 @@ collections:
       - { label: "Title", name: "title", widget: "string", i18n: true }
       - { label: "Case ID", name: "caseid", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Case closed", name: "closed", widget: "boolean" }
+      - { label: "Case closed", name: "closed", widget: "boolean", required: false }
       - { label: "Case link", name: "link", widget: "string" }
       - { label: "Case lead", name: "caselead", widget: "string" }
       - { label: "Image", name: "image", widget: "image", media_folder: "/public/static/cases", required: false }

@@ -14,15 +14,20 @@ export interface MainNavItemProps {
 }
 
 export function MainNavItem({ isActive, href, onClick, children }: MainNavItemProps) {
+  const ref = React.useRef<HTMLAnchorElement>(null);
+
+  React.useEffect(() => {
+    if (onClick) {
+      ref.current.addEventListener("click", (e) => {
+        e.preventDefault();
+        onClick();
+      });
+    }
+  }, [onClick]);
   return (
     <Link
       href={href}
-      onClick={(e) => {
-        if (onClick) {
-          e.preventDefault();
-          onClick();
-        }
-      }}
+      ref={ref}
       className={cx({
         item: true,
         active: isActive
