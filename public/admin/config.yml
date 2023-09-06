@@ -1,7 +1,7 @@
 publish_mode: editorial_workflow
 site_url: https://divd-nl.github.io/web-www-v2/#/
 backend:
-  name: github
+  name: git-gateway
   repo: DIVD-NL/web-www-v2
   branch: main
 media_folder: public/static
