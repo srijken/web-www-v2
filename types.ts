@@ -14,7 +14,17 @@ export type MarkdownPage<T> = {
 export type ArticleAttributes = {
   title: string;
   date: string;
-  author: string;
+  tag: "case" | "news" | "updates" | "culture";
+  intro: string;
+  image?: string;
+  author?: string;
+  case?: {
+    caseid: string;
+    closed: boolean;
+    link: string;
+    caselead: string;
+    researchers: string[];
+  };
 };
 
 export type CaseAttributes = {
@@ -39,6 +49,8 @@ export type PeopleAttributes = {
 };
 
 export type FaqAttributes = {
+  title: string;
+  intro: string;
   faqgroups: {
     heading: string;
     faqs: {
@@ -46,6 +58,28 @@ export type FaqAttributes = {
       description: string;
     }[];
   }[];
+};
+
+export type PartnerAttributes = {
+  title: string;
+  intro: string;
+  partnerstitle: string;
+  partnersintro: string;
+  partnerquote: {
+    name: string;
+    role: string;
+    website: string;
+    quote: string;
+    image: string;
+  };
+  partnerlist: PartnerItem[];
+};
+
+export type PartnerItem = {
+  name: string;
+  description: string;
+  website: string;
+  image: string;
 };
 
 export type HomeAttributes = {
@@ -84,6 +118,59 @@ export type HomeAttributes = {
   partners: {
     description: string;
   };
+};
+
+export type TestimonialAttributes = {
+  title: string;
+  testimonials: {
+    name: string;
+    role: string;
+    quote: string;
+    image: string;
+  }[];
+};
+
+export type ProudestworkAttributes = {
+  title: string;
+  ourproudestwork: string[];
+};
+
+export type MissionAttributes = {
+  title: string;
+  description: string;
+  members: string;
+  totalcases: string;
+  ips: string;
+};
+
+export type VolunteersAttributes = {
+  title: string;
+  intro: string;
+  corevaluestitle: string;
+  corevalues: {
+    title: string;
+    description: string;
+  }[];
+};
+
+export type ContactAttributes = {
+  title: string;
+  intro: string;
+  form: {
+    title: string;
+    description: string;
+  };
+};
+
+export type NewsroomAttributes = {
+  title: string;
+  intro: string;
+  newsletter: string;
+  opener: {
+    title: string;
+    description: string;
+  };
+  highlight: string;
 };
 
 export type OptionItem = {

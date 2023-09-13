@@ -10,21 +10,25 @@ import { Opener } from "ui/opener/Opener";
 import { SubOpener } from "ui/opener/SubOpener";
 import { PageLayout } from "ui/page/PageLayout";
 import { PageSection } from "ui/page/PageSection";
-import { Stats, StatsItem } from "ui/stats/Stats";
-import i18n from "i18n/i18n";
 
-import { HomeAttributes, Lang } from "types";
+import i18n from "i18n/i18n";
+import { attributes } from "content/home.md";
+import { HomeAttributes, Lang, MarkdownPage } from "types";
 import { CaseCard } from "components/case/CaseCard";
+
+import { i18nContentFromAttributes, workingImageURL } from "lib/utils";
+import { MissionSection } from "components/mission/MissionSection";
+import { TestimonialLayout } from "components/testimonial/TestimonialLayout";
+import { ProudestWorkLayout } from "components/case/ProudestWorkLayout";
 
 export interface HomeProps {
   lang: Lang;
-  content: HomeAttributes;
 }
 
-export function Home({ lang = "en", content }: HomeProps) {
+export function Home({ lang = "en" }: HomeProps) {
   let t = i18n(lang);
+  const content = i18nContentFromAttributes<HomeAttributes>(lang, attributes as MarkdownPage<HomeAttributes>);
   if (!content) return null;
-
   return (
     <div className="home-layout">
       <Opener imgSrc="/static/test.png" imgAlt="Test">
@@ -67,67 +71,13 @@ export function Home({ lang = "en", content }: HomeProps) {
         </PageLayout>
       </PageSection>
 
-      <PageSection type="gradient">
-        <PageLayout columns={3}>
-          <h2>{t("ourproudestwork")}</h2>
-          <Card imgSrc="/static/test.png" imgAlt="Test">
-            <h2>A race between Russion criminals and Dutch hackers.</h2>
-            <CtaLink href="/temp">Read more</CtaLink>
-          </Card>
-          <Card imgSrc="/static/test.png" imgAlt="Test">
-            <h2>A race between Russion criminals and Dutch hackers.</h2>
-            <CtaLink href="/temp">Read more</CtaLink>
-          </Card>
-          <Card imgSrc="/static/divd_family.png" imgAlt="Test" cta fit="contain">
-            <h2>A race between Russion criminals and Dutch hackers.</h2>
-            <CtaLink href="/temp">Read more</CtaLink>
-          </Card>
-        </PageLayout>
+      <PageSection type="gradient-reverse">
+        <ProudestWorkLayout lang={lang} />
       </PageSection>
-
-      <PageSection type="inverse" overlap="bottom" round={["topright"]}>
-        <PageLayout>
-          <SubOpener>
-            <h2>{content.ourmission.title}</h2>
-            <p>{content.ourmission.description}</p>
-          </SubOpener>
-        </PageLayout>
-        <PageLayout>
-          <Stats>
-            <StatsItem>
-              <h2>{content.ourmission.members}</h2>
-              <h6>{t("members")}</h6>
-            </StatsItem>
-            <StatsItem>
-              <h2>{content.ourmission.totalcases}</h2>
-              <h6>{t("totalcases")}</h6>
-            </StatsItem>
-            <StatsItem>
-              <h2>{content.ourmission.ips}</h2>
-              <h6>{t("ipsnotified")}</h6>
-            </StatsItem>
-          </Stats>
-        </PageLayout>
-      </PageSection>
+      <MissionSection lang={lang} />
 
       <PageSection>
-        <PageLayout extend>
-          <h2>{t("testimonials")}</h2>
-          <Carousel>
-            <CardPerson name="John Doe" title="CEO" imgSrc="/static/deckard.webp">
-              <p>Lorem ipsum</p>
-            </CardPerson>
-            <CardPerson name="John Doe" title="CEO" imgSrc="/static/deckard.webp">
-              <p>Lorem ipsum</p>
-            </CardPerson>
-            <CardPerson name="John Doe" title="CEO" imgSrc="/static/deckard.webp">
-              <p>Lorem ipsum</p>
-            </CardPerson>
-            <CardPerson name="John Doe" title="CEO" imgSrc="/static/deckard.webp">
-              <p>Lorem ipsum</p>
-            </CardPerson>
-          </Carousel>
-        </PageLayout>
+        <TestimonialLayout lang={lang} />
         <PageLayout columns={2}>
           <div>
             <h2>{content.helpushelpyou.title}</h2>
@@ -154,12 +104,12 @@ export function Home({ lang = "en", content }: HomeProps) {
           <div>
             <h2>{content.volunteer.title}</h2>
             {content.volunteer.checklist.map((o, i) => (
-              <p key={`volunteer${i}`}>Test yo</p>
+              <p key={`volunteer${i}`}>{o.item}</p>
             ))}
 
-            <CtaLink href="/temp">Become a volunteer</CtaLink>
+            <CtaLink href={`/${lang}/volunteer`}>{t("becomeavolunteer")}</CtaLink>
             <CtaLink href="/temp" isInverse isExternal>
-              Open Roles
+              {t("openroles")}
             </CtaLink>
           </div>
           <div style={{ position: "relative" }}>

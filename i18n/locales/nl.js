@@ -7,5 +7,8 @@ export default {
   members: "Leden",
   totalcases: "Total cases",
   ipsnotified: "Vulnerable IPs notified",
-  testimonials: "Testimonials"
+  testimonials: "Testimonials",
+  openroles: "Beschikbare rollen",
+  becomeavolunteer: "Wordt vrijwilliger",
+  visitsite: "Bezoek site"
 };

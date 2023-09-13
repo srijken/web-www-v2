@@ -41,6 +41,10 @@
       &.page-layout-columns-4 {
         grid-template-columns: 1fr 1fr 1fr 1fr;
       }
+
+      &.page-layout-vcenter {
+        align-items: center;
+      }
     }
 
     &.page-layout-left {

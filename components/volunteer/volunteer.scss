@@ -1,0 +1,53 @@
+.volunteer {
+
+
+
+  .core-values {
+    h2 {
+      color: #fff;
+    }
+
+    article {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-gap: 32px;
+
+
+
+      section {
+        h3 {
+          padding: 16px;
+          display: flex;
+          align-items: center;
+          background-color: var(--brand);
+
+          span {
+            display: inline-block;
+            border-radius: 50%;
+            width: 42px;
+            height: 42px;
+            font-weight: normal;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            color: var(--brand);
+            background-color: black;
+            margin-right: 16px;
+          }
+        }
+        background-color: white;
+        border-radius: 8px;
+        overflow: hidden;
+
+      }
+
+      p {
+        padding: 16px;
+      }
+    }
+  }
+
+
+}

@@ -13,6 +13,8 @@ en:
           description: d﻿dsdasd
         - title: adass
           description: d﻿sddsdsds
+  title: Frequently Asked Questions
+  intro: Lorem ipsum
 nl:
   faqgroups:
     - heading: Thuis
@@ -25,4 +27,6 @@ nl:
       faqs:
         - title: asd
           description: a﻿d
+  title: Veel gestelde vragen
+  intro: Lorem ipsum
 ---

@@ -1,6 +1,6 @@
 import { readdirSync } from "fs";
 import { join } from "path";
-import { MarkdownImport, MarkdownPage } from "types";
+import { Lang, MarkdownImport, MarkdownPage } from "types";
 
 const _PATH = join(process.cwd(), "content");
 
@@ -30,7 +30,7 @@ export async function importMultiMarkdownFile<T>(path: string, slug: string, lan
     const defaultMarkdown: MarkdownImport<T> = await import(`../content/${path}/${_DEFAULT_LANG}/${slug}.md`);
     mergeI18Attributes(defaultMarkdown.attributes, markdown.attributes);
   }
-  return { ...markdown, slug };
+  return { ...markdown, slug } as MarkdownImport<T>;
 }
 
 export async function importPageMarkdownFile<T>(page: string, lang: string) {
@@ -46,7 +46,7 @@ export async function importPageMarkdownFile<T>(page: string, lang: string) {
     attributes: markdown.attributes[lang]
   };
 
-  return { ...newMarkdown, slug: page };
+  return { ...newMarkdown, slug: page } as MarkdownImport<T>;
 }
 
 export function mergeI18Attributes<T>(primary: T, target: Partial<T>) {
@@ -55,6 +55,17 @@ export function mergeI18Attributes<T>(primary: T, target: Partial<T>) {
       target[key] = value;
     }
   });
+}
+
+export function i18nContentFromAttributes<T>(lang: Lang, attributes: MarkdownPage<T>) {
+  if (!languageGuard(lang)) return null;
+
+  let content = lang === "en" ? (attributes.en as T) : (attributes.nl as T);
+
+  if (lang === "nl") {
+    mergeI18Attributes(attributes.en, content);
+  }
+  return content;
 }
 
 export async function staticParams(path: string) {
@@ -66,4 +77,9 @@ export async function staticParams(path: string) {
 export function workingImageURL(src: string | null | undefined) {
   if (src) return src.replace("/public", "");
   return null;
+}
+
+export function languageGuard(lang: any) {
+  if (lang !== "en" && lang !== "nl") return false;
+  return true;
 }

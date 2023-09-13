@@ -9,6 +9,7 @@ export interface CaseCardProps {
 }
 
 export function CaseCard({ str, cta }: CaseCardProps) {
+  if (!str) return null;
   const [slug, title, imgSrc] = str.split("|");
   return (
     <Card imgSrc={workingImageURL(imgSrc)} imgAlt="Test" tag="Case">

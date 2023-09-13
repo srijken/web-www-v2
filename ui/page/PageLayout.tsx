@@ -8,9 +8,10 @@ export interface PageLayoutProps {
   layout?: "default" | "left" | "right";
   extend?: boolean;
   type?: "article";
+  vcenter?: boolean;
 }
 
-export function PageLayout({ children, columns = 0, layout = "default", extend, type }: PageLayoutProps) {
+export function PageLayout({ children, columns = 0, layout = "default", extend, type, vcenter }: PageLayoutProps) {
   return (
     <article className="page-layout">
       <div className="page-layout-filler"></div>
@@ -24,7 +25,8 @@ export function PageLayout({ children, columns = 0, layout = "default", extend, 
           "page-layout-left": layout === "left",
           "page-layout-right": layout === "right",
           "page-layout-extend": extend,
-          "page-layout-article": type === "article"
+          "page-layout-article": type === "article",
+          "page-layout-vcenter": vcenter
         })}
       >
         {children}
