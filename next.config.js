@@ -1,5 +1,4 @@
-module.exports = {
-  output: "export",
+module_exports = {
   trailingSlash: true,
   webpack: (cfg) => {
     cfg.module.rules.push({
@@ -26,5 +25,38 @@ module.exports = {
     // nextImageExportOptimizer_generateAndUseBlurImages to false and pass
     // `placeholder="empty"` to all <ExportedImage> components.
     nextImageExportOptimizer_generateAndUseBlurImages: true
-  }
+  },
 };
+
+const env = process.env.NODE_ENV
+if(env == "development"){
+  /*
+  Header always set Strict-Transport-Security "max-age=63072000; includeSubdomains;"
+  Header always append X-Frame-Options DENY
+  Header set X-Content-Type-Options nosniff
+  Header set X-XSS-Protection "1; mode=block"
+  Header set Content-Security-Policy "default-src 'none'; font-src 'self'; img-src 'self' data:; script-src 'self' https://unpkg.com/; style-src 'self'; connect-src 'self';"
+
+  Header always set Referrer-Policy "same-origin"
+
+  */
+  module_exports.headers = async function() {
+    return [
+      {
+        source: '/(.*)',
+          headers: [
+            {
+              key: 'Content-Security-Policy',
+              value:
+                "default-src 'none'; font-src 'self'; img-src 'self' data:; script-src 'self' https://unpkg.com/; style-src 'self'; connect-src 'self';",
+              },
+          ],
+      },
+    ];
+  }
+}
+else if (env == "production"){
+  module_exports.output = "export"
+}  
+
+module.exports = module_exports
