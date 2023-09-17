@@ -173,6 +173,40 @@ export type NewsroomAttributes = {
   highlight: string;
 };
 
+export type ContributeAttributes = {
+  title: string;
+  intro: string;
+  becomevolunteer: {
+    title: string;
+    description: string;
+  };
+  becomepartner: {
+    title: string;
+    description: string;
+  };
+  appreciate: {
+    title: string;
+    description: string;
+  };
+  donatesupp: {
+    title: string;
+    description: string;
+    links: {
+      label: string;
+      link: string;
+    }[];
+    customlink: string;
+  };
+  donatepaypal: {
+    label: string;
+    link: string;
+  };
+  donatebanktransfer: {
+    label: string;
+    link: string;
+  };
+};
+
 export type OptionItem = {
   label: string;
   value: string | number;

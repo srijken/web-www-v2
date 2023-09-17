@@ -34,7 +34,7 @@ export function ContactHome({ lang }: ContactHomeProps) {
         <PageLayout columns={2}>
           <div>
             <h2>{content.form.title}</h2>
-            <p style={{ whiteSpace: "pre-wrap" }}>{content.form.description}</p>
+            <p className="pre">{content.form.description}</p>
           </div>
           <div>Form</div>
         </PageLayout>

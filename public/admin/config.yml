@@ -294,6 +294,120 @@ collections:
                 widget: "text"
                 i18n: true
 
+      - label: "Contribute"
+        name: "contribute"
+        file: "content/contribute.md"
+        i18n: true
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Intro"
+            name: "intro"
+            widget: text
+            i18n: true
+          - label: "Become a Volunteer"
+            name: "becomevolunteer"
+            i18n: true
+            widget: "object"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "string"
+                i18n: true
+              - label: "Description"
+                name: "description"
+                widget: "text"
+                i18n: true
+          - label: "Become a Partner"
+            name: "becomepartner"
+            i18n: true
+            widget: "object"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "string"
+                i18n: true
+              - label: "Description"
+                name: "description"
+                widget: "text"
+                i18n: true
+
+          - label: "Appreciate"
+            name: "appreciate"
+            i18n: true
+            widget: "object"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "string"
+                i18n: true
+              - label: "Description"
+                name: "description"
+                widget: "text"
+                i18n: true
+
+          - label: "Donate SUPP"
+            name: "donatesupp"
+            i18n: true
+            widget: "object"
+            fields:
+              - label: "SUPP"
+                name: "title"
+                widget: "string"
+                i18n: true
+              - label: "Description"
+                name: "description"
+                widget: "text"
+                i18n: true
+              - label: "Value Links"
+                name: "links"
+                widget: "list"
+                i18n: true
+                max: 3
+                fields:
+                  - label: "Label"
+                    name: "label"
+                    widget: "string"
+                    i18n: true
+                  - label: "Link"
+                    name: "link"
+                    widget: "string"
+                    i18n: true
+              - label: "Custome ammount link"
+                name: "customlink"
+                widget: "string"
+                i18n: true
+
+          - label: "Donate Paypal"
+            name: "donatepaypal"
+            i18n: true
+            widget: "object"
+            fields:
+              - label: "Label"
+                name: "label"
+                widget: "string"
+                i18n: true
+              - label: "Link"
+                name: "link"
+                widget: "string"
+                i18n: true
+
+          - label: "Donate Bank transfer"
+            name: "donatebanktransfer"
+            i18n: true
+            widget: "object"
+            fields:
+              - label: "Label"
+                name: "label"
+                widget: "string"
+                i18n: true
+              - label: "Link"
+                name: "link"
+                widget: "string"
+                i18n: true
+
       - label: "Newsroom"
         name: "newsroom"
         file: "content/newsroom.md"
