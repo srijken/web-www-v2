@@ -294,6 +294,153 @@ collections:
                 widget: "text"
                 i18n: true
 
+      - label: "Ethics"
+        name: "ethics"
+        file: "content/ethics.md"
+        i18n: true
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Description"
+            name: "intro"
+            widget: text
+            i18n: true
+
+      - label: "What we do"
+        name: "whatwedo"
+        file: "content/whatwedo.md"
+        i18n: true
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Intro"
+            name: "intro"
+            widget: text
+            i18n: true
+          - label: "What we do content"
+            name: "whatwedocontent"
+            i18n: true
+            widget: "object"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "string"
+                i18n: true
+              - label: "Description"
+                name: "description"
+                widget: "text"
+                i18n: true
+          - label: "Scouting"
+            name: "scouting"
+            i18n: true
+            widget: "object"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "string"
+                i18n: true
+              - label: "Description"
+                name: "description"
+                widget: "text"
+                i18n: true
+          - label: "Assessing"
+            name: "assessing"
+            i18n: true
+            widget: "object"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "string"
+                i18n: true
+              - label: "Description"
+                name: "description"
+                widget: "text"
+                i18n: true
+          - label: "Reporting"
+            name: "reporting"
+            i18n: true
+            widget: "object"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "string"
+                i18n: true
+              - label: "Description"
+                name: "description"
+                widget: "text"
+                i18n: true
+
+      - label: "Who we are"
+        name: "whowearea"
+        file: "content/whoweare.md"
+        i18n: true
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Intro"
+            name: "intro"
+            widget: text
+            i18n: true
+          - label: "Mission and History"
+            name: "missionandhistory"
+            i18n: true
+            widget: "object"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "string"
+                i18n: true
+              - label: "Intro"
+                name: "intro"
+                widget: "text"
+                i18n: true
+              - label: "Description"
+                name: "description"
+                widget: "text"
+                i18n: true
+          - label: "Communication Manager"
+            name: "communicationmanager"
+            i18n: true
+            widget: "object"
+            fields:
+              - label: "Name"
+                name: "name"
+                widget: "string"
+                i18n: true
+              - label: "Role"
+                name: "role"
+                widget: "string"
+                i18n: true
+              - label: "Description"
+                name: "description"
+                widget: "text"
+                i18n: true
+              - label: "Image"
+                name: "image"
+                widget: "image"
+                media_folder: "/public/static"
+                required: false
+
+          - label: "Reporting"
+            name: "reporting"
+            i18n: true
+            widget: "object"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "string"
+                i18n: true
+              - label: "Description"
+                name: "description"
+                widget: "text"
+                i18n: true
+
       - label: "Contribute"
         name: "contribute"
         file: "content/contribute.md"

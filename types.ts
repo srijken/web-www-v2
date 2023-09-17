@@ -207,6 +207,32 @@ export type ContributeAttributes = {
   };
 };
 
+export type WhatwedoAttributes = {
+  title: string;
+  intro: string;
+  whatwedocontent: {
+    title: string;
+    description: string;
+  };
+  scouting: {
+    title: string;
+    description: string;
+  };
+  assessing: {
+    title: string;
+    description: string;
+  };
+  reporting: {
+    title: string;
+    description: string;
+  };
+};
+
+export type EthicsAttributes = {
+  title: string;
+  intro: string;
+};
+
 export type OptionItem = {
   label: string;
   value: string | number;
