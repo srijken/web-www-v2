@@ -1,5 +1,3 @@
-"use client";
-
 import * as React from "react";
 import "./rootlayout.scss";
 import { MainNav } from "../../components/nav/MainNav";
@@ -12,7 +10,7 @@ export interface RootLayoutProps {
 export function RootLayout({ children }: RootLayoutProps) {
   return (
     <main className="rootlayout">
-      <MainNav />
+      <MainNav lang={"en"} />
       {children}
       <Footer />
     </main>

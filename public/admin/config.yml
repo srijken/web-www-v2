@@ -4,6 +4,7 @@ backend:
   name: github
   repo: DIVD-NL/web-www-v2
   branch: main
+
 media_folder: public/static
 public_folder: static
 i18n:
@@ -17,6 +18,9 @@ collections:
     i18n:
       structure: single_file
     files:
+      ########################################################################
+      # PAGE:  Home
+      ########################################################################
       - label: "Home"
         name: "home"
         file: "content/home.md"
@@ -86,31 +90,9 @@ collections:
             fields:
               - { label: description, name: description, widget: text, i18n: true }
 
-      - label: "Testimonials"
-        name: "testimonials"
-        file: "content/testimonials.md"
-        i18n: true
-        fields:
-          - label: "Title"
-            name: "title"
-            widget: "string"
-            i18n: true
-          - label: "Testimonials"
-            name: "testimonials"
-            widget: list
-            i18n: true
-            fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "role", name: "role", widget: "string", i18n: true }
-              - { label: "Quote", name: "quote", widget: "text", i18n: true }
-              - {
-                  label: "Image",
-                  name: "image",
-                  widget: "image",
-                  media_folder: "/public/static/testimonials",
-                  required: false
-                }
-
+      ########################################################################
+      # PAGE:  FAQ
+      ########################################################################
       - label: "FAQ"
         name: "faq"
         file: "content/faq.md"
@@ -141,6 +123,9 @@ collections:
                       { label: "Description", name: "description", widget: "markdown", i18n: true }
                     ]
                 }
+      ########################################################################
+      # PAGE:  Volunteers
+      ########################################################################
       - label: "Volunteers"
         name: "volunteers"
         file: "content/volunteers.md"
@@ -171,7 +156,9 @@ collections:
                 name: "description"
                 widget: "text"
                 i18n: true
-
+      ########################################################################
+      # PAGE:  Partners
+      ########################################################################
       - label: "Partners"
         name: "partners"
         file: "content/partners.md"
@@ -225,48 +212,9 @@ collections:
                 widget: "image"
                 media_folder: "/public/static/partners"
                 required: false
-
-      - label: "Our proudest work"
-        name: "proudestwork"
-        file: "content/proudestwork.md"
-        i18n: true
-        fields:
-          - label: "title"
-            name: "title"
-            widget: "string"
-            i18n: true
-          - label: "Our proudest work"
-            name: "ourproudestwork"
-            widget: "relation"
-            collection: "articles"
-            search_fields: ["title", "case.caseid"]
-            value_field: "{{slug}}|{{title}}|{{image}}"
-            display_fields: ["title", "case.caseid"]
-            multiple: true
-
-      - label: "Our mission"
-        name: "mission"
-        file: "content/mission.md"
-        i18n: true
-        fields:
-          - label: "Title"
-            name: "title"
-            widget: "string"
-            i18n: true
-          - label: "Description"
-            name: "description"
-            widget: text
-            i18n: true
-          - label: "Members"
-            name: members
-            widget: string
-          - label: "Total cases"
-            name: totalcases
-            widget: string
-          - label: "Vulnerable ips"
-            name: ips
-            widget: string
-
+      ########################################################################
+      # PAGE:  Contact
+      ########################################################################
       - label: "Contact"
         name: "contact"
         file: "content/contact.md"
@@ -293,21 +241,39 @@ collections:
                 name: "description"
                 widget: "text"
                 i18n: true
-
-      - label: "Ethics"
-        name: "ethics"
-        file: "content/ethics.md"
+      ########################################################################
+      # PAGE:  The Team
+      ########################################################################
+      - label: "Team"
+        name: "team"
+        file: "content/team.md"
         i18n: true
         fields:
-          - label: "Title"
-            name: "title"
-            widget: "string"
+          - label: "Teams"
+            name: "teams"
             i18n: true
-          - label: "Description"
-            name: "intro"
-            widget: text
-            i18n: true
+            widget: "list"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "string"
+                i18n: true
+              - label: "Description"
+                name: "description"
+                widget: "text"
+                i18n: true
+              - label: "Members"
+                name: "members"
+                widget: relation
+                collection: "people"
+                value_field: "{{slug}}|{{name}}|{{role}}|{{image}}"
+                display_fields: ["name"]
+                search_fields: ["name"]
+                multiple: true
 
+      ########################################################################
+      # PAGE:  What we do
+      ########################################################################
       - label: "What we do"
         name: "whatwedo"
         file: "content/whatwedo.md"
@@ -373,7 +339,9 @@ collections:
                 name: "description"
                 widget: "text"
                 i18n: true
-
+      ########################################################################
+      # PAGE:  Who we are
+      ########################################################################
       - label: "Who we are"
         name: "whowearea"
         file: "content/whoweare.md"
@@ -427,20 +395,9 @@ collections:
                 media_folder: "/public/static"
                 required: false
 
-          - label: "Reporting"
-            name: "reporting"
-            i18n: true
-            widget: "object"
-            fields:
-              - label: "Title"
-                name: "title"
-                widget: "string"
-                i18n: true
-              - label: "Description"
-                name: "description"
-                widget: "text"
-                i18n: true
-
+      ########################################################################
+      # PAGE:  Contribute
+      ########################################################################
       - label: "Contribute"
         name: "contribute"
         file: "content/contribute.md"
@@ -555,6 +512,9 @@ collections:
                 widget: "string"
                 i18n: true
 
+      ########################################################################
+      # PAGE:  Newsroom
+      ########################################################################
       - label: "Newsroom"
         name: "newsroom"
         file: "content/newsroom.md"
@@ -591,6 +551,175 @@ collections:
             search_fields: ["title", "case.caseid"]
             value_field: "{{slug}}|{{title}}|{{image}}"
             display_fields: ["title", "case.caseid"]
+
+  ########################################################################
+  #################### CONTENT BLOCKS
+  ########################################################################
+  - label: "Content Blocks"
+    name: "contentblocks"
+    i18n:
+      structure: single_file
+    files:
+      ########################################################################
+      # BLOCK:  Ethics
+      ########################################################################
+      - label: "Ethics"
+        name: "ethics"
+        file: "content/ethics.md"
+        i18n: true
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Description"
+            name: "intro"
+            widget: text
+            i18n: true
+      ########################################################################
+      # BLOCK:  Want to become part of the family
+      ########################################################################
+      - label: "Family CTA"
+        name: "familycta"
+        file: "content/familycta.md"
+        i18n: true
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Description"
+            name: "intro"
+            widget: text
+            i18n: true
+
+      ########################################################################
+      # BLOCK:  CSIRT
+      ########################################################################
+      - label: "CSIRT"
+        name: "csirt"
+        file: "content/csirt.md"
+        i18n: true
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Description"
+            name: "intro"
+            widget: text
+            i18n: true
+          - label: "Link"
+            name: "link"
+            widget: "string"
+
+      ########################################################################
+      # BLOCK:  Our proudest work
+      ########################################################################
+      - label: "Our proudest work"
+        name: "proudestwork"
+        file: "content/proudestwork.md"
+        i18n: true
+        fields:
+          - label: "title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Our proudest work"
+            name: "ourproudestwork"
+            widget: "relation"
+            collection: "articles"
+            search_fields: ["title", "case.caseid"]
+            value_field: "{{slug}}|{{title}}|{{image}}"
+            display_fields: ["title", "case.caseid"]
+            multiple: true
+      ########################################################################
+      # BLOCK:  Our Mission
+      ########################################################################
+      - label: "Our mission"
+        name: "mission"
+        file: "content/mission.md"
+        i18n: true
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Description"
+            name: "description"
+            widget: text
+            i18n: true
+          - label: "Members"
+            name: members
+            widget: string
+          - label: "Total cases"
+            name: totalcases
+            widget: string
+          - label: "Vulnerable ips"
+            name: ips
+            widget: string
+
+      ########################################################################
+      # BLOCK:  DIVD Family
+      ########################################################################
+      - label: "The DIVD family"
+        name: "divdfamily"
+        file: "content/divdfamily.md"
+        i18n: true
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Description"
+            name: "description"
+            widget: text
+            i18n: true
+          - label: "DIVD Family members"
+            name: members
+            widget: list
+            i18n: true
+            fields:
+              - label: "Name"
+                name: name
+                widget: string
+                i18n: true
+              - label: "Description"
+                name: description
+                widget: text
+                i18n: true
+              - label: "link"
+                name: link
+                widget: string
+                i18n: true
+
+      ########################################################################
+      # BLOCK:  Testimonials
+      ########################################################################
+      - label: "Testimonials"
+        name: "testimonials"
+        file: "content/testimonials.md"
+        i18n: true
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: list
+            i18n: true
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "role", name: "role", widget: "string", i18n: true }
+              - { label: "Quote", name: "quote", widget: "text", i18n: true }
+              - {
+                  label: "Image",
+                  name: "image",
+                  widget: "image",
+                  media_folder: "/public/static/testimonials",
+                  required: false
+                }
 
   - name: "people"
     label: "People"
@@ -636,7 +765,7 @@ collections:
           name: "author",
           widget: "relation",
           collection: "people",
-          value_field: "{{slug}}|{{name}}{{image}}",
+          value_field: "{{slug}}|{{name}}|{{image}}",
           display_fields: ["name"],
           search_fields: ["name"],
           default: "string"

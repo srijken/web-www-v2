@@ -233,6 +233,51 @@ export type EthicsAttributes = {
   intro: string;
 };
 
+export type FamilyCTAAttributes = {
+  title: string;
+  intro: string;
+};
+
+export type CSIRTAttributes = {
+  title: string;
+  intro: string;
+  link: string;
+};
+
+export type DIVDFamilyAttributes = {
+  title: string;
+  description: string;
+  members: {
+    name: string;
+    description: string;
+    link: string;
+  }[];
+};
+
+export type TeamAttributes = {
+  teams: {
+    title: string;
+    description: string;
+    members: string[];
+  }[];
+};
+
+export type WhoWeAreAttributes = {
+  title: string;
+  intro: string;
+  missionandhistory: {
+    title: string;
+    intro: string;
+    description: string;
+  };
+  communicationmanager: {
+    name: string;
+    role: string;
+    description: string;
+    image: string;
+  };
+};
+
 export type OptionItem = {
   label: string;
   value: string | number;

@@ -4,11 +4,10 @@ import * as React from "react";
 import { WhatwedoAttributes, Lang, MarkdownPage } from "types";
 import { attributes } from "content/whatwedo.md";
 import { PageSection } from "ui/page/PageSection";
-import { FaqLayout } from "components/faq/FaqLayout";
 import { PageLayout } from "ui/page/PageLayout";
 import { ProudestWorkLayout } from "components/case/ProudestWorkLayout";
 import { TestimonialLayout } from "components/testimonial/TestimonialLayout";
-import { EthicsLayout } from "components/ethics/EthicsLayout";
+import { EthicsLayout } from "components/blocks/EthicsLayout";
 
 export interface WhatWeDoHomeProps {
   lang: Lang;

@@ -1,39 +1,37 @@
 import * as React from "react";
-import classnames from "classnames/bind";
-import styles from "./nav.module.scss";
+import cx from "classnames";
+
 import { IconExternalLink } from "../../ui/icons";
 import { Toggle } from "../../ui/toggle";
 import { Lang } from "types";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 
-const cx = classnames.bind(styles);
-
 export interface SubNavProps {
-  isOpen: boolean;
   lang: Lang;
 }
 
-export function SubNav({ isOpen, lang }: SubNavProps) {
-  const p = usePathname();
-  const router = useRouter();
+export function SubNav({ lang }: SubNavProps) {
+  // const p = usePathname();
+  // const router = useRouter();
 
-  const switchLanguage = (l: Lang) => {
-    if (l !== lang) {
-      if (!p.startsWith("/nl") && !p.startsWith("/en")) {
-        router.push(`/${l}${p}`);
-        return;
-      }
-      let base = p.substring(3);
-      router.push(`/${l}${base}`);
-    }
-  };
+  // const switchLanguage = (l: Lang) => {
+  //   if (l !== lang) {
+  //     if (!p.startsWith("/nl") && !p.startsWith("/en")) {
+  //       router.push(`/${l}${p}`);
+  //       return;
+  //     }
+  //     let base = p.substring(3);
+  //     router.push(`/${l}${base}`);
+  //   }
+  // };
 
   return (
     <nav
+      id="divd-sub-nav"
       className={cx({
         sub: true,
-        active: isOpen
+        active: false
       })}
     >
       <article>
@@ -100,7 +98,7 @@ export function SubNav({ isOpen, lang }: SubNavProps) {
           </div>
         </section>
         <section>
-          <Toggle
+          {/* <Toggle
             label="Language"
             value={lang}
             onChange={(v) => switchLanguage(v as Lang)}
@@ -108,7 +106,7 @@ export function SubNav({ isOpen, lang }: SubNavProps) {
               { label: "English", value: "en" },
               { label: "Dutch", value: "nl" }
             ]}
-          />
+          /> */}
           {/* <Toggle
             dir="vertical"
             label="Screenmode"

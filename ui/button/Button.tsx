@@ -1,21 +1,21 @@
 import * as React from "react";
-import { Button as AriaButton, ButtonProps as AriaButtonProps } from "@ariakit/react";
 import styles from "./button.module.scss";
 import classnames from "classnames/bind";
 
 const cx = classnames.bind(styles);
 
-export interface ButtonProps extends AriaButtonProps {
+export interface ButtonProps {
   size: "sm" | "md" | "lg";
   isInverse?: boolean;
   isPrimary?: boolean;
   isSecondary?: boolean;
   leftIcon?: React.ReactNode;
+  children: React.ReactNode;
 }
 
-export function Button({ size, isInverse, isPrimary, isSecondary, leftIcon, children, ...props }: ButtonProps) {
+export function Button({ size, isInverse, isPrimary, isSecondary, leftIcon, children }: ButtonProps) {
   return (
-    <AriaButton
+    <button
       className={cx({
         "button-base": true,
         button: true,
@@ -23,12 +23,11 @@ export function Button({ size, isInverse, isPrimary, isSecondary, leftIcon, chil
         primary: isPrimary,
         secondary: isSecondary
       })}
-      {...props}
     >
       <>
         {leftIcon && <span className={styles.icon}>{leftIcon}</span>}
         {children}
       </>
-    </AriaButton>
+    </button>
   );
 }

@@ -1,11 +1,11 @@
 import * as React from "react";
-import { Button as AriaButton, ButtonProps as AriaButtonProps } from "@ariakit/react";
+
 import styles from "./button.module.scss";
 import classnames from "classnames/bind";
 
 const cx = classnames.bind(styles);
 
-export interface IconButtonProps extends AriaButtonProps {
+export interface IconButtonProps {
   icon: React.ReactNode;
   size?: "sm" | "md" | "lg";
   isInverse?: boolean;
@@ -14,18 +14,9 @@ export interface IconButtonProps extends AriaButtonProps {
   isRound?: boolean;
 }
 
-export function IconButton({
-  icon,
-  size = "md",
-  isInverse,
-  isPrimary,
-  isSecondary,
-  isRound,
-  children,
-  ...props
-}: IconButtonProps) {
+export function IconButton({ icon, size = "md", isInverse, isPrimary, isSecondary, isRound }: IconButtonProps) {
   return (
-    <AriaButton
+    <button
       className={cx({
         "button-base": true,
         "icon-button": true,
@@ -34,9 +25,8 @@ export function IconButton({
         secondary: isSecondary,
         round: isRound
       })}
-      {...props}
     >
       <>{icon}</>
-    </AriaButton>
+    </button>
   );
 }

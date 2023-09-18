@@ -23,3 +23,23 @@ body {
 p.pre {
   white-space: pre-wrap;
 }
+
+
+
+.divd-family-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 32px;
+
+  .divd-family-item {
+    border-radius: 20px;
+    padding: 32px;
+    background-color: #1D1D1D;
+    color: #fff;
+
+    h3 {
+      margin-bottom: 16px;
+    }
+  }
+}

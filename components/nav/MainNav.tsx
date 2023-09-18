@@ -1,41 +1,36 @@
 import * as React from "react";
-import styles from "./nav.module.scss";
+import "./nav.scss";
 import { Logo } from "./Logo";
 import { MainNavItem } from "../../ui/nav/MainNavItem";
 import { Button } from "../../ui/button/Button";
 import { IconSearch, IconEmail } from "../../ui/icons";
-import { useParams } from "next/navigation";
 
 import { SubNav } from "./SubNav";
 import { Lang } from "types";
+import Script from "next/script";
 
-export interface MainNavProps {}
+export interface MainNavProps {
+  lang: Lang;
+}
 
-export function MainNav({}: MainNavProps) {
-  const [subNavOpen, setSubNavOpen] = React.useState(false);
-  const { lang } = useParams() as { lang: Lang };
-
-  const toggle = React.useCallback(() => {
-    setSubNavOpen((b) => !b);
-  }, []);
-
+export function MainNav({ lang }: MainNavProps) {
   return (
     <>
-      <nav className={styles.main}>
+      <nav className={"main"} id="divd-main-nav">
         <article>
           <section>
-            <Logo className={styles.logo} />
+            <Logo className={"logo"} />
           </section>
           <section>
-            <MainNavItem href="/about" onClick={toggle} isActive={true}>
+            <MainNavItem href="/about" isActive={true}>
               About DIVD
             </MainNavItem>
 
-            <MainNavItem href="/community" onClick={toggle} isActive={true}>
+            <MainNavItem href="/community" isActive={true}>
               DIVD Community
             </MainNavItem>
 
-            <MainNavItem href="/security" onClick={toggle} isActive={true}>
+            <MainNavItem href="/security" isActive={true}>
               Security
             </MainNavItem>
           </section>
@@ -50,7 +45,9 @@ export function MainNav({}: MainNavProps) {
           </section>
         </article>
       </nav>
-      <SubNav isOpen={subNavOpen} lang={lang} />
+      <SubNav lang={lang} />
+
+      <Script strategy="lazyOnload" src="/js/nav.js" />
     </>
   );
 }

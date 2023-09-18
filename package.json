@@ -14,7 +14,6 @@
     "localtest": "python3 -m http.server --directory ./out"
   },
   "dependencies": {
-    "@ariakit/react": "^0.2.10",
     "classnames": "^2.3.2",
     "next": "^13.4.7",
     "next-image-export-optimizer": "^1.8.1",
