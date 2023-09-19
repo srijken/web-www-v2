@@ -4,25 +4,29 @@ en:
     - heading: Home
       faqs:
         - title: Is this a question
-          description: yes it is
+          description: y﻿es it is
         - title: This is not a question
-          description: nope
+          description: So why is it here then?
     - heading: Subgroup
       faqs:
         - title: asd
-          description: ddsdasd
+          description: d﻿dsdasd
         - title: adass
-          description: dsddsdsds
+          description: d﻿sddsdsds
+  title: Frequently Asked Questions
+  intro: Lorem ipsum
 nl:
   faqgroups:
     - heading: Thuis
       faqs:
         - title: asd
-          description: asd
+          description: a﻿sd
         - title: asd
-          description: sd
+          description: s﻿d
     - heading: subgroep
       faqs:
         - title: asd
-          description: ad
+          description: a﻿d
+  title: Veel gestelde vragen
+  intro: Lorem ipsum
 ---
