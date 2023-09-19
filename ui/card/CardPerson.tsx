@@ -1,9 +1,7 @@
 import * as React from "react";
-import styles from "./card.module.scss";
+import "./card.scss";
 import ExportedImage from "next-image-export-optimizer";
-import classnames from "classnames/bind";
-
-const cx = classnames.bind(styles);
+import cx from "classnames";
 
 export interface CardPersonProps {
   children: React.ReactNode;
@@ -27,6 +25,7 @@ export function CardPerson({ children, name, title, imgSrc }: CardPersonProps) {
             alt={name}
             fill
             priority
+            placeholder="empty"
             style={{ objectFit: "cover" }}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />

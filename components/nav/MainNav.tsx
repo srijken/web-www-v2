@@ -1,6 +1,5 @@
 import * as React from "react";
 import "./nav.scss";
-import { Logo } from "./Logo";
 import { MainNavItem } from "../../ui/nav/MainNavItem";
 import { Button } from "../../ui/button/Button";
 import { IconSearch, IconEmail } from "../../ui/icons";
@@ -19,7 +18,7 @@ export function MainNav({ lang }: MainNavProps) {
       <nav className={"main"} id="divd-main-nav">
         <article>
           <section>
-            <Logo className={"logo"} />
+            <img src="/assets/divdlogo.svg" className="logo" />
           </section>
           <section>
             <MainNavItem href="/about" isActive={true}>
@@ -46,8 +45,7 @@ export function MainNav({ lang }: MainNavProps) {
         </article>
       </nav>
       <SubNav lang={lang} />
-
-      <Script strategy="lazyOnload" src="/js/nav.js" />
+      <script type="text/javascript" src="/js/nav.js"></script>
     </>
   );
 }

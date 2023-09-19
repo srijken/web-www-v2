@@ -1,10 +1,8 @@
 import * as React from "react";
-import styles from "./toggle.module.scss";
+import "./toggle.scss";
 
-import classnames from "classnames/bind";
+import cx from "classnames";
 import { OptionItem } from "types";
-
-const cx = classnames.bind(styles);
 
 export interface ToggleProps {
   label: string;

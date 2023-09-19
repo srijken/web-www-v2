@@ -20,6 +20,7 @@ export function PartnerCard({ p, cta }: PartnerCardProps) {
         {imgSrc && (
           <ExportedImage
             src={imgSrc}
+            placeholder="empty"
             alt={imgAlt}
             fill
             style={{ objectFit: "contain" }}

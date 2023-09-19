@@ -1,9 +1,7 @@
 import * as React from "react";
 
-import styles from "./button.module.scss";
-import classnames from "classnames/bind";
-
-const cx = classnames.bind(styles);
+import "./button.scss";
+import cx from "classnames";
 
 export interface IconButtonProps {
   icon: React.ReactNode;

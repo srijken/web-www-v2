@@ -50,6 +50,7 @@ export function WhoWeAreHome({ lang }: WhoWeAreProps) {
         <PageLayout>
           <div>
             <ExportedImage
+              placeholder="empty"
               alt={content.communicationmanager.name}
               src={workingImageURL(content.communicationmanager.image)}
               width={300}

@@ -1,8 +1,6 @@
 import Link, { LinkProps } from "next/link";
-import styles from "./button.module.scss";
-import classnames from "classnames/bind";
-
-const cx = classnames.bind(styles);
+import "./button.scss";
+import cx from "classnames";
 
 import * as React from "react";
 import { IconExternalLink } from "../icons";

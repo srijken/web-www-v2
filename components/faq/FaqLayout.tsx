@@ -4,6 +4,7 @@ import { CtaLink } from "../../ui/button/CtaLink";
 import { attributes } from "../../content/faq.md";
 import { i18nContentFromAttributes } from "lib/utils";
 import { FaqAttributes, Lang, MarkdownPage } from "types";
+import { Accordion, AccordionItem } from "ui/accordion/Accordion";
 
 export function FaqLayout({ lang = "en", skipContact = false }: { lang: Lang; skipContact?: boolean }) {
   let content = i18nContentFromAttributes(lang, attributes as MarkdownPage<FaqAttributes>);
@@ -19,15 +20,18 @@ export function FaqLayout({ lang = "en", skipContact = false }: { lang: Lang; sk
         <p>{content.intro}</p>
 
         {!skipContact && <CtaLink href={`/${lang}/contact`}>Contact</CtaLink>}
-        <CtaLink href={`/${lang}/faq`}>All faq</CtaLink>
+        <CtaLink href={`/${lang}/faq`} isInverse>
+          All faq
+        </CtaLink>
       </div>
       <div>
-        {homeFaq.faqs.map((faq, n) => (
-          <div key={n}>
-            <h3>{faq.title}</h3>
-            <div>{faq.description}</div>
-          </div>
-        ))}
+        <Accordion>
+          {homeFaq.faqs.map((faq, n) => (
+            <AccordionItem key={n} title={faq.title} active={n === 0}>
+              {faq.description}
+            </AccordionItem>
+          ))}
+        </Accordion>
       </div>
     </PageLayout>
   );

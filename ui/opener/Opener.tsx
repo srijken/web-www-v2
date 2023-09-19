@@ -1,10 +1,8 @@
 import * as React from "react";
 
 import ExportedImage from "next-image-export-optimizer";
-import styles from "./opener.module.scss";
-import classnames from "classnames/bind";
-
-const cx = classnames.bind(styles);
+import "./opener.scss";
+import cx from "classnames";
 
 export interface OpenerProps {
   imgSrc: string;
@@ -14,7 +12,7 @@ export interface OpenerProps {
 
 export function Opener({ imgSrc, imgAlt, children }: OpenerProps) {
   return (
-    <div className={styles.opener}>
+    <div className={"opener"}>
       <article>
         <section>{children}</section>
       </article>
@@ -22,6 +20,7 @@ export function Opener({ imgSrc, imgAlt, children }: OpenerProps) {
         <ExportedImage
           src={imgSrc}
           alt={imgAlt}
+          placeholder="empty"
           fill
           priority
           style={{ objectFit: "contain" }}

@@ -23,7 +23,7 @@ export function CSIRTLayout({ lang }: CSIRTLayoutProps) {
         </CtaLink>
       </div>
       <div>
-        <ExportedImage src="/static/csirt.png" alt="CSIRT" width={300} height={300} />
+        <ExportedImage src="/static/csirt.png" placeholder="empty" alt="CSIRT" width={300} height={300} />
       </div>
     </PageLayout>
   );

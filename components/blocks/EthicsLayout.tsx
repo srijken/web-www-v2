@@ -15,7 +15,7 @@ export function EthicsLayout({ lang }: EthicsLayoutProps) {
   return (
     <PageLayout columns={2}>
       <div>
-        <ExportedImage src="/static/ethics.png" alt="Ethics" width={300} height={300} />
+        <ExportedImage src="/static/ethics.png" placeholder="empty" alt="Ethics" width={300} height={300} />
       </div>
       <div>
         <h2>{content.title}</h2>

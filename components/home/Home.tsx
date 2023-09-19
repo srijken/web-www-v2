@@ -20,6 +20,7 @@ import { i18nContentFromAttributes, workingImageURL } from "lib/utils";
 import { MissionSection } from "components/mission/MissionSection";
 import { TestimonialLayout } from "components/testimonial/TestimonialLayout";
 import { ProudestWorkLayout } from "components/case/ProudestWorkLayout";
+import { FaqLayout } from "components/faq/FaqLayout";
 
 export interface HomeProps {
   lang: Lang;
@@ -90,6 +91,7 @@ export function Home({ lang = "en" }: HomeProps) {
             <ExportedImage
               src="/static/csirt_team.png"
               alt="Security.txt"
+              placeholder="empty"
               fill
               priority
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -116,6 +118,7 @@ export function Home({ lang = "en" }: HomeProps) {
             <ExportedImage
               src="/static/volunteers.png"
               alt="Become a volunteer"
+              placeholder="empty"
               fill
               priority
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -149,7 +152,9 @@ export function Home({ lang = "en" }: HomeProps) {
         </PageLayout>
       </PageSection>
 
-      <PageSection type="gradient-reverse">{/* <FaqHome lang={lang} /> */}</PageSection>
+      <PageSection type="gradient-reverse">
+        <FaqLayout lang={lang} />
+      </PageSection>
     </div>
   );
 }

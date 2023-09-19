@@ -1,8 +1,6 @@
 import * as React from "react";
-import styles from "./stats.module.scss";
-import classnames from "classnames/bind";
-
-const cx = classnames.bind(styles);
+import "./stats.scss";
+import cx from "classnames";
 
 export interface StatsProps {
   children: React.ReactNode;

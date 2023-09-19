@@ -2,10 +2,8 @@ import { PeopleAttributes, MarkdownImport } from "types";
 import * as React from "react";
 import { workingImageURL } from "lib/utils";
 import ExportedImage from "next-image-export-optimizer";
-import styles from "./person.module.scss";
-import classnames from "classnames/bind";
-
-const cx = classnames.bind(styles);
+import "./person.scss";
+import cx from "classnames";
 
 export interface PersonProps {
   lang: "en" | "nl";
@@ -54,6 +52,7 @@ export function Person({ lang, person }: PersonProps) {
             <ExportedImage
               src={imgSrc}
               alt={imgAlt}
+              placeholder="empty"
               fill
               priority
               style={{ objectFit: "cover" }}

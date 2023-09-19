@@ -1,5 +1,5 @@
 import * as React from "react";
-import styles from "./carousel.module.scss";
+import "./carousel.scss";
 
 export interface CarouselSmallProps {
   children: React.ReactNode;
@@ -7,10 +7,10 @@ export interface CarouselSmallProps {
 
 export function CarouselSmall({ children }: CarouselSmallProps) {
   return (
-    <div className={styles.smallousel}>
-      <div className={styles.smallouselnav}>L</div>
-      <div className={styles.smallouselcontent}>{children}</div>
-      <div className={styles.smallouselnav}>R</div>
+    <div className="smallousel">
+      <div className="smallouselnav">L</div>
+      <div className="smallouselcontent">{children}</div>
+      <div className="smallouselnav">R</div>
     </div>
   );
 }

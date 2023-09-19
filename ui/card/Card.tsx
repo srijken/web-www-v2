@@ -1,9 +1,7 @@
 import * as React from "react";
-import styles from "./card.module.scss";
+import "./card.scss";
 import ExportedImage from "next-image-export-optimizer";
-import classnames from "classnames/bind";
-
-const cx = classnames.bind(styles);
+import cx from "classnames";
 
 export interface CardProps {
   imgSrc: string;
@@ -32,9 +30,10 @@ export function Card({ imgSrc, imgAlt, children, tag, fit = "cover", article, ct
           <ExportedImage
             src={imgSrc}
             alt={imgAlt}
-            fill
-            priority
-            style={{ objectFit: fit }}
+            placeholder="empty"
+            className="test"
+            width={300}
+            height={300}
             sizes="(max-width: 768px) 50vw, (max-width: 1200px) 30vw, 20vw"
           />
         )}

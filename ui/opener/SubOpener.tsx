@@ -1,8 +1,6 @@
 import * as React from "react";
-import styles from "./opener.module.scss";
-import classnames from "classnames/bind";
-
-const cx = classnames.bind(styles);
+import "./opener.scss";
+import cx from "classnames";
 
 export interface SubOpenerProps {
   children: React.ReactNode;

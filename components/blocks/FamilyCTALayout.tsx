@@ -15,7 +15,7 @@ export function FamilyCTALayout({ lang }: FamilyCTALayoutProps) {
   return (
     <PageLayout columns={2}>
       <div>
-        <ExportedImage src="/static/familycta.png" alt="Ethics" width={300} height={300} />
+        <ExportedImage src="/static/familycta.png" placeholder="empty" alt="Ethics" width={300} height={300} />
       </div>
       <div>
         <h2>{content.title}</h2>

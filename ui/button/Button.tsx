@@ -1,8 +1,6 @@
 import * as React from "react";
-import styles from "./button.module.scss";
-import classnames from "classnames/bind";
-
-const cx = classnames.bind(styles);
+import "./button.scss";
+import cx from "classnames";
 
 export interface ButtonProps {
   size: "sm" | "md" | "lg";
@@ -25,7 +23,7 @@ export function Button({ size, isInverse, isPrimary, isSecondary, leftIcon, chil
       })}
     >
       <>
-        {leftIcon && <span className={styles.icon}>{leftIcon}</span>}
+        {leftIcon && <span className="icon">{leftIcon}</span>}
         {children}
       </>
     </button>
