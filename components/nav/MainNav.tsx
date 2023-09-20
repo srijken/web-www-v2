@@ -6,7 +6,6 @@ import { IconSearch, IconEmail } from "../../ui/icons";
 
 import { SubNav } from "./SubNav";
 import { Lang } from "types";
-import Script from "next/script";
 
 export interface MainNavProps {
   lang: Lang;

@@ -2,10 +2,10 @@ import * as React from "react";
 import cx from "classnames";
 
 import { IconExternalLink } from "../../ui/icons";
-import { Toggle } from "../../ui/toggle";
+//import { Toggle } from "../../ui/toggle";
 import { Lang } from "types";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+//import { usePathname, useRouter } from "next/navigation";
 
 export interface SubNavProps {
   lang: Lang;
@@ -41,16 +41,16 @@ export function SubNav({ lang }: SubNavProps) {
 
             <ul>
               <li>
-                <a href="#whoweare">Who we are</a>
+                <a href={`/${lang}/whoweare`}>Who we are</a>
               </li>
               <li>
-                <a href="#whatwedo">What we do</a>
+                <a href={`/${lang}/whatwedo`}>What we do</a>
               </li>
               <li>
-                <a href="#theteam">The team</a>
+                <a href={`/${lang}/team`}>The team</a>
               </li>
               <li>
-                <a href="#contact">Contact</a>
+                <a href={`/${lang}/contact`}>Contact</a>
               </li>
               <li>
                 <Link href={`/${lang}/faq`}>FAQ</Link>
@@ -61,19 +61,19 @@ export function SubNav({ lang }: SubNavProps) {
             <h3>DIVD Community</h3>
             <ul>
               <li>
-                <a href="#whoweare">Contribute</a>
+                <a href={`/${lang}/contribute`}>Contribute</a>
               </li>
               <li>
-                <a href="#whatwedo">Become a volunteer</a>
+                <a href={`/${lang}/volunteer`}>Become a volunteer</a>
               </li>
               <li>
-                <a href="#whoweare">Become a partner</a>
+                <a href={`/${lang}/parnters`}>Become a partner</a>
               </li>
               <li>
-                <a href="#whatwedo">Donate</a>
+                <a href={`/${lang}/contribute`}>Donate</a>
               </li>
               <li>
-                <a href="#whatwedo">Newsroom</a>
+                <a href={`/${lang}/newsroom`}>Newsroom</a>
               </li>
             </ul>
           </div>
