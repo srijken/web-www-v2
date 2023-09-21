@@ -44,7 +44,7 @@ export function MainNav({ lang }: MainNavProps) {
         </article>
       </nav>
       <SubNav lang={lang} />
-      <script type="text/javascript" src="/js/nav.js"></script>
+      {/* <script type="text/javascript" src="/js/nav.js"></script> */}
     </>
   );
 }

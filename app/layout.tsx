@@ -6,6 +6,7 @@ import "../ui/css/typography.scss";
 
 import { Source_Sans_3 } from "next/font/google";
 import { Open_Sans } from "next/font/google";
+import Script from "next/script";
 
 const headerFont = Source_Sans_3({
   weight: ["900", "400"],
@@ -25,7 +26,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Layout>{children}</Layout>
 
-        <script type="text/javascript" src="/js/ui.js"></script>
+        <Script src="/js/nav.js" />
+        <Script src="/js/ui.js" />
       </body>
     </html>
   );
