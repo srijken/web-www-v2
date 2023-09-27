@@ -16,9 +16,7 @@ class MyRequestHandler(http.server.SimpleHTTPRequestHandler):
         self.send_header("X-XSS-Protection", "1; mode=block")
         self.send_header("Content-Security-Policy",
                          "default-src 'none'; font-src 'self'; img-src 'self' data:; script-src 'self' https://unpkg.com/; style-src 'self'; connect-src 'self';")
-
         self.send_header("Referrer-Policy", "same-origin")
-
         super().end_headers()
 
 

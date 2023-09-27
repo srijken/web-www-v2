@@ -1,7 +1,8 @@
 import * as React from "react";
 import "./carousel.scss";
-import { IconButton } from "../button/IconButton";
-import { IconChevronLeft, IconChevronRight } from "../icons";
+//import { IconButton } from "../button/IconButton";
+//import { IconChevronLeft, IconChevronRight } from "../icons";
+import { CarouselController } from "./CarouselController";
 
 export interface CarouselProps {
   children: React.ReactNode;
@@ -14,9 +15,7 @@ export function Carousel({ children }: CarouselProps) {
     <div className="carousel">
       <div className="slides">{children}</div>
       <div className="pages">
-        <IconButton icon={<IconChevronLeft />} isRound isInverse />
-        <IconButton icon={<IconChevronRight />} isRound isInverse />
-        <div className="page-count">1 / {React.Children.count(children)}</div>
+        <CarouselController count={React.Children.count(children)} />
       </div>
     </div>
   );

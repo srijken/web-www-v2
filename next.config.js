@@ -1,3 +1,6 @@
+// const HtmlWebpackPlugin = require("html-webpack-plugin");
+// const CspHtmlWebpackPlugin = require("csp-html-webpack-plugin");
+
 module_exports = {
   trailingSlash: true,
   webpack: (cfg) => {
@@ -6,6 +9,14 @@ module_exports = {
       loader: "frontmatter-markdown-loader",
       options: { mode: ["react-component"] }
     });
+    // if (!cfg.plugins) cfg.plugins = [];
+    // cfg.plugins.push(
+    //   new HtmlWebpackPlugin(),
+    //   new CspHtmlWebpackPlugin({
+    //     "script-src": "",
+    //     "style-src": ""
+    //   })
+    // );
     return cfg;
   },
   images: {
