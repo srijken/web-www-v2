@@ -1,34 +1,19 @@
 {
   "name": "divd",
   "version": "1.0.0",
-  "description": "divd static website",
+  "description": "",
   "main": "index.js",
-  "author": "Birdinadream",
-  "license": "MIT",
-  "private": true,
   "scripts": {
-    "dev": "next",
-    "build": "next build && next-image-export-optimizer",
-    "start": "next start",
-    "export": "yarn run build && next export",
-    "localtest": "python3 -m http.server --directory ./out"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "classnames": "^2.3.2",
-    "next": "^13.5.3-canary.3",
-    "next-image-export-optimizer": "^1.8.5",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
+  "author": "Les Kleuver",
+  "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.22.20",
-    "@babel/preset-react": "^7.22.15",
-    "@types/node": "20.6.3",
-    "@types/react": "18.2.22",
-    "csp-html-webpack-plugin": "^5.1.0",
-    "frontmatter-markdown-loader": "^3.7.0",
-    "html-webpack-plugin": "^5.5.3",
-    "sass": "^1.67.0",
-    "typescript": "5.2.2"
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
+    "prettier": "^3.0.3",
+    "prettier-plugin-go-template": "^0.0.15",
+    "typescript": "^5.2.2"
   }
 }

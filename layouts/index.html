@@ -1,0 +1,85 @@
+{{ define "main" }}
+<div class="home-layout">
+
+  <div class="opener">
+    <article>
+      <section>
+        <h1>{{ .Title }}</h1>
+        <p className="opener">{{ .Params.intro }}</p>
+        <a class="cta" href="/{{ .Lang }}/who-we-are">{{ i18n "whoweare" }}</a>
+      </section>
+    </article>
+    <aside>
+      {{ with resources.Get "images/home/divd_intro.png" }}
+        {{ partial "tools/rimg/img" (dict "img" . "alt" "test") }}
+      {{ end }}
+    </aside>
+  </div>
+
+
+  {{ with .Params.fold }}
+    {{ partial "p/section_open" (dict "classes" (slice "inverse" "overlap-top"))}}
+      {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-3")) }}
+          <section class="card card-article">
+            <figure>
+              {{ with resources.Get "images/home/divd_intro.png" }}
+                {{ partial "tools/rimg/img" (dict "img" . "alt" "test") }}
+              {{ end }}
+              <figcaption>Case</figcaption>
+            </figure>
+            <header>
+              <h2>Test card</h2>
+              <a href="/" class="cta">{{ i18n "readmore" }}</a>
+            </header>
+          </section>
+          <section class="card card-article">
+            <figure>
+              {{ with resources.Get "images/home/divd_intro.png" }}
+                {{ partial "tools/rimg/img" (dict "img" . "alt" "test") }}
+              {{ end }}
+              <figcaption>Case</figcaption>
+            </figure>
+            <header>
+              <h2>Test card</h2>
+              <a href="/" class="cta">{{ i18n "readmore" }}</a>
+            </header>
+          </section>
+          {{ partial "card-article" .Showcase }}
+
+      {{ partial "p/layout_close" }}
+      {{ partial "p/layout_open" (dict "classes" (slice "left" "extend")) }}
+      
+        <div class="reverse">
+          <h2>What we do</h2>
+          <p>What we do description</p>
+          <a class="cta" href="/{{ .Lang }}/what-we-do">{{ i18n "learnmore"}}</a>
+        </div>
+        <div class="carousel">
+          <div class="slides">
+            {{ partial "card-article" .Showcase }}
+            {{ partial "card-article" .Showcase }}
+            {{ partial "card-article" .Showcase }}
+          </div>
+          {{ partial "carousel_controls" 3 }}
+        </div>
+      {{ partial "p/layout_close" }}
+    {{ partial "p/section_close" }}
+  {{ end }}
+
+
+
+<div>
+  {{ with .Params.fold }}
+  <h2>Fold</h2>
+  <p>{{ .Showcase }}</p>
+  <p>{{ .Received }}</p>
+  <p>{{ .Family }}</p>
+  {{ end }}
+</div>
+
+
+{{ partial "block/ethics.html" . }}
+
+
+</div>
+{{ end }}

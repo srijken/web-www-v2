@@ -1,0 +1,144 @@
+.ps {
+
+  &.ps-hide {
+    overflow-x: hidden;
+  }
+
+  &.ps-inverse {
+    background-color:#1D1D1D; 
+  }
+
+  &.ps-primary {
+    background-color: var(--brand);
+  }
+
+  &.ps-gradient {
+    background: linear-gradient(3.3deg, #FFFFFF 59.39%, rgba(61, 220, 235, 0.2) 97.41%);
+  }
+
+  &.ps-gradient-reverse {
+    background: linear-gradient(to top, rgba(61, 220, 235, 0.2) 50%, #fff 100%);
+  }
+
+
+  &.ps-overlap {  
+    background: linear-gradient(to bottom, #fff 0%, #fff 64px, #1D1D1D 64px, #1D1D1D 100%);
+    .ps-container {
+      
+      background: transparent url("/assets/bubble.png") no-repeat 60% 120px;
+    }
+  }
+
+
+  &.ps-overlap-top {
+    .ps-container {
+      position: relative;
+      top: -128px;
+    }
+  }
+
+  &.ps-overlap-bottom {
+    .ps-container {
+      position: relative;
+      bottom: -96px;
+    }
+  }
+
+
+  &.ps-round {
+    padding-top: 64px;
+
+    &.ps-round-topright {
+      border-top-right-radius: 300px; /* TODO: var */
+    }
+    
+    &.ps-round-topleft {
+      border-top-left-radius: 300px;
+    }
+    
+    &.ps-round-bottomright {
+      border-bottom-right-radius: 300px;
+    }
+    
+    &.ps-round-bottomleft {
+      border-bottom-left-radius: 300px;
+    }
+  }
+
+
+  &.ps-article {
+    .ps-container {
+      background-color: white;
+    }
+  }
+
+}
+
+
+
+.pl {
+  display: flex;
+  padding: 64px 0;
+
+  .pl-filler {
+    flex: 0 0 var(--rest);
+  }
+
+  .pl-content {
+    flex: 0 0 var(--cw);
+    padding: 0 32px;
+
+    &.pl-extend {
+      flex: 0 0 calc(var(--cw) + var(--rest));
+      overflow-x: hidden;
+      padding-right: 0;
+    }
+
+
+    &.pl-columns {
+      display: grid;
+      grid-gap: 32px;
+
+
+      h1, h2, h3 {
+        grid-column: 1 / -1;
+      }
+
+      &.pl-columns-2 {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      &.pl-columns-3 {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      &.pl-columns-4 {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+
+      &.pl-vcenter {
+        align-items: center;
+      }
+    }
+
+    &.pl-left {
+      display: grid;
+      grid-gap: 32px;
+      grid-template-columns: 1fr 2fr;
+    }
+    &.pl-right {
+      display: grid;
+      grid-gap: 32px;
+      grid-template-columns: 2fr 1fr;
+    }
+
+
+    &.pl-article {
+      background-color: white;
+      padding-top: 32px;
+      padding-bottom: 32px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 300px;
+    }
+  }
+}

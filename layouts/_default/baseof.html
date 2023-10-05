@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ .Lang | default "en" }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>{{ .Title }}</title>
+
+    {{ partial "styles.html" . }}
+    {{ partial "js.html" . }}
+
+  </head>
+  <body>
+    {{ partial "mainnav.html" . }}
+    
+    <!-- Code that all your templates share, like a header -->
+    {{ block "main" . }}
+    <!-- The part of the page that begins to differ between templates -->
+    {{ end }} {{ block "footer" . }}
+    <!-- More shared code, perhaps a footer but that can be overridden if need be in  -->
+    {{ end }}
+  </body>
+</html>

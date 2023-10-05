@@ -1,0 +1,18 @@
+baseURL: "/"
+title: "Dutch Institute for Vulnerability Disclosure"
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: false
+
+languages:
+  en:
+    disabled: false
+    languageCode: en-US
+    languageDirection: ltr
+    languageName: English
+    weight: 1
+  nl:
+    disabled: false
+    languageCode: nl-NL
+    languageDirection: ltr
+    languageName: Nederlands
+    weight: 2

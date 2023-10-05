@@ -1,0 +1,158 @@
+
+
+nav.nav-container {
+  position: fixed;
+  top: 10px;
+  left: 0;
+  width: calc(var(--cw) + var(--rest));
+  z-index: 3;
+
+  .main-nav {
+    position: absolute;
+    width: calc(var(--cw) + var(--rest));
+    top: 0;
+    background-color: black;
+    border-top-right-radius: 64px;
+    border-bottom-right-radius: 64px;
+
+    padding: 24px 0;
+
+    padding-left: var(--rest);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    figure {
+      flex: 0 0 120px;
+      .logo {
+        width: 96px;
+      }
+    }
+
+    article {
+      display: flex;
+      a {
+        padding: 0 24px;
+        color: #fff;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 14px;
+    
+    
+        letter-spacing: 0.04em;
+    
+        svg {
+          fill: white;
+          margin-left: 8px;
+          height: 8px;
+          width: 14px;
+          transition: transform 0.5s ease-in-out;
+        }
+
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+          color: var(--brand);
+
+          svg {
+            transform: rotate(180deg);
+            fill: var(--brand);
+          }
+        }
+      }
+    }
+  }
+
+  .sub-nav {
+    display: none;
+  }
+
+  &:hover {
+    .sub-nav {
+      display: block;
+    }
+  }
+}
+
+
+nav.sub-nav {
+  padding-top: 96px;
+  box-shadow: 0px 4px 20px 0px #0000001A;
+  border-bottom-right-radius: 64px;
+  border-top-right-radius: 64px;
+  overflow: hidden;
+  background: linear-gradient(to right,#fff 0%, #fff 50%, #F2F2F2 51%);
+
+  display: none;
+  justify-content: center;
+  
+  z-index: 2;
+
+
+  &.active {
+    display: flex;
+  }
+
+  article {
+    padding-left: calc(var(--rest) + 110px);
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+  }
+
+
+  section:first-of-type {
+    background-color: white;
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: space-between;
+
+    padding: 32px;
+
+    h3 {
+      text-transform: uppercase;
+      font-size: 1em;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      
+      li {
+        margin-bottom: 10px;
+        a {
+          font-size: 1.2em;
+          text-decoration: none;
+          border-bottom: none;
+          font-weight: 300;
+          opacity: 0.8;
+          &:hover {
+            text-decoration: underline;
+          }
+
+
+          svg {
+            width: 11px;
+          }
+        }
+      }
+    }
+    
+  }
+
+  section:last-of-type {
+
+    flex: 0 0 300px;
+    background-color: #F2F2F2;
+
+    padding: 32px;
+  }
+}

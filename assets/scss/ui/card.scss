@@ -1,0 +1,101 @@
+.card {
+  
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  figure {
+    background-color: #e3e3e3;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    
+    position: relative;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    figcaption {
+      position: absolute;
+      left: 16px;
+      bottom: 10px;
+      border: 1px solid white;
+      border-radius: 16px;
+      color: white;
+      padding: 4px 8px;
+      text-transform: uppercase;
+    }
+  }
+
+  header {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: white;
+
+    padding: 16px;
+
+    
+
+    h2 {
+      font-weight: 700;
+      font-size: 1.5em;
+      line-height: 1.2em;
+      margin-bottom: 16px;
+      font-family: var(--font-text);
+    }
+  }
+}
+
+
+.card-article {
+  figure {
+    clip-path: polygon(360px 220px, 0px calc(100% - 0px), 0px 23.54px, 0px 23.54px, 0.30812px 19.72188px, 1.20016px 16.09984px, 2.62764px 12.72236px, 4.54208px 9.63792px, 6.895px 6.895px, 9.63792px 4.54208px, 12.72236px 2.62764px, 16.09984px 1.20016px, 19.72188px 0.30812px, 23.54px 0, calc(100% - 77.06px) 0px, calc(100% - 77.06px) 0px, calc(100% - 75.89428px) 0.04116px, calc(100% - 74.73984px) 0.16368px, calc(100% - 73.60076px) 0.36612px, calc(100% - 72.48112px) 0.64704px, calc(100% - 71.385px) 1.005px, calc(100% - 70.31648px) 1.43856px, calc(100% - 69.27964px) 1.94628px, calc(100% - 68.27856px) 2.52672px, calc(100% - 67.31732px) 3.17844px, calc(100% - 66.4px) 3.9px, calc(100% - 5.86px) 55.05px, calc(100% - 5.86px) 55.05px, calc(100% - 4.7943899999999px) 56.03488px, calc(100% - 3.8259199999999px) 57.10064px, calc(100% - 2.9581299999999px) 58.23996px, calc(100% - 2.1945599999999px) 59.44552px, calc(100% - 1.5387499999999px) 60.71px, calc(100% - 0.99423999999999px) 62.02608px, calc(100% - 0.56456999999989px) 63.38644px, calc(100% - 0.25327999999996px) 64.78376px, calc(100% - 0.063909999999964px) 66.21072px, calc(100% - 0px) 67.66px, 100% calc(100% - 0.0099999999999909px)); 
+  }
+}
+
+.card-cta {
+  figure {
+    border-top-left-radius: 328px;
+    border-top-right-radius: 328px;
+    background-color: var(--brand);
+  }
+
+  header {
+    background-color: var(--brand);
+    text-align: center;
+  }
+}
+
+.card-person {
+  border-radius: 20px; 
+  padding: 16px;
+  background-color: #fff;
+
+  figure {
+    height: auto;
+    display: flex;
+    background: transparent;
+
+    aside {
+      width: 64px;
+      height: 64px;
+      flex: 0 0 64px;
+      position: relative;
+      margin-right: 16px;
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: #e3e3e3;
+    }
+  }
+
+
+  h3 {
+    padding-top: 10px;
+    padding-bottom: 8px;
+  }
+    
+
+  
+  
+}

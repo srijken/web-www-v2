@@ -1,0 +1,71 @@
+.carousel {
+  --item-width: calc(var(--cw) / 3);
+
+  overflow-x: hidden;
+
+  .slides {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    
+    padding-left: 8px;
+
+    display: flex;
+    position: relative;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: transparent;
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+
+    > * {
+      margin-right: 32px;
+      width: calc(var(--item-width) - 32px);
+
+      scroll-snap-align: start;
+      flex-shrink: 0;
+    }
+  }
+
+
+
+  .pages {
+    display: flex;
+    align-items: center;
+    color: white;
+
+
+    div {
+      margin-left: 16px;
+    }
+  }
+}
+
+
+.smallousel {
+  background-color: #fff;
+  border-radius: 64px;
+  padding: 24px 16px;
+
+  display: flex;
+
+  .smallouselnav {
+    flex: 0 0 64px;
+  }
+
+  .smallouselcontent {
+    flex: 1 1 auto;
+
+    display: flex;
+  }
+}

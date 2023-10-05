@@ -1,0 +1,101 @@
+<nav class="nav-container">
+
+  <nav class="main-nav">
+    <figure>
+      {{ with resources.GetMatch "images/global/divdlogo.svg" }}
+      <img src="{{ .RelPermalink }}" class="logo" />
+      {{ end }}
+    </figure>
+  
+
+  <article>
+    <a href="/{{ .Lang }}/about">
+      {{ i18n "nav_about" }}
+      {{ partial "svg/icon" "chevrondown" }}
+    </a>
+
+    <a href="/{{ .Lang }}/community">
+      {{ i18n "nav_community" }}
+      {{ partial "svg/icon" "chevrondown" }}
+    </a>
+
+    <a href="/{{ .Lang }}/security">
+      {{ i18n "nav_security" }}
+      {{ partial "svg/icon" "chevrondown" }}
+    </a>
+  </article>
+
+  
+  
+  </nav>
+
+  <nav class="sub-nav">
+    <article>
+      <section>
+        <div>
+          <h3>About DIVD</h3>
+
+          <ul>
+            <li>
+              <a href="{{ .Lang }}/whoweare">Who we are</a>
+            </li>
+            <li>
+              <a href="{{ .Lang }}/whatwedo">What we do</a>
+            </li>
+            <li>
+              <a href="{{ .Lang }}/team">The team</a>
+            </li>
+            <li>
+              <a href="{{ .Lang }}/contact">Contact</a>
+            </li>
+            <li>
+              <Link href="{{ .Lang }}/faq">FAQ</Link>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3>DIVD Community</h3>
+          <ul>
+            <li>
+              <a href="{{ .Lang }}/contribute">Contribute</a>
+            </li>
+            <li>
+              <a href="{{ .Lang }}/volunteer">Become a volunteer</a>
+            </li>
+            <li>
+              <a href="{{ .Lang }}/parnters">Become a partner</a>
+            </li>
+            <li>
+              <a href="{{ .Lang }}/contribute">Donate</a>
+            </li>
+            <li>
+              <a href="{{ .Lang }}/newsroom">Newsroom</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3>Security</h3>
+          <ul>
+            <li>
+              <a href="#whoweare">Code of conduct</a>
+            </li>
+            <li>
+              <a href="#whatwedo">Security policy</a>
+            </li>
+            <li>
+              <a href="#whoweare">ANBI</a>
+            </li>
+            <li>
+              <a href="#whatwedo">
+                CSIRT externallink
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        toggle stuff
+      </section>
+    </article>
+  </nav>
+</nav>

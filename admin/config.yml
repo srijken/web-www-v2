@@ -1,0 +1,177 @@
+local_backend: true
+publish_mode: editorial_workflow
+site_url: http://localhost:3000
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: static/img
+public_folder: /img
+i18n:
+  structure: multiple_files
+  locales: [en, nl]
+  default_locale: en
+
+collections:
+  ########################################################################
+  # Single Pages
+  ########################################################################
+  - name: "_index"
+    label: "Home page"
+    slug: "_index"
+    i18n: true
+    folder: "content"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Intro", name: "intro", widget: "text", i18n: true }
+      - label: "fold"
+        name: "fold"
+        i18n: true
+        widget: "object"
+        fields:
+          - label: "Showcase"
+            name: "showcase"
+            widget: "relation"
+            collection: "articles"
+            search_fields: ["title", "case.caseid"]
+            value_field: "/newsroom/articles/{{slug}}"
+            display_fields: ["title", "case.caseid"]
+            multiple: false
+          - {
+              label: "Received an email",
+              name: "received",
+              widget: "string",
+              i18n: true,
+            }
+          - { label: "Family", name: "family", widget: "string", i18n: true }
+
+  ########################################################################
+  # CONTENT BLOCKS
+  ########################################################################
+
+  # BLOCK:  Ethics #####################################################
+
+  - name: "ethics"
+    label: "Ethics"
+    folder: "content/block"
+    file: "content/block/ethics"
+    slug: "ethics"
+    create: true
+    i18n: true
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        i18n: true
+      - label: "Description"
+        name: "intro"
+        widget: text
+        i18n: true
+
+  # BLOCK:  Proudest work #####################################################
+
+  - name: "proudestwork"
+    label: "Our proudest work"
+    folder: "content/block"
+    file: "content/block/proudestwork"
+    slug: "proudestwork"
+    create: true
+    i18n: true
+    fields:
+      - label: "title"
+        name: "title"
+        widget: "string"
+        i18n: true
+      - label: "Our proudest work"
+        name: "ourproudestwork"
+        widget: "relation"
+        collection: "articles"
+        search_fields: ["title", "case.caseid"]
+        value_field: "/newsroom/articles/{{slug}}"
+        display_fields: ["title", "case.caseid"]
+        multiple: true
+
+  ########################################################################
+  # COlLECTIONS
+  ########################################################################
+
+  - name: "people"
+    label: "People"
+    i18n:
+      structure: multiple_files
+    folder: "content/people"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: name
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - {
+          label: "Image",
+          name: "image",
+          widget: "image",
+          media_folder: "/public/static/people",
+          required: false,
+        }
+      - { label: "Role", name: "role", widget: "string" }
+      - { label: "Bio", name: "bio", widget: "text", i18n: true }
+      - {
+          label: "Links",
+          name: "links",
+          widget: "list",
+          fields: [{ label: "Link", name: "link", widget: "string" }],
+        }
+
+  - label: "Articles"
+    name: "articles"
+    i18n:
+      structure: multiple_files
+    folder: "content/newsroom/articles"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - {
+          label: "Tag",
+          name: "tag",
+          widget: "select",
+          options: ["case", "news", "updates", "culture"],
+        }
+      - { label: "Intro", name: "intro", widget: "text", i18n: true }
+      - {
+          label: "Image",
+          name: "image",
+          widget: "image",
+          media_folder: "/public/static/articles",
+          required: false,
+        }
+      - {
+          label: "case",
+          required: false,
+          name: "case",
+          widget: "object",
+          collapsed: true,
+          fields:
+            [
+              {
+                label: "Case ID",
+                name: "caseid",
+                widget: "string",
+                required: false,
+              },
+              {
+                label: "Case closed",
+                name: "closed",
+                widget: "boolean",
+                required: false,
+              },
+              {
+                label: "Case link",
+                name: "link",
+                widget: "string",
+                required: false,
+              },
+            ],
+        }
+      - { label: "Body", name: "body", widget: "markdown", i18n: true }
