@@ -1,0 +1,29 @@
+{{ $page := .Site.GetPage "/partners" }}
+
+{{ with $page }}
+  {{ partial "p/layout_open" (dict "classes" (slice "default")) }}
+    <div class="reverse">
+      <h2>{{ .Params.partnerstitle }}</h2>
+    </div>
+    <div class="smallousel">
+      <div class="smallouselnav">L</div>
+      <div class="smallouselcontent">
+          {{ range $index, $element := .Params.partnerlist }}
+            <section>
+              {{ with resources.Get .image }} 
+                {{ partial "tools/rimg/img" (dict "img" . "alt" $element.name) }}
+              {{ end }}
+            </section>
+
+          {{ end }}
+      </div>
+      <div class="smallouselnav">R</div>
+    </div>
+    <div class="reverse">
+      <p>
+        {{ .Params.partnersintro }}
+      </p>
+      <a href="#" class="cta">{{ i18n "becomeapartner" }}</a>
+    </div>
+  {{ partial "p/layout_close" }}
+{{ end }}

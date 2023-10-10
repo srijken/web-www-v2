@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+<div class="home-layout volunteer" style="padding-top: 164px">
+  
+  {{ range .Params.faqgroups }}
+    <h3>{{ .heading }}</h3>
+    {{ range .faqs }}
+      <div class="faq">
+        <h4>{{ .title }}</h4>
+        <p>{{ .description }}</p>
+      </div>    
+
+    {{ end }}
+
+  {{ end }}
+</div>
+
+{{ end }}

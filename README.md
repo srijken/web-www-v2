@@ -1,29 +1,57 @@
+# Prerequisites
+- golang
+- https://gohugo.io
+- https://just.systems/ (optional)
+- npm
+- node
+
+
 # Setup
 ```sh
-yarn
-yarn dev
+npm install
 ```
-[open browser](http://localhost:3000)
 
 
 # Local development
 
-in a seperate terminal:
+## Website
 ```sh
-npx netlify-cms-proxy-server
+hugo server
+open http://localhost:1313
 ```
 
-Start the website:
-```sh
-yarn run dev
+## Local admin
+Change the toplines in `./admin/config.yaml` to:
+
+```yaml
+local_backend: true
+publish_mode: editorial_workflow
+site_url: http://localhost:1313
+backend:
+  name: git-gateway
+  branch: main
 ```
 
 Run the admin
-```
-http://localhost:3000/admin/index.html
-```
-or
+
 ```sh
-cd public/admin
-python -m http.server
+just admin
+open http://localhost:8000
+just admin-stop #when done
+
+# equivalent to:
+
+npx netlify-cms-proxy-server
+python3 -m http.server --directory ./admin
 ```
+
+## Test production version
+```sh
+just prod-test
+open http://localhost:8000
+
+# equivalent to:
+
+python3 serve.py
+```
+

@@ -9,3 +9,6 @@ admin-stop:
 fresh:
   rm -rf ./public/*
   hugo
+
+prod_test:
+  ./serve.py

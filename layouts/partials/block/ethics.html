@@ -1,9 +1,17 @@
-{{ with .Site.GetPage "/block/ethics" }}
+{{ $blocks := .Site.GetPage "/block" }}
 
-<div>
-  <h3>Ethics Test</h3>
-  <h4>{{ .Params.Title }}</h4>
-  <p>{{ .Params.Intro }}</p>
-</div>
+
+{{ with $blocks.Params.ethics }}
+  {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }} 
+    <div class="image-container">
+      {{ with resources.Get "images/global/ethics.png" }} 
+        {{ partial "tools/rimg/img" (dict "img" . "alt" "Ethics") }}
+      {{ end }}
+    </div>
+    <div>
+      <h2>{{ .title }}</h2>
+      <p>{{ .intro }}</p>
+    </div>
+  {{ partial "p/layout_close" }}
 
 {{ end }}

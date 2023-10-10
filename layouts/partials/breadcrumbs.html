@@ -1,0 +1,20 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <!-- Link to the homepage -->
+    <li class="breadcrumb-item">
+      <a href="{{ "/" | relLangURL }}">Home</a>
+    </li>
+    
+    <!-- Iterating through the page ancestors -->
+    {{ range .Page.Ancestors }}
+      <li class="breadcrumb-item">
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </li>
+    {{ end }}
+    
+    <!-- Display the current page -->
+    <li class="breadcrumb-item active" aria-current="page">
+      {{ .Page.Title }}
+    </li>
+  </ol>
+</nav>

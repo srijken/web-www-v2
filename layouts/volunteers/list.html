@@ -1,0 +1,47 @@
+{{ define "main" }}
+
+<div class="home-layout volunteer">
+  <div class="opener">
+    <article>
+      <section>
+        <h1>{{ .Title }}</h1>
+        <p className="opener">{{ .Params.intro }}</p>
+        <a class="cta" href="/{{ .Lang }}/who-we-are">{{ i18n "whoweare" }}</a>
+      </section>
+    </article>
+    <aside>
+      {{ with resources.Get "images/home/divd_intro.png" }} 
+        {{ partial "tools/rimg/img" (dict "img" . "alt" "test") }}
+      {{ end }}
+    </aside>
+  </div>
+
+  {{ partial "p/section_open" (dict "classes" (slice "inverse"))}} 
+    {{ partial "p/layout_open" (dict "classes" (slice "default")) }} 
+      <div class="core-values">
+        <h2>{{ .Params.corevaluestitle }}</h2>
+        <article>
+          {{ range $index, $elements := .Params.corevalues }}
+            <section key={i}>
+              <h3>
+                <span>{{ add $index 1 }}</span>
+                {{ .title }}
+              </h3>
+              <p>{{ .description }}</p>
+            </section>
+          {{ end }}
+        </article>
+      </div>
+    {{ partial "p/layout_close" }}
+  {{ partial "p/section_close" }}
+
+  {{ partial "p/section_open" (dict "classes" (slice "gradient"))}} 
+
+    {{ partial "block/faq" . }}
+    
+    {{ partial "block/proudestwork" . }}
+
+  {{ partial "p/section_close" }}
+</div>
+
+{{ end }}

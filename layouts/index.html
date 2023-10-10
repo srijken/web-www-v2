@@ -1,6 +1,5 @@
 {{ define "main" }}
 <div class="home-layout">
-
   <div class="opener">
     <article>
       <section>
@@ -10,76 +9,134 @@
       </section>
     </article>
     <aside>
-      {{ with resources.Get "images/home/divd_intro.png" }}
+      {{ with resources.Get "images/home/divd_intro.png" }} 
         {{ partial "tools/rimg/img" (dict "img" . "alt" "test") }}
       {{ end }}
     </aside>
   </div>
 
+  {{ with .Params.fold }} 
+    {{ partial "p/section_open" (dict "classes" (slice "inverse" "overlap-top"))}} 
+      {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-3")) }} 
+        
+        {{ partial "card-article" .Showcase }}
 
-  {{ with .Params.fold }}
-    {{ partial "p/section_open" (dict "classes" (slice "inverse" "overlap-top"))}}
-      {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-3")) }}
-          <section class="card card-article">
-            <figure>
-              {{ with resources.Get "images/home/divd_intro.png" }}
-                {{ partial "tools/rimg/img" (dict "img" . "alt" "test") }}
-              {{ end }}
-              <figcaption>Case</figcaption>
-            </figure>
-            <header>
-              <h2>Test card</h2>
-              <a href="/" class="cta">{{ i18n "readmore" }}</a>
-            </header>
-          </section>
-          <section class="card card-article">
-            <figure>
-              {{ with resources.Get "images/home/divd_intro.png" }}
-                {{ partial "tools/rimg/img" (dict "img" . "alt" "test") }}
-              {{ end }}
-              <figcaption>Case</figcaption>
-            </figure>
-            <header>
-              <h2>Test card</h2>
-              <a href="/" class="cta">{{ i18n "readmore" }}</a>
-            </header>
-          </section>
-          {{ partial "card-article" .Showcase }}
+        {{ partial "card" (dict 
+            "imageSource" "images/global/received_email.png" 
+            "title" .Received 
+            "linkTitle" (i18n "readmore") 
+            "link" "/test" 
+            "classes" (slice "article")) 
+        }}
+
+        {{ partial "card" (dict 
+            "imageSource" "images/global/divd_family.png" 
+            "title" .Family 
+            "linkTitle" (i18n "readmore") 
+            "link" "/test" 
+            "classes" (slice "cta")) 
+        }}
+        
 
       {{ partial "p/layout_close" }}
+    {{ end }}
+    {{ with .Params.whatwedo }}
       {{ partial "p/layout_open" (dict "classes" (slice "left" "extend")) }}
-      
-        <div class="reverse">
-          <h2>What we do</h2>
-          <p>What we do description</p>
-          <a class="cta" href="/{{ .Lang }}/what-we-do">{{ i18n "learnmore"}}</a>
-        </div>
-        <div class="carousel">
-          <div class="slides">
-            {{ partial "card-article" .Showcase }}
-            {{ partial "card-article" .Showcase }}
-            {{ partial "card-article" .Showcase }}
+        
+          <div class="reverse">
+            <h2>{{ .Title }}</h2>
+            <p>{{ .description }}</p>
+            <a class="cta" href="/{{ .Lang }}/what-we-do">{{ i18n "learnmore"}}</a>
           </div>
-          {{ partial "carousel_controls" 3 }}
-        </div>
+          <div class="carousel">
+            <div class="slides">
+              {{ partial "card" (dict 
+                "imageSource" "images/global/scout.png" 
+                "title" .t1 
+                "linkTitle" (i18n "readmore") 
+                "link" "/test" 
+                "classes" (slice "cta")) 
+              }}
+              {{ partial "card" (dict 
+                "imageSource" "images/global/assessing.png" 
+                "title" .t2 
+                "linkTitle" (i18n "readmore") 
+                "link" "/test" 
+                "classes" (slice "cta")) 
+              }}
+              {{ partial "card" (dict 
+                "imageSource" "images/global/scout.png" 
+                "title" .t3 
+                "linkTitle" (i18n "readmore") 
+                "link" "/test" 
+                "classes" (slice "cta")) 
+              }}
+            </div>
+            {{ partial "carousel_controls" 3 }}
+          </div>
+        {{ partial "p/layout_close" }}
+      
+    {{ end }}
+  {{ partial "p/section_close" }} 
+  
+
+  {{ partial "p/section_open" (dict "classes" (slice "gradient"))}} 
+    {{ partial "block/proudestwork" . }}
+  {{ partial "p/section_close" }} 
+
+  {{ partial "block/mission" .}}
+
+  
+    {{ partial "p/section_open" (dict "classes" (slice "default"))}} 
+      {{ partial "block/testimonials" . }}
+      {{ with .Params.helpushelpyou }}
+        {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
+          <div>
+            <h2>{{ .Title }}</h2>
+            <p>{{ .description }}</p>
+            <p>&nbsp;</p>
+            <a class="cta" href="/temp">Download Security.txt</a>
+            <p>&nbsp;</p>
+          </div>
+          <div class="image-container">
+            {{ with resources.Get "images/global/csirt_team.png" }} 
+              {{ partial "tools/rimg/img" (dict "img" . "alt" "CSIRT Team") }}
+            {{ end }}
+          </div>
+        {{ partial "p/layout_close" }}
+      {{ end }}
+    {{ partial "p/section_close" }}
+
+    {{ partial "p/section_open" (dict "classes" (slice "primary" "round" "round-topleft"))}} 
+      {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
+        {{ with .Params.volunteer }}
+          <div>
+            <h2>{{ .Title }}</h2>
+            {{ range .checklist }}
+              <p> {{ .item }}</p>
+            {{ end }}
+
+            <a class="cta" href="/{{ .Lang }}/volunteers">{{ i18n "becomeavolunteer" }}</a>
+            <a class="cta inverse external" href="/temp">
+              {{ i18n "openroles" }}
+              {{ partial "svg/icon" "external" }}
+            </a>
+          </div>
+          <div class="image-container">
+            {{ with resources.Get "images/global/volunteers.png" }} 
+              {{ partial "tools/rimg/img" (dict "img" . "alt" "Become a volunteer") }}
+            {{ end }}
+          </div>
+        {{ end }}
       {{ partial "p/layout_close" }}
     {{ partial "p/section_close" }}
-  {{ end }}
 
+    {{ partial "p/section_open" (dict "classes" (slice "inverse" "round" "round-bottomright"))}} 
+        {{ partial "block/partners_carousel" .}}
+    {{ partial "p/section_close" }}
 
-
-<div>
-  {{ with .Params.fold }}
-  <h2>Fold</h2>
-  <p>{{ .Showcase }}</p>
-  <p>{{ .Received }}</p>
-  <p>{{ .Family }}</p>
-  {{ end }}
-</div>
-
-
-{{ partial "block/ethics.html" . }}
-
-
+    {{ partial "p/section_open" (dict "classes" (slice "gradient"))}} 
+      {{ partial "block/faq" . }}
+    {{ partial "p/section_close" }}
 </div>
 {{ end }}

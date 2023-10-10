@@ -2,20 +2,20 @@
 {{ $page := site.GetPage "page" . }}
 
 {{ with $page }}
+  {{ $defaultImage := "images/global/received_email.png" }}
+  {{ $imageFromParam := .Params.image | default $defaultImage }}
+  {{ $imageSource := strings.TrimPrefix "/assets" $imageFromParam }}
+  {{ $tag := cond (isset .Params "tag") .Params.tag "" }}
+  {{ $link := print "/" .RelPermalink }}
 
-<section class="card card-article">
-  <figure>
-    {{ with resources.Get "images/home/divd_intro.png" }}
-      {{ partial "tools/rimg/img" (dict "img" . "alt" "test") }}
-    {{ end }}
-    <figcaption>Case</figcaption>
-  </figure>
-  <header>
-    <h2>{{ .Title }}</h2>
-    <a href="/" class="cta">{{ i18n "readmore" }}</a>
-  </header>
-</section>
-
+  {{ partial "card" (dict 
+    "imageSource" $imageSource
+    "title" .Title 
+    "tag" $tag
+    "linkTitle" (i18n "readmore") 
+    "link" $link
+    "classes" (slice "article")) 
+  }}
 {{ else }}
 
   <div>Card not found</div>

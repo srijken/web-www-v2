@@ -1,0 +1,23 @@
+{{ define "main" }}
+  <div class="article-layout">
+    {{ partial "p/section_open" (dict "classes" (slice "default"))}} 
+      {{ partial "p/layout_open" (dict "classes" (slice "left" "article")) }}
+        <div>
+          {{ range .Params.teams }}
+            <div>
+              <h3>{{ .title }}</h3>
+              <p>{{ .description }}</p>
+              <div>
+                {{ range .members }}
+                  <div>
+                    {{ . }}
+                  </div>
+                {{ end }}
+              </div>
+            </div>
+          {{ end }}
+        </div>
+      {{ partial "p/layout_close" }}
+    {{ partial "p/section_close" }}
+  </div>
+{{ end }}

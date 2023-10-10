@@ -6,7 +6,7 @@ import os
 class MyRequestHandler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
 
-        super().__init__(*args, directory="out", **kwargs)
+        super().__init__(*args, directory="public", **kwargs)
 
     def end_headers(self):
         self.send_header("Strict-Transport-Security",

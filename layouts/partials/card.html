@@ -1,0 +1,38 @@
+{{/* _partials/card.html */}}
+{{ $imageSource := .imageSource }}
+{{ $title := .title }}
+{{ $linkTitle := .linkTitle }}
+{{ $link := .link }}
+{{ $classes := .classes }}
+{{ $tag := .tag }}
+{{ $name := .name }}
+{{ $content := .content }}
+
+<section class="card {{ range $classes }} card-{{ . }} {{ end }}">
+    <figure>
+        {{ with resources.Get $imageSource }} 
+            {{ partial "tools/rimg/img" (dict "img" . "alt" $linkTitle) }} 
+        {{ else }}
+            <img src="#" alt="Default alt text" />
+        {{ end }}
+        {{ if $tag }}
+            <figcaption>{{ $tag }}</figcaption>
+        {{ end }}
+    </figure>
+    <header>
+        {{ if $name }}
+            <h3>{{ $name }}</h3>
+            <h6>{{ $title }}</h6>
+        {{ else }}
+            <h2>{{ $title }}</h2>
+        {{ end }}
+        {{ if $link }}
+            <div class="test">
+                <a href="{{ $link }}" class="cta">{{ $linkTitle }}</a>
+            </div>
+        {{ end }}
+    </header>
+    {{ if $content }}
+        <p class="content">{{ $content }}</p>
+    {{ end }}
+</section>

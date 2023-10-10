@@ -67,5 +67,9 @@
     flex: 1 1 auto;
 
     display: flex;
+
+    img {
+      max-height: 64px;
+    }
   }
 }

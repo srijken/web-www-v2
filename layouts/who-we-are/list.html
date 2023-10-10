@@ -1,0 +1,52 @@
+{{ define "main" }}
+  <div class="topic-layout whoweare">
+    
+    <div class="topic-intro reverse">
+      {{ partial "breadcrumbs.html" . }}
+      {{ partial "p/layout_open" (dict "classes" (slice "right")) }}
+        <div>
+          <h1>{{ .Params.opener }}</h1>
+        </div>
+        <div>
+          <p>{{ .Params.intro }}</p>
+          <a class="cta secondary" href="#mission">{{ i18n "learnmore" }}</a>
+        </div>
+      {{ partial "p/layout_close" }}
+    </div>
+
+    {{ partial "p/section_open" (dict "classes" (slice "gradient"))}} 
+
+      {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
+        {{ with .Params.missionandhistory }}
+          <div>
+            <h2>{{ .title }}</h2>
+            <p class="pre">{{ .intro }}</p>
+          </div>
+          <div>
+            <p class="pre">{{ .description }}</p>
+          </div>
+        {{ end }}
+      {{ partial "p/layout_close" }}
+
+      {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
+        {{ with .Params.communicationmanager }}
+          <div>
+            {{ with resources.Get "images/whoweare/lucinda.png" }} 
+              {{ partial "tools/rimg/img" (dict "img" . "alt" "Communication Maanger") }}
+            {{ end }}
+            <h3>{{ .name }}</h3>
+            <h3>{{ .role }}</h3>
+            <h3>{{ .description }}</h3>
+            <a class="cta" href="{{ "team/" | relLangURL }}">{{ i18n "meetthewholeteam" }}</a>
+          </div>
+        {{ end }}
+      {{ partial "p/layout_close" }}
+
+
+      {{ partial "block/divdfamily" . }}
+      {{ partial "block/familycta" . }}
+      {{ partial "block/csirt" . }}
+
+    {{ partial "p/section_close" }}
+  </div>
+{{ end }}

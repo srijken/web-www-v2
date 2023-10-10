@@ -1,0 +1,16 @@
+
+{{ $blocks := .Site.GetPage "/block" }}
+
+{{ with $blocks.Params.proudestwork }}
+  {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-3")) }} 
+    <h2>{{ .Title }}</h2>
+    {{ with .ourproudestwork }}
+      {{ range . }}
+        {{ partial "card-article" . }}
+      {{ end }}
+    {{ else }}
+      <p>No items in our proudest work.</p>
+    {{ end }}  
+  {{ partial "p/layout_close" }} 
+
+{{ end }}
