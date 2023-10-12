@@ -1,4 +1,5 @@
 ---
+type: volunteers
 title: Volunteers
 intro: Volunteers intro
 corevaluestitle: Core values title

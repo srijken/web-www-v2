@@ -96,16 +96,19 @@ collections:
 
   - name: "volunteers"
     label: "Volunteers"
-    folder: "content/volunteers"
+    folder: "content/contribute/volunteers"
     slug: "_index"
-    file: "content/volunteers/_index.md"
     i18n: true
     create: true
     fields:
+      - label: "type"
+        name: "type"
+        widget: "hidden"
+        value: "volunteers"
       - label: "title"
         name: "title"
         widget: "string"
-        defualt: "Volunteers"
+        default: "Become a volunteer"
         i18n: true
       - label: "opener"
         name: "opener"
@@ -218,13 +221,22 @@ collections:
 
   - name: "partners"
     label: "Partners"
-    folder: "content/partners"
+    folder: "content/contribute/partners"
     slug: "_index"
     create: true
     i18n: true
     fields:
+      - label: "type"
+        name: "type"
+        widget: "hidden"
+        value: "partners"
       - label: "title"
         name: "title"
+        widget: "string"
+        default: "Become a partner"
+        i18n: true
+      - label: "Opener"
+        name: "opener"
         widget: "string"
         i18n: true
       - label: "Intro"
@@ -412,6 +424,7 @@ collections:
             widget: "text"
             i18n: true
 
+  # PAGE: The Team #####################################################
   - name: "team"
     label: "Team"
     folder: "content/team"
@@ -445,6 +458,164 @@ collections:
             display_fields: ["name"]
             search_fields: ["name"]
             multiple: true
+
+  # PAGE:  Contact #####################################################
+  - name: "contact"
+    label: "Contact"
+    folder: "content/contact"
+    slug: "_index"
+    create: true
+    i18n: true
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        default: "Contact"
+        i18n: true
+      - label: "Opener"
+        name: "opener"
+        widget: "string"
+        i18n: true
+      - label: "Intro"
+        name: "intro"
+        widget: text
+        i18n: true
+      - label: "Form"
+        name: "form"
+        i18n: true
+        widget: "object"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Description"
+            name: "description"
+            widget: "text"
+            i18n: true
+
+  # PAGE: Contribute #####################################################
+  - name: "contribute"
+    label: "Contribute"
+    folder: "content/contribute"
+    slug: "_index"
+    create: true
+    i18n: true
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        default: "Contribute"
+        i18n: true
+      - label: "Opener"
+        name: "opener"
+        widget: "string"
+        i18n: true
+      - label: "Intro"
+        name: "intro"
+        widget: text
+        i18n: true
+      - label: "Become a Volunteer"
+        name: "becomevolunteer"
+        i18n: true
+        widget: "object"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Description"
+            name: "description"
+            widget: "text"
+            i18n: true
+      - label: "Become a Partner"
+        name: "becomepartner"
+        i18n: true
+        widget: "object"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Description"
+            name: "description"
+            widget: "text"
+            i18n: true
+
+      - label: "Appreciate"
+        name: "appreciate"
+        i18n: true
+        widget: "object"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Description"
+            name: "description"
+            widget: "text"
+            i18n: true
+
+      - label: "Donate SUPP"
+        name: "donatesupp"
+        i18n: true
+        widget: "object"
+        fields:
+          - label: "SUPP"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Description"
+            name: "description"
+            widget: "text"
+            i18n: true
+          - label: "Value Links"
+            name: "links"
+            widget: "list"
+            i18n: true
+            max: 3
+            fields:
+              - label: "Label"
+                name: "label"
+                widget: "string"
+                i18n: true
+              - label: "Link"
+                name: "link"
+                widget: "string"
+                i18n: true
+          - label: "Custome ammount link"
+            name: "customlink"
+            widget: "string"
+            i18n: true
+
+      - label: "Donate Paypal"
+        name: "donatepaypal"
+        i18n: true
+        widget: "object"
+        fields:
+          - label: "Label"
+            name: "label"
+            widget: "string"
+            i18n: true
+          - label: "Link"
+            name: "link"
+            widget: "string"
+            i18n: true
+
+      - label: "Donate Bank transfer"
+        name: "donatebanktransfer"
+        i18n: true
+        widget: "object"
+        fields:
+          - label: "Label"
+            name: "label"
+            widget: "string"
+            i18n: true
+          - label: "Link"
+            name: "link"
+            widget: "string"
+            i18n: true
+
   ########################################################################
   # CONTENT BLOCKS
   ########################################################################

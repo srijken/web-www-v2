@@ -1,0 +1,80 @@
+{{ define "main" }}
+
+  <div class="topic-layout contribute-page">
+    <div class="topic-intro reverse">
+      {{ partial "breadcrumbs" . }}
+      {{ partial "p/layout_open" (dict "classes" (slice "right" "vcenter")) }}
+        <div>
+          <h1>{{ .Params.opener }}</h1>
+        </div>
+        <div>
+          <p>{{ .Params.intro}}</p>
+          <a class="cta secondary" href="#donate">{{ i18n "donate" }}</a>
+        </div>  
+      {{ partial "p/layout_close" }}
+    </div>
+
+    {{ partial "p/section_open" (dict "classes" (slice "gradient"))}} 
+
+      {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
+        {{ partial "card" (dict 
+          "imageSource" "images/global/becomevolunteer.png" 
+          "title" .Params.becomevolunteer.title
+          "content" .Params.becomevolunteer.description
+          "classes" (slice "cta")) 
+        }}
+        {{ partial "card" (dict 
+          "imageSource" "images/global/becomepartner.png" 
+          "title" .Params.becomepartner.title
+          "content" .Params.becomepartner.description
+          "classes" (slice "cta")) 
+        }}
+      {{ partial "p/layout_close" }}
+
+      {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
+        <div>
+          <h2>{{ .Params.appreciate.title }}</h2>
+          <p className="pre">{{ .Params.appreciate.description }}</p>
+
+          {{ with resources.Get "images/global/divdyay.png" }} 
+            {{ partial "tools/rimg/img" (dict "img" . "alt" "DIVD Yay!") }}
+          {{ end }}
+        </div>
+        <div>
+          <div className="block">
+            <h3>{{ .Params.donatesupp.title }}</h3>
+            <p class="pre">{{ .Params.donatesupp.description }}</p>
+            {{ range .Params.donatesub.links }}
+              <a class="cta secondary" href="{{ .link }}">
+                {{ .label }}
+              </a>
+            {{ end }}
+
+            <a class="cta secondary" href="{{ .Params.donatesub.customlink }}">
+              {{ i18n "donate_custom_amount" }}
+            </a>
+          </div>
+
+          <div class="block">
+            <h3>{{ .Params.donatepaypal.label }}</h3>
+            <a class="cta" href="{{ .Params.donatepaypal.link }}">{{ .Params.donatepaypal.label }}</a>
+          </div>
+
+          <div class="block">
+            <h3>{{ .Params.donatebanktransfer.label }}</h3>
+            <a class="cta" href="{{ .Params.donatebanktransfer.link }}">{{ .Params.donatebanktransfer.label }}</a>
+          </div>
+        </div>
+      {{ partial "p/layout_close" }}
+
+    {{ partial "p/section_close" }}
+
+
+    <div style="padding: 32px">
+      {{ .Type }}
+    </div>
+
+  </div>
+
+
+{{ end }}

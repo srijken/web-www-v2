@@ -1,0 +1,25 @@
+{{ define "main" }}
+
+  {{ partial "breadcrumbs" . }}
+
+  <div class="home-layout partners-page">
+
+    <div class="opener">
+      <article>
+        <section>
+          <h1>{{ .Params.opener }} PARTNERS</h1>
+          <p className="opener">{{ .Params.intro }}</p>
+          <a class="cta" href="/{{ .Lang }}/who-we-are">{{ i18n "whoweare" }}</a>
+        </section>
+      </article>
+      <aside>
+        {{ with resources.Get "images/home/divd_intro.png" }} 
+          {{ partial "tools/rimg/img" (dict "img" . "alt" "test") }}
+        {{ end }}
+      </aside>
+    </div>
+
+
+
+  </div>
+{{ end }}

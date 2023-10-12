@@ -1,5 +1,7 @@
 ---
-title: Friends of DIVD
+type: partners
+title: Wordt partner
+opener: Friends of DIVD
 intro: Share and pursue your passion for cybersecurity with like-minded people
   while helping to create a safer digital world
 partnerstitle: Our Partners
@@ -18,9 +20,9 @@ partnerlist:
   - name: Bit
     description: Lorem ipsum
     website: https://bit.nl
-    image: /images/partners/8bit.png
+    image: /public/static/partners/8bit.png
   - name: Avacadravra
     description: Avacadavra internet
     website: https://avacadavra.nl
-    image: /images/partners/agracadavra.png
+    image: /public/static/partners/agracadavra.png
 ---

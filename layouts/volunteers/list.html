@@ -1,9 +1,11 @@
 {{ define "main" }}
 
+
 <div class="home-layout volunteer">
   <div class="opener">
     <article>
       <section>
+        {{ partial "breadcrumbs" . }}
         <h1>{{ .Title }}</h1>
         <p className="opener">{{ .Params.intro }}</p>
         <a class="cta" href="/{{ .Lang }}/who-we-are">{{ i18n "whoweare" }}</a>
