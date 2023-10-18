@@ -17,7 +17,7 @@ jobs:
 #        with: 
 #          fetch-depth: 0
       - name: Setup prerequisites
-        run:  apt update && apt install -y hugo npm node
+        run:  sudo apt-get update && sudo apt-get install -y hugo npm node
       - name: Build
         run:  hugo
       - name: "Fix security.txt"
