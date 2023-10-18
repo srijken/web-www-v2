@@ -10,14 +10,14 @@ on:
 
 jobs:
   build_and_test:
-    runs-on: alpine-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 #        with: 
 #          fetch-depth: 0
       - name: Setup prerequisites
-        run:  apk add hugo
+        run:  apt update && apt install -y hugo npm node
       - name: Build
         run:  hugo
       - name: "Fix security.txt"
