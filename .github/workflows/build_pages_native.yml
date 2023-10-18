@@ -19,7 +19,7 @@ jobs:
       - name: Setup prerequisites
         run:  sudo apt-get update && sudo apt-get install -y hugo npm 
       - name: Build
-        run:  hugo
+        run:  hugo --config hugo.yml
       - name: "Fix security.txt"
         run: mkdir public/.well-known && (cd public/.well-known && ln -s ../security.txt) && ls -al public/.well-known
       - name: ".htaccess"
