@@ -16,3 +16,14 @@ languages:
     languageDirection: ltr
     languageName: Nederlands
     weight: 2
+
+server:
+  headers:
+  - for: /**
+    values:
+      Strict-Transport-Security: "max-age=63072000; includeSubdomains;"
+      X-Frame-Options: "DENY"
+      X-Content-Type-Options: "nosniff"
+      X-XSS-Protection: "1; mode=block"
+      Content-Security-Policy: "default-src 'none'; font-src 'self'; img-src 'self' data:; script-src 'self' https://unpkg.com/; style-src 'self'; connect-src 'self';"
+      Referrer-Policy: "same-origin"
