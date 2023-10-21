@@ -1,0 +1,25 @@
+{{/* _partials/card.html */}}
+{{ $imageSource := .imageSource }}
+{{ $name := .name }}
+{{ $cta := .cta }}
+{{ $link := .link }}
+{{ $description := .description }}
+
+
+<div class="partner-card">
+    <figure>
+        {{ with resources.Get $imageSource }} 
+            {{ partial "tools/rimg/img" (dict "img" . "alt" $name) }} 
+        {{ else }}
+            <img src="#" alt="Default alt text" />
+        {{ end }}
+    </figure>
+    <section>
+        <h3>{{ $name }}</h3>
+        <p>{{ $description }}</p>
+        <a class="cta external inverse" href="{{ $link }}" target="_blank">
+            {{ $cta }}
+        </a>
+    </section>
+</div>
+

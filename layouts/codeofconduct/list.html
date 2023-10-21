@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+<div class="article-layout">
+
+  {{ partial "p/layout_open" (dict "classes" (slice "default")) }}
+    {{ partial "breadcrumbs" . }}
+
+    {{ with resources.Get "images/global/codeofconduct_header.png" }} 
+      {{ partial "tools/rimg/img" (dict "img" . "alt" "Code of conduct") }}
+    {{ end }}
+
+  {{ partial "p/layout_close" }}
+  {{ partial "p/layout_open" (dict "classes" (slice "article")) }}
+
+
+  {{ .Content }}
+  {{ partial "p/layout_close" }}
+
+  
+</div>
+
+{{ end }}

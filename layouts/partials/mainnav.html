@@ -8,22 +8,50 @@
     </figure>
   
 
-  <article>
-    <a href="/{{ .Lang }}/about">
-      {{ i18n "nav_about" }}
-      {{ partial "svg/icon" "chevrondown" }}
-    </a>
+    <article>
+      <a href="/{{ .Lang }}/about">
+        {{ i18n "nav_about" }}
+        {{ partial "svg/icon" "chevrondown" }}
+      </a>
 
-    <a href="/{{ .Lang }}/community">
-      {{ i18n "nav_community" }}
-      {{ partial "svg/icon" "chevrondown" }}
-    </a>
+      <a href="/{{ .Lang }}/community">
+        {{ i18n "nav_community" }}
+        {{ partial "svg/icon" "chevrondown" }}
+      </a>
 
-    <a href="/{{ .Lang }}/security">
-      {{ i18n "nav_security" }}
-      {{ partial "svg/icon" "chevrondown" }}
-    </a>
-  </article>
+      <a href="/{{ .Lang }}/security">
+        {{ i18n "nav_security" }}
+        {{ partial "svg/icon" "chevrondown" }}
+      </a>
+    </article>
+
+    <aside>
+      <button class="inverse">
+        {{ partial "svg/icon" "search" }}
+        search
+      </button>
+      <button class="primary">
+        {{ partial "svg/icon" "email" }}
+        warning email
+      </button>
+      <section>
+        {{ $currentLang := $.Site.Language }}
+        {{ range .Site.Languages }}
+          {{ if eq . $.Site.Language }}
+            <span>{{ .LanguageName }}</span>
+          {{ else }}
+            {{ range $.Translations }}
+              {{ if ne  . $currentLang }}
+                <a title="{{ .Language.LanguageName }}" href="{{ .Permalink }}">
+                  {{ .Language.LanguageName }}
+                </a>
+              {{ end}}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+
+      </section>
+    </aside>
 
   
   
@@ -66,10 +94,10 @@
               <a href="{{ "contribute/partners" | relLangURL }}">Become a partner</a>
             </li>
             <li>
-              <a href="{{ .Lang }}/contribute">Donate</a>
+              <a href="{{ "contribute/" | relLangURL }}#donate">Donate</a>
             </li>
             <li>
-              <a href="{{ .Lang }}/newsroom">Newsroom</a>
+              <a href="{{ "newsroom/" | relLangURL }}">Newsroom</a>
             </li>
           </ul>
         </div>
@@ -77,7 +105,7 @@
           <h3>Security</h3>
           <ul>
             <li>
-              <a href="#whoweare">Code of conduct</a>
+              <a href="{{ "what-we-do/code-of-conduct" | relLangURL }}">Code of Conduct</a>
             </li>
             <li>
               <a href="#whatwedo">Security policy</a>

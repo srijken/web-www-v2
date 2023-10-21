@@ -1,3 +1,8 @@
+build:
+  npm install
+  hugo
+  npm run postbuild
+
 admin:
   npx netlify-cms-proxy-server &
   python3 -m http.server --directory ./admin &

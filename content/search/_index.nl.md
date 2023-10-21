@@ -1,0 +1,5 @@
+---
+title: Zoeken
+outputs:
+- json
+---

@@ -1,4 +1,5 @@
 ---
+type: team
 title: The Team
 teams:
   - title: Supervisory board

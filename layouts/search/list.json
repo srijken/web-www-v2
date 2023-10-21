@@ -1,0 +1,30 @@
+[
+{{- $newsroom := site.GetPage "/newsroom" -}}
+  {
+    "type": "stub",
+    "title": "DIVD",
+    "content": "Ignore"
+  }
+{{- with $newsroom.Pages -}}
+  {{- range . -}}
+  ,{
+    "type": "article",
+    "title": "{{- .Title -}}",
+    "content": "{{ .Params.intro | }}"
+  }
+  {{- end -}}
+{{- end -}}
+
+{{- $faq := .Site.GetPage "/faq" -}}
+
+{{- range $faq.Params.faqgroups -}}
+  {{- range .faqs -}}
+  ,{
+    "type": "faq",
+    "title": "{{ .title }}",
+    "content": "{{ .description }}"
+  }
+  {{- end -}}
+{{- end -}}
+
+]

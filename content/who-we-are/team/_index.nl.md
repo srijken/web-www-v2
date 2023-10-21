@@ -1,4 +1,5 @@
 ---
+type: team
 title: Het Team
 teams:
   - title: Supervisory board

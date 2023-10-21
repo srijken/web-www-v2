@@ -1,0 +1,65 @@
+{{ define "main" }}
+
+<div class="topic-layout newsroom">
+  <div class="topic-intro reverse">
+    {{ partial "p/layout_open" (dict "classes" (slice "right")) }} 
+      <div>
+        <h1>{{ .Params.opener }}</h1>
+      </div>
+      <div>
+        <p>{{ .Params.intro }}</p>
+        <a class="cta secondary" href="{{ .Params.newsletter }}">
+          Newsletter
+        </a>
+      </div>
+    {{ partial "p/layout_close" }}
+  </div>
+
+  {{ partial "p/section_open" (dict "classes" (slice "default")) }} 
+    {{ partial "p/layout_open" }}
+      <div>
+        <h2>{{ .Params.starter.title }}</h2>
+        <p class="pre">{{ .Params.starter.description }}</p>
+      </div>
+      
+      <div class="newsroom-article-list">
+        <div class="highlight">
+
+          {{ with site.GetPage (printf "%s" .Params.highlight) }}
+            <h1>Highlight {{ .Title }}</h1>
+          {{ end }}
+          
+          <a class="cta" href="temp">
+            {{ i18n "readmore" }}
+          </a>
+        </div>
+
+        <div>
+        {{ range first 5 .Pages.ByDate }}
+          <div class="article">
+            <h4>{{ .Params.tag }}</h4>
+            <h3>{{ .Title }}</h3>
+            <p>{{ .Params.intro }}</p>
+            <a href="{{ .Permalink }}">
+              {{ i18n "readmore" }}
+            </a>
+          </div>
+        {{ end }}
+        </div>
+
+        {{/*  {articles.map((a) => (
+          <div key={a.slug} className="article">
+            <h4>{a.attributes.tag}</h4>
+            <h3>{a.attributes.title}</h3>
+            <p>{a.attributes.intro}</p>
+            <CtaLink href={`/${lang}/article/${a.slug}`} isPrimary>
+              {t("readmore")}
+            </CtaLink>
+          </div>
+        ))}  */}}
+      </div>
+      {{ partial "p/layout_close" }}
+  {{ partial "p/section_close" }}
+</div>
+
+{{ end }}

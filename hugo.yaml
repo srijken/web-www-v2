@@ -6,13 +6,13 @@ defaultContentLanguageInSubdir: false
 languages:
   en:
     disabled: false
-    languageCode: en-US
+    languageCode: en
     languageDirection: ltr
-    languageName: English
+    languageName: EN
     weight: 1
   nl:
     disabled: false
-    languageCode: nl-NL
+    languageCode: nl
     languageDirection: ltr
-    languageName: Nederlands
+    languageName: NL
     weight: 2

@@ -19,6 +19,39 @@
       </aside>
     </div>
 
+  {{ partial "p/section_open" (dict "classes" (slice "inverse" "overlap-top"))}} 
+    {{ partial "p/layout_open" (dict "classes" (slice "default")) }}
+      
+        <div class="reverse">
+          <h2>{{ .Params.partnerstitle }}</h2>
+          <p>{{ .Params.partnersintro }}</p>
+          <div class="partner-list">
+            {{ range .Params.partnerlist }}
+              {{ partial "card-partner" (dict 
+                  "imageSource" .image
+                  "name" .name
+                  "link" .website 
+                  "cta" (i18n "visitsite")
+                  "description" .description)
+              }}
+            {{ end }}
+          </div>
+
+          <div>
+            <p>{{ .Params.partnerquote.name }}</p>
+            <p>{{ .Params.partnerquote.role }}</p>
+            <p>{{ .Params.partnerquote.website }}</p>
+            <p>{{ .Params.partnerquote.quote }}</p>
+            <p>{{ .Params.partnerquote.image }}</p>
+          </div>
+        </div>
+      {{ partial "p/layout_close" }}
+    {{ partial "p/section_close" }}
+
+    {{ partial "p/section_open" (dict "classes" (slice "gradient-reverse"))}} 
+      {{ partial "block/proudestwork" . }}
+      {{ partial "block/faq" . }}
+    {{ partial "p/section_close" }}
 
 
   </div>
