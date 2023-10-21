@@ -1,8 +1,8 @@
-local_backend: true
 publish_mode: editorial_workflow
-site_url: http://localhost:1313
+site_url: https://beta.divd.nl
 backend:
-  name: git-gateway
+  name: github
+  repo: DIVD-NL/web-www-v2
   branch: main
 
 media_folder: /assets/images
@@ -19,7 +19,7 @@ collections:
     slug: "_index"
     i18n: true
     folder: "content"
-    create: true
+    create: false
     fields:
       - {
           label: "Title",
@@ -95,7 +95,7 @@ collections:
     file: "content/faq/_index.md"
     folder: "content/faq"
     slug: "_index"
-    create: true
+    create: false
     i18n: true
     fields:
       - label: "Title"
@@ -145,7 +145,7 @@ collections:
     name: "testimonials"
     folder: "content/testimonials"
     slug: "_index"
-    create: true
+    create: false
     i18n: true
     fields:
       - label: "Title"
@@ -174,7 +174,7 @@ collections:
     label: "Contact"
     folder: "content/contact"
     slug: "_index"
-    create: true
+    create: false
     i18n: true
     fields:
       - label: "Title"
@@ -213,7 +213,7 @@ collections:
     name: "newsroom"
     folder: "content/newsroom"
     slug: "_index"
-    create: true
+    create: false
     i18n: true
     fields:
       - label: "Title"
@@ -318,7 +318,7 @@ collections:
     label: "Contribute"
     folder: "content/contribute"
     slug: "_index"
-    create: true
+    create: false
     i18n: true
     fields:
       - label: "Title"
@@ -441,7 +441,7 @@ collections:
     label: "Partners"
     folder: "content/contribute/partners"
     slug: "_index"
-    create: true
+    create: false
     i18n: true
     fields:
       - label: "type"
@@ -516,7 +516,7 @@ collections:
     folder: "content/contribute/volunteers"
     slug: "_index"
     i18n: true
-    create: true
+    create: false
     fields:
       - label: "type"
         name: "type"
@@ -563,7 +563,7 @@ collections:
     label: "What we do"
     folder: "content/what-we-do"
     slug: "_index"
-    create: true
+    create: false
     i18n: true
     fields:
       - label: "Title"
@@ -632,7 +632,7 @@ collections:
     label: "Code of conduct"
     folder: "content/what-we-do/code-of-conduct"
     slug: "_index"
-    create: true
+    create: false
     i18n: true
     fields:
       - {
@@ -654,7 +654,7 @@ collections:
     label: "Who we are"
     folder: "content/who-we-are"
     slug: "_index"
-    create: true
+    create: false
     i18n: true
     fields:
       - label: "Title"
@@ -716,7 +716,7 @@ collections:
     label: "Team"
     folder: "content/who-we-are/team"
     slug: "_index"
-    create: true
+    create: false
     i18n: true
     fields:
       - label: "Title"
@@ -763,7 +763,8 @@ collections:
           label: "Image",
           name: "image",
           widget: "image",
-          media_folder: "/public/static/people",
+          public_folder: "/images/people",
+          media_folder: "/assets/images/people",
           required: false,
         }
       - { label: "Role", name: "role", widget: "string" }
@@ -783,7 +784,7 @@ collections:
     label: "Blocks"
     folder: "content/block"
     slug: "_index"
-    create: true
+    create: false
     i18n: true
     fields:
       # BLOCK:  Ethics #####################################################

@@ -1,6 +1,6 @@
 build:
   npm install
-  hugo
+  hugo --minify
   npm run postbuild
 
 admin:
