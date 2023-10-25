@@ -28,7 +28,7 @@ jobs:
       - name: Test HTML code
         uses: Cyb3r-Jak3/html5validator-action@v7.2.0
         with:
-          root: _site/
+          root: public
       - name: Upload HTML test report 
         uses: actions/upload-artifact@v3
         if: success() || failure() # Run even if we had an error
