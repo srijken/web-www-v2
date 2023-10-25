@@ -14,17 +14,21 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      - name: Setup Just
-        uses: extractions/setup-just@v1
+#      - name: Setup Just
+#        uses: extractions/setup-just@v1
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
       - name: Build
-        run:  just build
+#        run:  just build
+        run:  |
+            npm install
+            hugo --minify
+            npm run postbuild
       - name: Test HTML code
         uses: Cyb3r-Jak3/html5validator-action@v7.2.0
         with:
