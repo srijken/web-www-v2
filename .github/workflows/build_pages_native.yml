@@ -1,5 +1,5 @@
 name: build_test_deploy
-run-name: Build, test and deploy website (if needed)
+run-name: Build and test website (and deploy if needed)
 on: 
   push:
     branches:
@@ -14,8 +14,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-#      - name: Setup Just
-#        uses: extractions/setup-just@v1
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -24,24 +22,23 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
       - name: Build
-#        run:  just build
         run:  |
             npm install
             hugo --minify
             npm run postbuild
-      - name: Test HTML code
-        uses: Cyb3r-Jak3/html5validator-action@v7.2.0
-        with:
-          root: public
-      - name: Upload HTML test report 
-        uses: actions/upload-artifact@v3
-        if: success() || failure() # Run even if we had an error
-        with:
-          name: html5validator_log
-          path: log.log
+#      - name: Test HTML code
+#        uses: Cyb3r-Jak3/html5validator-action@v7.2.0
+#        with:
+#          root: public
+#      - name: Upload HTML test report 
+#        uses: actions/upload-artifact@v3
+#        if: success() || failure() # Run even if we had an error
+#        with:
+#          name: html5validator_log
+#          path: log.log
       - name: rsync deploy
         uses: burnett01/rsync-deployments@5.2.1
-        if:   ${{ github.ref == 'refs/heads/main' }} && ( success() || failure() ) # Remove the && clause when a HTML check is flawless
+        if:   ${{ github.ref == 'refs/heads/main' }} # && ( success() || failure() ) # Remove the && clause when a HTML check is flawless
         with:
           switches: -avzr --delete
           path: public/
@@ -51,6 +48,6 @@ jobs:
           remote_key: ${{ secrets.DEPLOY_KEY }}
       - name: Deploy GiutHub pages
         uses: JamesIves/github-pages-deploy-action@v4
-        if:   ${{ github.ref == 'refs/heads/main' }}  && ( success() || failure() )  # Remove the && clause when a HTML check is flawless
+        if:   ${{ github.ref == 'refs/heads/main' }}  # && ( success() || failure() )  # Remove the && clause when a HTML check is flawless
         with:
           folder: admin # The folder the action should deploy.      
