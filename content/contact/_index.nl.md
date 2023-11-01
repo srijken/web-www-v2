@@ -2,7 +2,7 @@
 title: Contact
 opener: Hoe in contact te komen
 intro: Wij zijn een groep van vrijwilligers dat het internet verkent op zoek
-    naar cyber security risico's
+  naar cyber security risico's
 form:
   title: Geen gewoon kantoor
   description: >-
@@ -12,5 +12,5 @@ form:
 
     Je kan ons ook ontmoeten bij cyber security conferenties en hacker evenementen of volg ons op X.
 
-    Voor vragen gerelateerd aan onze CSIRT e-mail naar csirt@divd.nl
+    Voor vragen gerelateerd aan onze CSIRT e-mail naar csirt@divd.nl .
 ---
