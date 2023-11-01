@@ -1,8 +1,9 @@
 ---
 title: Home
 opener: A watchful eye in the digital world
-intro: We aim to make the digital world safer by reporting vulnerabilities we
-  find in digital systems to the people who can fix them.
+intro: "We aim to make the digital world safer by reporting vulnerabilities we
+  find in digital systems to the people who can fix them. We have a global
+  reach, but do it Dutch style: open, honest, collaborative, and for free."
 fold:
   showcase: /newsroom/articles/test-article-with-image
   received: Received an E-mail from us? Don’t worry! Learn more here.

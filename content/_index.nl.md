@@ -34,6 +34,6 @@ volunteer:
   checklist:
     - item: Wordt onderdeel van een community van Ethical Hackers, CISO's &
         researchers
-    - item: ""
-    - item: The one and only DIVD-sweater after 6 months of membership
+    - item: Toegang tot ons e-learningplatform
+    - item: Activiteiten, feestjes & een lifetime stock aan DIVD stickers
 ---
