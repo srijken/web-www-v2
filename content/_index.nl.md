@@ -22,13 +22,12 @@ whatwedo:
   t2: Tag 2
   t3: Tag 3
 helpushelpyou:
-  title: Help us, help you!
-  description: >-
-    Make our work easier by putting our security.txt in the code of
-          your website and our IP 194.5.73.0-255 on your allow list. This way you
-          make sure that our research team can look for vulnerabilities without
-          alarming your cyber security systems. And we know who to talk to when we
-          find vulnerabilities.
+  title: Security.txt, kleine moeite groot effect
+  description: Make our work easier by putting our security.txt in the code of
+    your website and our IP 194.5.73.0-255 on your allow list. This way you make
+    sure that our research team can look for vulnerabilities without alarming
+    your cyber security systems. And we know who to talk to when we find
+    vulnerabilities.
 volunteer:
   title: Wil je samen met ons de digitale wereld veiliger maken? Wordt vrijwilliger!
   checklist:
