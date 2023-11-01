@@ -10,10 +10,14 @@ fold:
   family: Wordt onderdeel van de DIVD en help ons de digitale wereld veiliger te maken
 whatwedo:
   title: Wat doen we?
-  description: "Samen met onze security researchers scannen wij ip-adressen op het
-    internet naar bekende, en onbekende, kwetsbaarheden op het internet. Dit
-    doen wij samen met ons team van security researchers. Vrijwillig. Omdat wij
-    geloven in een veiliger internet. "
+  description: >-
+    Samen met onze security researchers scannen wij ip-adressen op het internet
+    naar bekende, en onbekende, kwetsbaarheden op het internet. Dit doen wij
+    samen met ons team van security researchers. Vrijwillig. Omdat wij geloven
+    in een veiliger internet. 
+
+
+    Securitymeldingen en incidenten opvolgen en de ernst ervan bepalen. De technische scan data omzetten naar herleidbare contactgegevens van bedrijven die mogelijk getroffen kunnen worden. Samen met het CSIRT team een begrijpelijk advies opstellen over hoe te handelen. En vervolgens de potentiële slachtoffers informeren zodat zij actie kunnen ondernemen om schade te voorkomen of te beperken. Jij voert in samenwerking met de afdeling het hele proces uit vanaf de eerste melding tot het contact met de betrokkenen. Die combinatie van operationeel werk en advisering maakt je werk afwisselend en uitdagend.
   t1: Tag 1
   t2: Tag 2
   t3: Tag 3
@@ -28,7 +32,8 @@ helpushelpyou:
 volunteer:
   title: Wil je samen met ons de digitale wereld veiliger maken? Wordt vrijwilliger!
   checklist:
-    - item: About 20 meet-ups every year
-    - item: Part of a community of ethical hackers
+    - item: Wordt onderdeel van een community van Ethical Hackers, CISO's &
+        researchers
+    - item: ""
     - item: The one and only DIVD-sweater after 6 months of membership
 ---
