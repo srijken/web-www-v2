@@ -1,15 +1,19 @@
 ---
 title: Home
 opener: A watchful eye in the digital world
-intro: We aim to make the digital world safer by reporting vulnerabilities we
-  find in digital systems to the people who can fix them.
+intro: "Wij maken de digitale wereld veiliger door te scannen naar
+  kwetsbaarheden in digitale systemen en deze vervolgens te melden aan de mensen
+  die deze kunnen oplossen. "
 fold:
   showcase: /newsroom/articles/test-article-with-image
-  received: Received an E-mail from us? Don’t worry! Learn more here.
-  family: Become part of DIVD family and help protect the digital world
+  received: Heb je een email van ons csirt team ontvangen? Lees hier verder
+  family: Wordt onderdeel van de DIVD en help ons de digitale wereld veiliger te maken
 whatwedo:
-  title: What we do
-  description: Lorem ipsum
+  title: Wat doen we?
+  description: "Samen met onze security researchers scannen wij ip-adressen op het
+    internet naar bekende, en onbekende, kwetsbaarheden op het internet. Dit
+    doen wij samen met ons team van security researchers. Vrijwillig. Omdat wij
+    geloven in een veiliger internet. "
   t1: Tag 1
   t2: Tag 2
   t3: Tag 3
@@ -22,7 +26,7 @@ helpushelpyou:
           alarming your cyber security systems. And we know who to talk to when we
           find vulnerabilities.
 volunteer:
-  title: Want to become a volunteer?
+  title: Wil je samen met ons de digitale wereld veiliger maken? Wordt vrijwilliger!
   checklist:
     - item: About 20 meet-ups every year
     - item: Part of a community of ethical hackers
