@@ -17,27 +17,30 @@
 
   {{ with .Params.fold }} 
     {{ partial "p/section_open" (dict "classes" (slice "inverse" "overlap-top"))}} 
-      {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-3")) }} 
-        
-        {{ partial "card-article" .Showcase }}
+      {{ partial "p/layout_open" (dict "classes" (slice "extend")) }} 
+        <div class="carousel">
+          <div class="slides">
+            {{ partial "card-article" .Showcase }}
 
-        {{ partial "card" (dict 
-            "imageSource" "images/global/received_email.png" 
-            "title" .Received 
-            "linkTitle" (i18n "readmore") 
-            "link" "/test" 
-            "classes" (slice "article")) 
-        }}
+            {{ partial "card" (dict 
+                "imageSource" "images/global/received_email.png" 
+                "title" .Received 
+                "linkTitle" (i18n "readmore") 
+                "link" "/test" 
+                "classes" (slice "article")) 
+            }}
 
-        {{ partial "card" (dict 
-            "imageSource" "images/global/divd_family.png" 
-            "title" .Family 
-            "linkTitle" (i18n "readmore") 
-            "link" "/test" 
-            "classes" (slice "cta")) 
-        }}
-        
-
+            {{ partial "card" (dict 
+                "imageSource" "images/global/divd_family.png" 
+                "title" .Family 
+                "linkTitle" (i18n "readmore") 
+                "link" "/test" 
+                "classes" (slice "cta")) 
+            }}
+          
+          </div>
+          {{ partial "carousel_controls" 3 }}
+        </div>
       {{ partial "p/layout_close" }}
     {{ end }}
     {{ with .Params.whatwedo }}

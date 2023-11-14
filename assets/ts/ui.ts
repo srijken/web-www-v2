@@ -1,8 +1,109 @@
+function initMainMenu() {
+	let menuButtonEl = document.getElementById('main-menu-button');
+	let subNavEl = document.getElementById('sub-nav');
+
+	function onClick() {
+		console.log('Clickckc');
+		if (subNavEl) {
+			subNavEl.classList.toggle('active');
+		}
+	}
+
+	if (menuButtonEl && subNavEl) {
+		menuButtonEl.addEventListener('click', onClick);
+	} else {
+		console.log('nope');
+	}
+}
+
+function initCarousel(el: HTMLDivElement) {
+	let index = 0;
+	let pageCount = 0;
+
+	let slides = el.querySelectorAll<HTMLElement>('.slides');
+	let pageCountContainer = el.querySelector<HTMLElement>('.page-count');
+	let slidesContainer = slides.length ? slides[0] : null;
+	if (slidesContainer) {
+		pageCount = slidesContainer.children.length;
+	}
+
+	function setPageCounter(n) {
+		if (pageCountContainer) {
+			pageCountContainer.innerHTML = `${n} / ${pageCount}`;
+		}
+	}
+
+	function nextPage() {
+		if (!slidesContainer) return;
+		if (index < pageCount - 1) {
+			index++;
+		} else {
+			index = 0;
+		}
+
+		let child = slidesContainer.children[index] as HTMLElement;
+		let left = child.offsetLeft;
+		smoothScroll(left, slidesContainer);
+		setPageCounter(index + 1);
+	}
+
+	function prevPage() {
+		if (!slidesContainer) return;
+		if (index > 0) {
+			index--;
+		} else {
+			index = pageCount - 1;
+		}
+		let child = slidesContainer.children[index] as HTMLElement;
+		let left = child.offsetLeft;
+		smoothScroll(left, slidesContainer);
+		setPageCounter(index + 1);
+	}
+
+	let buttons = el.querySelectorAll('.pages button');
+	if (buttons.length === 2) {
+		buttons[0].addEventListener('click', prevPage);
+		buttons[1].addEventListener('click', nextPage);
+	}
+}
+
+function initAllCarousels() {
+	let els = document.querySelectorAll<HTMLDivElement>('.carousel');
+	els.forEach(initCarousel);
+}
+
 function initUI() {
-	console.log('Hello there');
+	console.log('huh4');
+	initMainMenu();
+	initAllCarousels();
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-	// Your code here will run after the document is fully parsed.
+	console.log('hahas2');
 	initUI();
 });
+
+/* utils */
+function smoothScroll(targetScroll, el) {
+	const startScroll = el.scrollLeft;
+	const distance = targetScroll - startScroll;
+	const startTime = new Date().getTime();
+
+	function animate() {
+		const currentTime = new Date().getTime();
+		const timePassed = currentTime - startTime;
+		const duration = 300; // Animation duration in ms
+
+		// Calculate the easing (you can replace this with other easing functions)
+		const easing = (t) => t * t; // simple quadratic easing
+		const progress = Math.min(timePassed / duration, 1);
+
+		el.scrollLeft = startScroll + distance * easing(progress);
+
+		if (progress < 1) {
+			window.requestAnimationFrame(animate);
+		}
+	}
+
+	window.requestAnimationFrame(animate);
+}

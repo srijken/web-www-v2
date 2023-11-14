@@ -26,12 +26,28 @@
         <div class="highlight">
 
           {{ with site.GetPage (printf "%s" .Params.highlight) }}
-            <h1>Highlight {{ .Title }}</h1>
+
+            {{ with .Params.image }}
+              <figure>
+              {{ with resources.Get . }}
+                {{ partial "tools/rimg/img" (dict "img" . "alt" "test") }}
+              {{ end }}
+              </figure>
+            {{ end }}
+
+            <section>
+              <h3>{{ .Title }}</h3>
+              <p>
+                  {{ .Params.intro }}
+              </p>
+
+              <a class="cta inverse" href="temp">
+                {{ i18n "readmore" }}
+              </a>
+            </section>
           {{ end }}
           
-          <a class="cta" href="temp">
-            {{ i18n "readmore" }}
-          </a>
+
         </div>
 
         <div>

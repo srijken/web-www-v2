@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   position: relative;
-
+  
   article {
     flex: 1;
     max-width: 1200px;
@@ -31,6 +31,28 @@
     img {
       max-width: 100%;
     }
+  }
+
+  @media(max-width: 700px) {
+    position: none;
+    flex-direction: column-reverse;
+
+    article {
+      padding: 0 32px;
+
+      section {
+        padding: 64px 0;
+        flex: 1;
+      }
+    }
+
+    aside {
+      position: static;
+      order: 1;
+      height: auto;
+      width: auto;
+    }
+  
   }
 }
 

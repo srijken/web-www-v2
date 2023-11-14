@@ -26,15 +26,17 @@
     </article>
 
     <aside>
-      <button class="inverse">
-        {{ partial "svg/icon" "search" }}
-        search
-      </button>
-      <button class="primary">
-        {{ partial "svg/icon" "email" }}
-        warning email
-      </button>
-      <section>
+      <section class="actions">
+        <button class="inverse">
+          {{ partial "svg/icon" "search" }}
+          <span>search</span>
+        </button>
+        <button class="primary">
+          {{ partial "svg/icon" "email" }}
+          <span>warning email</span>
+        </button>
+      </section>
+      <section class="language">
         {{ $currentLang := $.Site.Language }}
         {{ range .Site.Languages }}
           {{ if eq . $.Site.Language }}
@@ -49,18 +51,22 @@
             {{ end }}
           {{ end }}
         {{ end }}
-
       </section>
+
+      <button class="secondary menu-button" id="main-menu-button">
+        MENU 
+        {{ partial "svg/icon" "search" }}
+      </button>
     </aside>
 
   
   
   </nav>
 
-  <nav class="sub-nav">
+  <nav class="sub-nav" id="sub-nav">
     <article>
       <section>
-        <div>
+        <div class="topic">
           <h3>About DIVD</h3>
 
           <ul>
@@ -81,7 +87,7 @@
             </li>
           </ul>
         </div>
-        <div>
+        <div class="topic">
           <h3>DIVD Community</h3>
           <ul>
             <li>
@@ -101,7 +107,7 @@
             </li>
           </ul>
         </div>
-        <div>
+        <div class="topic">
           <h3>Security</h3>
           <ul>
             <li>
@@ -121,7 +127,7 @@
           </ul>
         </div>
       </section>
-      <section>
+      <section class="toggle">
         toggle stuff
       </section>
     </article>

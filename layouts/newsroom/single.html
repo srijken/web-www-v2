@@ -1,7 +1,33 @@
 {{ define "main" }}
 
-<div>
-  <h1>Hello world</h1>
+{{ $extraClass := "default" }}
+{{ if .Params.image }}
+  {{ $extraClass = "has-image" }}
+{{ end }}
+
+<div class="article-layout">
+  {{ partial "breadcrumbs" . }}
+
+  {{ partial "p/section_open" (dict "classes" (slice "article" ))}} 
+
+    {{ partial "p/layout_open" (dict "classes" (slice "article" $extraClass)) }}
+      
+      {{ if .Params.image }}
+        <div class="image-header">
+          {{ with resources.Get .Params.image }} 
+            {{ partial "tools/rimg/img" (dict "img" . "alt" "test") }}
+          {{ end }}
+        </div>
+      {{ end }}
+
+      <h1>{{ .Title }}</h1>
+
+      <div class="article">
+        {{ .Content }}
+      </div>
+    {{ partial "p/layout_close" }}
+
+  {{ partial "p/section_close" }}
 </div>
 
 {{ end }}
