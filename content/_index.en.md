@@ -10,7 +10,10 @@ fold:
   family: Become part of DIVD and help us protect the digital world
 whatwedo:
   title: What we do
-  description: Lorem ipsum
+  description: "DIVD aims to make the digital world safer by reporting
+    vulnerabilities we find in digital systems to the people who can fix them.
+    We have a global reach, but do it Dutch style: open, honest, collaborative
+    and for free. "
   t1: Tag 1
   t2: Tag 2
   t3: Tag 3

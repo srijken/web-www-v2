@@ -10,10 +10,10 @@ fold:
   family: Wordt onderdeel van de DIVD en help ons de digitale wereld veiliger te maken
 whatwedo:
   title: Wat doen we?
-  description: "Samen met onze security researchers scannen wij ip-adressen op het
-    internet naar bekende, en onbekende, kwetsbaarheden op het internet. Dit
-    doen wij samen met ons team van security researchers. Vrijwillig. Omdat wij
-    geloven in een veiliger internet. "
+  description: "Wij scannen ip-adressen op het internet naar bekende, en
+    onbekende, kwetsbaarheden op het internet. Dit doen wij samen met ons team
+    van security researchers. Vrijwillig. Omdat wij geloven in een veiliger
+    internet. "
   t1: Tag 1
   t2: Tag 2
   t3: Tag 3
