@@ -28,8 +28,8 @@ helpushelpyou:
 volunteer:
   title: Want to become a volunteer?
   checklist:
-    - item: Become part of the hacker community with Ethical Hackers, CISO's &
-        researchers
+    - item: "Become part of the hacker community with Ethical Hackers, CISO's &
+        researchers "
     - item: Develop yourself, we provide very cool stuff at our e-learningplatform
     - item: Activities, a party so now and then and a lifetime stock of DIVD stickers
         & other merch
