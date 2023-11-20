@@ -28,7 +28,9 @@ helpushelpyou:
 volunteer:
   title: Want to become a volunteer?
   checklist:
-    - item: About 20 meet-ups every year
-    - item: Part of a community of ethical hackers
-    - item: The one and only DIVD-sweater after 6 months of membership
+    - item: Become part of the hacker community with Ethical Hackers, CISO's &
+        researchers
+    - item: Develop yourself, we provide very cool stuff at our e-learningplatform
+    - item: Activities, a party so now and then and a lifetime stock of DIVD stickers
+        & other merch
 ---
