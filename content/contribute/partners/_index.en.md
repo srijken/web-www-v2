@@ -48,4 +48,54 @@ partnerlist:
       enables us to deliver security research reports with tickets handling.
     website: https://cyver.io/
     image: /images/partners/cyver-360x200.jpg
+  - description: Remco Verhoef, Chief Hacking Officer at DTACT let’s us use their
+      Raven Data Processing Platform to process our scan data. We don’t pay in
+      licencefees, but in feedback.
+    name: DTACT
+    image: /images/partners/dtact-360x200.jpg
+    website: https://dtact.com/
+  - name: Eset
+    description: Dave Maasland, CEO of ESET sponsored DIVD in 2021 by paying most of
+      the costs of our AS. In 2022 ESET supports us with a serious donation and
+      free licenses
+    website: https://www.eset.com/nl/
+    image: /images/partners/eset-360x200.jpg
+  - description: We have our office at LunaVia, which also help us out with
+      administrative tasks and acquiring funding for our DIVD Academy.
+    name: LunaVia
+    image: /images/partners/lunavia-360x200.jpg
+    website: https://lunavia.nl/
+  - description: Passbolt has been sponsoring the pro subscription for DIVD since 2021.
+    name: Passbolt
+    website: https://www.passbolt.com/
+  - description: Protect4S has supported DIVD with expertise on the security of SAP
+      systems and resources to scan the internet for vulnerabilities related to
+      SAP systems
+    name: Protect4S
+    website: https://www.protect4s.com/
+    image: /images/partners/protect-4s-360x200.jpg
+  - description: Schouten Zekerheid Makelaars in Assurantiën is our insurance
+      intermediary and supports us and our cause.
+    name: Schouten Zekerheid
+    website: https://www.schoutenzekerheid.nl/
+    image: /images/partners/schouten-zekerheid-360x200.jpg
+  - description: SIDN Fund provided financial support in 2020 to kick start DIVD.
+    name: SIDN Fund
+    website: https://www.sidnfonds.nl/excerpt
+    image: /images/partners/sidn-fund-360x200.jpg
+  - name: Speak Freak
+    description: Peter Zinn from Speak Freak provided presentation trainings to DIVD members
+    website: https://speakfreak.eu/
+    image: /images/partners/speak-freak-360x200.jpg
+  - description: Schuberg Philis has provided us with support of some of their
+      employees and equipment we have used for our scanning infrastructure.
+    name: Schuberg Philis
+    website: https://schubergphilis.com/en
+    image: /images/partners/schuberg-philis-360x200.jpg
+  - name: VM Ware
+    description: DIVD is supported by a team of VMware people in building a new
+      scanning infrastructure. This support is backed by the VMware Foundation
+      which provides licenses and funding for hardware.
+    image: /images/partners/vmware-360x200.jpg
+    website: https://www.vmware.com/
 ---
