@@ -22,7 +22,7 @@ partnerlist:
       our own Autonomous System. Since then, we have our own IP addresses to
       scan from.
     website: https://www.a2b-internet.com/
-    image: /images/partners/a2b-internet-360x360.jpg
+    image: /images/partners/a2b-internet-360x200.jpg
   - name: Avacadravra
     description: Avacadavra internet
     website: https://avacadavra.nl
