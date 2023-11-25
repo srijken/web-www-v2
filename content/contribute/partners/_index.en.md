@@ -23,8 +23,9 @@ partnerlist:
       scan from.
     website: https://www.a2b-internet.com/
     image: /images/partners/a2b-internet-360x200.jpg
-  - name: Avacadravra
-    description: Avacadavra internet
-    website: https://avacadavra.nl
-    image: /images/partners/agracadavra.png
+  - name: Atom86
+    description: Atom86 is sponsoring connectivity and rack space for our scanning
+      infrastructure.
+    website: https://atom86.net/
+    image: /images/partners/atom86-360x200.jpg
 ---
