@@ -1,15 +1,17 @@
 ---
 title: What we do
 opener: How we work towards a more safe digital world
-intro: We are a group of volunteers that scout the web for potential cyber
-  security risks
+intro: And how we do it
 whatwedocontent:
   title: What we do
-  description: Lorem ipsum dolor sit amet consectetur. Pharetra ullamcorper
-    elementum ipsum a eu duis. Id nunc ipsum vel ultricies ornare. Odio
-    aliquet nisl etiam quis. Duis at nunc velit dolor arcu pharetra ornare.
-    Purus quis ut tellus enim et felis penatibus enim morbi. Ultrices nec
-    pulvinar orci varius sed gravida non.
+  description: >-
+    DIVD scans the whole internet on the presence of Common Vulnerabilities and
+    Exposures (CVEs) as soon as they are published and have a high score. When
+    we find vulnerable URLs, we send them an email with notification on the
+    vulnerability present, where we found it and what to do. 
+
+
+    We also find new vulnerabilities (zero-days) and share these with the software vendor, so they can fix it. Furthermore, when we detect instances of compromised credentials, we take swift action by alerting affected individuals via email and urging them to immediately change their passwords. 
 scouting:
   title: Scouting for digital vulnerabilities on the web
   description: Lorem ipsum dolor sit amet consectetur. Sagittis volutpat risus
