@@ -28,4 +28,14 @@ partnerlist:
       infrastructure.
     website: https://atom86.net/
     image: /images/partners/atom86-360x200.jpg
+  - name: BIT
+    description: BIT is sponsoring hosting space for our websites and mail server capacity.
+    website: bit.nl
+    image: /images/partners/bit-360x200.jpg
+  - name: CONNECT2TRUST
+    description: Connect2Trust is a cooperation of Dutch (international) companies.
+      Chairman of the Board Raymond Bierens has been with DIVD from the start on
+      to help out and share knowledge.
+    website: https://www.connect2trust.nl/
+    image: /images/partners/connect2trust-360x200.jpg
 ---
