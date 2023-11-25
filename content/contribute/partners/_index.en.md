@@ -38,4 +38,14 @@ partnerlist:
       to help out and share knowledge.
     website: https://www.connect2trust.nl/
     image: /images/partners/connect2trust-360x200.jpg
+  - description: Cryptshare supplies us with licenses for their tooling so we can
+      securely share files.
+    name: Cryptshare
+    website: https://www.cryptshare.com/en/home/
+    image: /images/partners/cryptshare-360x200.jpg
+  - name: Cyver
+    description: Cyver provides us with their cloud platform, Cyver Core, which
+      enables us to deliver security research reports with tickets handling.
+    website: https://cyver.io/
+    image: /images/partners/cyver-360x200.jpg
 ---
