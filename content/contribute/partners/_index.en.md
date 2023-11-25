@@ -17,10 +17,12 @@ partnerquote:
     to be part of such a fun and talented team."'
   image: /images/partners/jandijkstra.png
 partnerlist:
-  - name: Bit
-    description: Lorem ipsum
-    website: https://bit.nl
-    image: /images/partners/8bit.png
+  - name: A2B Internet
+    description: Erik Bais, owner of A2B-Internet was so kind to help us out getting
+      our own Autonomous System. Since then, we have our own IP addresses to
+      scan from.
+    website: https://www.a2b-internet.com/
+    image: /images/partners/a2b-internet-360x360.jpg
   - name: Avacadravra
     description: Avacadavra internet
     website: https://avacadavra.nl
