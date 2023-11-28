@@ -14,9 +14,9 @@ whatwedo:
     vulnerabilities we find in digital systems to the people who can fix them.
     We have a global reach, but do it Dutch style: open, honest, collaborative
     and for free. "
-  t1: Tag 1
-  t2: Tag 2
-  t3: Tag 3
+  t1: Scouting vulnerabilities
+  t2: Asessing the scope of vulnerabilities
+  t3: "Reporting vulnerabiltities "
 helpushelpyou:
   title: Help us, help you!
   description: >-
