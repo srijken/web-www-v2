@@ -5,7 +5,7 @@ intro: "We aim to make the digital world safer by reporting vulnerabilities we
   find in digital systems to the people who can fix them. We have a global
   reach, but do it Dutch style: open, honest, collaborative, and for free."
 fold:
-  showcase: /newsroom/articles/test-article-with-image
+  showcase: /newsroom/articles/online-test-article
   received: Received an E-mail from us? Don’t worry! Learn more here.
   family: Become part of DIVD and help us protect the digital world
 whatwedo:
