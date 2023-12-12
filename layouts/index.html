@@ -4,7 +4,7 @@
     <article>
       <section>
         <h1>{{ .Title }}</h1>
-        <p className="opener">{{ .Params.intro }}</p>
+        <p class="opener">{{ .Params.intro }}</p>
         <a class="cta" href="/{{ .Lang }}/who-we-are">{{ i18n "whoweare" }}</a>
       </section>
     </article>
@@ -24,14 +24,17 @@
 
             {{ partial "card" (dict 
                 "imageSource" "images/global/received_email.png" 
+                "imageAlt" .Received_Alt
                 "title" .Received 
                 "linkTitle" (i18n "readmore") 
                 "link" "/test" 
-                "classes" (slice "article")) 
+                "classes" (slice "article")
+                ) 
             }}
 
             {{ partial "card" (dict 
                 "imageSource" "images/global/divd_family.png" 
+                "imageAlt" .Family_Alt
                 "title" .Family 
                 "linkTitle" (i18n "readmore") 
                 "link" "/test" 
@@ -54,21 +57,24 @@
           <div class="carousel">
             <div class="slides">
               {{ partial "card" (dict 
-                "imageSource" "images/global/scout.png" 
+                "imageSource" .t1_image
+                "imageAlt" .t1_alt
                 "title" .t1 
                 "linkTitle" (i18n "readmore") 
                 "link" "/test" 
                 "classes" (slice "cta")) 
               }}
               {{ partial "card" (dict 
-                "imageSource" "images/global/assessing.png" 
+                "imageSource" .t2_image 
+                "imageAlt" .t2_alt
                 "title" .t2 
                 "linkTitle" (i18n "readmore") 
                 "link" "/test" 
                 "classes" (slice "cta")) 
               }}
               {{ partial "card" (dict 
-                "imageSource" "images/global/scout.png" 
+                "imageSource" .t3_image
+                "imageAlt" .t3_alt
                 "title" .t3 
                 "linkTitle" (i18n "readmore") 
                 "link" "/test" 
