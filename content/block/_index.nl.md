@@ -1,4 +1,5 @@
 ---
+title: "Blocks"
 ethics:
   title: Ethics
   intro: Lorem ipsum

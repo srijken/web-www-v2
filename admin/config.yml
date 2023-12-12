@@ -1,8 +1,8 @@
+local_backend: true
 publish_mode: editorial_workflow
-site_url: https://beta.divd.nl
+site_url: http://localhost:3000
 backend:
-  name: github
-  repo: DIVD-NL/web-www-v2
+  name: git-gateway
   branch: main
 
 media_folder: /assets/images
@@ -787,6 +787,9 @@ collections:
     create: false
     i18n: true
     fields:
+      - name: "Title"
+        widget: "string"
+        default: "Blocks"
       # BLOCK:  Ethics #####################################################
       - name: "ethics"
         label: "Ethics"
