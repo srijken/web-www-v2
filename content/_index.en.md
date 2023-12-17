@@ -2,8 +2,7 @@
 title: Home
 opener: A watchful eye in the digital world
 intro: "We aim to make the digital world safer by reporting vulnerabilities we
-  find in digital systems to the people who can fix them. We have a global
-  reach, but do it Dutch style: open, honest, collaborative, and for free."
+  find in digital systems to the people who can fix them. "
 fold:
   showcase: /newsroom/articles/online-test-article
   received: Received an E-mail from us? Don’t worry! Learn more here.
@@ -11,20 +10,24 @@ fold:
   family: Become part of DIVD and help us protect the digital world
   family_alt: Picture of group of people depicting the DIVD family
 whatwedo:
+  t1_alt: Image of an hourglass over a warning icon
+  t2_alt: Drawing of a person sitting in from of a screen of code
+  t3_alt: Image of an hourglass over a warning icon
+  Alt text for t1 image: Illustration of an magnifier with a shield in the middle
+    that contains an exclamation mark
+  Alt text for t2 image: Illustration of a cloud with an exclamation mark
+  Alt text for t3 image: "Illustration of a person with a laptop "
   title: What we do
+  t1_image: /images/divd-illustration-library_scout-what-we-do.svg
+  t2_image: /images/divd-illustration-library_scope-what-we-do.svg
+  t3_image: /images/divd-illustration-library_report-what-we-do.svg
   description: "DIVD aims to make the digital world safer by reporting
     vulnerabilities we find in digital systems to the people who can fix them.
     We have a global reach, but do it Dutch style: open, honest, collaborative
     and for free. "
-  t1: Scouting vulnerabilities
-  t1_image: images/global/scout.png
-  t1_alt: Image of an hourglass over a warning icon
-  t2: Asessing the scope of vulnerabilities
-  t2_image: images/global/assessing.png
-  t2_alt: Drawing of a person sitting in from of a screen of code
-  t3: "Reporting vulnerabiltities "
-  t3_image: images/global/scout.png
-  t3_alt: Image of an hourglass over a warning icon
+  t1: Scan the internet for vulnerabilities
+  t2: Reporting the vulnerability to the right people
+  t3: 0 Day disclosure
 helpushelpyou:
   title: Help us, help you!
   description: >-
