@@ -11,20 +11,20 @@ fold:
   family: Wordt onderdeel van de DIVD en help ons de digitale wereld veiliger te maken
   family_alt: Plaatje van een groep mensen die de DIVD familie moeten voorstellen
 whatwedo:
+  t1_alt: Plaatje van een vergrootglas boven een waarschuwingssymbool
+  t2_alt: Tekening van een persoon met een laptop voor een scherm met code erop.
+  t3_alt: Plaatje van een vergrootglas boven een waarschuwingssymbool
   title: Wat doen we?
+  t1_image: images/global/scout.png
+  t2_image: images/global/assessing.png
+  t3_image: images/global/scout.png
   description: "Wij scannen ip-adressen op het internet naar bekende, en
     onbekende, kwetsbaarheden op het internet. Dit doen wij samen met ons team
     van security researchers. Vrijwillig. Omdat wij geloven in een veiliger
     internet. "
   t1: Tag 1
-  t1_image: images/global/scout.png
-  t1_alt: Plaatje van een vergrootglas boven een waarschuwingssymbool
   t2: Tag 2
-  t2_image: images/global/assessing.png
-  t2_alt: Tekening van een persoon met een laptop voor een scherm met code erop.
   t3: Tag 3
-  t3_image: images/global/scout.png
-  t3_alt: Plaatje van een vergrootglas boven een waarschuwingssymbool
 helpushelpyou:
   title: Security.txt, kleine moeite groot effect
   description: Make our work easier by putting our security.txt in the code of
