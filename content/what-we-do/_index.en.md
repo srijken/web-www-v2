@@ -26,7 +26,8 @@ assessing:
     research methodes always comply with our code of conduct.
   title: Reporting  the vulnerability to the right people
 reporting:
-  description: Lorem ipsum dolor sit amet consectetur. Sagittis volutpat risus
-    euismod venenatis gravida purus non.
-  title: Reporting the vulnerability to the right people
+  description: "DIVD is also a CVE Numbering Authority, in this role we assign CVE
+    numbers and help security researchers engage with vendors to disclose
+    vulnerabilities. "
+  title: 0 Day disclosure
 ---
