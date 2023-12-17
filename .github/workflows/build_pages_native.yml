@@ -21,6 +21,8 @@ jobs:
           cache: 'npm'
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
       - name: Build
         run:  |
             npm install
