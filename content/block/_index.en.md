@@ -2,13 +2,15 @@
 title: Blocks
 Title: Blocks
 ethics:
-  title: Ethics
-  intro: Lorem ipsum
+  title: Ethics at the base of everything we do
+  intro: As we work on sensitive data, gathered without informed consent, we
+    established this Code of Conduct to provide an ethical base for the work we
+    do. This code can also be used by other researchers working on what is
+    currently referred to as responsible disclosure, or coordinated
+    vulnerability disclosure.
 proudestwork:
   ourproudestwork:
-    - /newsroom/articles/test-article-with-image
-    - /newsroom/articles/test-case
-    - /newsroom/articles/test-article
+    - /newsroom/articles/online-test-article
   title: Our proudest work
 mission:
   title: Our mission
