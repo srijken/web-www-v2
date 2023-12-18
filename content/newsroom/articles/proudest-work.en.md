@@ -1,9 +1,18 @@
 ---
-title: Proudest work
+title: "CASE: Proudest work"
 date: 2023-11-25T18:19:40.931Z
 tag: case
-intro: intro proudest work
-image: /images/articles/agracadavra.png
+intro: In a cooperation with DIVD, NCSC-NL and several EU govcerts, 14,986
+  global vulnerable hosts were found and notified.
+image: /images/articles/1675785490-esxi-16_9-1.png
 image_alt: Picture of a bug (insect)
+case:
+  closed: true
 ---
-Body of proudest work
+On February 3rd, DIVD became aware of a global ransomware attack that targeted vulnerable VMware ESXi servers, specifically those susceptible to **CVE-2021-21974.** In response, DIVD conducted a scan of ESXi servers accessible via the internet and notified users, urging them to patch their systems to prevent potential exploitation. VMware ESXi is a type 1 hypervisor that is part of VMware’s larger vSphere suite. It provides a platform for virtualizing servers and allows for the running of multiple operating systems on a single physical server. As a bare-metal hypervisor, ESXi is directly installed on the server hardware, providing a efficient way to manage and partition hardware resources like CPU, memory, storage, and networking among multiple virtual machines (VMs). ESXi includes features such as VMotion, which enables live migration of running VMs from one physical server to another with no downtime, and High Availability, which allows for automatic VM restart on other available servers in case of hardware failure. ESXi also provides security features, including VM encryption, and secure boot.
+
+CVE-2021-21974 is a vulnerability in OpenSLP as used in ESXi. OpenSLP is an open standard network protocol that enables dynamic discovery and communication with network services in LANs and WANs. The vunerability in the protocol is a heap-overflow vulnerability. A malicious actor who resides within the same network segment as ESXi and has access to TDP or UDP port 427, may be able to trigger the heap-overflow vulnerability in the OpenSLP service, which could result in remote code execution. The versions of ESXi that are vulnerable to this issue are 7.0 before ESXi70U1c-17325551, 6.7 before ESXi670-202102401-SG, and 6.5 before ESXi650-202102101-SG.
+
+February 3rd CERT-FR communicated about ransomware attacks, related to CVE-2021-21974. The attackers used the vulnerability to launch ransomware attacks.
+
+On February 4th DIVD started scanning. An initial scan revealed the presence of **14,986 vulnerable hosts globally**,with 269 of them located in the Netherlands. The researchers at DIVD notified the owners. Additionally, DIVD also informed the Dutch NCSC, as well as govcerts in Austria, Finland, France, and Italy.
