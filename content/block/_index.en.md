@@ -68,7 +68,9 @@ divdfamily:
     DIVD is more than just a research institute. More organisations carry our
     brand and share our 
 
-    mission in their own way. We call this the DIVD.family.
+    mission in their own way. 
+
+    We call this the DIVD.family.
 familycta:
   title: " Want to become part of the family?"
   intro: We are a organisation that consists of volutneers, we are always looking
