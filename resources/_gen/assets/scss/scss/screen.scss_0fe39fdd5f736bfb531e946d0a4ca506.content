@@ -834,9 +834,13 @@ nav.sub-nav {
     color: white; }
     .carousel .pages div {
       margin-left: 16px; }
+  .carousel.responsive-controls .pages {
+    display: none; }
   @media (max-width: 700px) {
     .carousel .slides > * {
-      width: calc(100vw - 32px); } }
+      width: calc(100vw - 32px); }
+    .carousel.responsive-controls .pages {
+      display: none; } }
 .smallousel {
   background-color: #fff;
   border-radius: 64px;

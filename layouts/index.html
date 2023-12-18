@@ -18,7 +18,7 @@
   {{ with .Params.fold }} 
     {{ partial "p/section_open" (dict "classes" (slice "inverse" "overlap-top"))}} 
       {{ partial "p/layout_open" (dict "classes" (slice "extend")) }} 
-        <div class="carousel">
+        <div class="carousel responsive-controls">
           <div class="slides">
             {{ partial "card-article" .Showcase }}
 
