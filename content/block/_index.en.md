@@ -11,6 +11,8 @@ ethics:
 proudestwork:
   ourproudestwork:
     - /newsroom/articles/online-test-article
+    - /newsroom/articles/test-case
+    - /newsroom/articles/test-article-with-image
   title: Our proudest work
 mission:
   title: Our mission
