@@ -4,6 +4,11 @@ date: 2023-12-18T21:00:49.266Z
 tag: case
 intro: "After Veloxity identified a zero-day vulnerability, DIVD, DTC and NSM
   cooperated to reach out to notify 18.469 vulnerable ISP. "
+image: /images/articles/what-do-you-need-to-know-about-atlassian-confluence-rce-vulnerability-1200x675.webp
+case:
+  caseid: 2022-00033
+  closed: true
+  link: https://csirt.divd.nl/cases/DIVD-2022-00033/
 ---
 On May 30th – Memorial Day 2022 – researchers of the Washington DC based cybersecurity firm [Volexity ](https://www.volexity.com/)started an investigation after one of the customers detected suspicious activity on two internet-facing web servers, that were running Atlassian Confluence Server software.
 
