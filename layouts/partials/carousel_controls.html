@@ -1,5 +1,9 @@
 <div class="pages">
-  <button>P</button>
-  <button>N</button>
+  <button class="icon">
+    {{ partial "svg/icon" "chevronleft" }}
+  </button>
+  <button class="icon">
+    {{ partial "svg/icon" "chevronright" }}
+  </button>
   <div class="page-count">1 / {{ . }}</div>
 </div>

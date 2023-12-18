@@ -5,7 +5,7 @@
       <section>
         <h1>{{ .Title }}</h1>
         <p class="opener">{{ .Params.intro }}</p>
-        <a class="cta" href="/{{ .Lang }}/who-we-are">{{ i18n "whoweare" }}</a>
+        <a class="cta" href="{{ "who-we-are/" | relLangURL }}">{{ i18n "whoweare" }}</a>
       </section>
     </article>
     <aside>
@@ -27,7 +27,7 @@
                 "imageAlt" .Received_Alt
                 "title" .Received 
                 "linkTitle" (i18n "readmore") 
-                "link" "/test" 
+                "link" (relLangURL "who-we-are/") 
                 "classes" (slice "article")
                 ) 
             }}
@@ -37,7 +37,7 @@
                 "imageAlt" .Family_Alt
                 "title" .Family 
                 "linkTitle" (i18n "readmore") 
-                "link" "/test" 
+                "link" (relLangURL "contribute/")  
                 "classes" (slice "cta")) 
             }}
           
@@ -52,7 +52,7 @@
           <div class="reverse">
             <h2>{{ .Title }}</h2>
             <p>{{ .description }}</p>
-            <a class="cta" href="/{{ .Lang }}/what-we-do">{{ i18n "learnmore"}}</a>
+            <a class="cta" href="{{ "/what-we-do" | relLangURL }}">{{ i18n "learnmore"}}</a>
           </div>
           <div class="carousel">
             <div class="slides">
