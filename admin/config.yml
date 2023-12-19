@@ -1,8 +1,8 @@
+local_backend: true
 publish_mode: editorial_workflow
-site_url: https://beta.divd.nl
+site_url: http://localhost:3000
 backend:
-  name: github
-  repo: DIVD-NL/web-www-v2
+  name: git-gateway
   branch: main
 
 media_folder: /assets/images
@@ -13,7 +13,7 @@ i18n:
   default_locale: en
 
 collections:
-  # PAGE:  Home #####################################################
+  # PAGE:  !Home #####################################################
   - name: "_index"
     label: "Home page"
     slug: "_index"
@@ -123,7 +123,7 @@ collections:
               fields: [{ label: "Item", name: "item", widget: string }],
             }
 
-  # PAGE:  FAQ #####################################################
+  # PAGE:  !FAQ #####################################################
 
   - name: "faq"
     label: "FAQ"
@@ -174,7 +174,7 @@ collections:
                 ],
             }
 
-  # PAGE:  Testimonials #####################################################
+  # PAGE:  !Testimonials #####################################################
 
   - label: "Testimonials"
     name: "testimonials"
@@ -204,7 +204,7 @@ collections:
               required: false,
             }
 
-  # PAGE:  Contact #####################################################
+  # PAGE:  !Contact #####################################################
   - name: "contact"
     label: "Contact"
     folder: "content/contact"
@@ -238,6 +238,77 @@ collections:
             name: "description"
             widget: "text"
             i18n: true
+  
+  # PAGE:  !Warning email #####################################################
+  - name: "warningemail"
+    label: "Warning email"
+    folder: "content/warningemail"
+    slug: "_index"
+    create: false
+    i18n: true
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        default: "Warning e-mail"
+        i18n: true
+      - label: "Opener"
+        name: "opener"
+        widget: "string"
+        i18n: true
+      - label: "Intro"
+        name: "intro"
+        widget: text
+        i18n: true
+      - label: "CSIRT"
+        name: "csirt"
+        i18n: true
+        widget: "object"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Description"
+            name: "description"
+            widget: "text"
+            i18n: true
+          - label: "Link"
+            name: "link"
+            widget: "string"
+      - label: "STEPBYSTEP"
+        name: "stepbystep"
+        i18n: true
+        widget: "object"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Description"
+            name: "description"
+            widget: "text"
+            i18n: true
+          - label: "Link"
+            name: "link"
+            widget: "string"
+          - label: "steps"
+            name: "steps"
+            i18n: true
+            widget: "object"
+            fields:
+              - {label: "Step 1 title", name: "step1title", widget: "string", i18n: true}
+              - {label: "Step 1 description", name: "step1description", widget: "string", i18n: true}
+              - {label: "Step 2 title", name: "step2title", widget: "string", i18n: true}
+              - {label: "Step 2 description", name: "step2description", widget: "string", i18n: true}
+              - {label: "Step 3 title", name: "step3title", widget: "string", i18n: true}
+              - {label: "Step 3 description", name: "step3description", widget: "string", i18n: true}
+              - {label: "Step 4 title", name: "step4title", widget: "string", i18n: true}
+              - {label: "Step 4 description", name: "step4description", widget: "string", i18n: true}
+              - {label: "Step 4 link label", name: "step4linklabel", widget: "string", i18n: true}
+              - {label: "Step 4 link", name: "step4link", widget: "string", i18n: true}
+  
+  
 
   ######################################
   # SECTION: Newsroom
@@ -299,6 +370,14 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string", i18n: true }
       - { label: "Publish Date", name: "date", widget: "datetime" }
+      - label: "Author(s)"
+        name: "author"
+        widget: "relation"
+        collection: "people"
+        value_field: "/people/{{slug}}"
+        display_fields: ["name"]
+        search_fields: ["name"]
+        multiple: true
       - {
           label: "Tag",
           name: "tag",
@@ -341,6 +420,36 @@ collections:
                 widget: "string",
                 required: false,
               },
+              {
+                label: "Case lead",
+                name: "lead",
+                widget: "string",
+                required: false
+              },
+              {
+                label: "Case lead Link",
+                name: "leadlink",
+                widget: "string",
+                required: false
+              },
+              { 
+                label: "Researchers",
+                name: "researchers",
+                widget: "list",
+                fields: [
+                  {
+                    label: "Label",
+                    name: "label",
+                    widget: "string"
+                  },
+                  {
+                    label: "Link",
+                    name: "link",
+                    widget: "string",
+                    required: false
+                  }
+                ]
+              }
             ],
         }
       - { label: "Body", name: "body", widget: "markdown", i18n: true }

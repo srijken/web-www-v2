@@ -203,13 +203,13 @@ ol {
 
 .image-header {
   margin: -33px -33px 32px -33px;
-  height: 600px;
+  height: 520px;
   overflow: hidden;
   position: relative;
   img {
     position: absolute;
-    top: -50%;
-    width: 100%;
+    min-width: 100%;
+    min-height: 520px;
     
   }
 }

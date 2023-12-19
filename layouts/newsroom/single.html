@@ -20,10 +20,49 @@
         </div>
       {{ end }}
 
-      <h1>{{ .Title }}</h1>
+      <div class="article-body">
+        <article>
+        <h1>{{ .Title }}</h1>
 
-      <div class="article">
-        {{ .Content }}
+        
+          {{ .Content }}
+        </article>
+        <aside>
+        {{ with .Params.case }}
+          <section>
+            {{ if .lead }}
+            <h4>Case lead</h4>
+            <ul>
+              {{ if .leadlink }}
+                <li><a href="{{ .leadlink }}">{{ .lead }}</a></li>
+              {{ else }}
+                <li>{{ .lead }}</li>
+              {{ end }}
+            </ul>
+            {{ end }}
+
+            {{ if .researchers }}
+              <h4>Researchers</h4>
+              <ul>
+                {{ range .researchers }}
+                  {{ if .link }}
+                    <li>{{ .label }}</li>
+                  {{ else }}
+                    <li><a href="{{.link}}">{{ .label }}</a></li>
+                  {{ end }}
+                {{ end }}
+              </ul>
+            {{ end }}
+
+            
+
+            <a class="cta" target="_blank" href="https://divd.nl">
+              SOME NUMBERS
+              {{ partial "svg/icon" "external" }}
+            </a>
+          </section>
+        {{ end }}
+        </aside>
       </div>
     {{ partial "p/layout_close" }}
 

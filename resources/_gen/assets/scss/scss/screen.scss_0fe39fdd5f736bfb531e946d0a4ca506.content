@@ -349,13 +349,13 @@ ol {
 
 .image-header {
   margin: -33px -33px 32px -33px;
-  height: 600px;
+  height: 520px;
   overflow: hidden;
   position: relative; }
   .image-header img {
     position: absolute;
-    top: -50%;
-    width: 100%; }
+    min-width: 100%;
+    min-height: 520px; }
 
 nav.nav-container {
   position: fixed;
@@ -973,5 +973,30 @@ nav.sub-nav {
 
 .newsroom .article {
   background-color: gray; }
+
+.article-body {
+  display: flex;
+  padding: 50px; }
+  .article-body article {
+    flex: 1 1 auto; }
+    .article-body article h1 {
+      font-weight: 900;
+      font-size: 2.6em;
+      font-family: var(--font-header);
+      line-height: 1.2em;
+      margin-bottom: 0.4em; }
+  .article-body aside {
+    flex: 0 0 330px; }
+    .article-body aside section {
+      background-color: #F2F2F2;
+      border-radius: 20px;
+      padding: 20px; }
+      .article-body aside section h4 {
+        font-weight: bold;
+        margin-bottom: 4px; }
+      .article-body aside section ul {
+        margin-bottom: 16px; }
+        .article-body aside section ul li {
+          margin-bottom: 2px; }
 
 /*# sourceMappingURL=screen.css.map */
