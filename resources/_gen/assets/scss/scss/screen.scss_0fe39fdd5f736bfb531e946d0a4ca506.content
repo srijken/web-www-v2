@@ -357,6 +357,18 @@ ol {
     min-width: 100%;
     min-height: 520px; }
 
+.default-content {
+  padding: 32px 50px 50px 50px; }
+  .default-content p {
+    max-width: 760px; }
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; }
+  .flex.start {
+    justify-content: flex-start; }
+
 nav.nav-container {
   position: fixed;
   top: 10px;
@@ -376,9 +388,10 @@ nav.nav-container {
     display: flex;
     align-items: center;
     justify-content: space-between; }
-    nav.nav-container .main-nav figure {
+    nav.nav-container .main-nav a.divd {
+      display: block;
       flex: 0 0 120px; }
-      nav.nav-container .main-nav figure .logo {
+      nav.nav-container .main-nav a.divd .logo {
         width: 96px; }
     nav.nav-container .main-nav article {
       flex: 1 1 auto;
@@ -803,6 +816,45 @@ nav.sub-nav {
     padding-top: 8px;
     grid-area: content; }
 
+.card-person-large {
+  border-radius: 20px;
+  background-color: #000;
+  max-width: 270px;
+  display: grid; }
+  .card-person-large a.figure {
+    display: block;
+    background-color: #fff;
+    height: 200px;
+    position: relative; }
+    .card-person-large a.figure img {
+      min-width: 100%;
+      min-height: 100%;
+      top: -50%; }
+  .card-person-large header {
+    padding-top: 8px;
+    padding-bottom: 12px; }
+    .card-person-large header h3, .card-person-large header h3 a {
+      color: #FFD736;
+      text-align: center;
+      font-family: Open Sans;
+      font-size: 1em;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 22px;
+      /* 100% */
+      letter-spacing: 0.44px; }
+    .card-person-large header h6 {
+      color: #FFF;
+      text-align: center;
+      font-family: Open Sans;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 14px;
+      /* 100% */
+      letter-spacing: 0.28px;
+      text-transform: uppercase; }
+
 .carousel {
   --item-width: calc(var(--cw) / 3);
   overflow-x: hidden; }
@@ -861,12 +913,12 @@ nav.sub-nav {
   .accordion .accordion-item .accordion-content {
     display: none;
     padding-bottom: 8px; }
-  .accordion .accordion-item h3 {
+  .accordion .accordion-item > h3 {
     display: flex;
     align-items: center;
     padding-bottom: 8px;
     display: pointer; }
-    .accordion .accordion-item h3 span {
+    .accordion .accordion-item > h3 span {
       margin-left: 10px;
       display: inline-block;
       width: 10px;
@@ -976,7 +1028,7 @@ nav.sub-nav {
 
 .article-body {
   display: flex;
-  padding: 50px; }
+  padding: 32px 50px 50px 50px; }
   .article-body article {
     flex: 1 1 auto; }
     .article-body article h1 {

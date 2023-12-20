@@ -1,21 +1,27 @@
 {{ define "main" }}
   <div class="article-layout">
+    {{ partial "breadcrumbs" . }}
+
     {{ partial "p/section_open" (dict "classes" (slice "default"))}} 
-      {{ partial "p/layout_open" (dict "classes" (slice "left" "article")) }}
-        <div>
-          {{ range .Params.teams }}
-            <div>
-              <h3>{{ .title }}</h3>
-              <p>{{ .description }}</p>
-              <div>
-                {{ range .members }}
-                  <div>
-                    {{ . }}
+      {{ partial "p/layout_open" (dict "classes" (slice "article")) }}
+        <div class="default-content">
+
+          <div class="accordion">
+              {{ range $index, $element := .Params.teams }}
+                <div class="accordion-item{{ if eq $index 0 }} active{{ end }}">
+                  <h3>{{ .title }} <span> </span></h3>
+                  <div class="accordion-content">
+                    <p>{{ .description }}</p>
+                    <div class="flex start">
+                      {{ range .members }}
+                          {{ partial "card-person" . }}
+                      {{ end }}
+                    </div>
                   </div>
-                {{ end }}
-              </div>
-            </div>
-          {{ end }}
+                </div>
+              {{ end }}
+
+          </div>
         </div>
       {{ partial "p/layout_close" }}
     {{ partial "p/section_close" }}

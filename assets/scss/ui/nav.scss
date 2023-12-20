@@ -23,7 +23,8 @@ nav.nav-container {
     align-items: center;
     justify-content: space-between;
 
-    figure {
+    a.divd {
+      display: block;
       flex: 0 0 120px;
       .logo {
         width: 96px;

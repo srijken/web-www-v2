@@ -67,19 +67,41 @@ function initCarousel(el: HTMLDivElement) {
 	}
 }
 
+
+function initAccordion(el:HTMLDivElement) {
+  let items = el.querySelectorAll(".accordion-item");
+
+  function toggleItem(itemEl) {
+    items.forEach((item) => {
+      item.classList.remove("active");
+    });
+    itemEl.classList.add("active");
+  }
+
+  items.forEach((item) => {
+    item.addEventListener("click", () => {
+      toggleItem(item);
+    });
+  });
+}
+
 function initAllCarousels() {
 	let els = document.querySelectorAll<HTMLDivElement>('.carousel');
 	els.forEach(initCarousel);
 }
 
+function initAllAccordions() {
+	let els = document.querySelectorAll<HTMLDivElement>('.accordion');
+	els.forEach(initAccordion);
+}
+
 function initUI() {
-	console.log('huh4');
 	initMainMenu();
 	initAllCarousels();
+	initAllAccordions();
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-	console.log('hahas2');
 	initUI();
 });
 

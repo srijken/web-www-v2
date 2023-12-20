@@ -119,3 +119,49 @@
     grid-area: content;
   }
 }
+
+.card-person-large {
+  border-radius: 20px;
+  background-color: #000;
+  max-width: 270px;
+  display: grid;
+  
+  a.figure {
+    display: block;
+    background-color: #fff;
+    height: 200px;
+    position: relative;
+    img {
+      min-width: 100%;
+      min-height: 100%;
+      top: -50%;
+    }
+  }
+
+  header {
+    padding-top: 8px;
+    padding-bottom: 12px;
+    h3, h3 a {
+      color: #FFD736;
+      text-align: center;
+      font-family: Open Sans;
+      font-size: 1em;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 22px; /* 100% */
+      letter-spacing: 0.44px;
+    }
+
+    h6 {
+      color: #FFF;
+      text-align: center;
+      font-family: Open Sans;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 14px; /* 100% */
+      letter-spacing: 0.28px;
+      text-transform: uppercase;
+    }
+  }
+}

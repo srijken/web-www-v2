@@ -56,8 +56,8 @@
 
             
 
-            <a class="cta" target="_blank" href="https://divd.nl">
-              SOME NUMBERS
+            <a class="cta" target="_blank" href="{{ if .link }}{{ .link }}{{ else }}https://csirt.divd.nl/{{end}}">
+              {{ .caseid}}
               {{ partial "svg/icon" "external" }}
             </a>
           </section>

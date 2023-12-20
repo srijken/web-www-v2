@@ -7,9 +7,11 @@ teams:
       passion for creating a safer digital world while simultaneously reporting
       cybercrime.
     members:
-      - /people/arthur-dent
+      - /who-we-are/team/people/arthur-dent
+      - /who-we-are/team/people/arthur-dent
+      - /who-we-are/team/people/arthur-dent
   - title: Board
     description: Never bored always on board
     members:
-      - /people/arthur-dent
+      - /who-we-are/team/people/arthur-dent
 ---

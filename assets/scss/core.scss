@@ -213,3 +213,22 @@ ol {
     
   }
 }
+
+
+.default-content {
+  padding: 32px 50px 50px 50px;
+
+  p {
+    max-width: 760px;
+  }
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between; 
+  gap: 20px;
+
+  &.start {
+    justify-content: flex-start;
+  }
+}
