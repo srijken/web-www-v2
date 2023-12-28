@@ -13,10 +13,13 @@ missionandhistory:
     Frank Breedijk and Security Analyst Lennaert Oudshoorn joined and started
     the first case in January 2020: Citrix, notifying 546 potential victims in
     the Netherlands. "
-  description: "After this first media exposure many hackers and partners joined.
-    Together they drew up a Code of Conduct to comply with the rules of
-    vulnerability disclosure. In that year, 13 more cases followed, notifying
-    58K potential victims worldwide. "
+  description: " After the launch CISO/hacker Frank Breedijk and Security Analyst
+    Lennaert Oudshoorn joined and started the first case in January 2020:
+    Citrix, notifying 546 potential victims in the Netherlands. After this first
+    media exposure many hackers and partners joined. Together they drew up a
+    Code of Conduct to comply with the rules of vulnerability disclosure. In
+    that year, 13 more cases followed, notifying 58K potential victims
+    worldwide. "
 communicationmanager:
   name: Lucinda Sterk
   role: Communications Manager
