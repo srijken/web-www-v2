@@ -18,8 +18,8 @@ communicationmanager:
   name: Lucinda Sterk
   role: Communications Manager
   description: ‘’Ik vind het erg leuk om voor de DIVD vrijwilliger te zijn. Ik kan
-    mijn vaardigheden inzetten voor een goeddoel waarbij ik echt resultaat
-    zie. Verder vindt ik het gewoon fantastisch om onderdeel te zijn van zo’n
-    leuk en getalanteerd team.’’
+    mijn vaardigheden inzetten voor een goeddoel waarbij ik echt resultaat zie.
+    Verder vindt ik het gewoon fantastisch om onderdeel te zijn van zo’n leuk en
+    getalanteerd team.’’
   image: /images/whoweare/lucinda.png
 ---
