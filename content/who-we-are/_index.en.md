@@ -21,11 +21,10 @@ missionandhistory:
     that year, 13 more cases followed, notifying 58K potential victims
     worldwide. "
 communicationmanager:
-  name: Lucinda Sterk
-  role: Communications Manager
-  description: ‘’Ik vind het erg leuk om voor de DIVD vrijwilliger te zijn. Ik kan
-    mijn vaardigheden inzetten voor een goeddoel waarbij ik echt resultaat zie.
-    Verder vindt ik het gewoon fantastisch om onderdeel te zijn van zo’n leuk en
-    getalanteerd team.’’
+  name: "Max Kraal "
+  role: Researcher CSIRT
+  description: "Koen gaat hier een superleuke quote schrijven over hoe fantastisch
+    het is om bij DIVD te werken als vrijwilliger. Hopefully niet toooo cheesy,
+    "
   image: /images/whoweare/lucinda.png
 ---
