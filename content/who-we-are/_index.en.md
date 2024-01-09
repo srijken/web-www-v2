@@ -13,7 +13,7 @@ missionandhistory:
     Frank Breedijk and Security Analyst Lennaert Oudshoorn joined and started
     the first case in January 2020: Citrix, notifying 546 potential victims in
     the Netherlands. "
-  description: " After the launch CISO/hacker Frank Breedijk and Security Analyst
+  description: "After the launch CISO/hacker Frank Breedijk and Security Analyst
     Lennaert Oudshoorn joined and started the first case in January 2020:
     Citrix, notifying 546 potential victims in the Netherlands. After this first
     media exposure many hackers and partners joined. Together they drew up a
@@ -26,5 +26,5 @@ communicationmanager:
   description: "Koen gaat hier een superleuke quote schrijven over hoe fantastisch
     het is om bij DIVD te werken als vrijwilliger. Hopefully niet toooo cheesy,
     "
-  image: /images/whoweare/lucinda.png
+  image: /images/whoweare/img_5431.jpg
 ---
