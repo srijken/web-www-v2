@@ -6,7 +6,7 @@
   {{ $imageFromParam := .Params.image | default $defaultImage }}
   {{ $imageSource := strings.TrimPrefix "/assets" $imageFromParam }}
   {{ $tag := cond (isset .Params "tag") .Params.tag "" }}
-  {{ $link := print "/" .Permalink }}
+  {{ $link :=  .Permalink }}
   {{ $imageAlt := .Params.image_alt |default "" }}
 
   {{ partial "card" (dict 

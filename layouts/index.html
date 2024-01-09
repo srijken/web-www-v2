@@ -121,9 +121,13 @@
         {{ with .Params.volunteer }}
           <div>
             <h2>{{ .Title }}</h2>
-            {{ range .checklist }}
-              <p> {{ .item }}</p>
-            {{ end }}
+            <ul class="checklist">
+              {{ range .checklist }}
+                <li>
+                  {{ partial "svg/icon" "checkmark"}} {{ .item }}
+                </li>
+              {{ end }}
+            </ul>
 
             <a class="cta" href="/{{ .Lang }}/volunteers">{{ i18n "becomeavolunteer" }}</a>
             <a class="cta inverse external" href="/temp">

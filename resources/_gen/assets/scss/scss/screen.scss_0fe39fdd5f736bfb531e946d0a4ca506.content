@@ -218,6 +218,12 @@ p {
   color: #fff;
   /* TODO VAR */ }
 
+.p {
+  font-family: var(--font-text);
+  font-size: 1.2em;
+  line-height: 1.6em;
+  margin-bottom: 16px; }
+
 html,
 body {
   padding: 0;
@@ -397,6 +403,13 @@ ul.article-list {
 a.external svg {
   width: 12px;
   heighT: 12px; }
+
+ul.checklist li {
+  display: flex;
+  margin-bottom: 18px; }
+  ul.checklist li svg {
+    height: 16px;
+    margin-right: 8px; }
 
 nav.nav-container {
   position: fixed;
@@ -891,14 +904,19 @@ nav.sub-nav {
 
 .people-image {
   max-width: 100%;
+  height: 600px;
   border-top-right-radius: 240px;
   border-top-left-radius: 24px;
   border-bottom-left-radius: 24px;
   border-bottom-right-radius: 24px;
   overflow: hidden;
-  background-color: #e3e3e3; }
+  background-color: #e3e3e3;
+  position: relative; }
   .people-image img {
-    max-width: 100%;
+    position: absolute;
+    left: -50%;
+    min-width: 100%;
+    min-height: 100%;
     object-fit: cover; }
 
 .carousel {

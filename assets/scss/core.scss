@@ -264,3 +264,15 @@ a.external {
     heighT: 12px;
   }
 }
+
+ul.checklist {
+
+  li {
+    display: flex;
+    margin-bottom: 18px;
+    svg {
+      height: 16px;
+      margin-right: 8px;
+    }
+  }
+}

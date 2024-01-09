@@ -31,8 +31,8 @@
       {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
         {{ with .Params.communicationmanager }}
           <div>
-            {{ with resources.Get "images/whoweare/lucinda.png" }} 
-              {{ partial "tools/rimg/img" (dict "img" . "alt" "Communication Maanger") }}
+            {{ with resources.Get .image }} 
+              {{ partial "tools/rimg/img" (dict "img" . "alt" "Communication Manager") }}
             {{ end }}
             <h3>{{ .name }}</h3>
             <h3>{{ .role }}</h3>
