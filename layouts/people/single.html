@@ -1,7 +1,77 @@
 {{ define "main" }}
 
+
 <div class="article-layout">
-  <h1>Hello People single</h1>
+  {{ partial "breadcrumbs" . }}
+
+  {{ partial "p/section_open" (dict "classes" (slice "article" ))}} 
+
+    {{ partial "p/layout_open" (dict "classes" (slice "article")) }}
+      
+      
+
+      <div class="article-body people">
+        <article>
+          <h1>{{ .Title }}</h1>
+          <h3>{{ .Params.role }}</h3>
+        
+          <p>{{ .Params.intro }}</p>
+
+          <div class="default-text">
+            {{ .Content }}
+          </div>
+
+          <h3>{{ i18n "featured_articles" }}</h3>
+          <ul class="article-list">
+            {{ range .Params.featured_articles }}
+              {{ $page := site.GetPage "page" . }}
+                <li>
+                  {{ partial "svg/icon" "article" }} <a href="{{ $page.Permalink }}">{{ $page.Title }}</a>
+                </li>
+            {{ end }}
+          </ul>
+
+          <h3>{{ i18n "csirt_cases" }}</h3>
+          <ul class="article-list">
+            {{ range .Params.csirt_cases }}
+              <li>
+                {{ partial "svg/icon" "article" }}  <a href="{{ .link }}" class="external">{{ .name }} {{ partial "svg/icon" "external" }} </a>
+              </li>
+            {{ end }}
+          </ul>
+
+          <h3>{{ i18n "other_links" }}</h3>
+          <ul class="article-list">
+            {{ range .Params.links }}
+              <li>
+                {{ partial "link_icon" .link }}
+                <a href="{{ .link }}" class="external">{{ .name }} {{ partial "svg/icon" "external" }} </a> 
+              </li>
+            {{ end }}
+          </ul>
+        </article>
+        <aside>
+          <div class="people-image">
+
+            {{ $defaultImage := "/images/global/person_placeholder.png" }}
+            {{ $imageFromParam := .Params.image | default $defaultImage }}
+            {{ $imageSource := strings.TrimPrefix "/assets" $imageFromParam }}
+            {{ $link := print "/" .Permalink }}
+            {{ $alt := .Params.title }}
+            
+                {{ with resources.Get $imageSource }} 
+                  {{ partial "tools/rimg/img" (dict "img" . "alt" $alt) }}
+                    <!--- $alt --->
+                {{ else }}
+                  <img src="/images/global/person_placeholder.png" alt="No image" />
+                {{ end }}
+            
+          </div>
+        </aside>
+      </div>
+    {{ partial "p/layout_close" }}
+
+  {{ partial "p/section_close" }}
 </div>
 
 {{ end }}

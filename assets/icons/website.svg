@@ -1,0 +1,11 @@
+<svg width="24px" height="24px" viewBox="0 0 24 24"
+  xmlns="http://www.w3.org/2000/svg">
+  <!-- Monitor outline -->
+  <rect x="2" y="3" width="20" height="15" rx="2" ry="2" stroke="black" fill="none"/>
+  <!-- Screen -->
+  <rect x="4" y="5" width="16" height="11" fill="lightgray"/>
+  <!-- Bottom stand -->
+  <rect x="10" y="19" width="4" height="2" fill="black"/>
+  <!-- Top bar (browser) -->
+  <rect x="4" y="5" width="16" height="2" fill="black"/>
+</svg>

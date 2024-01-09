@@ -5,6 +5,7 @@ backend:
   repo: DIVD-NL/web-www-v2
   branch: main
 
+
 media_folder: /assets/images
 public_folder: /images
 i18n:
@@ -356,7 +357,7 @@ collections:
         widget: "relation"
         collection: "articles"
         search_fields: ["title", "case.caseid"]
-        value_field: "/newsroom/article/{{slug}}"
+        value_field: "/newsroom/articles/{{slug}}"
         display_fields: ["title", "case.caseid"]
 
   # COLLECTION:  Articles #####################################################
@@ -921,7 +922,7 @@ collections:
     identifier_field: name
     fields:
       - { label: "type", name: "type", widget: "hidden", default: "people" }
-      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Title", name: "title", widget: "string", hint: "Persons name" }
       - {
           label: "Image",
           name: "image",
@@ -931,13 +932,37 @@ collections:
           required: false,
         }
       - { label: "Role", name: "role", widget: "string" }
-      - { label: "Bio", name: "bio", widget: "text", i18n: true }
+      - { label: "intro", name: "intro", widget: "text", i18n: true, hint: "Used in cards" }
+      - { 
+          label: "Featured Articles",
+          name: "featured_articles",
+          widget: "relation",
+          multiple: true,
+          collection: "articles",
+          search_fields: ["title", "case.caseid"],
+          value_field: "/newsroom/articles/{{slug}}",
+          display_fields: ["title", "case.caseid"]
+        }
+      - {
+          label: "CSIRT Cases",
+          name: "csirt_cases",
+          widget: "list",
+          fields: [
+            { label: "name", name: "name", widget: "string" },
+            { label: "Link", name: "link", widget: "string" }
+          ]
+        }
       - {
           label: "Links",
           name: "links",
+          hint: "Links automatically get icons if applicable",
           widget: "list",
-          fields: [{ label: "Link", name: "link", widget: "string" }],
+          fields: [
+            { label: "name", name: "name", widget: "string" },
+            { label: "Link", name: "link", widget: "string" }
+          ],
         }
+      - { label: "Body", name: "body", widget: "markdown", i18n: true }
 
   ########################################################################
   # CONTENT BLOCKS

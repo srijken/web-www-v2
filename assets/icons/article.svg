@@ -1,0 +1,11 @@
+<svg width="24px" height="24px" viewBox="0 0 24 24"
+  xmlns="http://www.w3.org/2000/svg">
+  <!-- Document outline -->
+  <rect x="4" y="3" width="16" height="18" rx="2" ry="2" stroke="black" fill="none"/>
+  <!-- Title line -->
+  <rect x="6" y="6" width="12" height="2" fill="black"/>
+  <!-- Text lines -->
+  <rect x="6" y="10" width="9" height="1" fill="black"/>
+  <rect x="6" y="13" width="9" height="1" fill="black"/>
+  <rect x="6" y="16" width="9" height="1" fill="black"/>
+</svg>

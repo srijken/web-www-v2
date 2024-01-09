@@ -232,3 +232,35 @@ ol {
     justify-content: flex-start;
   }
 }
+
+
+ul.article-list {
+  li {
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    > svg {
+      width: 16px;
+      height: 16px;
+      margin-right: 6px;
+    }
+    a {
+      border-bottom: 0;
+    }
+  }
+
+  margin-bottom: 32px;
+}
+
+.default-text {
+  margin-bottom: 32px;
+  max-width: 620px;
+}
+
+
+a.external {
+  svg {
+    width: 12px;
+    heighT: 12px;
+  }
+}

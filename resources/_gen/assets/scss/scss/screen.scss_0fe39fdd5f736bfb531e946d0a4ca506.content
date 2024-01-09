@@ -169,7 +169,8 @@ h2 {
 h3 {
   font-size: 1.4em;
   font-family: var(--font-text);
-  font-weight: 700; }
+  font-weight: 700;
+  margin-bottom: 0.4em; }
 
 h6 {
   text-transform: uppercase;
@@ -177,6 +178,13 @@ h6 {
   font-weight: 400;
   font-size: 0.8em;
   color: #545454; }
+
+h1 + h3 {
+  color: #545454;
+  /* Desktop/SH1 */
+  font-weight: 400;
+  margin-top: -16px;
+  margin-bottom: 1.4em; }
 
 p.opener {
   font-weight: 400;
@@ -368,6 +376,27 @@ ol {
   gap: 20px; }
   .flex.start {
     justify-content: flex-start; }
+
+ul.article-list {
+  margin-bottom: 32px; }
+  ul.article-list li {
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center; }
+    ul.article-list li > svg {
+      width: 16px;
+      height: 16px;
+      margin-right: 6px; }
+    ul.article-list li a {
+      border-bottom: 0; }
+
+.default-text {
+  margin-bottom: 32px;
+  max-width: 620px; }
+
+a.external svg {
+  width: 12px;
+  heighT: 12px; }
 
 nav.nav-container {
   position: fixed;
@@ -825,10 +854,15 @@ nav.sub-nav {
     display: block;
     background-color: #fff;
     height: 200px;
-    position: relative; }
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px; }
     .card-person-large a.figure img {
       min-width: 100%;
       min-height: 100%;
+      max-width: 100%;
+      max-height: 100%;
       top: -50%; }
   .card-person-large header {
     padding-top: 8px;
@@ -854,6 +888,18 @@ nav.sub-nav {
       /* 100% */
       letter-spacing: 0.28px;
       text-transform: uppercase; }
+
+.people-image {
+  max-width: 100%;
+  border-top-right-radius: 240px;
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  overflow: hidden;
+  background-color: #e3e3e3; }
+  .people-image img {
+    max-width: 100%;
+    object-fit: cover; }
 
 .carousel {
   --item-width: calc(var(--cw) / 3);
@@ -1023,14 +1069,12 @@ nav.sub-nav {
   .newsroom .highlight section {
     padding: 0 16px; }
 
-.newsroom .article {
-  background-color: gray; }
-
 .article-body {
   display: flex;
-  padding: 32px 50px 50px 50px; }
+  padding: 16px 42px 50px 50px; }
   .article-body article {
-    flex: 1 1 auto; }
+    flex: 1 1 auto;
+    padding-right: 32px; }
     .article-body article h1 {
       font-weight: 900;
       font-size: 2.6em;
@@ -1050,5 +1094,7 @@ nav.sub-nav {
         margin-bottom: 16px; }
         .article-body aside section ul li {
           margin-bottom: 2px; }
+  .article-body.people aside {
+    flex: 0 0 40%; }
 
 /*# sourceMappingURL=screen.css.map */

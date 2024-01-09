@@ -23,6 +23,7 @@ h3 {
   font-size: 1.4em;
   font-family: var(--font-text);
   font-weight: 700;
+  margin-bottom: 0.4em;
 }
 
 h6 {
@@ -31,6 +32,15 @@ h6 {
   font-weight: 400;
   font-size: 0.8em;
   color: #545454;
+}
+
+h1 + h3 {
+  color: #545454;
+
+/* Desktop/SH1 */
+  font-weight: 400;
+  margin-top: -16px;
+  margin-bottom: 1.4em;
 }
 
 p.opener {

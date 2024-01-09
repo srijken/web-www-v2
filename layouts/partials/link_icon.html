@@ -1,0 +1,12 @@
+{{ $link := . }}
+{{ if (strings.Contains $link "twitter") }}
+  {{ partial "svg/icon" "twitter" }}
+{{ else if (strings.Contains $link "x.com") }}
+  {{ partial "svg/icon" "twitter" }}
+{{ else if (strings.Contains $link "linkedin") }}
+  {{ partial "svg/icon" "linkedin" }}
+{{ else if (strings.Contains $link "github") }}
+  {{ partial "svg/icon" "twitter" }}
+{{ else }}
+  {{ partial "svg/icon" "website" }}
+{{ end }}
