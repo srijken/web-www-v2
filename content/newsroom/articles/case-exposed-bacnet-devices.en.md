@@ -1,25 +1,17 @@
 ---
 title: "CASE: EXPOSED BACNET DEVICES"
-date: 2023-12-19T13:42:20.205Z
+date: 2024-01-09T20:29:38.981Z
 author:
   - /people/arthur-dent
 tag: case
-intro: During the Log4J crisis, researchers uncovered BACnet devices with open
-  ports. Upon further investigation, more devices have been found running the
-  BACnet protocol.
+intro: blabla
 image: /images/articles/1675785490-esxi-16_9-1.png
-Alt tag for image: ""
 case:
-  caseid: 2022-00005
-  link: https://csirt.divd.nl/cases/DIVD-2022-00005/
-  lead: Ruben Uithol
-  leadlink: ""
-  researchers:
-    - label: Arthur Miron
-      link: ""
-    - label: Patrick Hulshof
+  caseid: DIVD-2022-00005
   closed: true
 ---
+During the process of conducting vulnerability scans focused on the Log4J vulnerability, the DIVD discovered numerous Siemens systems that exposed the BACnet protocol via an unsecured port.
+
 BACnet, or Building Automation and Control Networks, is a widely adopted communication protocol designed for building automation and control systems. Established as an international standard by the American Society of Heating, Refrigerating, and Air-Conditioning Engineers (ASHRAE), BACnet facilitates communication and interoperability between devices and systems used in areas such as heating, ventilation, air-conditioning (HVAC), lighting, access, and fire detection. It is employed worldwide in commercial, industrial, and residential buildings to ensure effective and efficient building management.
 
 These systems might be at risk of unauthorized access or manipulation by threat actors. Communication can be unencrypted and without proper authentication mechanisms, making it potentially vulnerable to interception or tampering. An exposed BACnet port also increases the attack surface of the Siemens systems, potentially allowing attackers to gain access to other parts of the network and causing further damage.
