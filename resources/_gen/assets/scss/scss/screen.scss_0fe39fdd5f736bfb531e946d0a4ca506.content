@@ -157,7 +157,7 @@ h1 {
   font-weight: 900;
   font-size: 5em;
   font-family: var(--font-header);
-  line-height: 0.8em; }
+  line-height: 1em; }
 
 h2 {
   font-weight: 900;
@@ -239,6 +239,11 @@ body {
   padding-top: 128px;
   border-bottom-left-radius: 150px; }
 
+.bg-gradient {
+  background: linear-gradient(to bottom, rgba(61, 220, 235, 0.2) 60%, #FFFFFF 100%); }
+  .bg-gradient.bottom-lg {
+    padding-bottom: 228px; }
+
 p.pre {
   white-space: pre-wrap; }
 
@@ -318,7 +323,7 @@ button, .button {
   letter-spacing: 0.02em;
   text-transform: uppercase;
   padding: 4px 16px;
-  display: flex;
+  display: inline-flex;
   justify-content: space-around;
   align-items: center; }
   button.primary, .button.primary {
@@ -346,6 +351,7 @@ button, .button {
     width: 15px;
     height: 15px;
     margin-right: 6px;
+    margin-left: 6px;
     margin-top: 1px;
     fill: white; }
 
@@ -382,6 +388,8 @@ ol {
   gap: 20px; }
   .flex.start {
     justify-content: flex-start; }
+  .flex.flex-50 > * {
+    flex: 0 0 50%; }
 
 ul.article-list {
   margin-bottom: 32px; }
@@ -410,6 +418,40 @@ ul.checklist li {
   ul.checklist li svg {
     height: 16px;
     margin-right: 8px; }
+
+.steps section {
+  border-radius: 20px;
+  overflow: hidden; }
+  .steps section header {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    padding: 20px; }
+    .steps section header span {
+      width: 54px;
+      height: 54px;
+      flex: 0 0 54px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border-radius: 50%;
+      background-color: var(--brand);
+      color: #000;
+      margin-right: 16px; }
+    .steps section header h4 {
+      color: #fff;
+      font-size: 1.5em;
+      font-weight: 700; }
+  .steps section p {
+    background-color: #fff;
+    border-radius: 0 0 20px 20px;
+    padding: 20px; }
+
+.panel {
+  background-color: #fff;
+  padding: 60px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 20px; }
 
 nav.nav-container {
   position: fixed;
@@ -624,6 +666,10 @@ nav.sub-nav {
 .ps.ps-overlap-top .ps-container {
   position: relative;
   top: -128px; }
+
+.ps.ps-overlap-top-lg .ps-container {
+  position: relative;
+  top: -228px; }
 
 .ps.ps-overlap-bottom .ps-container {
   position: relative;

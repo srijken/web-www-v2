@@ -14,12 +14,18 @@ body {
 
 
 
-
-
 .topic-intro {
   background-color: #1D1D1D;
   padding-top: 128px;
   border-bottom-left-radius: 150px; 
+}
+
+.bg-gradient {
+  background: linear-gradient(to bottom, rgba(61, 220, 235, 0.2)  60%, #FFFFFF 100%);
+
+  &.bottom-lg {
+    padding-bottom: 228px;
+  }
 }
 
 p.pre {
@@ -138,7 +144,7 @@ button, .button {
 
   padding: 4px 16px;
 
-  display: flex;
+  display: inline-flex;
   justify-content: space-around;
   align-items: center;
 
@@ -178,6 +184,7 @@ button, .button {
     width: 15px;
     height: 15px;
     margin-right: 6px;
+    margin-left: 6px;
     margin-top: 1px;
     fill: white;
   }
@@ -231,6 +238,14 @@ ol {
   &.start {
     justify-content: flex-start;
   }
+
+  &.flex-50 {
+    
+    > * {
+      flex: 0 0 50%;
+    }
+  
+  }
 }
 
 
@@ -275,4 +290,49 @@ ul.checklist {
       margin-right: 8px;
     }
   }
+}
+
+
+.steps {
+  section {
+    
+    border-radius: 20px;
+    overflow: hidden;
+    header {
+      background-color: #000;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      span {
+        width: 54px;
+        height: 54px;
+        flex: 0 0 54px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 50%;
+        background-color: var(--brand);
+        color: #000;
+        margin-right: 16px;
+      }
+      h4 {
+        color: #fff;
+        font-size: 1.5em;
+        font-weight: 700;
+      }
+    }
+    p {
+      background-color: #fff;
+      border-radius: 0 0 20px 20px;
+      padding: 20px;
+    }
+  }
+}
+
+
+.panel {
+  background-color: #fff;
+  padding: 60px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
 }

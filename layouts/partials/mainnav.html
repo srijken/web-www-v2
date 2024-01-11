@@ -32,10 +32,11 @@
           {{ partial "svg/icon" "search" }}
           <span>search</span>
         </button>
-        <button class="primary">
+        
+        <a href="{{ "warningemail/" | relLangURL }}" class="button primary">
           {{ partial "svg/icon" "email" }}
           <span>warning email</span>
-        </button>
+        </a>
       </section>
       <section class="language">
         {{ $currentLang := $.Site.Language }}

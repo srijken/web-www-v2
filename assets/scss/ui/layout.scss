@@ -37,6 +37,13 @@
     }
   }
 
+  &.ps-overlap-top-lg {
+    .ps-container {
+      position: relative;
+      top: -228px;
+    }
+  }
+
   &.ps-overlap-bottom {
     .ps-container {
       position: relative;
