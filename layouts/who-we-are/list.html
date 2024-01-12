@@ -1,52 +1,71 @@
 {{ define "main" }}
   <div class="topic-layout whoweare">
     
-    <div class="topic-intro reverse">
-      {{ partial "breadcrumbs.html" . }}
-      {{ partial "p/layout_open" (dict "classes" (slice "right")) }}
-        <div>
-          <h1>{{ .Params.opener }}</h1>
-        </div>
-        <div>
-          <p>{{ .Params.intro }}</p>
-          <a class="cta secondary" href="#mission">{{ i18n "learnmore" }}</a>
-        </div>
-      {{ partial "p/layout_close" }}
+    <div class="bg-gradient bg-gradient-reverse">
+      <div class="topic-intro reverse">
+        {{ partial "breadcrumbs.html" . }}
+        {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
+          <div>
+            <h1>{{ .Params.opener }}</h1>
+          </div>
+          <div class="pt-md">
+            <p>{{ .Params.intro }}</p>
+            <a class="cta secondary" href="#mission">{{ i18n "learnmore" }}</a>
+          </div>
+        {{ partial "p/layout_close" }}
+      </div>
+      <div class="intro-image">
+        {{ with resources.Get "images/global/who_we_are_main.svg" }} 
+          <img src="{{ .RelPermalink }}" alt="who we are" />
+        {{ end }}
+      </div>
     </div>
 
-    {{ partial "p/section_open" (dict "classes" (slice "gradient"))}} 
+      
+    {{ partial "p/section_open" (dict "classes" (slice "inverse" ))}} 
 
       {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
         {{ with .Params.missionandhistory }}
-          <div>
+          <div class="reverse">
             <h2>{{ .title }}</h2>
-            <p class="pre">{{ .intro }}</p>
+            <p class="pre primary">{{ .intro }}</p>
           </div>
-          <div>
+          <div class="reverse">
+            <h2>&nbsp;</h2>
             <p class="pre">{{ .description }}</p>
           </div>
         {{ end }}
       {{ partial "p/layout_close" }}
 
-      {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
+
+      {{ partial "p/layout_open" (dict "classes" (slice "overlap-bottom")) }}
         {{ with .Params.communicationmanager }}
-          <div>
+          <div class="person-highlight">
+            <figure>
             {{ with resources.Get .image }} 
               {{ partial "tools/rimg/img" (dict "img" . "alt" "Communication Manager") }}
             {{ end }}
-            <h3>{{ .name }}</h3>
-            <h3>{{ .role }}</h3>
-            <h3>{{ .description }}</h3>
-            <a class="cta" href="{{ "team/" | relLangURL }}">{{ i18n "meetthewholeteam" }}</a>
+            </figure>
+            <article>
+              <h2>{{ .name }}</h2>
+              <h3>{{ .role }}</h3>
+              <h3>{{ .description }}</h3>
+              <a class="cta" href="{{ "team/" | relLangURL }}">{{ i18n "meetthewholeteam" }}</a>
+            </article>
           </div>
         {{ end }}
       {{ partial "p/layout_close" }}
-
-
-      {{ partial "block/divdfamily" . }}
-      {{ partial "block/familycta" . }}
-      {{ partial "block/csirt" . }}
-
+        
     {{ partial "p/section_close" }}
+    
+    <div class="bg-gradient pt-xlg">
+      {{ partial "p/section_open" (dict "classes" (slice "default" "round" "round-topright"))}}
+
+        {{ partial "block/divdfamily" . }}
+        {{ partial "block/familycta" . }}
+        {{ partial "block/csirt" . }}
+      
+      {{ partial "p/section_close" }}
+    </div>
   </div>
 {{ end }}

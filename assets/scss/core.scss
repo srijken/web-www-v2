@@ -18,10 +18,20 @@ body {
   background-color: #1D1D1D;
   padding-top: 128px;
   border-bottom-left-radius: 150px; 
+  padding-bottom: 40px;
+
+  .pl {
+    padding-top: 24px;
+  }
 }
 
 .bg-gradient {
   background: linear-gradient(to bottom, rgba(61, 220, 235, 0.2)  60%, #FFFFFF 100%);
+
+
+  &.bg-gradient-reverse {
+    background: linear-gradient(to top, rgba(61, 220, 235, 0.2)  60%, #FFFFFF 100%);
+  }
 
   &.bottom-lg {
     padding-bottom: 228px;
@@ -335,4 +345,22 @@ ul.checklist {
   padding: 60px;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
+}
+
+.fill-center {
+  display: flex;
+  align-items: center;
+}
+
+.pt-sm {
+  padding-top: 16px;
+}
+.pt-md {
+  padding-top: 32px;
+}
+.pt-lg {
+  padding-top: 64px;
+}
+.pt-xlg {
+  padding-top: 328px;
 }

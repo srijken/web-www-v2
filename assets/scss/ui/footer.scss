@@ -1,0 +1,39 @@
+footer.main {
+  background-color: #1D1D1D;
+
+  display: flex;
+  flex-direction: column;
+
+  .container {
+    max-width: var(--cw);
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  article {
+    padding: 64px 0;
+    flex: 1 1 auto;
+    color: #fff;
+
+    .container {
+      section {
+        flex: 0 0 50%;
+      }
+    }
+  }
+
+  aside {
+    flex: 0 0 52px;
+    background-color: #000;
+    color: #fff;
+    padding: 16px;
+
+    a {
+      color: #fff;
+    }
+  }
+
+
+}

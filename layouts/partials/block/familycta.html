@@ -10,9 +10,11 @@
           {{ partial "tools/rimg/img" (dict "img" . "alt" "Become part of the family") }}
         {{ end }}
       </div>
-      <div>
-        <h2>{{ .Title }}</h2>
-        <p>{{ .intro }}</p>
+      <div class="fill-center">
+        <div>
+          <h2>{{ .Title }}</h2>
+          <p>{{ .intro }}</p>
+        </div>
       </div>
     {{ partial "p/layout_close" }}
     

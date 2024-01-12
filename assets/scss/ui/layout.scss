@@ -4,6 +4,11 @@
     overflow-x: hidden;
   }
 
+
+  &.ps-default {
+    background-color: #fff;
+  }
+
   &.ps-inverse {
     background-color:#1D1D1D; 
   }
@@ -48,6 +53,13 @@
     .ps-container {
       position: relative;
       bottom: -96px;
+    }
+  }
+
+  &.ps-overlap-bottom-xl {
+    .ps-container {
+      position: relative;
+      bottom: -296px;
     }
   }
 
@@ -196,7 +208,7 @@
 }
 
 
-.article-layout {
+.article-layout, .topic-layout {
   padding-top: 128px;
   background-color: #1D1D1D;
 
@@ -217,4 +229,48 @@
 .topic-layout {
   padding-top: 0;
   background-color: white;
+}
+
+
+.intro-image {
+  height: 580px;
+  position: relative;
+  overflow: hidden;
+  img {
+    position: absolute;
+    min-width: 100%;
+    top: -50%;
+    size: cover;
+  }
+
+}
+
+
+.person-highlight {
+  background-color: var(--brand);
+
+  border-radius: 328px;
+  overflow: hidden;
+  padding: 20px;
+  display: flex;
+  margin-top: -256px;
+  transform: translateY(256px);
+
+  figure {
+    border-radius: 50%;
+    overflow: hidden;
+    height: 400px;
+    width: 400px;
+    flex: 0 0 400px;
+    img {
+      height: 400px;
+      width: 400px;
+      object-fit: cover;
+    }
+  }
+
+  article {
+    padding: 32px;
+    color: black;
+  }
 }
