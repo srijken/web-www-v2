@@ -4,30 +4,40 @@ opener: We report vulnerabilities to prevent issues
 intro: We are a group of volunteers that scout the web for potential cyber
   security risks.
 csirt:
-  title: The researchers looking for vulnerabilities
-  description: "A short introduction to CSIRT and a call to action that tells
-    visitors they can learn more about CSIRT on their website. "
+  title: Our researchers looking for vulnerabilities
+  description: >-
+    CSIRT: Computer Security Incident Response Team
+
+    The CSIRT handles the scanning for and disclosing of vulnerabilities, either discovered by DIVD researchers or third parties and warning people for leaked credentials and operates our CVE Numbering Authoristy (CNA) capability.
   link: https://csirt.divd.nl
 stepbystep:
   title: Step by step of what you should do
-  description: Lorem ipsum dolor sit amet consectetur. Pharetra ullamcorper
-    elementum ipsum a eu duis. Id nunc ipsum vel ultricies ornare. Odio aliquet
-    nisl etiam quis. Duis at nunc velit dolor arcu pharetra ornare. Purus quis
-    ut tellus enim et felis penati
+  description: >
+    If you've received an notification (email) from our CSIRT,  check whether
+    the email address contains @divd.nl. This could be csirt@divd.nl or a
+    nameofresearchers@divd.nl. Some of our researchers prefer to send
+    notifications from their personal account. 
   link: https://csirt.divd.nl
   steps:
     step4link: https://csirt.divd.nl/cases
-    step4title: Check the status of the case on the CSIRT website
-    step3title: Report back to DIVD
-    step2title: "Discuss the plan of action layed out in the e-mail with your colleagues "
+    step4title: "Make sure you're responsible disclosure policy is accurate and
+      regularly updated. "
+    step3title: Check the status of the case on the CSIRT website
+    step4linklabel: CSIRT Case pages
+    step2title: Check your security policy and forward this email to the right person
     step1title: Read the e-mail thoroughly
-    step4description: On the CSIRT site you can check the up to date status of the
-      cases we are working on. The case number in the e-mail you received from
-      us, is the same on this page.
-    step3description: Lorem ipsum dolor sit amet consectetur. Pharetra ullamcorper
-      elementum ipsum a eu duis.
-    step2description: Lorem ipsum dolor sit amet consectetur. Pharetra ullamcorper
-      elementum ipsum a eu duis.
-    step1description: Lorem ipsum dolor sit amet consectetur. Pharetra ullamcorper
-      elementum ipsum a eu duis.
+    step4description: "Please add 'security.txt' to your responisble disclosure
+      policy. You could use securitytxt.org to easily create a security.txt file
+      and ask your administrator to add it in the source of the website. "
+    step3description: "We update the casefile whenever there's any news on the
+      vulnerability. This might be when a patch is available or, unfortunately,
+      in some cases when there's no patch available yet we keep you updated on
+      what type of mitigations you can take. "
+    step2description: "Some organisations employ a CISO, developer or other IT-team
+      member, please inform the right person in your organisation about the
+      vulnerability. If you don't have a contact who could help you out, please
+      reply on our email and we'll do our best to help you out. "
+    step1description: The email contains all the information you'll need to take
+      actions on this vulnerability. We always  share the possible consequences
+      when the vulnerability is exploited by a threat actor.
 ---
