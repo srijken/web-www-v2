@@ -1,11 +1,12 @@
 ---
 title: Warning e-mail
 opener: We report vulnerabilities to prevent issues
-intro: We are a group of volunteers that scout the web for potential cyber
-  security risks.
+intro: "Whenever a vulnerability is found, we open a case and create a
+  fingerprint. After that we'll start scanning to identify vulnerable instances
+  and notify the owners of these systems. "
 csirt:
   title: Our researchers looking for vulnerabilities
-  description: >-
+  description: >
     CSIRT: Computer Security Incident Response Team
 
     The CSIRT handles the scanning for and disclosing of vulnerabilities, either discovered by DIVD researchers or third parties and warning people for leaked credentials and operates our CVE Numbering Authoristy (CNA) capability.
@@ -17,11 +18,12 @@ stepbystep:
     the email address contains @divd.nl. This could be csirt@divd.nl or a
     nameofresearchers@divd.nl. Some of our researchers prefer to send
     notifications from their personal account. 
+
+    *Only owners of vulnerable instances receive a notification with the host information and mitigation steps.*
   link: https://csirt.divd.nl
   steps:
     step4link: https://csirt.divd.nl/cases
-    step4title: "Make sure you're responsible disclosure policy is accurate and
-      regularly updated. "
+    step4title: Make sure you're responsible disclosure policy is accurate
     step3title: Check the status of the case on the CSIRT website
     step4linklabel: CSIRT Case pages
     step2title: Check your security policy and forward this email to the right person
