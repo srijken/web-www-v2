@@ -10,6 +10,8 @@ csirt:
     CSIRT: Computer Security Incident Response Team
 
     The CSIRT handles the scanning for and disclosing of vulnerabilities, either discovered by DIVD researchers or third parties and warning people for leaked credentials and operates our CVE Numbering Authoristy (CNA) capability.
+
+    *Only owners of vulnerable instances receive a notification with the host information and mitigation steps.*
   link: https://csirt.divd.nl
 stepbystep:
   title: Step by step of what you should do
