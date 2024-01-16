@@ -21,6 +21,7 @@ teams:
     description: ..
     members:
       - /who-we-are/team/people/arthur-dent
+      - /who-we-are/team/people/_index
   - title: Research
     description: ..
     members:
