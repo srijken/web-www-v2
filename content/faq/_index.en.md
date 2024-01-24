@@ -32,6 +32,20 @@ faqgroups:
 
 
           I﻿ndividuals of all kinds of backgrounds and genders are most welcome at DIVD. We do not only welcome and embrace them, but value their unique perspectives and contributions to our community. We find it important that everybody can feel and act like themselves.
+      - description: Anything that is classified as high risk / high impact. We
+          prioritize the vulnerabilities we work on by various metrics, for
+          instance how big the exposure on the internet is and if it is being
+          actively abused or not.
+        title: What type of vulnerabilities do you notify?
+      - title: Do you prevent scanning IP addresses of big (foreign) companies to avoid
+          lawsuits or any legal issues?
+        description: No. We scan everyone who runs the targeted software throughout  the
+          whole IPv4 range. Only after a hit, we see who it is.
+      - description: Most of our volunteers work in cyber security and will stay
+          up-to-date on what is going on. We take information from various feeds
+          / mailing lists / news sources.
+        title: Where do you got the info about the vulnerability? How do you know
+          where’s a vulnerability and what to do with it.
   - heading: An extra group
     faqs:
       - title: A question
