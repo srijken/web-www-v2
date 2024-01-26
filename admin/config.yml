@@ -5,7 +5,6 @@ backend:
   repo: DIVD-NL/web-www-v2
   branch: main
 
-
 media_folder: /assets/images
 public_folder: /images
 i18n:
@@ -76,8 +75,13 @@ collections:
               public_folder: "/images/",
               media_folder: "/assets/images/",
               required: true,
-            }          
-          - { label: t1_alt, name: "Alt text for t1 image", widget: string, i18n: true }
+            }
+          - {
+              label: t1_alt,
+              name: "Alt text for t1 image",
+              widget: string,
+              i18n: true,
+            }
           - { label: t2, name: t2, widget: string, i18n: true }
           - {
               label: "t2_Image",
@@ -86,8 +90,13 @@ collections:
               public_folder: "/images/",
               media_folder: "/assets/images/",
               required: true,
-            }          
-          - { label: t2_alt, name: "Alt text for t2 image", widget: string, i18n: true }
+            }
+          - {
+              label: t2_alt,
+              name: "Alt text for t2 image",
+              widget: string,
+              i18n: true,
+            }
           - { label: t3, name: t3, widget: string, i18n: true }
           - {
               label: "t3_Image",
@@ -96,8 +105,13 @@ collections:
               public_folder: "/images/",
               media_folder: "/assets/images/",
               required: true,
-            }          
-          - { label: t3_alt, name: "Alt text for t3 image", widget: string, i18n: true }
+            }
+          - {
+              label: t3_alt,
+              name: "Alt text for t3 image",
+              widget: string,
+              i18n: true,
+            }
 
       - name: "helpushelpyou"
         label: "Help us, help you"
@@ -239,7 +253,7 @@ collections:
             name: "description"
             widget: "text"
             i18n: true
-  
+
   # PAGE:  !Warning email #####################################################
   - name: "warningemail"
     label: "Warning email"
@@ -298,24 +312,72 @@ collections:
             i18n: true
             widget: "object"
             fields:
-              - {label: "Step 1 title", name: "step1title", widget: "string", i18n: true}
-              - {label: "Step 1 description", name: "step1description", widget: "string", i18n: true}
-              - {label: "Step 2 title", name: "step2title", widget: "string", i18n: true}
-              - {label: "Step 2 description", name: "step2description", widget: "string", i18n: true}
-              - {label: "Step 3 title", name: "step3title", widget: "string", i18n: true}
-              - {label: "Step 3 description", name: "step3description", widget: "string", i18n: true}
-              - {label: "Step 4 title", name: "step4title", widget: "string", i18n: true}
-              - {label: "Step 4 description", name: "step4description", widget: "string", i18n: true}
-              - {label: "Step 4 link label", name: "step4linklabel", widget: "string", i18n: true}
-              - {label: "Step 4 link", name: "step4link", widget: "string", i18n: true}
-  
-  
+              - {
+                  label: "Step 1 title",
+                  name: "step1title",
+                  widget: "string",
+                  i18n: true,
+                }
+              - {
+                  label: "Step 1 description",
+                  name: "step1description",
+                  widget: "string",
+                  i18n: true,
+                }
+              - {
+                  label: "Step 2 title",
+                  name: "step2title",
+                  widget: "string",
+                  i18n: true,
+                }
+              - {
+                  label: "Step 2 description",
+                  name: "step2description",
+                  widget: "string",
+                  i18n: true,
+                }
+              - {
+                  label: "Step 3 title",
+                  name: "step3title",
+                  widget: "string",
+                  i18n: true,
+                }
+              - {
+                  label: "Step 3 description",
+                  name: "step3description",
+                  widget: "string",
+                  i18n: true,
+                }
+              - {
+                  label: "Step 4 title",
+                  name: "step4title",
+                  widget: "string",
+                  i18n: true,
+                }
+              - {
+                  label: "Step 4 description",
+                  name: "step4description",
+                  widget: "string",
+                  i18n: true,
+                }
+              - {
+                  label: "Step 4 link label",
+                  name: "step4linklabel",
+                  widget: "string",
+                  i18n: true,
+                }
+              - {
+                  label: "Step 4 link",
+                  name: "step4link",
+                  widget: "string",
+                  i18n: true,
+                }
 
   ######################################
   # SECTION: Newsroom
   ####
 
-  # PAGE: Newsroom #####################################################
+  # PAGE: !Newsroom #####################################################
   - label: "Newsroom"
     name: "newsroom"
     folder: "content/newsroom"
@@ -395,7 +457,13 @@ collections:
           media_folder: "/assets/images/articles",
           required: false,
         }
-      - { label: alt, name: "Alt tag for image", widget: string, i18n: true, required: false }
+      - {
+          label: alt,
+          name: "Alt tag for image",
+          widget: string,
+          i18n: true,
+          required: false,
+        }
       - {
           label: "case",
           required: false,
@@ -426,32 +494,29 @@ collections:
                 label: "Case lead",
                 name: "lead",
                 widget: "string",
-                required: false
+                required: false,
               },
               {
                 label: "Case lead Link",
                 name: "leadlink",
                 widget: "string",
-                required: false
+                required: false,
               },
-              { 
+              {
                 label: "Researchers",
                 name: "researchers",
                 widget: "list",
-                fields: [
-                  {
-                    label: "Label",
-                    name: "label",
-                    widget: "string"
-                  },
-                  {
-                    label: "Link",
-                    name: "link",
-                    widget: "string",
-                    required: false
-                  }
-                ]
-              }
+                fields:
+                  [
+                    { label: "Label", name: "label", widget: "string" },
+                    {
+                      label: "Link",
+                      name: "link",
+                      widget: "string",
+                      required: false,
+                    },
+                  ],
+              },
             ],
         }
       - { label: "Body", name: "body", widget: "markdown", i18n: true }
@@ -460,7 +525,7 @@ collections:
   # SECTION: Contribute
   ####
 
-  # PAGE: Contribute #####################################################
+  # PAGE: !Contribute #####################################################
   - name: "contribute"
     label: "Contribute"
     folder: "content/contribute"
@@ -497,8 +562,13 @@ collections:
               public_folder: "/images/",
               media_folder: "/assets/images/",
               required: false,
-            }          
-          - { label: alt, name: "Alt tag for image", widget: string, i18n: true }            
+            }
+          - {
+              label: alt,
+              name: "Alt tag for image",
+              widget: string,
+              i18n: true,
+            }
           - label: "Description"
             name: "description"
             widget: "text"
@@ -519,8 +589,13 @@ collections:
               public_folder: "/images/",
               media_folder: "/assets/images/",
               required: false,
-            }          
-          - { label: alt, name: "Alt tag for image", widget: string, i18n: true }            
+            }
+          - {
+              label: alt,
+              name: "Alt tag for image",
+              widget: string,
+              i18n: true,
+            }
           - label: "Description"
             name: "description"
             widget: "text"
@@ -600,7 +675,7 @@ collections:
             widget: "string"
             i18n: true
 
-  # PAGE:  Partners #####################################################
+  # PAGE:  !Partners #####################################################
 
   - name: "partners"
     label: "Partners"
@@ -674,7 +749,7 @@ collections:
             media_folder: "/assets/images/partners"
             required: false
 
-  # PAGE:  Volunteers #####################################################
+  # PAGE:  !Volunteers #####################################################
 
   - name: "volunteers"
     label: "Volunteers"
@@ -722,7 +797,7 @@ collections:
   # SECTION: What we do
   ####
 
-  # PAGE : What we do #####################################################
+  # PAGE : !What we do #####################################################
 
   - name: "whatwedo"
     label: "What we do"
@@ -792,7 +867,7 @@ collections:
             widget: "text"
             i18n: true
 
-  # PAGE: Code of Conduct #####################################################
+  # PAGE: !Code of Conduct #####################################################
   - name: codeofconduct
     label: "Code of conduct"
     folder: "content/what-we-do/code-of-conduct"
@@ -813,7 +888,7 @@ collections:
   # SECTION: Who we are
   ####
 
-  # PAGE:  Who we are #####################################################
+  # PAGE:  !Who we are #####################################################
 
   - name: "whoweare"
     label: "Who we are"
@@ -923,7 +998,12 @@ collections:
     identifier_field: name
     fields:
       - { label: "type", name: "type", widget: "hidden", default: "people" }
-      - { label: "Title", name: "title", widget: "string", hint: "Persons name" }
+      - {
+          label: "Title",
+          name: "title",
+          widget: "string",
+          hint: "Persons name",
+        }
       - {
           label: "Image",
           name: "image",
@@ -933,8 +1013,14 @@ collections:
           required: false,
         }
       - { label: "Role", name: "role", widget: "string" }
-      - { label: "intro", name: "intro", widget: "text", i18n: true, hint: "Used in cards" }
-      - { 
+      - {
+          label: "intro",
+          name: "intro",
+          widget: "text",
+          i18n: true,
+          hint: "Used in cards",
+        }
+      - {
           label: "Featured Articles",
           name: "featured_articles",
           widget: "relation",
@@ -942,26 +1028,28 @@ collections:
           collection: "articles",
           search_fields: ["title", "case.caseid"],
           value_field: "/newsroom/articles/{{slug}}",
-          display_fields: ["title", "case.caseid"]
+          display_fields: ["title", "case.caseid"],
         }
       - {
           label: "CSIRT Cases",
           name: "csirt_cases",
           widget: "list",
-          fields: [
-            { label: "name", name: "name", widget: "string" },
-            { label: "Link", name: "link", widget: "string" }
-          ]
+          fields:
+            [
+              { label: "name", name: "name", widget: "string" },
+              { label: "Link", name: "link", widget: "string" },
+            ],
         }
       - {
           label: "Links",
           name: "links",
           hint: "Links automatically get icons if applicable",
           widget: "list",
-          fields: [
-            { label: "name", name: "name", widget: "string" },
-            { label: "Link", name: "link", widget: "string" }
-          ],
+          fields:
+            [
+              { label: "name", name: "name", widget: "string" },
+              { label: "Link", name: "link", widget: "string" },
+            ],
         }
       - { label: "Body", name: "body", widget: "markdown", i18n: true }
 
@@ -1100,3 +1188,34 @@ collections:
           - label: "Link"
             name: "link"
             widget: "string"
+
+      # BLOCK: Contact #####################################################
+      - name: "contact"
+        label: "Contact"
+        i18n: true
+        widget: object
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Description"
+            name: "intro"
+            widget: text
+            i18n: true
+
+      # BLOCK: Footer #####################################################
+      - name: "footer"
+        label: "Footer"
+        i18n: true
+        widget: object
+        fields:
+          - label: "Title"
+            name: "title"
+            hidden: true
+            widget: "hidden"
+            default: "Footer"
+          - label: "Description"
+            name: "intro"
+            widget: text
+            i18n: true

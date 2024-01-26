@@ -77,7 +77,8 @@
   background-color: #fff;
   border-radius: 64px;
   padding: 24px 16px;
-
+  overflow-x: hidden;
+  max-width: 100%;
   display: flex;
 
   .smallouselnav {
@@ -86,8 +87,42 @@
 
   .smallouselcontent {
     flex: 1 1 auto;
+    overflow: hidden;
+    position: relative;
+    height: 64px;
 
-    display: flex;
+    .slides {
+      position: absolute;
+      width: 100%;
+      height: 80px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      display: flex;  
+      flex-wrap: nowrap;
+
+
+      &::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: transparent;
+        border-radius: 10px;
+      }
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      section {
+        filter: grayscale(100%);
+        transition: filter 0.3s ease;
+
+        &:hover {
+          filter: grayscale(0%);
+        }
+      }
+    }
 
     img {
       max-height: 64px;

@@ -8,14 +8,15 @@
     <div class="smallousel">
       <div class="smallouselnav">L</div>
       <div class="smallouselcontent">
+        <div class="slides">
           {{ range $index, $element := .Params.partnerlist }}
             <section>
               {{ with resources.Get .image }} 
                 {{ partial "tools/rimg/img" (dict "img" . "alt" $element.name) }}
               {{ end }}
             </section>
-
           {{ end }}
+        </div>
       </div>
       <div class="smallouselnav">R</div>
     </div>

@@ -39,7 +39,7 @@ body {
 }
 
 p.pre {
-  white-space: pre-wrap;
+  white-space: pre-line;
 }
 
 
@@ -363,4 +363,59 @@ ul.checklist {
 }
 .pt-xlg {
   padding-top: 328px;
+}
+
+
+form.default {
+  max-width: 400px;
+
+  
+  label {
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  input, textarea {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid black;
+    padding: 4px 8px;
+  }
+
+  textarea {
+    min-height: 100px;
+  }
+
+
+  section {
+    margin-bottom: 20px;
+    &.required label:after, p.required label:after {
+      content: "*";
+      color: red;
+    }
+
+    &.split {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    > div {
+      flex: 1;
+      margin: 0;
+      padding: 0;
+    }
+
+    &.agree {
+      label {
+        display: inline-block;
+      }
+
+      input {
+        display: inline-block;
+        width: auto;
+      }
+    }
+  }
+
 }

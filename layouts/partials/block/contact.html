@@ -1,0 +1,44 @@
+{{ $blocks := .Site.GetPage "/block" }}
+
+
+{{ with $blocks.Params.contact }}
+  {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }} 
+    <div class="fill-center">
+      <div>
+        <h2>{{ .title }}</h2>
+        <p class="pre">{{ .intro }}</p>
+      </div>
+    </div>
+    <div>
+
+      <form class="default">
+        <section class="required">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" />
+        </section>
+        <section class="split">
+          <div class="required">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="your@email.address" />
+          </div>
+          <div class="required">
+            <label for="phone">Phone</label>
+            <input type="text" id="phone" name="phone" placeholder="+00 0000000000" />
+          </div>
+        </section>
+        <section>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Optional message"></textarea>
+        </section>
+
+        <section class="agree">
+          <label><input type="checkbox" name="nounsollicitedoffers" />I agree to not contact DIVD with unsollicited services or offers*</label>
+        </section>
+
+        <button class="cta" type="submit">Submit</button>
+      </form>
+    </div>
+
+  {{ partial "p/layout_close" }}
+
+{{ end }}

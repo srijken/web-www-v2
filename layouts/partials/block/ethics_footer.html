@@ -1,4 +1,4 @@
-{{ $blocks := .Site.GetPage "/block" }}
+{{ $blocks := site.GetPage "/block" }}
 
 
 {{ with $blocks.Params.ethics }}
@@ -8,11 +8,9 @@
         {{ partial "tools/rimg/img" (dict "img" . "alt" "Ethics") }}
       {{ end }}
     </div>
-    <div class="fill-center">
-      <div>
-        <h2>{{ .title }}</h2>
-        <p>{{ .intro }}</p>
-      </div>
+    <div>
+      <h2>{{ .title }}</h2>
+      <p>{{ .intro }}</p>
     </div>
   {{ partial "p/layout_close" }}
 

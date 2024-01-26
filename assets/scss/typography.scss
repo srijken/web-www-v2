@@ -36,11 +36,20 @@ h6 {
 
 h1 + h3 {
   color: #545454;
-
-/* Desktop/SH1 */
   font-weight: 400;
   margin-top: -16px;
   margin-bottom: 1.4em;
+}
+
+h2 + h4 {
+  color: #000;
+
+  margin-top: -16px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px; /* 160% */
+  letter-spacing: 0.4px;
 }
 
 p.opener {

@@ -20,6 +20,10 @@ footer.main {
     .container {
       section {
         flex: 0 0 50%;
+
+        &:first-of-type {
+          padding-right: 32px;
+        }
       }
     }
   }
@@ -34,6 +38,31 @@ footer.main {
       color: #fff;
     }
   }
+}
 
+.footernav {
+  display: flex;
+  justify-content: space-between;
 
+  h4 {
+    color: var(--brand);
+    margin-bottom: 12px;
+  }
+  li {
+    padding-right: 16px;
+    ul {
+      
+      li {
+        padding-bottom: 8px;
+        a {
+          color: #fff;
+          border-bottom: 0;
+
+          &:hover {
+            border-bottom: 0.5px solid #fff;
+          }
+        }
+      }
+    }
+  }
 }
