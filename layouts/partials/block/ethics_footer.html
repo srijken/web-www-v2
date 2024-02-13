@@ -2,16 +2,15 @@
 
 
 {{ with $blocks.Params.ethics }}
-  {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }} 
-    <div class="image-container">
-      {{ with resources.Get "images/global/ethics.png" }} 
-        {{ partial "tools/rimg/img" (dict "img" . "alt" "Ethics") }}
+  <div class="ethics-footer">
+    
+      {{ with resources.Get "/images/global/ethics.png" }} 
+        <img src="{{ .RelPermalink }}" />
       {{ end }}
-    </div>
-    <div>
-      <h2>{{ .title }}</h2>
+    <div class="content">
+      <h3>{{ .title }}</h3>
       <p>{{ .intro }}</p>
     </div>
-  {{ partial "p/layout_close" }}
+  </div>
 
 {{ end }}

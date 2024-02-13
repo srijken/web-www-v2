@@ -66,3 +66,30 @@ footer.main {
     }
   }
 }
+
+.ethics-footer {
+  margin-top: 40px !important; 
+  background-color: #fff;
+  border-radius: 42px;
+  max-width: var(--cw);
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+
+  h3, p {
+    color: #000;
+  }
+
+
+  img {
+    flex: 0 0 30%;
+    object-fit: cover; 
+    height: 220px;
+  }
+
+
+  .content {
+    flex: 1 1 auto;
+    padding: 20px 16px;
+  }
+}

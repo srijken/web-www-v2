@@ -1,0 +1,4 @@
+---
+title: "Artikelen"
+type: "article"
+---

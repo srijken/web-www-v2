@@ -1,6 +1,7 @@
 {{ define "main" }}
 
   <div class="topic-layout contribute-page">
+    <div class="bg-gradient bg-gradient-reverse pb-xlg">
     <div class="topic-intro reverse">
       {{ partial "breadcrumbs" . }}
       {{ partial "p/layout_open" (dict "classes" (slice "right" "vcenter")) }}
@@ -13,9 +14,10 @@
         </div>  
       {{ partial "p/layout_close" }}
     </div>
+  </div>
+    {{ partial "p/section_open" (dict "classes" (slice "inverse"))}} 
 
-    {{ partial "p/section_open" (dict "classes" (slice "gradient"))}} 
-
+    <div class="overlap-top">
       {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
         {{ partial "card" (dict 
           "imageSource" .Params.becomevolunteer.image
@@ -32,7 +34,7 @@
           "classes" (slice "cta")) 
         }}
       {{ partial "p/layout_close" }}
-
+      </div>
       {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
         <div>
           <h2>{{ .Params.appreciate.title }}</h2>

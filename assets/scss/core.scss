@@ -350,6 +350,10 @@ ul.checklist {
 .fill-center {
   display: flex;
   align-items: center;
+
+  &.hor {
+    justify-content: space-around;
+  }
 }
 
 .pt-sm {
@@ -363,6 +367,19 @@ ul.checklist {
 }
 .pt-xlg {
   padding-top: 328px;
+}
+
+.pb-sm {
+  padding-bottom: 16px;
+}
+.pb-md {
+  padding-bottom: 32px;
+}
+.pb-lg {
+  padding-bottom: 64px;
+}
+.pb-xlg {
+  padding-bottom: 328px;
 }
 
 
@@ -418,4 +435,27 @@ form.default {
     }
   }
 
+}
+
+
+ul.sumup {
+
+  li {
+    display: flex;
+    background-color: #000;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+
+    img {
+      flex: 0 0 160px;
+      max-width: 160px;
+      object-fit: cover;
+    }
+    div {
+      flex: 1 1 auto;
+      color: #fff;
+      padding: 20px 16px;
+    }
+  }
 }
