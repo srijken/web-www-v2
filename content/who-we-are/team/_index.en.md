@@ -22,10 +22,13 @@ teams:
     members:
       - /who-we-are/team/people/arthur-dent
       - /who-we-are/team/people/_index
+      - /who-we-are/team/people/max-van-der-horst
   - title: Research
     description: ..
     members:
       - /who-we-are/team/people/arthur-dent
+      - /who-we-are/team/people/_index
+      - /who-we-are/team/people/max-van-der-horst
   - title: IT Services
     description: ..
     members:
