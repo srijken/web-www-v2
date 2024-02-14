@@ -3,54 +3,77 @@ type: team
 title: The Team
 teams:
   - title: Supervisory board
-    description: ..
+    description: "Hacker initiatives like these, tend to have their own dynamics:
+      sparks lead to flames, which die out or lead to wildfires, wasting energy
+      along the way. To keep our minds focused on our goal to make the digital
+      world a safer place and provide helpful hackers a solid platform, we
+      installed a Supervisory Board of cyber security heavyweights. Each board
+      member also represents a sector we try to get along in reaching our goals,
+      i.e.: law enforcement, intelligence services, cyber security companies,
+      academia and hackers."
     members:
       - /who-we-are/team/people/arthur-dent
       - /who-we-are/team/people/arthur-dent
       - /who-we-are/team/people/arthur-dent
   - title: Board
-    description: Never bored always on board
+    description: The board of directors is responsible for strategic leadership of DIVD.
     members:
       - /who-we-are/team/people/arthur-dent
       - /who-we-are/team/people/arthur-dent
   - title: Office
-    description: ..
+    description: Providing some sense of direction to a bunch of hackers, aka
+      advanced cat herding.
     members:
       - /who-we-are/team/people/arthur-dent
   - title: CSIRT
-    description: ..
+    description: The CSIRT is the engineblock of DIVD. It is responsible for
+      scanning the internet and notifying the system owners as well as running
+      our CVE Numbering Authority activities.
     members:
       - /who-we-are/team/people/arthur-dent
       - /who-we-are/team/people/_index
       - /who-we-are/team/people/max-van-der-horst
   - title: Research
-    description: ..
+    description: DIVD has two teams highly skilled security researchers who seek and
+      report vulnerabilities as a voluntary service next to their jobs. DIVD
+      sees to it they follow our Code of Conduct while we provide them a
+      firewall for journalists, lawyers and recruiters. Meanwhile, their
+      research also serves as an empirical base to discover trends in security,
+      stimulate security awareness and develop new methodologies in
+      vulnerability research and disclosure. So, although you will probably
+      never meet our researchers, you may hope they are checking your systems
+      right now, before the bad guys do…
     members:
       - /who-we-are/team/people/arthur-dent
       - /who-we-are/team/people/_index
       - /who-we-are/team/people/max-van-der-horst
   - title: IT Services
-    description: ..
+    description: Taking care of the IT of hackers in a non-hacky way so they don’t
+      get hacked.
     members:
       - /who-we-are/team/people/arthur-dent
   - title: Helpdesk
-    description: ..
+    description: When you have IT, you have IT problems. When you have an
+      organisation of hackers you have even more interesting problems. Team
+      helpdesk is here to help.
     members:
       - /who-we-are/team/people/arthur-dent
   - title: Communications
-    description: ..
+    description: Translating l33tsp3ak to human and the other way around as well as
+      maintaining this awesome website.
     members:
       - /who-we-are/team/people/arthur-dent
   - title: "Security, Risk & compliance "
-    description: ..
+    description: Hackers need security and compliance too, and there are plenty of
+      risks to manage as well as ethics to consider.
     members:
       - /who-we-are/team/people/arthur-dent
   - title: Development
-    description: ..
+    description: These coders code awesome code for us.
     members:
       - /who-we-are/team/people/arthur-dent
   - title: HRM
-    description: ..
+    description: Caring for our volunteers to the maximum extend.
     members:
       - /who-we-are/team/people/arthur-dent
 ---
