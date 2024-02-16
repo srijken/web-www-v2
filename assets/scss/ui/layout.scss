@@ -82,6 +82,26 @@
     &.ps-round-bottomleft {
       border-bottom-left-radius: 300px;
     }
+
+    @media(max-width: 700px) {
+      padding-top: 32px;
+
+      &.ps-round-topright {
+        border-top-right-radius: 56px; /* TODO: var */
+      }
+      
+      &.ps-round-topleft {
+        border-top-left-radius: 56px;
+      }
+      
+      &.ps-round-bottomright {
+        border-bottom-right-radius: 56px;
+      }
+      
+      &.ps-round-bottomleft {
+        border-bottom-left-radius: 56px;
+      }
+    }
   }
 
 
@@ -99,6 +119,8 @@
   display: flex;
   padding: 64px 0;
 
+  
+
   .pl-filler {
     flex: 0 0 var(--rest);
   }
@@ -108,7 +130,9 @@
   .pl-content {
     flex: 0 0 var(--cw);
     padding: 0;
-
+    @media(max-width: 700px) {
+      padding: 0 16px;
+    }
     &.pl-extend {
       flex: 0 0 calc(var(--cw) + var(--rest));
       overflow-x: hidden;
@@ -127,6 +151,9 @@
 
       &.pl-columns-2 {
         grid-template-columns: 1fr 1fr;
+        @media(max-width: 700px) {
+          grid-template-columns: 1fr;
+        }
       }
 
       &.pl-columns-3 {
@@ -145,11 +172,20 @@
     &.pl-left {
       display: grid;
       grid-template-columns: 1fr 2fr;
+
+      @media(max-width: 700px) {
+        grid-template-columns: 1fr;
+      }
+
     }
     &.pl-right {
       display: grid;
       grid-gap: 32px;
       grid-template-columns: 2fr 1fr;
+      
+      @media(max-width: 700px) {
+        grid-template-columns: 1fr;
+      }
     }
 
 
@@ -201,9 +237,11 @@
         text-decoration: none;
         border-bottom: none;
       }
-
-     
     }
+  }
+
+  @media (max-width: 700px) {
+    top: 52px;
   }
 }
 
@@ -279,6 +317,26 @@
     padding: 32px;
     color: black;
   }
+
+  @media(max-width: 700px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    figure {
+      flex: 0 0 300px;
+      width: 300px;
+      height: 300px;
+      img {
+        width: 300px;
+        height: 300px;
+      }
+    }
+
+    article {
+      padding: 16px 16px 64px 16px;
+    }
+  }
+  
 }
 
 .overlap-bottom {
@@ -288,4 +346,21 @@
 
 .overlap-top {
   transform: translateY(-256px);
+  margin-bottom: -256px;
+}
+
+.donate-blocks {
+  .block {
+    background-color: #fff;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    padding: 16px;
+
+    display: flex;
+    justify-content: space-between;
+
+    a.cta {
+      white-space: nowrap;
+    }
+  }
 }

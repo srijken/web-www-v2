@@ -1024,6 +1024,7 @@ collections:
           label: "Featured Articles",
           name: "featured_articles",
           widget: "relation",
+          required: false,
           multiple: true,
           collection: "articles",
           search_fields: ["title", "case.caseid"],
@@ -1033,6 +1034,7 @@ collections:
       - {
           label: "CSIRT Cases",
           name: "csirt_cases",
+          required: false,
           widget: "list",
           fields:
             [
@@ -1045,6 +1047,7 @@ collections:
           name: "links",
           hint: "Links automatically get icons if applicable",
           widget: "list",
+          required: false,
           fields:
             [
               { label: "name", name: "name", widget: "string" },

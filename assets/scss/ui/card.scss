@@ -192,3 +192,24 @@
     object-fit: cover;
   }
 }
+
+.intro-card {
+  img {
+    width: 100%;
+  }
+
+  article {
+    margin-top: -3px;
+    background-color: #fff;
+    padding: 16px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  &.secondary {
+    article {
+      background-color: var(--brand);
+    }
+  }
+
+}

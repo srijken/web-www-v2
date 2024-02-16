@@ -157,7 +157,8 @@ h1 {
   font-weight: 900;
   font-size: 5em;
   font-family: var(--font-header);
-  line-height: 1em; }
+  line-height: 1em;
+  margin-bottom: 0.5em; }
 
 h2 {
   font-weight: 900;
@@ -310,7 +311,10 @@ a.cta {
     color: #fff; }
     .divd-family-list .divd-family-item h3 {
       margin-bottom: 16px; }
-
+  @media (max-width: 700px) {
+    .divd-family-list {
+      grid-template-columns: 1fr;
+      grid-gap: 8px; } }
 .partner-card {
   border-radius: 20px;
   overflow: hidden; }
@@ -636,9 +640,9 @@ nav.nav-container {
         padding-left: 20px;
         border-top-right-radius: 0;
         border-bottom-right-radius: 32px; }
-        nav.nav-container .main-nav figure {
-          flex: 0 0 80px; }
-          nav.nav-container .main-nav figure .logo {
+        nav.nav-container .main-nav a.divd {
+          flex: 0 0 60px; }
+          nav.nav-container .main-nav a.divd .logo {
             width: 60px; }
         nav.nav-container .main-nav article {
           display: none; }
@@ -647,11 +651,18 @@ nav.nav-container {
           nav.nav-container .main-nav aside .actions {
             display: flex;
             flex: 1 1 auto;
-            align-items: center; }
+            padding: 0 16px;
+            align-items: center;
+            justify-content: space-around; }
+            nav.nav-container .main-nav aside .actions .search-button {
+              display: none; }
+            nav.nav-container .main-nav aside .actions a {
+              width: 100%; }
           nav.nav-container .main-nav aside .language {
-            margin-right: 16px; }
+            margin-right: 16px;
+            display: none; }
           nav.nav-container .main-nav aside button {
-            padding: 4px 5px;
+            padding: 4px 8px;
             display: flex;
             justify-content: space-around; }
             nav.nav-container .main-nav aside button svg {
@@ -789,7 +800,18 @@ nav.sub-nav {
     border-bottom-right-radius: 300px; }
   .ps.ps-round.ps-round-bottomleft {
     border-bottom-left-radius: 300px; }
-
+  @media (max-width: 700px) {
+    .ps.ps-round {
+      padding-top: 32px; }
+      .ps.ps-round.ps-round-topright {
+        border-top-right-radius: 56px;
+        /* TODO: var */ }
+      .ps.ps-round.ps-round-topleft {
+        border-top-left-radius: 56px; }
+      .ps.ps-round.ps-round-bottomright {
+        border-bottom-right-radius: 56px; }
+      .ps.ps-round.ps-round-bottomleft {
+        border-bottom-left-radius: 56px; } }
 .pl {
   display: flex;
   padding: 64px 0; }
@@ -798,6 +820,9 @@ nav.sub-nav {
   .pl .pl-content {
     flex: 0 0 var(--cw);
     padding: 0; }
+    @media (max-width: 700px) {
+      .pl .pl-content {
+        padding: 0 16px; } }
     .pl .pl-content.pl-extend {
       flex: 0 0 calc(var(--cw) + var(--rest));
       overflow-x: hidden;
@@ -809,6 +834,9 @@ nav.sub-nav {
         grid-column: 1 / -1; }
       .pl .pl-content.pl-columns.pl-columns-2 {
         grid-template-columns: 1fr 1fr; }
+        @media (max-width: 700px) {
+          .pl .pl-content.pl-columns.pl-columns-2 {
+            grid-template-columns: 1fr; } }
       .pl .pl-content.pl-columns.pl-columns-3 {
         grid-template-columns: 1fr 1fr 1fr; }
       .pl .pl-content.pl-columns.pl-columns-4 {
@@ -818,10 +846,16 @@ nav.sub-nav {
     .pl .pl-content.pl-left {
       display: grid;
       grid-template-columns: 1fr 2fr; }
+      @media (max-width: 700px) {
+        .pl .pl-content.pl-left {
+          grid-template-columns: 1fr; } }
     .pl .pl-content.pl-right {
       display: grid;
       grid-gap: 32px;
       grid-template-columns: 2fr 1fr; }
+      @media (max-width: 700px) {
+        .pl .pl-content.pl-right {
+          grid-template-columns: 1fr; } }
     .pl .pl-content.pl-article {
       background-color: white;
       padding-top: 32px;
@@ -852,7 +886,9 @@ nav.sub-nav {
       .breadcrumbs ul li a {
         text-decoration: none;
         border-bottom: none; }
-
+  @media (max-width: 700px) {
+    .breadcrumbs {
+      top: 52px; } }
 .home-layout {
   padding-top: 128px;
   background-color: #fff; }
@@ -902,13 +938,37 @@ nav.sub-nav {
   .person-highlight article {
     padding: 32px;
     color: black; }
-
+  @media (max-width: 700px) {
+    .person-highlight {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around; }
+      .person-highlight figure {
+        flex: 0 0 300px;
+        width: 300px;
+        height: 300px; }
+        .person-highlight figure img {
+          width: 300px;
+          height: 300px; }
+      .person-highlight article {
+        padding: 16px 16px 64px 16px; } }
 .overlap-bottom {
   transform: translateY(256px);
   margin-top: -256px; }
 
 .overlap-top {
-  transform: translateY(-256px); }
+  transform: translateY(-256px);
+  margin-bottom: -256px; }
+
+.donate-blocks .block {
+  background-color: #fff;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between; }
+  .donate-blocks .block a.cta {
+    white-space: nowrap; }
 
 .opener {
   display: flex;
@@ -1109,6 +1169,19 @@ nav.sub-nav {
     min-height: 100%;
     object-fit: cover; }
 
+.intro-card img {
+  width: 100%; }
+
+.intro-card article {
+  margin-top: -3px;
+  background-color: #fff;
+  padding: 16px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px; }
+
+.intro-card.secondary article {
+  background-color: var(--brand); }
+
 .carousel {
   --item-width: calc(var(--cw) / 3);
   overflow-x: hidden; }
@@ -1268,7 +1341,17 @@ footer.main {
     padding: 16px; }
     footer.main aside a {
       color: #fff; }
-
+  @media (max-width: 700px) {
+    footer.main article {
+      padding: 16px; }
+      footer.main article .container {
+        flex-direction: column; }
+        footer.main article .container section {
+          margin-bottom: 32px; }
+          footer.main article .container section a.cta {
+            font-size: 10px; }
+    footer.main aside {
+      font-size: 11px; } }
 .footernav {
   display: flex;
   justify-content: space-between; }
@@ -1284,7 +1367,9 @@ footer.main {
         border-bottom: 0; }
         .footernav li ul li a:hover {
           border-bottom: 0.5px solid #fff; }
-
+  @media (max-width: 700px) {
+    .footernav li ul li a {
+      font-size: 12px; } }
 .ethics-footer {
   margin-top: 40px !important;
   background-color: #fff;
@@ -1302,7 +1387,11 @@ footer.main {
   .ethics-footer .content {
     flex: 1 1 auto;
     padding: 20px 16px; }
-
+  @media (max-width: 700px) {
+    .ethics-footer {
+      flex-direction: column; }
+      .ethics-footer img {
+        height: 140px; } }
 .volunteer .core-values h2 {
   color: #fff; }
 

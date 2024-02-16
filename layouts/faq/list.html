@@ -1,18 +1,30 @@
 {{ define "main" }}
 
-<div class="home-layout volunteer" style="padding-top: 164px">
-  
-  {{ range .Params.faqgroups }}
-    <h3>{{ .heading }}</h3>
-    {{ range .faqs }}
-      <div class="faq">
-        <h4>{{ .title }}</h4>
-        <p>{{ .description }}</p>
-      </div>    
 
-    {{ end }}
+<div class="default-layout faq" style="padding-top: 164px">
+  {{ partial "breadcrumbs" . }}
 
-  {{ end }}
+  {{ partial "p/section_open" (dict "classes" (slice "default"))}} 
+    {{ partial "p/layout_open" (dict "classes" (slice "article")) }}
+      <div class="default-content">
+        <h1>Frequently Asked Questions</h1>
+
+        {{ range .Params.faqgroups }}
+          {{ if ne .heading "Home" }}
+            <h2>{{ .heading }}</h2>
+          {{ end }}
+          {{ range .faqs }}
+            <div class="faq">
+              <h3>{{ .title }}</h3>
+              <p>{{ .description }}</p>
+            </div>    
+
+          {{ end }}
+
+        {{ end }}
+      </div>
+    {{ partial "p/layout_close" }}
+  {{ partial "p/section_close" }}
 </div>
 
 {{ end }}

@@ -28,7 +28,7 @@
 
     <aside>
       <section class="actions">
-        <button class="inverse">
+        <button class="inverse search-button">
           {{ partial "svg/icon" "search" }}
           <span>search</span>
         </button>
@@ -57,7 +57,7 @@
 
       <button class="secondary menu-button" id="main-menu-button">
         MENU 
-        {{ partial "svg/icon" "search" }}
+        {{ partial "svg/icon" "hamburger" }}
       </button>
     </aside>
 
@@ -130,7 +130,22 @@
         </div>
       </section>
       <section class="toggle">
-        toggle stuff
+        <div class="language">
+          {{ $currentLang := $.Site.Language }}
+          {{ range .Site.Languages }}
+            {{ if eq . $.Site.Language }}
+              <span>{{ .LanguageName }}</span>
+            {{ else }}
+              {{ range $.Translations }}
+                {{ if ne  . $currentLang }}
+                  <a title="{{ .Language.LanguageName }}" href="{{ .Permalink }}">
+                    {{ .Language.LanguageName }}
+                  </a>
+                {{ end}}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        </div>
       </section>
     </article>
   </nav>
