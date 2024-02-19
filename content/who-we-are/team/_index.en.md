@@ -63,6 +63,7 @@ teams:
       maintaining this awesome website.
     members:
       - /who-we-are/team/people/arthur-dent
+      - /who-we-are/team/people/marieke-smits
   - title: "Security, Risk & compliance "
     description: Hackers need security and compliance too, and there are plenty of
       risks to manage as well as ethics to consider.
