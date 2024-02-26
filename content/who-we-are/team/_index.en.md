@@ -25,8 +25,6 @@ teams:
       scanning the internet and notifying the system owners as well as running
       our CVE Numbering Authority activities.
     members:
-      - /who-we-are/team/people/arthur-dent
-      - /who-we-are/team/people/_index
       - /who-we-are/team/people/max-van-der-horst
   - title: Research
     description: DIVD has two teams highly skilled security researchers who seek and
