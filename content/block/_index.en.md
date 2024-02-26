@@ -1,5 +1,4 @@
 ---
-title: Blocks
 Title: Blocks
 ethics:
   title: Ethics at the base of everything we do
@@ -28,21 +27,16 @@ mission:
 divdfamily:
   members:
     - name: DIVD Academy
-      description: By enabling and empowering aspiring ethical hackers and
-        cybersecurity enthusiasts, DIVD Academy stands as a beacon of
-        cutting-edge education, fostering knowledge, skills, and ethical
-        awareness among young talent while guiding at-risk youth toward a
-        positive impact in cybersecurity and IT education, shaping a safer
-        digital future for all.
+      description: DIVD Academy empowers ethical hackers and cybersecurity
+        enthusiasts, fostering skills and ethical awareness among young talent
+        while guiding at-risk youth toward positive impact in cybersecurity and
+        IT education, shaping a safer digital future.
       link: https://divd.academy
     - name: CSIRT Global
-      description: >-
-        CSIRT.global is a global, volunteer-led, not-for-profit organization,
-        aiming to make the world more secure by going after vulnerabilities
-        no-one else cares for.
-
-
-        We are a sister organization to the Dutch Institute for Vulnerability Disclosure (DIVD). In 2022, international CSIRT activities were moved to CSIRT.global, as a first step to build an international network of like-minded people.
+      description: CSIRT.global, a global volunteer-led nonprofit, enhances global
+        security by addressing overlooked vulnerabilities. It's affiliated with
+        the DIVD, consolidating international CSIRT efforts to establish a
+        network of like-minded individuals.
       link: https://csirt.global/
     - name: DIVD Fund
       description: The core values of DIVD.fund are integrity, connectivity and
@@ -50,11 +44,9 @@ divdfamily:
         partner.
       link: https://divd.fund/
     - name: DIVD Charity
-      description: DIVD Charity is an organization that supports projects and
-        initiatives that benefit the public welfare and the creation of
-        promising programs that contribute to the vision of DIVD Charity. We
-        want to help everyone develop their talents so that they will have a
-        positive social impact through their participation.
+      description: DIVD Charity supports public welfare projects and initiatives,
+        fostering programs aligned with its vision. Our goal is to empower
+        individuals to make positive social impacts through talent development.
       link: https://divd.charity/
     - name: DIVD Club
       description: DIVD Club is a place where, in collaboration with cyber security
@@ -79,6 +71,19 @@ familycta:
     for new talent that wants to join our cause or potential partners and
     donations. Check out our contribute page to learn more about what you can do
     for us.
+contact:
+  title: Not a regular office
+  intro: >-
+    We are a network of security researchers who mainly work online. If you want
+    to contact us, you can send us an e mail to question@divd.nl or use our
+    contact form.
+
+
+    You can also meet us at cyber security conferences and hacker events or just follow us on Twitter.
+
+
+    For questions related to our CSIRT you can email csirt@divd.nl
+title: Blocks
 csirt:
   title: "CSIRT: Computer Security Incident Response Team"
   intro: The CSIRT handles the scanning for and disclosing of vulnerabilities,
@@ -86,20 +91,9 @@ csirt:
     for leaked credentials and operates our CVE Numbering Authoristy (CNA)
     capability.
   link: https://csirt.divd.nl/
-contact:
-  title: "Not a regular office"
-  intro: >-
-    We are a network of security researchers who mainly work online. If you want to contact us, you can send us an e mail to question@divd.nl or use our contact form.
-
-
-    You can also meet us at cyber security conferences and hacker events or just follow us on Twitter.
-
-
-    For questions related to our CSIRT you can email csirt@divd.nl
-  
 footer:
-  title: "footer"
-  intro: >-
-    We aim to make the digital world safer by reporting vulnerabilities we find  in digital systems to the people who can fix them. We have a global reach, but do it Dutch style: open, honest, collaborative and for free.
-
+  title: footer
+  intro: "We aim to make the digital world safer by reporting vulnerabilities we
+    find  in digital systems to the people who can fix them. We have a global
+    reach, but do it Dutch style: open, honest, collaborative and for free."
 ---
