@@ -20,9 +20,9 @@ scouting:
   description: "When our CSIRT team founds or knows about a vulnerability, they
     scan the internet and identify the affected systems. "
 assessing:
-  description: "After affected systems are identified we investigate to who these
-    systems belong to and send them a notification. This notification informs
-    them of the vulnerability and offers steps to fix or mitigate it. "
+  description: "When affected systems are identified, we investigate the owners of
+    these systems and notify them. Our notification email informs them and
+    offers steps to fix or mitigate it. "
   title: Reporting  the vulnerability to the right people
 reporting:
   description: "DIVD is also a CVE Numbering Authority, in this role we assign CVE
