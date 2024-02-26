@@ -3,14 +3,9 @@ type: team
 title: The Team
 teams:
   - title: Supervisory board
-    description: "Hacker initiatives like these, tend to have their own dynamics:
-      sparks lead to flames, which die out or lead to wildfires, wasting energy
-      along the way. To keep our minds focused on our goal to make the digital
-      world a safer place and provide helpful hackers a solid platform, we
-      installed a Supervisory Board of cyber security heavyweights. Each board
-      member also represents a sector we try to get along in reaching our goals,
-      i.e.: law enforcement, intelligence services, cyber security companies,
-      academia and hackers."
+    description: >-
+      
+      To ensure our commitment to digital safety and provide a strong platform for ethical hackers, we've formed a Supervisory Board of cybersecurity experts, each representing key sectors such as law enforcement, intelligence services, cybersecurity firms, academia, and the hacker community.
     members:
       - /who-we-are/team/people/arthur-dent
       - /who-we-are/team/people/arthur-dent
