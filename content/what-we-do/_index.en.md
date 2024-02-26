@@ -7,10 +7,10 @@ intro: We are a collective with over 100 very enthusiastic and skilled people
 whatwedocontent:
   title: What we do
   description: >-
-    DIVD scans the whole internet on the presence of Common Vulnerabilities and
-    Exposures (CVEs) as soon as they are published and have a high score. When
-    we find vulnerable URLs, we send them an email with notification on the
-    vulnerability present, where we found it and what to do. 
+    DIVD scans the internet on the presence of Common Vulnerabilities and
+    Exposures (CVEs) which might be quite impactull. When we find vulnerable
+    URLs, we send owners an motificationemail on the vulnerability present,
+    where we found it and what to do. 
 
 
 
@@ -20,9 +20,9 @@ scouting:
   description: "When our CSIRT team founds or knows about a vulnerability, they
     scan the internet and identify the affected systems. "
 assessing:
-  description: "After affected systems are identified we investigate to who these
-    systems belong to and send them a notification. This notification informs
-    them of the vulnerability and offers steps to fix or mitigate it. "
+  description: "When affected systems are identified, we investigate the owners of
+    these systems and notify them. Our notification email informs them and
+    offers steps to fix or mitigate it. "
   title: Reporting  the vulnerability to the right people
 reporting:
   description: "DIVD is also a CVE Numbering Authority, in this role we assign CVE
