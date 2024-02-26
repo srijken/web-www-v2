@@ -18,13 +18,11 @@ whatwedocontent:
 scouting:
   title: "Scan the internet for vulnerabilities "
   description: "When our CSIRT team founds or knows about a vulnerability, they
-    scan the internet and identify the affected systems. By developing a scan
-    method (per case), we do this in the least impactful way possible. "
+    scan the internet and identify the affected systems. "
 assessing:
-  description: After affected systems are identified we investigate to who these
+  description: "After affected systems are identified we investigate to who these
     systems belong to and send them a notification. This notification informs
-    them of the vulnerability and offers steps to fix or mitigate it. Our
-    research methodes always comply with our code of conduct.
+    them of the vulnerability and offers steps to fix or mitigate it. "
   title: Reporting  the vulnerability to the right people
 reporting:
   description: "DIVD is also a CVE Numbering Authority, in this role we assign CVE
