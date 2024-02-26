@@ -1,5 +1,4 @@
 ---
-title: Blocks
 ethics:
   title: Ethics
   intro: Lorem ipsum
@@ -62,21 +61,24 @@ familycta:
     donations. 
 
     Check out our contribute page to learn more about what you can do for us.
-csirt:
-  title: "CSIRT: Computer Security Incident Response Team"
-  intro: A short piece of copy which explains the importance and role of CSIRT for
-    DIVD. This text should inspire visitors to click the botom below
 contact:
-  title: "Not a regular office"
+  title: Not a regular office
   intro: >-
-    We are a network of security researchers who mainly work online. If you want to contact us, you can send us an e mail to question@divd.nl or use our contact form.
+    We are a network of security researchers who mainly work online. If you want
+    to contact us, you can send us an e mail to question@divd.nl or use our
+    contact form.
 
     You can also meet us at cyber security conferences and hacker events or just follow us on Twitter.
 
     For questions related to our CSIRT you can email csirt@divd.nl
+title: Blocks
+csirt:
+  title: "CSIRT: Computer Security Incident Response Team"
+  intro: A short piece of copy which explains the importance and role of CSIRT for
+    DIVD. This text should inspire visitors to click the botom below
 footer:
-  title: "footer"
-  intro: >-
-    We aim to make the digital world safer by reporting vulnerabilities we find  in digital systems to the people who can fix them. We have a global reach, but do it Dutch style: open, honest, collaborative and for free.
-    
+  title: footer
+  intro: "We aim to make the digital world safer by reporting vulnerabilities we
+    find  in digital systems to the people who can fix them. We have a global
+    reach, but do it Dutch style: open, honest, collaborative and for free."
 ---
