@@ -1,8 +1,9 @@
 ---
 title: Who we are
 opener: We are the safe-keepers of the digital world
-intro: We are a group of volunteers that scout the web for potential cyber
-  security risks
+intro: Five years ago we started making the digital world safer, we started with
+  a few enthousiast hackers and now we're with over 130 very enthusiastic and
+  skilled people working together on the same mission.
 missionandhistory:
   title: Mission & History
   intro: "This wonderful adventure started with the work of hacker Victor Gevers,
@@ -23,8 +24,12 @@ missionandhistory:
 communicationmanager:
   name: "Max Kraal "
   role: Researcher CSIRT
-  description: "Koen gaat hier een superleuke quote schrijven over hoe fantastisch
-    het is om bij DIVD te werken als vrijwilliger. Hopefully niet toooo cheesy,
-    "
+  description: Cybersecurity is an endless race between attackers and defenders.
+    This endlessness can work tiring for a lot of people in the industry. What
+    makes DIVD amazing is the fact that we are inbetween these attackers and
+    defenders. We attempt to take away attacker's weapons as quickly as possible
+    by making people aware of these weapons. That has a lot of impact! I came to
+    participate in the perpetual defender's puzzle and stayed for the way we
+    assist organizations by spreading puzzle pieces across the entire globe.
   image: /images/whoweare/img_5431.jpg
 ---
