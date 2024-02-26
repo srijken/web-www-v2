@@ -14,6 +14,7 @@ whatwedocontent:
 
 
 
+
     We also find new vulnerabilities (zero-days) and share these with the software vendor, so they can fix it. Furthermore, when we detect instances of compromised credentials, we take swift action by alerting affected individuals via email and urging them to immediately change their passwords or take other necessary steps. 
 scouting:
   title: "Scan the internet for vulnerabilities "
