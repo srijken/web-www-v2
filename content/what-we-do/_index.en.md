@@ -7,10 +7,10 @@ intro: We are a collective with over 100 very enthusiastic and skilled people
 whatwedocontent:
   title: What we do
   description: >-
-    DIVD scans the whole internet on the presence of Common Vulnerabilities and
-    Exposures (CVEs) as soon as they are published and have a high score. When
-    we find vulnerable URLs, we send them an email with notification on the
-    vulnerability present, where we found it and what to do. 
+    DIVD scans the internet on the presence of Common Vulnerabilities and
+    Exposures (CVEs) which might be quite impactull. When we find vulnerable
+    URLs, we send owners an motificationemail on the vulnerability present,
+    where we found it and what to do. 
 
 
 
