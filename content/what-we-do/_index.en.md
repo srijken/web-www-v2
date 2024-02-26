@@ -1,16 +1,17 @@
 ---
 title: What we do
 opener: How we work towards a more safe digital world
-intro: We are a collective with over 100 very enthusiastic and skilled people
+intro: We are a collective with over 130 very enthusiastic and skilled people
   who are passionate about security & cyber. We work voluntarily to make the
   digital world a little safer every day.
 whatwedocontent:
   title: What we do
   description: >-
     DIVD scans the internet on the presence of Common Vulnerabilities and
-    Exposures (CVEs) which might be quite impactull. When we find vulnerable
-    URLs, we send owners an motificationemail on the vulnerability present,
+    Exposures (CVEs) which might be quite impactfull. When we find vulnerable
+    URLs, we send owners an notification email on the vulnerability present,
     where we found it and what to do. 
+
 
 
 
