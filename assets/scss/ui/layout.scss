@@ -63,6 +63,9 @@
     }
   }
 
+  &.ps-pt-md {
+    padding-top: 64px;
+  }
 
   &.ps-round {
     padding-top: 64px;
@@ -362,5 +365,17 @@
     a.cta {
       white-space: nowrap;
     }
+  }
+}
+
+.image-fill {
+  position: relative;
+  overflow: hidden;
+  height: 600px;
+
+  img {
+    position: absolute;
+    height: 600px;
+    object-fit: cover;
   }
 }

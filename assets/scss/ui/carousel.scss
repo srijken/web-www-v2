@@ -32,7 +32,7 @@
       margin-right: 32px;
       width: calc(var(--item-width) - 32px);
 
-      scroll-snap-align: start;
+      scroll-snap-align: 8px;
       flex-shrink: 0;
     }
   }

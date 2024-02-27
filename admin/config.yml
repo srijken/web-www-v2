@@ -969,11 +969,11 @@ collections:
         i18n: true
         widget: "list"
         fields:
-          - { label: "type", name: "type", widget: "hidden", value: "team" }
           - label: "Title"
             name: "title"
             widget: "string"
             i18n: true
+          - { label: "type", name: "type", widget: "hidden", value: "team" }
           - label: "Description"
             name: "description"
             widget: "text"
@@ -1012,11 +1012,12 @@ collections:
           media_folder: "/assets/images/people",
           required: false,
         }
-      - { label: "Role", name: "role", widget: "string" }
+      - { label: "Role", name: "role", widget: "string", required: false }
       - {
           label: "intro",
           name: "intro",
           widget: "text",
+          required: false,
           i18n: true,
           hint: "Used in cards",
         }

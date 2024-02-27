@@ -465,3 +465,11 @@ ul.sumup {
     }
   }
 }
+
+.offset:before {
+  display: block;
+  content: " ";
+  height: 128px;
+  margin-top: -128px;
+  visibility: hidden;
+}

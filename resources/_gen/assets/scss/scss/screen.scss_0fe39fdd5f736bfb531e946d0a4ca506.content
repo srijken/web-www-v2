@@ -553,6 +553,13 @@ ul.sumup li {
     color: #fff;
     padding: 20px 16px; }
 
+.offset:before {
+  display: block;
+  content: " ";
+  height: 128px;
+  margin-top: -128px;
+  visibility: hidden; }
+
 nav.nav-container {
   position: fixed;
   top: 10px;
@@ -789,6 +796,9 @@ nav.sub-nav {
   position: relative;
   bottom: -296px; }
 
+.ps.ps-pt-md {
+  padding-top: 64px; }
+
 .ps.ps-round {
   padding-top: 64px; }
   .ps.ps-round.ps-round-topright {
@@ -970,6 +980,15 @@ nav.sub-nav {
   .donate-blocks .block a.cta {
     white-space: nowrap; }
 
+.image-fill {
+  position: relative;
+  overflow: hidden;
+  height: 600px; }
+  .image-fill img {
+    position: absolute;
+    height: 600px;
+    object-fit: cover; }
+
 .opener {
   display: flex;
   justify-content: center;
@@ -992,6 +1011,7 @@ nav.sub-nav {
     width: calc(100vw - 50%);
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     overflow: hidden; }
     .opener aside img {
       max-width: 100%; }
@@ -1205,7 +1225,7 @@ nav.sub-nav {
     .carousel .slides > * {
       margin-right: 32px;
       width: calc(var(--item-width) - 32px);
-      scroll-snap-align: start;
+      scroll-snap-align: 8px;
       flex-shrink: 0; }
   .carousel .pages {
     display: flex;

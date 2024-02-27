@@ -27,7 +27,7 @@
       {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
 
           <div class="reverse">
-            <h2>{{ .Params.whatwedocontent.title }}</h2>
+            <h2 id="mission" class="offset">{{ .Params.whatwedocontent.title }}</h2>
             <p class="pre">{{ .Params.whatwedocontent.description }}</p>
           </div>
           <div>
@@ -69,10 +69,10 @@
           {{ partial "p/layout_close" }}
 
     {{ partial "p/section_close" }}  
-    {{ partial "p/section_open" (dict "classes" (slice "gradient" ))}} 
-
-      {{ partial "block/ethics" . }}
+    {{ partial "p/section_open" (dict "classes" (slice "gradient" "pt-md" ))}} 
+      
       {{ partial "block/proudestwork" . }}
+      {{ partial "block/ethics" . }}
 
     {{ partial "p/section_close" }}
 
