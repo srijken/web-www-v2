@@ -10,7 +10,7 @@
       <h2>{{ .Title }}</h2>
       <p>{{.Params.intro}}</p>
 
-      <a class="cta" href="/{{ .Lang }}/faq">{{ i18n "learnmore"}}</a>
+      <a href="{{ "faq/" | relLangURL }}" class="cta">{{ i18n "learnmore" }}</a>
     </div>
     <div>
       <div class="accordion">

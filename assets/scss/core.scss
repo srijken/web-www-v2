@@ -86,6 +86,16 @@ a.cta {
     color: black;
     background-color: var(--brand);
   }
+
+  &.alternative {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    svg {
+      fill: black;
+    }
+  }
+
 }
 
 
@@ -118,10 +128,12 @@ a.cta {
 .partner-card {
   border-radius: 20px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;;
 
   figure {
     background-color: white;
-    height: 200px;
+    flex: 0 0 200px;
     overflow: hidden;
     img {
       max-width: 100%;
@@ -130,6 +142,7 @@ a.cta {
 
 
   section {
+    flex: 1 1 auto;
     padding: 20px 16px;;
     background-color: black;
     color: white;
@@ -141,6 +154,7 @@ a.cta {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 32px;
+  
 }
 
 
@@ -386,6 +400,9 @@ ul.checklist {
 }
 .pb-xlg {
   padding-bottom: 328px;
+}
+.pb-xxlg {
+  padding-bottom: 428px;
 }
 
 

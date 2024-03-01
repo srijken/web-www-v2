@@ -1,7 +1,7 @@
 {{ define "main" }}
 
   <div class="topic-layout contribute-page">
-    <div class="bg-gradient bg-gradient-reverse pb-xlg">
+    <div class="bg-gradient bg-gradient-reverse pb-xxlg">
     <div class="topic-intro reverse">
       {{ partial "breadcrumbs" . }}
       {{ partial "p/layout_open" (dict "classes" (slice "right" "vcenter")) }}
@@ -17,7 +17,7 @@
   </div>
   {{ partial "p/section_open" (dict "classes" (slice "inverse"))}} 
 
-    <div class="overlap-top">
+    <div class="overlap-top-lg">
       {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
         <div class="intro-card">
           {{ with resources.Get .Params.becomevolunteer.image }} 
@@ -50,10 +50,10 @@
           <p class="pre">{{ .Params.appreciate.description }}</p>
 
         </div>
-        <div id="donate" class="donate-blocks">
+        <div class="donate-blocks">
           <div class="block">
             <div>
-              <h3>{{ .Params.donatesupp.title }}</h3>
+              <h3 id="donate" class="offset" >{{ .Params.donatesupp.title }}</h3>
               <p class="pre">{{ .Params.donatesupp.description }}</p>
               {{ range .Params.donatesub.links }}
                 <a class="cta secondary" href="{{ .link }}">

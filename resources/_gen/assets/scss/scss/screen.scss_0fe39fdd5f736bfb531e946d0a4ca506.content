@@ -298,6 +298,12 @@ a.cta {
   a.cta.secondary {
     color: black;
     background-color: var(--brand); }
+  a.cta.alternative {
+    background-color: white;
+    color: black;
+    border: 1px solid black; }
+    a.cta.alternative svg {
+      fill: black; }
 
 .divd-family-list {
   display: grid;
@@ -317,14 +323,17 @@ a.cta {
       grid-gap: 8px; } }
 .partner-card {
   border-radius: 20px;
-  overflow: hidden; }
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; }
   .partner-card figure {
     background-color: white;
-    height: 200px;
+    flex: 0 0 200px;
     overflow: hidden; }
     .partner-card figure img {
       max-width: 100%; }
   .partner-card section {
+    flex: 1 1 auto;
     padding: 20px 16px;
     background-color: black;
     color: white; }
@@ -506,6 +515,9 @@ ul.checklist li {
 
 .pb-xlg {
   padding-bottom: 328px; }
+
+.pb-xxlg {
+  padding-bottom: 428px; }
 
 form.default {
   max-width: 400px; }
@@ -970,6 +982,10 @@ nav.sub-nav {
   transform: translateY(-256px);
   margin-bottom: -256px; }
 
+.overlap-top-lg {
+  transform: translateY(-456px);
+  margin-bottom: -456px; }
+
 .donate-blocks .block {
   background-color: #fff;
   border-radius: 20px;
@@ -1011,10 +1027,15 @@ nav.sub-nav {
     width: calc(100vw - 50%);
     display: flex;
     justify-content: flex-end;
-    align-items: center;
-    overflow: hidden; }
+    align-items: center; }
     .opener aside img {
-      max-width: 100%; }
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 2;
+      object-fit: contain; }
   @media (max-width: 700px) {
     .opener {
       position: none;
@@ -1043,6 +1064,34 @@ nav.sub-nav {
 
 .image-container img {
   max-width: 100%; }
+
+.bubble {
+  position: absolute;
+  background: linear-gradient(to right, #3DDCEB 0%, rgba(61, 220, 235, 0) 100%);
+  height: 126px;
+  width: 200px; }
+  .bubble.bubble-small {
+    top: 0;
+    border-radius: 64px;
+    width: 400px;
+    height: 128px; }
+  .bubble.bubble-large {
+    border-top-left-radius: 128px;
+    bottom: 0px;
+    height: 128px;
+    width: 100%; }
+  .bubble.under {
+    z-index: 1; }
+  .bubble.over {
+    z-index: 3; }
+  .bubble.far-left {
+    left: -200px; }
+  .bubble.left {
+    left: 40px; }
+  .bubble.middle {
+    left: 50%; }
+  .bubble.far-right {
+    right: -200px; }
 
 .card {
   display: flex;
@@ -1281,8 +1330,7 @@ nav.sub-nav {
 
 .accordion .accordion-item {
   padding-top: 8px;
-  border-bottom: 1px solid black;
-  padding-bottom: 4px; }
+  border-bottom: 1px solid black; }
   .accordion .accordion-item .accordion-content {
     display: none;
     padding-bottom: 8px; }
@@ -1292,7 +1340,7 @@ nav.sub-nav {
     padding-bottom: 8px;
     display: pointer; }
     .accordion .accordion-item > h3 span {
-      margin-left: 10px;
+      margin-left: 24px;
       display: inline-block;
       width: 10px;
       height: 10px;

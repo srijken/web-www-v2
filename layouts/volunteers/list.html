@@ -6,16 +6,19 @@
   <div class="opener">
     <article>
       <section>
-        
         <h1>{{ .Title }}</h1>
         <p class="opener">{{ .Params.intro }}</p>
-        <a class="cta" href="https://form.jotform.com/221242784790055" target="_blank">Signup</a>
+        <a class="cta" href="https://form.jotform.com/221242784790055" target="_blank">Open roles {{ partial "svg/icon" "external"}}</a>
+        <a class="cta alternative" href="https://form.jotform.com/221242784790055" target="_blank">Signup</a>
       </section>
     </article>
     <aside>
-      {{ with resources.Get "images/home/divd_intro.png" }} 
+      <div class="bubble bubble-large far-left under"></div>
+      
+      {{ with resources.Get "images/global/volunteers.png" }} 
         {{ partial "tools/rimg/img" (dict "img" . "alt" "test") }}
       {{ end }}
+      <div class="bubble bubble-small far-right over"></div>
     </aside>
   </div>
 

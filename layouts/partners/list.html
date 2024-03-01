@@ -9,20 +9,26 @@
         <section>
           <h1>{{ .Params.opener }} PARTNERS</h1>
           <p class="opener">{{ .Params.intro }}</p>
-          <a class="cta" href="/{{ .Lang }}/who-we-are">{{ i18n "whoweare" }}</a>
+          <a class="cta" href="https://drive.google.com/file/d/1LlYrVy0UWurx7IfYza7yp4QyMn-iZw4z/view?usp=sharing" target="_blank">
+            Download Sponsordeck
+            {{ partial "svg/icon" "external" }}
+          </a>
         </section>
       </article>
       <aside>
-        {{ with resources.Get "images/home/divd_intro.png" }} 
+        <div class="bubble bubble-large middle over"></div>
+        
+        {{ with resources.Get "images/global/partners.png" }} 
           {{ partial "tools/rimg/img" (dict "img" . "alt" "test") }}
         {{ end }}
+        <div class="bubble bubble-small left under"></div>
       </aside>
     </div>
 
-  {{ partial "p/section_open" (dict "classes" (slice "inverse" "overlap-top"))}} 
+  {{ partial "p/section_open" (dict "classes" (slice "inverse"))}} 
     {{ partial "p/layout_open" (dict "classes" (slice "default")) }}
       
-        <div class="reverse">
+        <div class="reverse pb-xl">
           <h2>{{ .Params.partnerstitle }}</h2>
           <p>{{ .Params.partnersintro }}</p>
           <div class="partner-list">
@@ -36,23 +42,33 @@
               }}
             {{ end }}
           </div>
-
-          <div>
-            <p>{{ .Params.partnerquote.name }}</p>
-            <p>{{ .Params.partnerquote.role }}</p>
-            <p>{{ .Params.partnerquote.website }}</p>
-            <p>{{ .Params.partnerquote.quote }}</p>
-            <p>{{ .Params.partnerquote.image }}</p>
-          </div>
         </div>
+        {{ partial "p/layout_close" }}
+        {{ partial "p/layout_open" (dict "classes" (slice "overlap-bottom")) }}
+          {{ with .Params.partnerquote }}
+            <div class="person-highlight">
+              <figure>
+              {{ with resources.Get .image }} 
+                {{ partial "tools/rimg/img" (dict "img" . "alt" "Communication Manager") }}
+              {{ end }}
+              </figure>
+              <article>
+                <h2>{{ .name }}</h2>
+                <h4>{{ .role }}</h4>
+                <p>{{ .quote }}</p>
+                <a class="cta" href="{{ .website }}" target="_blank">{{ i18n "visitsite" }} {{ partial "svg/icon" "external" }}</a>
+              </article>
+            </div>
+          {{ end }}
+        
       {{ partial "p/layout_close" }}
     {{ partial "p/section_close" }}
-
+    <div class="pt-xlg">
     {{ partial "p/section_open" (dict "classes" (slice "gradient-reverse"))}} 
+    {{ partial "block/faq" . }}
       {{ partial "block/proudestwork" . }}
-      {{ partial "block/faq" . }}
-    {{ partial "p/section_close" }}
-
+      {{ partial "p/section_close" }}
+    </div>
 
   </div>
 {{ end }}

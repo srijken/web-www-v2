@@ -1207,6 +1207,9 @@ collections:
             name: "intro"
             widget: text
             i18n: true
+          - label: "To E-mail"
+            name: "email"
+            widget: text
 
       # BLOCK: Footer #####################################################
       - name: "footer"

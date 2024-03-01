@@ -11,7 +11,7 @@
     </div>
     <div>
 
-      <form class="default">
+      <form class="default" action="mailto:{{.email}}" method="GET" enctype="text/plain">
         <section class="required">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" placeholder="Your name" />
@@ -23,7 +23,7 @@
           </div>
           <div class="required">
             <label for="phone">Phone</label>
-            <input type="text" id="phone" name="phone" placeholder="+00 0000000000" />
+            <input type="tel" id="phone" name="phone" placeholder="+00 0000000000" />
           </div>
         </section>
         <section>
@@ -35,7 +35,7 @@
           <label><input type="checkbox" name="nounsollicitedoffers" />I agree to not contact DIVD with unsollicited services or offers*</label>
         </section>
 
-        <button class="cta" type="submit">Submit</button>g
+        <button class="cta" type="submit">Submit</button>
       </form>
     </div>
 

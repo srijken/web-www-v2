@@ -11,7 +11,7 @@
         {{ with resources.Get $imageSource }} 
             {{ partial "tools/rimg/img" (dict "img" . "alt" $name) }} 
         {{ else }}
-            <img src="#" alt="Default alt text" />
+            <img src="#" alt="{{ $name }}" />
         {{ end }}
     </figure>
     <section>

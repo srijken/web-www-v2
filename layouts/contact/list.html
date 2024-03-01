@@ -1,30 +1,22 @@
 {{ define "main" }}
   <div class="topic-layout contact-page">
-    <div class="topic-intro reverse">
-      {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
-        <div>
-          <h1>{{ .Params.opener }}</h1>
-        </div>
-        <div>
-          <p>{{ .Params.intro}}
-        </div>
-      {{ partial "p/layout_close" }}
+
+    <div class="bg-gradient bg-gradient-reverse">
+      <div class="topic-intro reverse">
+        {{ partial "p/layout_open" (dict "classes" (slice "right")) }}
+          <div>
+            <h1>{{ .Params.opener }}</h1>
+          </div>
+          <div>
+            <p>{{ .Params.intro}}
+          </div>
+        {{ partial "p/layout_close" }}
+      </div>
     </div>
 
     {{ partial "p/section_open" (dict "classes" (slice "gradient"))}} 
       {{ partial "block/faq" . }}
-
-      {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
-        <div>
-          <h2>{{ .Params.form.title }}</h2>
-          <p class="pre">
-            {{ .Params.form.description }}
-          </p>
-        </div>
-        <div>
-          Form
-        </div>
-      {{ partial "p/layout_close" }}
+      {{ partial "block/contact" . }}
     {{ partial "p/section_close" }}
   </div>
 {{ end }}

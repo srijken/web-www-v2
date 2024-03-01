@@ -73,6 +73,7 @@ familycta:
     for us.
 contact:
   title: Not a regular office
+  email: contact@divd.nl
   intro: >-
     We are a network of security researchers who mainly work online. If you want
     to contact us, you can send us an e mail to question@divd.nl or use our

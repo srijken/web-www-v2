@@ -1,30 +1,36 @@
 {{ define "main" }}
 
 
-<div class="default-layout faq" style="padding-top: 164px">
+<div class="article-layout faq" style="padding-top: 164px">
   {{ partial "breadcrumbs" . }}
 
-  {{ partial "p/section_open" (dict "classes" (slice "default"))}} 
+  {{ partial "p/section_open" (dict "classes" (slice "article" ))}} 
+
     {{ partial "p/layout_open" (dict "classes" (slice "article")) }}
-      <div class="default-content">
-        <h1>Frequently Asked Questions</h1>
 
-        {{ range .Params.faqgroups }}
-          {{ if ne .heading "Home" }}
-            <h2>{{ .heading }}</h2>
+      <div class="article-body">
+        <article>
+          <h1>Frequently Asked Questions</h1>          
+          {{ range .Params.faqgroups }}
+            <div class="faqgroup pb-lg">
+              {{ if ne .heading "Home" }}
+                <h2>{{ .heading }}</h2>
+              {{ end }}
+
+              <div class="accordion">
+                {{ range $index, $element := .faqs }}
+                  <div class="accordion-item{{ if eq $index 0 }} active{{ end }}">
+                    <h3>{{ .title }} <span> </span></h3>
+                    <div class="accordion-content p">{{ .description }}</div>
+                  </div>
+                {{ end }}
+              </div>
+            </div>
           {{ end }}
-          {{ range .faqs }}
-            <div class="faq">
-              <h3>{{ .title }}</h3>
-              <p>{{ .description }}</p>
-            </div>    
-
-          {{ end }}
-
-        {{ end }}
+        </article>
       </div>
     {{ partial "p/layout_close" }}
+
   {{ partial "p/section_close" }}
 </div>
-
 {{ end }}
