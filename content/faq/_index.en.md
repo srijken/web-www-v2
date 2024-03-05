@@ -46,8 +46,11 @@ faqgroups:
           / mailing lists / news sources.
         title: Where do you got the info about the vulnerability? How do you know
           where’s a vulnerability and what to do with it.
-  - heading: An extra group
+  - heading: Contact
     faqs:
       - title: A question
         description: a﻿nd an answer
+  - heading: Become a volunteer
+  - heading: Become a partner
+  - heading: Notification email
 ---
