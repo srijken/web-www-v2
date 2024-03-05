@@ -8,12 +8,13 @@ footer.main {
     max-width: var(--cw);
     margin: auto;
 
+    padding-bottom: 32px;
     display: flex;
     justify-content: space-between;
   }
 
   article {
-    padding: 64px 0;
+    padding: 96px 0;
     flex: 1 1 auto;
     color: #fff;
 

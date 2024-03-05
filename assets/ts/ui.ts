@@ -3,7 +3,6 @@ function initMainMenu() {
 	let subNavEl = document.getElementById('sub-nav');
 
 	function onClick() {
-		console.log('Clickckc');
 		if (subNavEl) {
 			subNavEl.classList.toggle('active');
 		}
@@ -11,8 +10,6 @@ function initMainMenu() {
 
 	if (menuButtonEl && subNavEl) {
 		menuButtonEl.addEventListener('click', onClick);
-	} else {
-		console.log('nope');
 	}
 }
 
@@ -61,33 +58,38 @@ function initCarousel(el: HTMLDivElement) {
 	}
 
 	let buttons = el.querySelectorAll('.pages button');
+	if (!buttons.length) {
+		buttons = el.querySelectorAll('button');
+	}
 	if (buttons.length === 2) {
 		buttons[0].addEventListener('click', prevPage);
 		buttons[1].addEventListener('click', nextPage);
 	}
 }
 
+function initAccordion(el: HTMLDivElement) {
+	let items = el.querySelectorAll('.accordion-item');
 
-function initAccordion(el:HTMLDivElement) {
-  let items = el.querySelectorAll(".accordion-item");
+	function toggleItem(itemEl) {
+		items.forEach((item) => {
+			item.classList.remove('active');
+		});
+		itemEl.classList.add('active');
+	}
 
-  function toggleItem(itemEl) {
-    items.forEach((item) => {
-      item.classList.remove("active");
-    });
-    itemEl.classList.add("active");
-  }
-
-  items.forEach((item) => {
-    item.addEventListener("click", () => {
-      toggleItem(item);
-    });
-  });
+	items.forEach((item) => {
+		item.addEventListener('click', () => {
+			toggleItem(item);
+		});
+	});
 }
 
 function initAllCarousels() {
 	let els = document.querySelectorAll<HTMLDivElement>('.carousel');
 	els.forEach(initCarousel);
+
+	let smallEls = document.querySelectorAll<HTMLDivElement>('.smallousel');
+	smallEls.forEach(initCarousel);
 }
 
 function initAllAccordions() {

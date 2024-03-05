@@ -83,6 +83,13 @@
 
   .smallouselnav {
     flex: 0 0 64px;
+
+    display: flex;
+    align-items: center;
+
+    &:last-of-type {
+      justify-content: flex-end;
+    }
   }
 
   .smallouselcontent {

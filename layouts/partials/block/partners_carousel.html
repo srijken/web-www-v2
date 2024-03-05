@@ -6,7 +6,9 @@
       <h2>{{ .Params.partnerstitle }}</h2>
     </div>
     <div class="smallousel">
-      <div class="smallouselnav">L</div>
+      <div class="smallouselnav">
+        <button class="icon small">{{ partial "svg/icon" "chevronleft" }}</button>
+      </div>
       <div class="smallouselcontent">
         <div class="slides">
           {{ range $index, $element := .Params.partnerlist }}
@@ -18,9 +20,11 @@
           {{ end }}
         </div>
       </div>
-      <div class="smallouselnav">R</div>
+      <div class="smallouselnav">
+        <button class="icon small">{{ partial "svg/icon" "chevronright" }}</button>
+      </div>
     </div>
-    <div class="reverse">
+    <div class="pt-md reverse">
       <p>
         {{ .Params.partnersintro }}
       </p>

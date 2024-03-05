@@ -6,15 +6,15 @@
     <div class="carousel">
       <div class="slides">
         
-          {{ range $index, $element := .Params.testimonials }}
+          {{ range $index, $element := first 3 .Params.testimonials }}
 
-          {{ partial "card" (dict 
-              "imageSource" .image
-              "name" .name
-              "title" .role
-              "content" .quote
-              "classes" (slice "person")) 
-          }}
+            {{ partial "card" (dict 
+                "imageSource" .image
+                "name" .name
+                "title" .role
+                "content" .quote
+                "classes" (slice "person")) 
+            }}
 
           {{ end }}
         

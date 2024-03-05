@@ -111,6 +111,17 @@ a.cta {
     background-color: #1D1D1D;
     color: #fff;
 
+    display: flex;
+    flex-direction: column;
+
+    section {
+      flex: 1 1 auto;
+    }
+
+    nav {
+      flex: 0 0 44px;
+    }
+
     h3 {
       margin-bottom: 16px;
     }
@@ -207,6 +218,11 @@ button, .button {
     svg {
       margin: 0;
     }
+
+    &.small {
+      width: 32px;
+      height: 32px;
+    }
   }
 
 
@@ -231,9 +247,7 @@ ol {
 
     ul {
       list-style: circle;
-      li {
-        font-size: 1em;
-      }
+      
     }
   }
 }

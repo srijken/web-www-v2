@@ -27,7 +27,7 @@
                 "imageAlt" .Received_Alt
                 "title" .Received 
                 "linkTitle" (i18n "readmore") 
-                "link" (relLangURL "who-we-are/") 
+                "link" (relLangURL "warningemail/") 
                 "classes" (slice "article")
                 ) 
             }}
@@ -60,24 +60,18 @@
                 "imageSource" .t1_image
                 "imageAlt" .t1_alt
                 "title" .t1 
-                "linkTitle" (i18n "readmore") 
-                "link" "/test" 
                 "classes" (slice "cta")) 
               }}
               {{ partial "card" (dict 
                 "imageSource" .t2_image 
                 "imageAlt" .t2_alt
                 "title" .t2 
-                "linkTitle" (i18n "readmore") 
-                "link" "/test" 
                 "classes" (slice "cta")) 
               }}
               {{ partial "card" (dict 
                 "imageSource" .t3_image
                 "imageAlt" .t3_alt
                 "title" .t3 
-                "linkTitle" (i18n "readmore") 
-                "link" "/test" 
                 "classes" (slice "cta")) 
               }}
             </div>
@@ -97,7 +91,9 @@
 
   
     {{ partial "p/section_open" (dict "classes" (slice "default"))}} 
+      <div class="pt-lg">
       {{ partial "block/testimonials" . }}
+      </div>
       {{ with .Params.helpushelpyou }}
         {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
           <div>
@@ -117,23 +113,25 @@
     {{ partial "p/section_close" }}
 
     {{ partial "p/section_open" (dict "classes" (slice "primary" "round" "round-topleft"))}} 
-      {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
+      {{ partial "p/layout_open" (dict "classes" (slice "half" "extend")) }}
         {{ with .Params.volunteer }}
-          <div>
-            <h2>{{ .Title }}</h2>
-            <ul class="checklist">
-              {{ range .checklist }}
-                <li>
-                  {{ partial "svg/icon" "checkmark"}} {{ .item }}
-                </li>
-              {{ end }}
-            </ul>
+          <div class="fill-center">
+            <div>
+              <h2>{{ .Title }}</h2>
+              <ul class="checklist">
+                {{ range .checklist }}
+                  <li>
+                    {{ partial "svg/icon" "checkmark"}} {{ .item }}
+                  </li>
+                {{ end }}
+              </ul>
 
-            <a class="cta" href="/{{ .Lang }}/volunteers">{{ i18n "becomeavolunteer" }}</a>
-            <a class="cta inverse external" href="/temp">
-              {{ i18n "openroles" }}
-              {{ partial "svg/icon" "external" }}
-            </a>
+              <a class="cta" href="{{ "/contribute/volunteers" | relLangURL }}">{{ i18n "becomeavolunteer" }}</a>
+              <a class="cta inverse external" href="/temp">
+                {{ i18n "openroles" }}
+                {{ partial "svg/icon" "external" }}
+              </a>
+            </div>
           </div>
           <div class="image-container">
             {{ with resources.Get "images/global/volunteers.png" }} 
@@ -148,7 +146,7 @@
         {{ partial "block/partners_carousel" .}}
     {{ partial "p/section_close" }}
 
-    {{ partial "p/section_open" (dict "classes" (slice "gradient"))}} 
+    {{ partial "p/section_open" (dict "classes" (slice "gradient-reverse"))}} 
       {{ partial "block/faq" . }}
     {{ partial "p/section_close" }}
 </div>

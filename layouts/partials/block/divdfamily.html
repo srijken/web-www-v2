@@ -12,9 +12,13 @@
       <div class="divd-family-list">
         {{ range .members }}
           <div class="divd-family-item">
-            <h3>{{ .name }}</h3>
-            <p>{{ .description }}</p>
-            <a class="cta" href="{{ .link }}">{{ i18n "visitsite"}} {{ partial "svg/icon" "external" }}</a>
+            <section>
+              <h3>{{ .name }}</h3>
+              <p>{{ .description }}</p>
+            </section>
+            <nav>
+              <a class="cta" href="{{ .link }}">{{ i18n "visitsite"}} {{ partial "svg/icon" "external" }}</a>
+            </nav>
           </div>
         {{ end }}
       </div>
