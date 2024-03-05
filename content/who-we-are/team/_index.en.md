@@ -15,11 +15,14 @@ teams:
     members:
       - /who-we-are/team/people/arthur-dent
       - /who-we-are/team/people/arthur-dent
+      - /who-we-are/team/people/chris-van-t-hof
+      - /who-we-are/team/people/victor-gevers
   - title: Office
     description: Providing some sense of direction to a bunch of hackers, aka
       advanced cat herding.
     members:
       - /who-we-are/team/people/arthur-dent
+      - /who-we-are/team/people/chris-van-t-hof
   - title: CSIRT
     description: The CSIRT is the engineblock of DIVD. It is responsible for
       scanning the internet and notifying the system owners as well as running
@@ -38,8 +41,8 @@ teams:
       right now, before the bad guys do…
     members:
       - /who-we-are/team/people/arthur-dent
-      - /who-we-are/team/people/_index
       - /who-we-are/team/people/max-van-der-horst
+      - /who-we-are/team/people/victor-gevers
   - title: IT Services
     description: Taking care of the IT of hackers in a non-hacky way so they don’t
       get hacked.
