@@ -504,3 +504,39 @@ ul.sumup {
   margin-top: -128px;
   visibility: hidden;
 }
+
+
+table.donations {
+  width: 100%;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+
+  td, th {
+    padding: 20px 20px;
+  }
+  thead {
+    tr {
+      th {
+        text-align: left;
+        color: #fff;
+        background-color: black;        
+      }
+    }
+  }
+
+  tbody {
+    tr:nth-child(even) {
+      background-color: #f4f4f4;
+    }
+  }
+}
+
+
+.image-grow {
+  overflow: hidden;
+  img {
+    max-width: 100%;
+    object-fit: contain;
+  }
+}

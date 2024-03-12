@@ -251,7 +251,7 @@ collections:
             i18n: true
           - label: "Description"
             name: "description"
-            widget: "text"
+            widget: "markdown"
             i18n: true
 
   # PAGE:  !Warning email #####################################################
@@ -273,7 +273,7 @@ collections:
         i18n: true
       - label: "Intro"
         name: "intro"
-        widget: text
+        widget: markdown
         i18n: true
       - label: "CSIRT"
         name: "csirt"
@@ -286,7 +286,7 @@ collections:
             i18n: true
           - label: "Description"
             name: "description"
-            widget: "text"
+            widget: "markdown"
             i18n: true
           - label: "Link"
             name: "link"
@@ -825,7 +825,7 @@ collections:
             i18n: true
           - label: "Description"
             name: "description"
-            widget: "text"
+            widget: "markdown"
             i18n: true
       - label: "Scouting"
         name: "scouting"
@@ -881,6 +881,50 @@ collections:
           widget: "hidden",
           value: "codeofconduct",
         }
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Body", name: "body", widget: "markdown", i18n: true }
+
+  # PAGE: !Terms #####################################################
+  - name: termsandconditions
+    label: "Terms and Conditions"
+    folder: "content/toc"
+    slug: "_index"
+    create: false
+    i18n: true
+    fields:
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Body", name: "body", widget: "markdown", i18n: true }
+
+  # PAGE: !Privacy #####################################################
+  - name: privacy
+    label: "Privacy"
+    folder: "content/privacy"
+    slug: "_index"
+    create: false
+    i18n: true
+    fields:
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Body", name: "body", widget: "markdown", i18n: true }
+
+  # PAGE: !Anbi #####################################################
+  - name: anbi
+    label: "ANBI"
+    folder: "content/anbi"
+    slug: "_index"
+    create: false
+    i18n: true
+    fields:
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Body", name: "body", widget: "markdown", i18n: true }
+
+  # PAGE: !Security policy #####################################################
+  - name: security
+    label: "Security policy"
+    folder: "content/security"
+    slug: "_index"
+    create: false
+    i18n: true
+    fields:
       - { label: "Title", name: "title", widget: "string", i18n: true }
       - { label: "Body", name: "body", widget: "markdown", i18n: true }
 
@@ -1205,7 +1249,7 @@ collections:
             i18n: true
           - label: "Description"
             name: "intro"
-            widget: text
+            widget: markdown
             i18n: true
           - label: "To E-mail"
             name: "email"

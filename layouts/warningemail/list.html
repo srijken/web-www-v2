@@ -24,11 +24,13 @@
             <div class="flex flex-50">
               <div>
                 <h2>{{ .title }}</h2>
-                <p class="pre">{{ .description }}</p>
+                <div class="markdown">{{ .description |markdownify }}</div>
                 <a class="button external">CSIRT SITE {{partial "svg/icon" "external"}}</a>
               </div>
-              <div>
-                test
+              <div class="image-grow">
+                {{ with resources.Get "images/global/warningemail.png" }} 
+                  {{ partial "tools/rimg/img" (dict "img" . "alt" "test") }}
+                {{ end }}
               </div>
             </div>
           </div>
@@ -39,9 +41,9 @@
         {{ with .Params.stepbystep }}
           <div class="reverse">
             <h2>{{.title }}</h2>
-            <p>
-              {{ .description }}
-            </p>
+            <div class="markdown">
+              {{ .description |markdownify}}
+            </div>
           </div>
 
           <div>

@@ -28,7 +28,7 @@
 
           <div class="reverse">
             <h2 id="mission" class="offset">{{ .Params.whatwedocontent.title }}</h2>
-            <p class="pre">{{ .Params.whatwedocontent.description }}</p>
+            <div>{{ .Params.whatwedocontent.description |markdownify }}</div>
           </div>
           <div>
             <ul class="sumup">

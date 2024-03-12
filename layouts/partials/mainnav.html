@@ -10,17 +10,17 @@
   
 
     <article>
-      <a href="/{{ .Lang }}/about">
+      <a href="{{ "/who-we-are" | relLangURL }}">
         {{ i18n "nav_about" }}
         {{ partial "svg/icon" "chevrondown" }}
       </a>
 
-      <a href="/{{ .Lang }}/community">
+      <a href="{{ "/contribute" | relLangURL }}">
         {{ i18n "nav_community" }}
         {{ partial "svg/icon" "chevrondown" }}
       </a>
 
-      <a href="/{{ .Lang }}/security">
+      <a href="{{ "/what-we-do/code-of-conduct" | relLangURL }}">
         {{ i18n "nav_security" }}
         {{ partial "svg/icon" "chevrondown" }}
       </a>
@@ -93,19 +93,19 @@
           <h3>DIVD Community</h3>
           <ul>
             <li>
-              <a href="{{ "contribute/" | relLangURL }}">Contribute</a>
+              <a href="{{ "/contribute/" | relLangURL }}">Contribute</a>
             </li>
             <li>
-              <a href="{{ "contribute/volunteers/" | relLangURL }}">Become a volunteer</a>
+              <a href="{{ "/contribute/volunteers/" | relLangURL }}">Become a volunteer</a>
             </li>
             <li>
-              <a href="{{ "contribute/partners" | relLangURL }}">Become a partner</a>
+              <a href="{{ "/contribute/partners" | relLangURL }}">Become a partner</a>
             </li>
             <li>
-              <a href="{{ "contribute/" | relLangURL }}#donate">Donate</a>
+              <a href="{{ "/contribute/" | relLangURL }}#donate">Donate</a>
             </li>
             <li>
-              <a href="{{ "newsroom/" | relLangURL }}">Newsroom</a>
+              <a href="{{ "/newsroom/" | relLangURL }}">Newsroom</a>
             </li>
           </ul>
         </div>
@@ -113,17 +113,17 @@
           <h3>Security</h3>
           <ul>
             <li>
-              <a href="{{ "what-we-do/code-of-conduct" | relLangURL }}">Code of Conduct</a>
+              <a href="{{ "/what-we-do/code-of-conduct" | relLangURL }}">Code of Conduct</a>
             </li>
             <li>
-              <a href="#whatwedo">Security policy</a>
+              <a href="{{ "/security" | relLangURL }}">Security policy</a>
             </li>
             <li>
-              <a href="#whoweare">ANBI</a>
+              <a href="{{ "/anbi" | relLangURL }}">ANBI</a>
             </li>
             <li>
-              <a href="#whatwedo">
-                CSIRT externallink
+              <a href="https://csirt.divd.nl/">
+                CSIRT {{ partial "svg/icon" "external" }}
               </a>
             </li>
           </ul>

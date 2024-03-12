@@ -76,6 +76,14 @@ p.primary {
   font-size: 1.2em;
 }
 
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
 @media (max-width: 700px) {
   h1 {
     font-size: 3em;
@@ -107,12 +115,18 @@ p.primary {
 
 .reverse {
 
-  h1, h2, p {
+  h1, h2, p, div, a {
     color: #fff; /* TODO VAR */
   }
+
+
+  a {
+    border-bottom: 1px solid white;
+  }
+
 }
 
-.p {
+.p, .markdown {
   font-family: var(--font-text);
   font-size: 1.2em;
   line-height: 1.6em;

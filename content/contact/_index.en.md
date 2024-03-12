@@ -12,5 +12,5 @@ form:
 
     You can also meet us at cyber security conferences and hacker events or just follow us on Twitter.
 
-    For questions related to our CSIRT you can email csirt@divd.nl .
+    For questions related to our CSIRT you can email [csirt@divd.nl](mailto:csirt@divd.nl) .
 ---
