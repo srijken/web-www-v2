@@ -6,7 +6,7 @@ intro: A critical security issue was recently identified in TeamCity
   On-Premises. If abused, the flaw may enable an unauthenticated attacker with
   HTTP(S) access to a TeamCity server to perform bypass authentication checks
   and gain administrative control of that TeamCity server.
-image: ""
+image: /images/articles/3uckvtyb_400x400.jpg
 image_alt: Picture of a bug (insect)
 case:
   caseid: DIVD-2024-00009
@@ -17,6 +17,10 @@ case:
     - label: Alwin Warringa
       link: https://www.divd.nl/people/Alwin%20Warringa/
 ---
+## SUMMARY
+
+A critical security issue was recently identified in TeamCity On-Premises. If abused, the flaw may enable an unauthenticated attacker with HTTP(S) access to a TeamCity server to perform bypass authentication checks and gain administrative control of that TeamCity server.
+
 ## RECOMMENDATIONS
 
 JetBrains advises On-Prem users to upgrade to the latest available version as soon as possible or install the security patch. See the references for the download links. If you are compromised, DIVD advises you start your incident response process immediately.
