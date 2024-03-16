@@ -7,6 +7,7 @@ intro: A critical security issue was recently identified in ConnectWise
   ScreenConnect. If abused, the flaw may enable an unauthenticated attacker to
   bypass the authentication and execute remote code or directly impact
   confidential data or critical systems.
+image: /images/articles/connectwise.webp
 case:
   caseid: DIVD-2024-00008
   closed: false
