@@ -1,18 +1,22 @@
 ---
-title: "CASE: Proudest work"
+title: "NEWS: INGE BRYAN NIEUWE BESTUURSVOORZITTER DIVD"
 date: 2023-11-25T18:19:40.931Z
-tag: case
-intro: In a cooperation with DIVD, NCSC-NL and several EU govcerts, 14,986
-  global vulnerable hosts were found and notified.
-image: /images/articles/1675785490-esxi-16_9-1.png
+tag: news
+intro: Met trots en plezier maken we bekend dat Inge Bryan de nieuwe
+  bestuursvoorzitter is van het Dutch Institute for Vulnerability Disclosure. Ze
+  neemt deze rol over van Astrid Oosenbrug. Astrid legt de voorzittershamer neer
+  om zich meer te gaan richten op de ontwikkeling van de DIVD Academy.
+image: /images/articles/divd-partnerevent-2023-21.jpg
 image_alt: Picture of a bug (insect)
 case:
   closed: true
+  researchers:
+    - label: Max van Der Horst
 ---
-On February 3rd, DIVD became aware of a global ransomware attack that targeted vulnerable VMware ESXi servers, specifically those susceptible to **CVE-2021-21974.** In response, DIVD conducted a scan of ESXi servers accessible via the internet and notified users, urging them to patch their systems to prevent potential exploitation. VMware ESXi is a type 1 hypervisor that is part of VMware’s larger vSphere suite. It provides a platform for virtualizing servers and allows for the running of multiple operating systems on a single physical server. As a bare-metal hypervisor, ESXi is directly installed on the server hardware, providing a efficient way to manage and partition hardware resources like CPU, memory, storage, and networking among multiple virtual machines (VMs). ESXi includes features such as VMotion, which enables live migration of running VMs from one physical server to another with no downtime, and High Availability, which allows for automatic VM restart on other available servers in case of hardware failure. ESXi also provides security features, including VM encryption, and secure boot.
+Met trots en plezier maken we bekend dat [Inge Bryan](https://www.linkedin.com/in/inge-bryan/) de nieuwe bestuursvoorzitter is van [het Dutch Institute for Vulnerability Disclosure](https://www.divd.nl/). Ze neemt deze rol over van [Astrid Oosenbrug](https://www.linkedin.com/in/astridoosenbrug/). Astrid legt de voorzittershamer neer om zich meer te gaan richten op de ontwikkeling van de [DIVD Academy](https://divd.academy/).
 
-CVE-2021-21974 is a vulnerability in OpenSLP as used in ESXi. OpenSLP is an open standard network protocol that enables dynamic discovery and communication with network services in LANs and WANs. The vunerability in the protocol is a heap-overflow vulnerability. A malicious actor who resides within the same network segment as ESXi and has access to TDP or UDP port 427, may be able to trigger the heap-overflow vulnerability in the OpenSLP service, which could result in remote code execution. The versions of ESXi that are vulnerable to this issue are 7.0 before ESXi70U1c-17325551, 6.7 before ESXi670-202102401-SG, and 6.5 before ESXi650-202102101-SG.
+Inge Bryan is een leading lady in de wereld van CyberSecurity. Ze maakte carrière bij de politie. Stapte over naar Deloitte waar ze partner werd en de afgelopen twee jaar was ze managing director van Fox-IT in Delft. Daarnaast is ze mede-oprichter van [AAN, het Anti-Abuse Network](https://www.abuse.nl/).
 
-February 3rd CERT-FR communicated about ransomware attacks, related to CVE-2021-21974. The attackers used the vulnerability to launch ransomware attacks.
+[Chris van ’t Hof](https://www.linkedin.com/in/chris-van-t-hof-312609/), directeur DIVD is enthousiast met de komst van de nieuwe voorzitter. “Inge is een begrip in CyberSecurity en we zijn dan ook heel erg blij met haar komst naar ons instituut. Ze heeft de kennis en kunde in huis om DIVD weer een stap verder te brengen. Ik kijk er naar uit om samen met haar en onze hackers Nederland nog digitaal veiliger te maken.”
 
-On February 4th DIVD started scanning. An initial scan revealed the presence of **14,986 vulnerable hosts globally**,with 269 of them located in the Netherlands. The researchers at DIVD notified the owners. Additionally, DIVD also informed the Dutch NCSC, as well as govcerts in Austria, Finland, France, and Italy.
+Inge Bryan zegt vereerd te zijn met de benoeming. “Ik beschouw DIVD als een cruciale schakel in de digitale veiligheid van ons land en een bonte verzameling van fantastische mensen. Ik voel mij vereerd dat ik hiervan deel mag uit maken.” De voorzittershamer is overdragen op dinsdag 26 september tijdens een partnerbijeenkomst van DIVD.
