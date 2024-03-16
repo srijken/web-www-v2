@@ -1,11 +1,11 @@
 ---
 title: Who we are
 opener: We are the safe-keepers of the digital world
-intro: Five years ago we started making the digital world safer, we started with
-  a few enthousiast hackers and now we're with over 130 very enthusiastic and
-  skilled people working together on the same mission.
+intro: Five years ago, a few enthousiast hackers started making the digital
+  world safer. Now we're with over 130 very enthusiastic and skilled people
+  working together on the same mission.
 missionandhistory:
-  title: Mission & History
+  title: History
   intro: "This wonderful adventure started with the work of hacker Victor Gevers,
     who was already scanning and notifying the whole world for 20 years.
     Together with Parliamentarian cybermum Astrid Oosenbrug, writer/researcher
