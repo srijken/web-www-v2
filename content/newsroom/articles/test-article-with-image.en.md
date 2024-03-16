@@ -16,6 +16,7 @@ case:
   researchers:
     - label: Alwin Warringa
       link: https://www.divd.nl/people/Alwin%20Warringa/
+    - label: Gerben van der Wel
 ---
 ## SUMMARY
 
