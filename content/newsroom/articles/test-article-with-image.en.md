@@ -6,7 +6,7 @@ intro: A critical security issue was recently identified in TeamCity
   On-Premises. If abused, the flaw may enable an unauthenticated attacker with
   HTTP(S) access to a TeamCity server to perform bypass authentication checks
   and gain administrative control of that TeamCity server.
-image: /images/articles/3uckvtyb_400x400.jpg
+image: /images/articles/divd-vulnerability-post-06.png
 image_alt: Picture of a bug (insect)
 case:
   caseid: DIVD-2024-00009
