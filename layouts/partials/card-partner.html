@@ -15,11 +15,15 @@
         {{ end }}
     </figure>
     <section>
-        <h3>{{ $name }}</h3>
-        <p>{{ $description }}</p>
-        <a class="cta external inverse" href="{{ $link }}" target="_blank">
-            {{ $cta }}
-        </a>
+        <div class="content">
+            <h3>{{ $name }}</h3>
+            <p>{{ $description }}</p>
+        </div>
+        <nav>
+            <a class="cta external inverse" href="{{ $link }}" target="_blank">
+                {{ $cta }}
+            </a>
+        </nav>
     </section>
 </div>
 

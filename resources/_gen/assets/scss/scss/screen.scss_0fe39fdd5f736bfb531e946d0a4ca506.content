@@ -351,7 +351,13 @@ a.cta {
     flex: 1 1 auto;
     padding: 20px 16px;
     background-color: black;
-    color: white; }
+    color: white;
+    display: flex;
+    flex-direction: column; }
+    .partner-card section .content {
+      flex: 1 1 auto; }
+    .partner-card section .cta {
+      flex: 0; }
 
 .partner-list {
   display: grid;
@@ -1082,7 +1088,7 @@ nav.sub-nav {
       object-fit: contain; }
   @media (max-width: 700px) {
     .opener {
-      position: none;
+      position: static;
       flex-direction: column-reverse; }
       .opener article {
         padding: 0 32px; }
@@ -1090,10 +1096,13 @@ nav.sub-nav {
           padding: 64px 0;
           flex: 1; }
       .opener aside {
+        height: auto;
         position: static;
         order: 1;
         height: auto;
-        width: auto; } }
+        width: auto; }
+        .opener aside img {
+          position: static; } }
 .sub-opener {
   display: flex;
   justify-content: space-around; }
@@ -1119,11 +1128,23 @@ nav.sub-nav {
     border-radius: 64px;
     width: 400px;
     height: 128px; }
+  .bubble.bubble-small-half {
+    top: 0;
+    border-top-left-radius: 64px;
+    border-bottom-left-radius: 64px;
+    width: 200px;
+    height: 128px; }
   .bubble.bubble-large {
     border-top-left-radius: 128px;
     bottom: 0px;
     height: 128px;
     width: 100%; }
+  .bubble.bubble-large-middle {
+    border-top-left-radius: 128px;
+    right: 0;
+    bottom: 0px;
+    height: 128px;
+    width: 40%; }
   .bubble.under {
     z-index: 1; }
   .bubble.over {
@@ -1135,7 +1156,7 @@ nav.sub-nav {
   .bubble.middle {
     left: 50%; }
   .bubble.far-right {
-    right: -200px; }
+    right: 0px; }
 
 .card {
   display: flex;

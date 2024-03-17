@@ -140,7 +140,7 @@ a.cta {
   border-radius: 20px;
   overflow: hidden;
   display: flex;
-  flex-direction: column;;
+  flex-direction: column;
 
   figure {
     background-color: white;
@@ -157,6 +157,16 @@ a.cta {
     padding: 20px 16px;;
     background-color: black;
     color: white;
+
+    display: flex;
+    flex-direction: column;
+    .content { 
+      flex: 1 1 auto;
+    }
+
+    .cta {
+      flex: 0;
+    }
   }
 }
 
