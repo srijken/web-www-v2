@@ -1,19 +1,26 @@
 ---
-title: "CASE: EXPOSED BACNET DEVICES"
+title: "CASE: SMARTERMAIL"
 date: 2024-01-09T20:29:38.981Z
 author:
   - /people/arthur-dent
 tag: case
-intro: blabla
+intro: A DIVD researcher found multiple vulnerabilities in SmarterMail. Both
+  vulnerabilities were discovered within the webmail fronted of SmarterMail.
 image: /images/articles/1675785490-esxi-16_9-1.png
 case:
-  caseid: DIVD-2022-00005
+  caseid: DIVD-2021-00006
   closed: true
+  link: https://csirt.divd.nl/cases/DIVD-2021-00006/
+  lead: Lenneart
+  researchers:
+    - label: Lenneart
+      link: https://www.divd.nl/people/Lennaert%20Oudshoorn/
+  leadlink: https://www.divd.nl/people/Lennaert%20Oudshoorn/
 ---
-During the process of conducting vulnerability scans focused on the Log4J vulnerability, the DIVD discovered numerous Siemens systems that exposed the BACnet protocol via an unsecured port.
+The DIVD notified SmarterTools Inc. of the following vulnerabilities:
 
-BACnet, or Building Automation and Control Networks, is a widely adopted communication protocol designed for building automation and control systems. Established as an international standard by the American Society of Heating, Refrigerating, and Air-Conditioning Engineers (ASHRAE), BACnet facilitates communication and interoperability between devices and systems used in areas such as heating, ventilation, air-conditioning (HVAC), lighting, access, and fire detection. It is employed worldwide in commercial, industrial, and residential buildings to ensure effective and efficient building management.
+* [CVE-2021-43977](https://csirt.divd.nl/cves/CVE-2021-43977) - SmarterTools SmarterMail before 100.0.7803 (May 13, 2021) and 16.x allows XSS.
+* [CVE-2021-32233](https://csirt.divd.nl/cves/CVE-2021-32233) - SmarterTools SmarterMail before 100.0.7803 (May 13, 2021) and 16.x allows XSS.
+* [CVE-2021-32234](https://csirt.divd.nl/cves/CVE-2021-32234) - SmarterTools SmarterMail before 100.0.7803 (May 13, 2021) and 16.x allows Remote Code Execution.
 
-These systems might be at risk of unauthorized access or manipulation by threat actors. Communication can be unencrypted and without proper authentication mechanisms, making it potentially vulnerable to interception or tampering. An exposed BACnet port also increases the attack surface of the Siemens systems, potentially allowing attackers to gain access to other parts of the network and causing further damage.
-
-The unintended exposure of BACnet ports poses potential security threats and may open the door to unauthorized access to essential building infrastructure. In our initial investigation, we used Shodan to explore BACnet-port 47808. The search revealed a total of 29,736 systems were exposed. Following this, we conducted a scan and found 12,572 vulnerable BACnet systems. The respective owners of these systems were promptly notified and provided with strategic advice to restrict access to their BACnet controllers.
+The DIVD warned users with a version of SmarterMail before 100.0.7803 (May 13, 2021) or 16.x, and advised to upgrade to the latest version as soon as possible.
