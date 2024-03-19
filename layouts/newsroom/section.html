@@ -63,7 +63,7 @@
               <div class="summary">
                 <h4>{{ .Params.tag }}</h4>
                 <h3>{{ .Title }}</h3>
-                <p>{{ .Params.intro }}</p>
+                <p>{{ .Params.intro | safeHTML | truncate 256 }}</p>
               </div>
               <nav>
                 <a href="{{ .Permalink }}" class="button">

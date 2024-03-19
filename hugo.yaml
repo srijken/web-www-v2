@@ -2,7 +2,7 @@ baseURL: "/"
 title: "Dutch Institute for Vulnerability Disclosure"
 defaultContentLanguage: en
 defaultContentLanguageInSubdir: false
-paginate: 3
+paginate: 12
 
 languages:
   en:

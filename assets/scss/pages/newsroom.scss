@@ -112,6 +112,14 @@
       line-height: 1.2em;
       margin-bottom: 0.4em;
     }
+
+    ul {
+      list-style: outside;
+      li {
+        margin-bottom: 8px;
+        line-height: 1.4em;
+      }
+    }
   }
 
   aside {

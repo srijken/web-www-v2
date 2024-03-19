@@ -335,10 +335,12 @@ a.external {
 }
 
 ul.checklist {
+  margin-bottom: 48px;
 
   li {
     display: flex;
     margin-bottom: 18px;
+    font-size: 16px;
     svg {
       height: 16px;
       margin-right: 8px;
@@ -495,8 +497,8 @@ ul.sumup {
     margin-bottom: 20px;
 
     img {
-      flex: 0 0 160px;
-      max-width: 160px;
+      flex: 0 0 196px;
+      max-width: 196px;
       object-fit: cover;
     }
     div {

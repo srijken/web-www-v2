@@ -207,7 +207,7 @@ p.opener {
 
 p {
   font-family: var(--font-text);
-  font-size: 1.2em;
+  font-size: 1em;
   line-height: 1.6em;
   margin-bottom: 16px;
   opacity: 0.8; }
@@ -467,12 +467,15 @@ a.external svg {
   width: 12px;
   heighT: 12px; }
 
-ul.checklist li {
-  display: flex;
-  margin-bottom: 18px; }
-  ul.checklist li svg {
-    height: 16px;
-    margin-right: 8px; }
+ul.checklist {
+  margin-bottom: 48px; }
+  ul.checklist li {
+    display: flex;
+    margin-bottom: 18px;
+    font-size: 16px; }
+    ul.checklist li svg {
+      height: 16px;
+      margin-right: 8px; }
 
 .steps section {
   border-radius: 20px;
@@ -579,8 +582,8 @@ ul.sumup li {
   overflow: hidden;
   margin-bottom: 20px; }
   ul.sumup li img {
-    flex: 0 0 160px;
-    max-width: 160px;
+    flex: 0 0 196px;
+    max-width: 196px;
     object-fit: cover; }
   ul.sumup li div {
     flex: 1 1 auto;
@@ -986,7 +989,8 @@ nav.sub-nav {
   .intro-image img {
     position: absolute;
     width: 100%;
-    top: -20%;
+    height: 580px;
+    top: 0;
     object-fit: cover; }
 
 .person-highlight {
@@ -1028,6 +1032,10 @@ nav.sub-nav {
   transform: translateY(256px);
   margin-top: -256px; }
 
+.overlap-bottom-half {
+  transform: translateY(200px);
+  margin-top: -200px; }
+
 .overlap-top {
   transform: translateY(-256px);
   margin-bottom: -256px; }
@@ -1052,6 +1060,7 @@ nav.sub-nav {
   height: 600px; }
   .image-fill img {
     position: absolute;
+    width: 100%;
     height: 600px;
     object-fit: cover; }
 
@@ -1298,9 +1307,8 @@ nav.sub-nav {
   position: relative; }
   .people-image img {
     position: absolute;
-    left: -50%;
-    min-width: 100%;
-    min-height: 100%;
+    width: 100%;
+    height: 100%;
     object-fit: cover; }
 
 .intro-card img {
@@ -1431,7 +1439,7 @@ nav.sub-nav {
 .stats {
   background-color: white;
   list-style: none;
-  border-radius: 64px;
+  border-radius: 96px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -1446,6 +1454,7 @@ nav.sub-nav {
       border-right: 0; }
     .stats li h2 {
       margin: 0;
+      font-size: 64px;
       padding: 0 0 8px 0; }
     .stats li h6 {
       margin: 0;
@@ -1641,6 +1650,11 @@ footer.main {
       font-family: var(--font-header);
       line-height: 1.2em;
       margin-bottom: 0.4em; }
+    .article-body article ul {
+      list-style: outside; }
+      .article-body article ul li {
+        margin-bottom: 8px;
+        line-height: 1.4em; }
   .article-body aside {
     flex: 0 0 330px; }
     .article-body aside section {

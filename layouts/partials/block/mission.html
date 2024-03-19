@@ -3,7 +3,7 @@
 
 
 {{ with $blocks.Params.mission }}
-  {{ partial "p/section_open" (dict "classes" (slice "inverse" "overlap-bottom" "round" "round-topright" ))}} 
+  {{ partial "p/section_open" (dict "classes" (slice "inverse" "round" "round-topright" ))}} 
     {{ partial "p/layout_open" (dict "classes" (slice "default")) }} 
       <div class="sub-opener">
         <article>
@@ -11,24 +11,25 @@
           <p>{{ .description }}</p>
         </article>
       </div>
-    {{ partial "p/layout_close" }}
-    {{ partial "p/layout_open" (dict "classes" (slice "default")) }} 
-      <ul class="stats">
-        <li>
-          <h2>{{ .members }}</h2>
-          <h6>Members</h6>
-        </li>
+    
+      <div class="pt-lg overlap-bottom-half">
+        <ul class="stats">
+          <li>
+            <h2>{{ .members }}</h2>
+            <h6>Members</h6>
+          </li>
 
-        <li>
-          <h2>{{ .totalcases }}</h2>
-          <h6>Total cases</h6>
-        </li>
+          <li>
+            <h2>{{ .totalcases }}</h2>
+            <h6>Total cases</h6>
+          </li>
 
-        <li>
-          <h2>{{ .ips }}</h2>
-          <h6>Vulnerable IPS Notified</h6>
-        </li>
-      </ul>
+          <li>
+            <h2>{{ .ips }}</h2>
+            <h6>Vulnerable IPS Notified</h6>
+          </li>
+        </ul>
+      </div>
     {{ partial "p/layout_close" }}
   {{ partial "p/section_close" }} 
 

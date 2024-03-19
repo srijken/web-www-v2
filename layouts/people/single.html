@@ -21,34 +21,40 @@
             {{ .Content }}
           </div>
 
-          <h3>{{ i18n "featured_articles" }}</h3>
-          <ul class="article-list">
-            {{ range .Params.featured_articles }}
-              {{ $page := site.GetPage "page" . }}
+          {{ with .Params.featured_articles }}
+            <h3>{{ i18n "featured_articles" }}</h3>
+            <ul class="article-list">
+              {{ range . }}
+                {{ $page := site.GetPage "page" . }}
+                  <li>
+                    {{ partial "svg/icon" "article" }} <a href="{{ $page.Permalink }}">{{ $page.Title }}</a>
+                  </li>
+              {{ end }}
+            </ul>
+          {{ end }}
+
+          {{ with .Params.csirt_cases }}
+            <h3>{{ i18n "csirt_cases" }}</h3>
+            <ul class="article-list">
+              {{ range . }}
                 <li>
-                  {{ partial "svg/icon" "article" }} <a href="{{ $page.Permalink }}">{{ $page.Title }}</a>
+                  {{ partial "svg/icon" "article" }}  <a href="{{ .link }}" class="external">{{ .name }} {{ partial "svg/icon" "external" }} </a>
                 </li>
-            {{ end }}
-          </ul>
+              {{ end }}
+            </ul>
+          {{ end }}
 
-          <h3>{{ i18n "csirt_cases" }}</h3>
-          <ul class="article-list">
-            {{ range .Params.csirt_cases }}
-              <li>
-                {{ partial "svg/icon" "article" }}  <a href="{{ .link }}" class="external">{{ .name }} {{ partial "svg/icon" "external" }} </a>
-              </li>
-            {{ end }}
-          </ul>
-
-          <h3>{{ i18n "other_links" }}</h3>
-          <ul class="article-list">
-            {{ range .Params.links }}
-              <li>
-                {{ partial "link_icon" .link }}
-                <a href="{{ .link }}" class="external">{{ .name }} {{ partial "svg/icon" "external" }} </a> 
-              </li>
-            {{ end }}
-          </ul>
+          {{ with .Params.links }}
+            <h3>{{ i18n "other_links" }}</h3>
+            <ul class="article-list">
+              {{ range . }}
+                <li>
+                  {{ partial "link_icon" .link }}
+                  <a href="{{ .link }}" class="external">{{ .name }} {{ partial "svg/icon" "external" }} </a> 
+                </li>
+              {{ end }}
+            </ul>
+          {{ end }}
         </article>
         <aside>
           <div class="people-image">

@@ -3,7 +3,7 @@
 .stats {
   background-color: white;
   list-style: none;
-  border-radius: 64px;
+  border-radius: 96px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -21,6 +21,7 @@
   
     h2 {
       margin: 0;
+      font-size: 64px;
       padding: 0 0 8px 0;
     }
   
