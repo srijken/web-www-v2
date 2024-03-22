@@ -134,9 +134,11 @@
             </div>
           </div>
           <div class="image-container">
-            {{ with resources.Get "images/global/volunteers.png" }} 
-              {{ partial "tools/rimg/img" (dict "img" . "alt" "Become a volunteer") }}
-            {{ end }}
+            <div class="image-half-pill">
+              {{ with resources.Get "images/divd/divd_team_photo.jpg" }} 
+                {{ partial "tools/rimg/img" (dict "img" . "alt" "Become a volunteer") }}
+              {{ end }}
+            </div>
           </div>
         {{ end }}
       {{ partial "p/layout_close" }}

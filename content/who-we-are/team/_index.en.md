@@ -4,7 +4,6 @@ title: The Team
 teams:
   - title: Supervisory board
     description: >-
-      
       To ensure our commitment to digital safety and provide a strong platform for ethical hackers, we've formed a Supervisory Board of cybersecurity experts, each representing key sectors such as law enforcement, intelligence services, cybersecurity firms, academia, and the hacker community.
     members:
       - /who-we-are/team/people/arthur-dent

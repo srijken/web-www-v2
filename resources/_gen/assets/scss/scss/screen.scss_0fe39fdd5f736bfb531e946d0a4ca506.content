@@ -216,6 +216,9 @@ p.primary {
   color: var(--brand) !important;
   font-size: 1.2em; }
 
+.brand {
+  color: var(--brand); }
+
 em {
   font-style: italic; }
 
@@ -1118,7 +1121,7 @@ nav.sub-nav {
   .sub-opener article {
     max-width: 800px; }
     .sub-opener article h2 {
-      color: #fff;
+      color: var(--brand);
       text-align: center; }
     .sub-opener article p {
       color: var(--brand);
@@ -1126,6 +1129,14 @@ nav.sub-nav {
 
 .image-container img {
   max-width: 100%; }
+
+.image-container .image-half-pill {
+  border-top-left-radius: 256px;
+  border-bottom-left-radius: 256px;
+  overflow: hidden;
+  width: 100%; }
+  .image-container .image-half-pill img {
+    object-fit: cover; }
 
 .bubble {
   position: absolute;
