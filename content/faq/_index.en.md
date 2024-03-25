@@ -8,9 +8,13 @@ intro: "If this F.A.Q. doesn't answer your question, please do not hesitate to
 faqgroups:
   - heading: Home
     faqs:
-      - title: How do I know I can trust you?
-        description: A﻿nswer
-      - title: Why did I receive an email of DIVD / CSIRT?
+      - title: Is it legal what DIVD is doing?
+        description: "The Dutch jurisprudence is clear: if you serve a societal need
+          with appropriate means, you are allowed to perform these small hacks
+          in order to prevent the real damaging hacks. Our way of working is
+          approved by the Dutch Public Prosecution Office the National Cyber
+          Security Center."
+      - title: Why did I receive an email from DIVD / CSIRT?
         description: >-
           If we find a vulnerability, we'll set up a case with all the details
           we know and how to patch this vulnerability. Then we scan known IP
@@ -18,33 +22,27 @@ faqgroups:
           send out an email to every vulnerable IP adress. 
 
 
-          O﻿ur emails are personally written by one of our researchers and contain a link to the casefile on the [csirt.divd.nl ](csirt.divd.nl)site. 
-
-
-          Learn more about what to do when you receive an email. \[link naar email-pagina]
+          O﻿ur emails are personally written by one of our researchers and contain a link to the casefile on the [csirt.divd.nl ](csirt.divd.nl)site.
       - title: Who works for DIVD?
         description: >-
-          E﻿verybody who volunteers at DIVD has and....
+          Most of our volunteers work in cybersecurity as their daily job, this
+          could be at a comercial security company, government or as a
+          freelancer. Some of our volunteers don't work in security at all but
+          have great interest in making the digital world safer. 
 
 
-          D﻿IVD'ers work in different fields of work, for example: (commercial) security companies, government or as a freelancer. And some people don't work in security at all but they have great interest in making the digital world safer. 
-
-
-          A﻿ll of our volunteers are screened and provided an certificate of conduct. Our code of conduct is sacred, we do not deviate from it.
+          **A﻿ll of our volunteers are screened and provided an certificate of conduct. Our code of conduct is sacred, we do not deviate from it.**
       - description: Anything that is classified as high risk / high impact. We
           prioritize the vulnerabilities we work on by various metrics, for
           instance how big the exposure on the internet is and if it is being
           actively abused or not.
         title: What type of vulnerabilities do you notify?
-      - title: Do you prevent scanning IP addresses of big (foreign) companies to avoid
-          lawsuits or any legal issues?
-        description: No. We scan everyone who runs the targeted software throughout  the
-          whole IPv4 range. Only after a hit, we see who it is.
-      - description: Most of our volunteers work in cyber security and will stay
-          up-to-date on what is going on. We take information from various feeds
-          / mailing lists / news sources.
-        title: Where do you got the info about the vulnerability? How do you know
-          where’s a vulnerability and what to do with it.
+      - description: |-
+          * J﻿oin us
+          * P﻿ut sexurity.txt on your website
+          * T﻿ake actions after you've received an notification
+          * b﻿ecome a partner or make a donation
+        title: How can we contribute this great initiative?
   - heading: Contact
     faqs:
       - title: "How do I know I can trust you? "
