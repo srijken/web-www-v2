@@ -15,10 +15,10 @@ teams:
   - title: Board
     description: The board of directors is responsible for strategic leadership of DIVD.
     members:
-      - /who-we-are/team/people/arthur-dent
-      - /who-we-are/team/people/arthur-dent
-      - /who-we-are/team/people/chris-van-t-hof
-      - /who-we-are/team/people/victor-gevers
+      - /who-we-are/team/people/eleonora-petridou
+      - /who-we-are/team/people/herbert-bos
+      - /who-we-are/team/people/joost-hendricksen
+      - /who-we-are/team/people/marinus-kuivenhoven
   - title: Office
     description: Providing some sense of direction to a bunch of hackers, aka
       advanced cat herding.
