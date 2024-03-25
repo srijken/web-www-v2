@@ -106,5 +106,5 @@ faqgroups:
           have great interest in making the digital world safer. 
 
 
-          **A﻿ll of our volunteers are screened and provided an certificate of conduct. Our code of conduct is sacred, we do not deviate from it.**
+          A﻿ll of our volunteers are screened and provided an certificate of conduct. Our code of conduct is sacred, we do not deviate from it.
 ---
