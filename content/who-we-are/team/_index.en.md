@@ -3,24 +3,26 @@ type: team
 title: The Team
 teams:
   - title: Supervisory board
-    description: >-
-      To ensure our commitment to digital safety and provide a strong platform for ethical hackers, we've formed a Supervisory Board of cybersecurity experts, each representing key sectors such as law enforcement, intelligence services, cybersecurity firms, academia, and the hacker community.
+    description: To ensure our commitment to digital safety and provide a strong
+      platform for ethical hackers, we've formed a Supervisory Board of
+      cybersecurity experts, each representing key sectors such as law
+      enforcement, intelligence services, cybersecurity firms, academia, and the
+      hacker community.
     members:
-      - /who-we-are/team/people/arthur-dent
-      - /who-we-are/team/people/arthur-dent
-      - /who-we-are/team/people/arthur-dent
+      - /who-we-are/team/people/herbert-bos
+      - /who-we-are/team/people/chantal-stekelenburg
+      - /who-we-are/team/people/petra-oldengarm-1
   - title: Board
     description: The board of directors is responsible for strategic leadership of DIVD.
     members:
-      - /who-we-are/team/people/arthur-dent
-      - /who-we-are/team/people/arthur-dent
-      - /who-we-are/team/people/chris-van-t-hof
-      - /who-we-are/team/people/victor-gevers
+      - /who-we-are/team/people/eleonora-petridou
+      - /who-we-are/team/people/herbert-bos
+      - /who-we-are/team/people/joost-hendricksen
+      - /who-we-are/team/people/marinus-kuivenhoven
   - title: Office
     description: Providing some sense of direction to a bunch of hackers, aka
       advanced cat herding.
     members:
-      - /who-we-are/team/people/arthur-dent
       - /who-we-are/team/people/chris-van-t-hof
   - title: CSIRT
     description: The CSIRT is the engineblock of DIVD. It is responsible for
@@ -28,6 +30,7 @@ teams:
       our CVE Numbering Authority activities.
     members:
       - /who-we-are/team/people/max-van-der-horst
+      - /who-we-are/team/people/jelle-ursum
   - title: Research
     description: DIVD has two teams highly skilled security researchers who seek and
       report vulnerabilities as a voluntary service next to their jobs. DIVD
@@ -39,14 +42,13 @@ teams:
       never meet our researchers, you may hope they are checking your systems
       right now, before the bad guys do…
     members:
-      - /who-we-are/team/people/arthur-dent
       - /who-we-are/team/people/max-van-der-horst
       - /who-we-are/team/people/victor-gevers
   - title: IT Services
     description: Taking care of the IT of hackers in a non-hacky way so they don’t
       get hacked.
     members:
-      - /who-we-are/team/people/arthur-dent
+      - /who-we-are/team/people/casper-kuijper
   - title: Helpdesk
     description: When you have IT, you have IT problems. When you have an
       organisation of hackers you have even more interesting problems. Team
