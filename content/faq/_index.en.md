@@ -100,4 +100,13 @@ faqgroups:
 
           Learn more about what to do when you receive an email. \[link naar email-pagina]
         title: Why did I receive an email of DIVD / CSIRT?
+      - title: Who works for DIVD?
+        description: >-
+          Most of our volunteers work in cybersecurity as their daily job, this
+          could be at a comercial security company, government or as a
+          freelancer. Some of our volunteers don't work in security at all but
+          have great interest in making the digital world safer. 
+
+
+          **A﻿ll of our volunteers are screened and provided an certificate of conduct. Our code of conduct is sacred, we do not deviate from it.**
 ---
