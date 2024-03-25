@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "postbuild": "node ./scripts/postbuild.js",
+    "gen-people": "node ./scripts/generate_people.js",
+    "gen-teams": "node ./scripts/generate_teams.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Les Kleuver",
@@ -18,6 +20,8 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "lunr": "^2.3.9"
+    "axios": "^1.6.8",
+    "lunr": "^2.3.9",
+    "yargs": "^17.7.2"
   }
 }
