@@ -31,17 +31,15 @@ faqgroups:
           have great interest in making the digital world safer. 
 
 
-          **A﻿ll of our volunteers are screened and provided an certificate of conduct. Our code of conduct is sacred, we do not deviate from it.**
+          A﻿ll of our volunteers are screened and provided an certificate of conduct. Our code of conduct is sacred, we do not deviate from it.
       - description: Anything that is classified as high risk / high impact. We
           prioritize the vulnerabilities we work on by various metrics, for
           instance how big the exposure on the internet is and if it is being
           actively abused or not.
         title: What type of vulnerabilities do you notify?
-      - description: |-
-          * J﻿oin us
-          * P﻿ut sexurity.txt on your website
-          * T﻿ake actions after you've received an notification
-          * b﻿ecome a partner or make a donation
+      - description: J﻿oin DIVD as a volunteer or as a partner, put security.txt on your
+          website, take action after you've received a notification email or
+          make a donation.
         title: How can we contribute this initiative?
   - heading: Contact
     faqs:
