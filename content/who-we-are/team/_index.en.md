@@ -3,12 +3,15 @@ type: team
 title: The Team
 teams:
   - title: Supervisory board
-    description: >-
-      To ensure our commitment to digital safety and provide a strong platform for ethical hackers, we've formed a Supervisory Board of cybersecurity experts, each representing key sectors such as law enforcement, intelligence services, cybersecurity firms, academia, and the hacker community.
+    description: To ensure our commitment to digital safety and provide a strong
+      platform for ethical hackers, we've formed a Supervisory Board of
+      cybersecurity experts, each representing key sectors such as law
+      enforcement, intelligence services, cybersecurity firms, academia, and the
+      hacker community.
     members:
-      - /who-we-are/team/people/arthur-dent
-      - /who-we-are/team/people/arthur-dent
-      - /who-we-are/team/people/arthur-dent
+      - /who-we-are/team/people/herbert-bos
+      - /who-we-are/team/people/chantal-stekelenburg
+      - /who-we-are/team/people/petra-oldengarm-1
   - title: Board
     description: The board of directors is responsible for strategic leadership of DIVD.
     members:
