@@ -42,13 +42,26 @@ faqgroups:
           * P﻿ut sexurity.txt on your website
           * T﻿ake actions after you've received an notification
           * b﻿ecome a partner or make a donation
-        title: How can we contribute this great initiative?
+        title: How can we contribute this initiative?
   - heading: Contact
     faqs:
-      - title: "How do I know I can trust you? "
-        description: a﻿nd an answer
-      - title: How do I know for sure an email from you is safe?
-        description: a﻿ntwoord
+      - title: Why did I receive an email from DIVD / CSIRT?
+        description: >-
+          If we find a vulnerability, we'll set up a case with all the details
+          we know and how to patch this vulnerability. Then we scan known IP
+          adresses to see if they're vulernable and if that's the case we'll
+          send out an email to every vulnerable IP adress. 
+
+
+          O﻿ur emails are personally written by one of our researchers and contain a link to the casefile on the [csirt.divd.nl ](csirt.divd.nl)site.
+      - description: |-
+          
+
+          * J﻿oin us
+          * P﻿ut sexurity.txt on your website
+          * T﻿ake actions after you've received an notification
+          * b﻿ecome a partner or make a donation
+        title: How can we contribute this initiative?
   - heading: Become a volunteer
     faqs:
       - title: "When can I join DIVD as a volunteer? "
