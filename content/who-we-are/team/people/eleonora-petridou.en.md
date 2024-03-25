@@ -1,6 +1,6 @@
 ---
 type: people
-title: ELEONORA PETRIDOU
+title: Eleonora Petridou
 role: Board member
 ---
 .
