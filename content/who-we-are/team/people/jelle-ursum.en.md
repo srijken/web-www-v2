@@ -1,6 +1,7 @@
 ---
 type: people
 title: Jelle Ursum
+image: /images/people/divd-illustration-library_profile-placeholder-3.svg
 role: Researcher Level 1
 intro: I find the passwords you upload to Github
 ---
