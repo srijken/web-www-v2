@@ -118,7 +118,8 @@
   &.bubble-small {
     top: 0;
     border-radius: 64px;
-    width: 400px;
+    width: 80%;
+    left: 0;
     height: 128px;
   }
 
@@ -143,6 +144,14 @@
     bottom: 0px;
     height: 128px; 
     width: 40%;
+  }
+
+  &.bubble-bottom-right {
+    border-top-left-radius: 64px;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    height: 64px;
   }
 
   &.under {

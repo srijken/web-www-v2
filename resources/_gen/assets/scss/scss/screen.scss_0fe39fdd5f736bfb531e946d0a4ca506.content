@@ -258,6 +258,9 @@ strong {
 .markdown string {
   font-style: strong; }
 
+li, li li, li li li {
+  font-size: 1.2em; }
+
 html,
 body {
   padding: 0;
@@ -960,6 +963,9 @@ nav.sub-nav {
       border-top-left-radius: 20px;
       border-top-right-radius: 300px;
       overflow: hidden; }
+      @media (max-width: 700px) {
+        .pl .pl-content.pl-article {
+          border-top-right-radius: 80px; } }
     .pl .pl-content.pl-has-image {
       background: linear-gradient(to bottom, #333 0%, #333 300px, #fff 300px, #fff 100%); }
     .pl .pl-content.pl-no-top-padding {
@@ -999,7 +1005,9 @@ nav.sub-nav {
       color: #858585; }
       .article-layout .breadcrumbs ul li a, .topic-layout .breadcrumbs ul li a {
         color: #fff; }
-
+  @media (max-width: 700px) {
+    .article-layout, .topic-layout {
+      padding-top: 32px; } }
 .topic-layout {
   padding-top: 0;
   background-color: white; }
@@ -1169,7 +1177,8 @@ nav.sub-nav {
   .bubble.bubble-small {
     top: 0;
     border-radius: 64px;
-    width: 400px;
+    width: 80%;
+    left: 0;
     height: 128px; }
   .bubble.bubble-small-half {
     top: 0;
@@ -1188,6 +1197,12 @@ nav.sub-nav {
     bottom: 0px;
     height: 128px;
     width: 40%; }
+  .bubble.bubble-bottom-right {
+    border-top-left-radius: 64px;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    height: 64px; }
   .bubble.under {
     z-index: 1; }
   .bubble.over {
@@ -1713,7 +1728,10 @@ footer.main {
           margin-bottom: 2px; }
   .article-body.people aside {
     flex: 0 0 40%; }
-
+  @media (max-width: 700px) {
+    .article-body {
+      display: block;
+      padding: 16px; } }
 ul.pagination {
   margin: 32px 0;
   width: 100%;

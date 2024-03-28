@@ -41,9 +41,15 @@
             </ul>
             {{ end }}
 
-            {{ if .researchers }}
+            {{ if or (isset . "researchers") (isset . "researchers_people") }}
               <h4>Researchers</h4>
               <ul>
+                {{ if .researchers_people }}
+                  {{ range .researchers_people }}
+                    {{ $peoplePage := site.GetPage "page" . }}
+                    <li><a href="{{ $peoplePage.Permalink }}">{{ $peoplePage.Title }}</a></li>
+                  {{ end }}
+                {{ end }}
                 {{ range .researchers }}
                   {{ if .link }}
                     <li>{{ .label }}</li>
@@ -53,6 +59,7 @@
                 {{ end }}
               </ul>
             {{ end }}
+            
 
             
 

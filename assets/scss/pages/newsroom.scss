@@ -150,6 +150,11 @@
       flex: 0 0 40%;
     }
   }
+
+  @media(max-width: 700px) {
+    display: block;
+    padding: 16px;
+  }
 }
 
 ul.pagination {

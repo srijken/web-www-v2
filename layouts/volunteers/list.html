@@ -48,6 +48,12 @@
     {{ partial "block/proudestwork" . }}
 
   {{ partial "p/section_close" }}
+
+  <div class="image-fill">
+    {{ with resources.Get "images/6images.png" }} 
+      <img src="{{ .RelPermalink }}" alt="who we are" />
+    {{ end }}
+  </div>
 </div>
 
 {{ end }}

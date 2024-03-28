@@ -209,6 +209,10 @@
       border-top-left-radius: 20px;
       border-top-right-radius: 300px;
       overflow: hidden;
+
+      @media(max-width: 700px) {
+        border-top-right-radius: 80px;
+      }
     }
 
     &.pl-has-image {
@@ -280,6 +284,10 @@
         }
       }
     }
+  }
+
+  @media (max-width: 700px) {
+    padding-top: 32px;
   }
 }
 
