@@ -72,9 +72,9 @@ function initAccordion(el: HTMLDivElement) {
 
 	function toggleItem(itemEl) {
 		items.forEach((item) => {
-			item.classList.remove('active');
+			if (item !== itemEl) item.classList.remove('active');
 		});
-		itemEl.classList.add('active');
+		itemEl.classList.toggle('active');
 	}
 
 	items.forEach((item) => {

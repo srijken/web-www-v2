@@ -109,11 +109,6 @@
   }
 
 
-  &.ps-article {
-    .ps-container {
-      
-    }
-  }
 
 }
 
@@ -166,6 +161,10 @@
 
       &.pl-columns-4 {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+
+      &.pl-stretch {
+        align-items: stretch;
       }
 
       &.pl-vcenter {
@@ -291,17 +290,23 @@
 
 
 .intro-image {
-  height: 580px;
+  height: 720px;
   position: relative;
   overflow: hidden;
   img {
     position: absolute;
     width: 100%;
-    height: 580px;
+    height: 720px;
     top: 0;
     object-fit: cover;
   }
 
+  &.intro-image-smaller {
+    height: 580px;
+    img {
+      height: 580px;
+    }
+  }
 }
 
 

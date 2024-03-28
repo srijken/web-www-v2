@@ -91,6 +91,7 @@
   grid-template-areas: "pic head"
                        "content content";
 
+  
   figure {
     width: 64px;
     height: 64px;
@@ -126,7 +127,7 @@
   background-color: #000;
   max-width: 270px;
   display: grid;
-  
+  min-width: 270px;
   a.figure {
     display: block;
     background-color: #fff;
@@ -194,17 +195,31 @@
 }
 
 .intro-card {
+  display: flex;
+  flex-direction: column;
   img {
     width: 100%;
   }
 
   article {
+    flex: 1 1 auto;
     margin-top: -3px;
     background-color: #fff;
     padding: 16px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    header {
+      flex: 1 1 auto;
+    }
+    nav {
+      flex: 0 0 42px;
+    }
   }
+
+  
 
   &.secondary {
     article {

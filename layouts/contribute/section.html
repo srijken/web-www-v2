@@ -18,15 +18,19 @@
   {{ partial "p/section_open" (dict "classes" (slice "inverse"))}} 
 
     <div class="overlap-top-lg">
-      {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
+      {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2" "stretch")) }}
         <div class="intro-card">
           {{ with resources.Get .Params.becomevolunteer.image }} 
             {{ partial "tools/rimg/img" (dict "img" . "alt" .Params.becomevolunteer.alt) }}
           {{ end }}
           <article>
-            <h3>{{ .Params.becomevolunteer.title }}</h3>
-            <p>{{ .Params.becomevolunteer.description }}</p>
-            <a class="cta" href="{{ "contribute/volunteers/" | relLangURL }}">{{ i18n "learnmore" }}</a>
+            <header>
+              <h3>{{ .Params.becomevolunteer.title }}</h3>
+              <p>{{ .Params.becomevolunteer.description }}</p>
+            </header>
+            <nav>
+              <a class="cta" href="{{ "contribute/volunteers/" | relLangURL }}">{{ i18n "learnmore" }}</a>
+            </nav>
           </article>
         </div>
 
@@ -35,9 +39,13 @@
             {{ partial "tools/rimg/img" (dict "img" . "alt" .Params.becomepartner.alt) }}
           {{ end }}
           <article>
-            <h3>{{ .Params.becomepartner.title }}</h3>
-            <p>{{ .Params.becomepartner.description }}</p>
-            <a class="cta"  href="{{ "contribute/partners/" | relLangURL }}">{{ i18n "learnmore" }}</a>
+            <header>
+              <h3>{{ .Params.becomepartner.title }}</h3>
+              <p>{{ .Params.becomepartner.description }}</p>
+            </header>
+            <nav>
+              <a class="cta"  href="{{ "contribute/partners/" | relLangURL }}">{{ i18n "learnmore" }}</a>
+            </nav>
           </article>
         </div>
 
@@ -55,16 +63,16 @@
             <div>
               <h3 id="donate" class="offset" >{{ .Params.donatesupp.title }}</h3>
               <p class="pre">{{ .Params.donatesupp.description }}</p>
-              {{ range .Params.donatesub.links }}
-                <a class="cta secondary" href="{{ .link }}">
+              {{ range .Params.donatesupp.links }}
+                <a class="cta gray" href="{{ .link }}">
                   {{ .label }}
                 </a>
               {{ end }}
-            </div>
-            <div>
-              <a class="cta secondary" href="{{ .Params.donatesub.customlink }}">
-                {{ i18n "donate_custom_amount" }}
-              </a>
+              <div class="pt-sm">
+                <a class="cta" href="{{ .Params.donatesupp.customlink }}">
+                  {{ i18n "donate_custom_amount" }}
+                </a>
+              </div>
             </div>
           </div>
 

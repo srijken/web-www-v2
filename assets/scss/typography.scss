@@ -65,7 +65,7 @@ p.opener {
 
 p {
   font-family: var(--font-text);
-  font-size: 1em;
+  font-size: 1.2em;
   line-height: 1.6em;
   margin-bottom: 16px;
   opacity: 0.8;
@@ -135,4 +135,14 @@ strong {
   font-size: 1.2em;
   line-height: 1.6em;
   margin-bottom: 16px;
+}
+
+.markdown {
+  em {
+    font-style: italic;
+  }
+
+  string {
+    font-style: strong;
+  }
 }

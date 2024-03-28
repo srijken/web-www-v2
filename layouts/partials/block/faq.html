@@ -4,13 +4,21 @@
 {{ $page := .Site.GetPage "/faq" }}
 
 
+{{ $isContactPage := eq .RelPermalink "/contact/" }}
+
+
 {{ with $page }}
   {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }} 
     <div>
       <h2>{{ .Title }}</h2>
       <p>{{.Params.intro}}</p>
 
-      <a href="{{ "contact/" | relLangURL }}" class="cta">Contact</a>
+
+      {{ if $isContactPage }}
+        <a href="#contact" class="cta">Contact</a>
+      {{ else }}
+        <a href="{{ "contact/" | relLangURL }}" class="cta">Contact</a>
+      {{ end }}
       <a href="{{ "faq/" | relLangURL }}" class="cta inverse">All FAQ</a>
     </div>
     <div>

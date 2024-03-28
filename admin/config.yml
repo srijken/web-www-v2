@@ -642,7 +642,7 @@ collections:
                 name: "link"
                 widget: "string"
                 i18n: true
-          - label: "Custome ammount link"
+          - label: "Custom amount link"
             name: "customlink"
             widget: "string"
             i18n: true
@@ -1099,7 +1099,13 @@ collections:
               { label: "Link", name: "link", widget: "string" },
             ],
         }
-      - { label: "Body", name: "body", widget: "markdown", i18n: true }
+      - {
+          label: "Body",
+          name: "body",
+          widget: "markdown",
+          i18n: true,
+          required: false,
+        }
 
   ########################################################################
   # CONTENT BLOCKS
