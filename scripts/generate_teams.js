@@ -21,9 +21,9 @@ const fetchTeamsAndMembers = async () => {
     operationName: "teamsByCompany",
     variables: {
       companySlug: "dutch-institute-for-vulnerability-disclosure",
-      membersLimit: 100,
+      membersLimit: 500,
       offset: 0,
-      limit: 100,
+      limit: 500,
     },
     query: `query teamsByCompany($companySlug: String!, $limit: Int!, $offset: Int!, $membersLimit: Int!) {
       teamsByCompany(companySlug: $companySlug, limit: $limit, offset: $offset) {

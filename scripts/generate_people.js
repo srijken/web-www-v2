@@ -1,10 +1,11 @@
 const fs = require('fs');
 const yargs = require('yargs');
 const axios = require('axios');
+const matter = require('gray-matter');
 
 const argv = yargs
   .option('member-path', {
-    describe: 'path of directory to create member md files',
+    describe: 'path to directory to create member md files',
     type: 'string',
     demandOption: true,
     default: './content/who-we-are/team/people'
@@ -13,30 +14,21 @@ const argv = yargs
   .alias('help', 'h')
   .argv;
 
-/**
- * @param {string} dirPath Path to check
- * @returns {boolean} True if the path exists
- */
 const doesDirExist = dirPath => {
     if (!fs.existsSync(dirPath)) {
-        console.log("Error: Output directory does not exist.");
-
+        console.error("Error: Output directory does not exist.");
         return false;
     }
-
     return true;
 };
 
-/** Reverse engineered from theorg's website. No docs are available sadly. */
 const url = 'https://prod-graphql-api.theorg.com/graphql';
 const headers = { 'Content-Type': 'application/json' };
 
 const fetchPeople = async () => {
   const payload = {
     operationName: "Company",
-    variables: {
-      slug: "dutch-institute-for-vulnerability-disclosure",
-    },
+    variables: { slug: "dutch-institute-for-vulnerability-disclosure" },
     query: `query Company($slug: String!) {
       company(slug: $slug) {
         nodes {
@@ -67,49 +59,63 @@ const fetchPeople = async () => {
     const response = await axios.post(url, payload, { headers });
     console.log("Updating people", "");
 
-    response.data.data.company.nodes.forEach(node => {
+    for (const node of response.data.data.company.nodes) {
       if (node.leafMember) {
         const person = node.leafMember;
-        // Note that we're hardcoding the .en.md for now since there is only support for 1 language in TheOrg
         const personFilePath = `${argv['member-path']}/${person.slug}.en.md`;
 
-        let personFileContent = `---
-type: people
-title: "${person.fullName}"
-image: ${person.profileImage ? `${person.profileImage.endpoint}/${person.profileImage.uri}.${person.profileImage.ext}` : '/images/people/image.png'}
-role: "${person.role}"
-intro: ${person.description || 'Blabla'}
-featured_articles:
-  - /newsroom/articles/test-article
-links:
-`;
+        let newPersonData = {
+          type: "people",
+          title: person.fullName,
+          image: person.profileImage ? `${person.profileImage.endpoint}/${person.profileImage.uri}` : '/images/people/image.png',
+          role: person.role,
+          intro: person.description,
+          links: []
+        };
+
+        // Add social links
         if (person.social) {
-          if (person.social.linkedInUrl) personFileContent += `  - name: LinkedIn\n    link: ${person.social.linkedInUrl}\n`;
-          if (person.social.twitterUrl) personFileContent += `  - name: Twitter\n    link: ${person.social.twitterUrl}\n`;
-          if (person.social.facebookUrl) personFileContent += `  - name: Facebook\n    link: ${person.social.facebookUrl}\n`;
-          if (person.social.websiteUrl) personFileContent += `  - name: Website\n    link: ${person.social.websiteUrl}\n`;
+          if (person.social.linkedInUrl) newPersonData.links.push({ name: "LinkedIn", link: person.social.linkedInUrl });
+          if (person.social.twitterUrl) newPersonData.links.push({ name: "Twitter", link: person.social.twitterUrl });
+          if (person.social.facebookUrl) newPersonData.links.push({ name: "Facebook", link: person.social.facebookUrl });
+          if (person.social.websiteUrl) newPersonData.links.push({ name: "Website", link: person.social.websiteUrl });
         }
 
-        if (person.description) {
+        let markdownContent = `Tekst ${person.description}`;
 
-            personFileContent += '---\n';
-            personFileContent += `Tekst ${person.description}`;
+        if (fs.existsSync(personFilePath)) {
+          const existingFile = fs.readFileSync(personFilePath, 'utf8');
+          const existingContent = matter(existingFile);
+
+          // Merge existing YAML data with new data, only adding missing fields
+          const mergedData = { ...existingContent.data };
+          Object.keys(newPersonData).forEach(key => {
+            if (!(key in mergedData)) {
+              mergedData[key] = newPersonData[key];
+            }
+          });
+
+          const updatedContent = matter.stringify(existingContent.content, mergedData);
+          fs.writeFileSync(personFilePath, updatedContent);
+        } else {
+          // Create new file with new data and markdown content
+          const newFileContent = matter.stringify(markdownContent, newPersonData);
+          fs.writeFileSync(personFilePath, newFileContent);
         }
 
-        fs.writeFileSync(personFilePath, personFileContent);
         process.stdout.write(".");
       }
-    });
-    console.log("done");
+    }
+    console.log("\ndone");
   } catch (error) {
     console.error("Failed to fetch people:", error);
   }
 };
 
 const main = async () => {
-  await fetchPeople();
+  if (doesDirExist(argv['member-path'])) {
+    await fetchPeople();
+  }
 };
 
-if (doesDirExist(argv['member-path'])) {
-    main();
-}
+main();
