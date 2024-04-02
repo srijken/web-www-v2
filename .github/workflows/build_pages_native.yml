@@ -45,7 +45,7 @@ jobs:
         with:
           switches: -avzr --delete
           path: public/
-          remote_path: htdocs/beta
+          remote_path: htdocs/divd-nl-2024
           remote_host: ${{ secrets.DEPLOY_HOST }}
           remote_user: ${{ secrets.DEPLOY_USER }}
           remote_key: ${{ secrets.DEPLOY_KEY }}
