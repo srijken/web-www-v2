@@ -258,6 +258,9 @@ strong {
 .markdown string {
   font-style: strong; }
 
+.markdown ul {
+  list-style-position: inside; }
+
 li, li li, li li li {
   font-size: 1em; }
 
@@ -1708,8 +1711,12 @@ footer.main {
       font-family: var(--font-header);
       line-height: 1.2em;
       margin-bottom: 0.4em; }
+    .article-body article h2 {
+      margin-top: 1.4em; }
+      .article-body article h2:first-of-type {
+        margin-top: 0; }
     .article-body article ul {
-      list-style: outside; }
+      list-style: inside; }
       .article-body article ul li {
         margin-bottom: 8px;
         line-height: 1.4em; }
