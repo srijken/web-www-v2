@@ -22,7 +22,7 @@ missionandhistory:
     that year, 13 more cases followed, notifying 58K potential victims
     worldwide. "
 communicationmanager:
-  name: "Max Kraal "
+  name: Max van der Horst
   role: Researcher CSIRT
   description: Cybersecurity is an endless race between attackers and defenders.
     This endlessness can work tiring for a lot of people in the industry. What
