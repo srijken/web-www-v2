@@ -517,6 +517,16 @@ collections:
                     },
                   ],
               },
+              {
+                label: "Researchers (linked)",
+                name: "researchers_people",
+                widget: relation,
+                collection: "people",
+                value_field: "/who-we-are/team/people/{{slug}}",
+                display_fields: ["title"],
+                search_fields: ["title"],
+                multiple: true,
+              },
             ],
         }
       - { label: "Body", name: "body", widget: "markdown", i18n: true }
@@ -642,7 +652,7 @@ collections:
                 name: "link"
                 widget: "string"
                 i18n: true
-          - label: "Custome ammount link"
+          - label: "Custom amount link"
             name: "customlink"
             widget: "string"
             i18n: true
@@ -1099,7 +1109,13 @@ collections:
               { label: "Link", name: "link", widget: "string" },
             ],
         }
-      - { label: "Body", name: "body", widget: "markdown", i18n: true }
+      - {
+          label: "Body",
+          name: "body",
+          widget: "markdown",
+          i18n: true,
+          required: false,
+        }
 
   ########################################################################
   # CONTENT BLOCKS

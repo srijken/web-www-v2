@@ -44,7 +44,7 @@ nav.nav-container {
         font-family: 'Open Sans';
         font-style: normal;
         font-weight: 700;
-        font-size: 16px;
+        font-size: 1em;
         line-height: 14px;
     
     
@@ -106,10 +106,6 @@ nav.nav-container {
         &.actions {
           display: flex;
           justify-content: flex-start;
-
-          button {
-            
-          }
         }
       }
 
@@ -278,7 +274,7 @@ nav.sub-nav {
         li {
           margin-bottom: 10px;
           a {
-            font-size: 1.2em;
+            font-size: 1em;
             text-decoration: none;
             border-bottom: none;
             font-weight: 300;

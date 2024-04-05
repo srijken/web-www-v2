@@ -2,8 +2,21 @@ Header always set Strict-Transport-Security "max-age=63072000; includeSubdomains
 Header always append X-Frame-Options DENY
 Header set X-Content-Type-Options nosniff
 Header set X-XSS-Protection "1; mode=block"
-Header set Content-Security-Policy "default-src 'none'; font-src 'self'; img-src 'self' data:; script-src 'self' https://unpkg.com/; style-src 'self'; connect-src 'self';"
+Header set Content-Security-Policy "default-src 'none'; frame-src https://form.jotform.com; font-src 'self'; img-src 'self' data:; script-src 'self' https://form.jotform.com https://unpkg.com/; style-src 'self'; connect-src 'self'; base-uri 'self'; frame-ancestors 'self'; form-action 'self';"
+        
 
 Header always set Referrer-Policy "same-origin"
 
 ErrorDocument 404 /404.html
+
+# Rewrite rules
+RewriteEngine On
+
+# Rewrite and redirect /people requests
+RewriteCond %{REQUEST_URI} ^/beta/people/ [NC]
+RewriteRule people/(.*?)\s(.*?)\s(.*?)\s(.*?)\s(.*?)\s(.*) /who-we-are/team/people/$1-$2-$3-$4-$5-$6 [L,r=301]
+RewriteRule people/(.*?)\s(.*?)\s(.*?)\s(.*?)\s(.*) /who-we-are/team/people/$1-$2-$3-$4-$5 [L,r=301]
+RewriteRule people/(.*?)\s(.*?)\s(.*?)\s(.*) /who-we-are/team/people/$1-$2-$3-$4 [L,r=301]
+RewriteRule people/(.*?)\s(.*?)\s(.*) /who-we-are/team/people/$1-$2-$3 [L,r=301]
+RewriteRule people/(.*?)\s(.*) /who-we-are/team/people/$1-$2 [L,r=301]
+RewriteRule people/(.*) /who-we-are/team/people/$1 [L,r=301]

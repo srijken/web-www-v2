@@ -1,7 +1,7 @@
 body {
   font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 h1 {
@@ -21,7 +21,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.4em;
+  font-size: 1.2em;
   font-family: var(--font-text);
   font-weight: 700;
   margin-bottom: 0.4em;
@@ -73,9 +73,13 @@ p {
 
 p.primary {
   color: var(--brand)!important;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
+
+.brand {
+  color: var(--brand);
+}
 em {
   font-style: italic;
 }
@@ -128,7 +132,27 @@ strong {
 
 .p, .markdown {
   font-family: var(--font-text);
-  font-size: 1.2em;
+  font-size: 1em;
   line-height: 1.6em;
   margin-bottom: 16px;
+}
+
+.markdown {
+  em {
+    font-style: italic;
+  }
+
+  string {
+    font-style: strong;
+  }
+
+  ul {
+    list-style-position: inside;
+  }
+
+  
+}
+
+li, li li, li li li {
+  font-size: 1em;
 }

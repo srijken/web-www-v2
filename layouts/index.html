@@ -100,7 +100,7 @@
             <h2>{{ .Title }}</h2>
             <p>{{ .description }}</p>
             <p>&nbsp;</p>
-            <a class="cta" href="https://www.digitaltrustcenter.nl/securitytxt">Download Security.txt</a>
+            <a class="cta external" href="https://www.digitaltrustcenter.nl/securitytxt">Download Security.txt {{ partial "svg/icon" "external" }}</a>
             <p>&nbsp;</p>
           </div>
           <div class="image-container">
@@ -134,9 +134,11 @@
             </div>
           </div>
           <div class="image-container">
-            {{ with resources.Get "images/global/volunteers.png" }} 
-              {{ partial "tools/rimg/img" (dict "img" . "alt" "Become a volunteer") }}
-            {{ end }}
+            <div class="image-half-pill">
+              {{ with resources.Get "images/divd/divd_team_photo.jpg" }} 
+                {{ partial "tools/rimg/img" (dict "img" . "alt" "Become a volunteer") }}
+              {{ end }}
+            </div>
           </div>
         {{ end }}
       {{ partial "p/layout_close" }}

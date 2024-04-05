@@ -25,11 +25,11 @@
               <div>
                 <h2>{{ .title }}</h2>
                 <div class="markdown">{{ .description |markdownify }}</div>
-                <a class="button external">CSIRT SITE {{partial "svg/icon" "external"}}</a>
+                <a class="button external" href="https://csirt.divd.nl/">CSIRT SITE {{partial "svg/icon" "external"}}</a>
               </div>
               <div class="image-grow">
                 {{ with resources.Get "images/global/warningemail.png" }} 
-                  {{ partial "tools/rimg/img" (dict "img" . "alt" "test") }}
+                  {{ partial "tools/rimg/img" (dict "img" . "alt" "notification email") }}
                 {{ end }}
               </div>
             </div>

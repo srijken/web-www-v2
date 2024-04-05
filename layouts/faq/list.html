@@ -21,7 +21,7 @@
                 {{ range $index, $element := .faqs }}
                   <div class="accordion-item{{ if eq $index 0 }} active{{ end }}">
                     <h3>{{ .title }} <span> </span></h3>
-                    <div class="accordion-content p">{{ .description }}</div>
+                    <div class="accordion-content p">{{ .description|markdownify }}</div>
                   </div>
                 {{ end }}
               </div>

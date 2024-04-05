@@ -113,8 +113,15 @@
       margin-bottom: 0.4em;
     }
 
+    h2 {
+      margin-top: 1.4em;
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+
     ul {
-      list-style: outside;
+      list-style: inside;
       li {
         margin-bottom: 8px;
         line-height: 1.4em;
@@ -149,6 +156,11 @@
     aside {
       flex: 0 0 40%;
     }
+  }
+
+  @media(max-width: 700px) {
+    display: block;
+    padding: 16px;
   }
 }
 
