@@ -3,7 +3,7 @@ type: people
 title: Sigurd Hoenkamp-de Vries
 image: 'https://cdn.theorg.com/03b21841-40d7-4c22-82ff-d67c42a4a087'
 role: Teamlead SaaS PSE (Product Support Engineer)
-intro: null
+intro: ''
 links:
   - name: LinkedIn
     link: 'https://www.linkedin.com/in/sigurddevries'
@@ -12,4 +12,4 @@ links:
   - name: Website
     link: 'https://www.domeinreputatie.nl'
 ---
-Tekst null
+

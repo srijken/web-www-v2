@@ -3,7 +3,7 @@ type: people
 title: Henry Schokkenbroek
 image: /images/people/image.png
 role: '-'
-intro: null
+intro: ''
 links: []
 ---
-Tekst null
+

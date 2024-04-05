@@ -3,7 +3,7 @@ type: people
 title: Carolien Braams
 image: /images/people/image.png
 role: Security Researcher
-intro: null
+intro: ''
 links: []
 ---
-Tekst null
+

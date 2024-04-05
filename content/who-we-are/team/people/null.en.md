@@ -3,7 +3,7 @@ type: people
 title: null
 image: /images/people/image.png
 role: null
-intro: null
+intro: ''
 links: []
 ---
-Tekst null
+

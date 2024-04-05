@@ -3,7 +3,7 @@ type: people
 title: Josha Beekman
 image: /images/people/image.png
 role: Researcher level 2
-intro: null
+intro: ''
 links: []
 ---
-Tekst null
+

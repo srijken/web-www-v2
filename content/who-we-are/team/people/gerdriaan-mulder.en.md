@@ -8,4 +8,4 @@ links:
   - name: LinkedIn
     link: 'https://www.linkedin.com/in/mrngm/'
 ---
-Tekst 
+

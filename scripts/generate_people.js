@@ -69,7 +69,7 @@ const fetchPeople = async () => {
           title: person.fullName,
           image: person.profileImage ? `${person.profileImage.endpoint}/${person.profileImage.uri}` : '/images/people/image.png',
           role: person.role,
-          intro: person.description,
+          intro: '',
           links: []
         };
 
@@ -80,8 +80,6 @@ const fetchPeople = async () => {
           if (person.social.facebookUrl) newPersonData.links.push({ name: "Facebook", link: person.social.facebookUrl });
           if (person.social.websiteUrl) newPersonData.links.push({ name: "Website", link: person.social.websiteUrl });
         }
-
-        let markdownContent = `Tekst ${person.description}`;
 
         if (fs.existsSync(personFilePath)) {
           const existingFile = fs.readFileSync(personFilePath, 'utf8');
@@ -99,7 +97,7 @@ const fetchPeople = async () => {
           fs.writeFileSync(personFilePath, updatedContent);
         } else {
           // Create new file with new data and markdown content
-          const newFileContent = matter.stringify(markdownContent, newPersonData);
+          const newFileContent = matter.stringify(person.description ?? '', newPersonData);
           fs.writeFileSync(personFilePath, newFileContent);
         }
 

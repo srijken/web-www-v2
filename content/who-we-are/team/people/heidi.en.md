@@ -3,7 +3,7 @@ type: people
 title: Heidi
 image: /images/people/image.png
 role: vrijwilliger
-intro: null
+intro: ''
 links: []
 ---
-Tekst null
+
