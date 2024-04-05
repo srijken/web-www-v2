@@ -8,6 +8,6 @@ featured_articles:
   - /newsroom/articles/test-article
 links:
   - name: LinkedIn
-    link: https://www.linkedin.com/in/marieke-s-431ab058/
+    link: 'https://www.linkedin.com/in/marieke-s-431ab058/'
 ---
 T﻿ekst blablabla
