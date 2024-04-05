@@ -22,12 +22,12 @@ missionandhistory:
     that year, 13 more cases followed, notifying 58K potential victims
     worldwide. "
 communicationmanager:
-  name: "Max Kraal "
+  name: Max van der Horst
   role: Researcher CSIRT
   description: Cybersecurity is an endless race between attackers and defenders.
     This endlessness can work tiring for a lot of people in the industry. What
-    makes DIVD amazing is the fact that we are inbetween these attackers and
-    defenders. We attempt to take away attacker's weapons as quickly as possible
+    makes DIVD amazing is the fact that we are in between these attackers and
+    defenders. We attempt to take away attackers' weapons as quickly as possible
     by making people aware of these weapons. That has a lot of impact! I came to
     participate in the perpetual defender's puzzle and stayed for the way we
     assist organizations by spreading puzzle pieces across the entire globe.

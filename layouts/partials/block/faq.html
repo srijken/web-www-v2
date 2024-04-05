@@ -1,7 +1,30 @@
 
 {{ partial "comment.html" (dict "comment" "p/block/faq.html.html" ) }}
 
-{{ $page := .Site.GetPage "/faq" }}
+{{ $context := . }}
+{{ $index := 0 }}
+
+{{ $page := site.GetPage "/faq" }}
+
+{{ if isset . "context" }}
+  {{/* Called with dict, so adjust context and retrieve targetHeading if exists. */}}
+  {{ $context = .context }}
+  {{ $targetHeading := .targetHeading }}
+  {{ if $targetHeading }}
+    
+  {{ end }}
+  {{ range $i, $v := $page.Params.faqgroups }}
+    {{ if eq $v.heading $targetHeading }}
+      {{ $index = $i }}
+      {{ break }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+
+
+
+{{ $isContactPage := eq .RelPermalink "/contact/" }}
 
 
 {{ with $page }}
@@ -10,16 +33,21 @@
       <h2>{{ .Title }}</h2>
       <p>{{.Params.intro}}</p>
 
-      <a href="{{ "contact/" | relLangURL }}" class="cta">Contact</a>
+
+      {{ if $isContactPage }}
+        <a href="#contact" class="cta">Contact</a>
+      {{ else }}
+        <a href="{{ "contact/" | relLangURL }}" class="cta">Contact</a>
+      {{ end }}
       <a href="{{ "faq/" | relLangURL }}" class="cta inverse">All FAQ</a>
     </div>
     <div>
       <div class="accordion">
-        {{ with index .Params.faqgroups 0 }}
+        {{ with index .Params.faqgroups $index }}
           {{ range $index, $element := .faqs }}
             <div class="accordion-item{{ if eq $index 0 }} active{{ end }}">
               <h3>{{ .title }} <span> </span></h3>
-              <div class="accordion-content p">{{ .description }}</div>
+              <div class="accordion-content p">{{ .description|markdownify }}</div>
             </div>
           {{ end }}
         {{ end }}

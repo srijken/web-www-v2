@@ -18,8 +18,12 @@ body {
   background-color: #1D1D1D;
   padding-top: 128px;
   border-bottom-left-radius: 150px; 
-  padding-bottom: 40px;
+  padding-bottom: 32px;
 
+  h1 {
+    padding: 0;
+    margin: 0;
+  }
   .pl {
     padding-top: 24px;
   }
@@ -96,6 +100,10 @@ a.cta {
     }
   }
 
+  &.gray {
+    color: black;
+    background-color: #F2F2F2;
+  }
 }
 
 
@@ -370,6 +378,8 @@ ul.checklist {
         background-color: var(--brand);
         color: #000;
         margin-right: 16px;
+        font-weight: bold;
+        font-size: 1.6em;
       }
       h4 {
         color: #fff;
@@ -551,4 +561,8 @@ table.donations {
     max-width: 100%;
     object-fit: contain;
   }
+}
+
+.disabled {
+  display: none;
 }
