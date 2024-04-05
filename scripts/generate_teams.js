@@ -57,19 +57,33 @@ const fetchTeamsAndMembers = async () => {
       existingTeams = parsedContent.data.teams || [];
     }
 
-    const fetchedTeams = response.data.data.teamsByCompany.map(team => ({
-      title: team.name,
-      members: team.members.map(member => `/who-we-are/team/people/${member.slug}`)
-    }));
+    const fetchedTeams = response.data.data.teamsByCompany;
 
-    // Update existing team members and descriptions, add new teams as necessary
+    // Merge existing and fetched team data
+    existingTeams.forEach(existingTeam => {
+      process.stdout.write(".");
+      const fetchedTeam = fetchedTeams.find(team => team.name === existingTeam.title);
+      if (fetchedTeam) {
+        // Update members only if they are not already in existingTeam
+        const existingMemberSlugs = new Set(existingTeam.members.map(member => member.split('/').pop()));
+        fetchedTeam.members.forEach(member => {
+          const memberSlug = `/who-we-are/team/people/${member.slug}`;
+          if (!existingMemberSlugs.has(member.slug)) {
+            existingTeam.members.push(memberSlug);
+          }
+        });
+      }
+    });
+
+    // Add new teams from fetched data if they don't exist in existingTeams
     fetchedTeams.forEach(fetchedTeam => {
       process.stdout.write(".");
-      const existingTeam = existingTeams.find(et => et.title === fetchedTeam.title);
-      if (existingTeam) {
-        existingTeam.members = fetchedTeam.members;
-      } else {
-        existingTeams.push(fetchedTeam);
+      if (!existingTeams.some(existingTeam => existingTeam.title === fetchedTeam.name)) {
+        existingTeams.push({
+          title: fetchedTeam.name,
+          description: '',
+          members: fetchedTeam.members.map(member => `/who-we-are/team/people/${member.slug}`)
+        });
       }
     });
 
