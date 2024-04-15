@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 const yargs = require('yargs');
 const axios = require('axios');
 const matter = require('gray-matter');
@@ -26,38 +27,23 @@ const url = 'https://prod-graphql-api.theorg.com/graphql';
 const headers = { 'Content-Type': 'application/json' };
 
 const fetchPeople = async () => {
+  const query = fs.readFileSync(path.join(__dirname, 'queries/fullCompany.graphql'), 'utf8');
+
   const payload = {
     operationName: "Company",
     variables: { slug: "dutch-institute-for-vulnerability-disclosure" },
-    query: `query Company($slug: String!) {
-      company(slug: $slug) {
-        nodes {
-          leafMember {
-            id
-            slug
-            fullName
-            profileImage {
-              endpoint
-              uri
-              versions
-            }
-            role
-            social {
-              twitterUrl
-              linkedInUrl
-              facebookUrl
-              websiteUrl
-            }
-            description
-          }
-        }
-      }
-    }`
+    query
   };
 
   try {
     const response = await axios.post(url, payload, { headers });
     console.log("Updating people", "");
+
+    if (response.data.error) {
+      throw new Error(response.data.error);
+    }
+
+    console.log("Found %d people", response.data.data.company.nodes.length);
 
     for (const node of response.data.data.company.nodes) {
       if (node.leafMember) {
@@ -85,15 +71,11 @@ const fetchPeople = async () => {
           const existingFile = fs.readFileSync(personFilePath, 'utf8');
           const existingContent = matter(existingFile);
 
-          // Merge existing YAML data with new data, only adding missing fields
-          const mergedData = { ...existingContent.data };
-          Object.keys(newPersonData).forEach(key => {
-            if (!(key in mergedData)) {
-              mergedData[key] = newPersonData[key];
-            }
-          });
+          // Overwrite newPersonData.description and image with existing ones if available
+          newPersonData.description = existingContent.data.description ?? person.description;
+          newPersonData.image = existingContent.data.image ?? newPersonData.image;
 
-          const updatedContent = matter.stringify(existingContent.content, mergedData);
+          const updatedContent = matter.stringify(existingContent.content, { ...existingContent.data, ...newPersonData });
           fs.writeFileSync(personFilePath, updatedContent);
         } else {
           // Create new file with new data and markdown content

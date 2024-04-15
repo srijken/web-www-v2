@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 const yargs = require('yargs');
 const axios = require('axios');
 const matter = require('gray-matter');
@@ -18,6 +19,8 @@ const url = 'https://prod-graphql-api.theorg.com/graphql';
 const headers = { 'Content-Type': 'application/json' };
 
 const fetchTeamsAndMembers = async () => {
+  const query = fs.readFileSync(path.join(__dirname, 'queries/teamsByCompany.graphql'), 'utf8');
+
   const payload = {
     operationName: "teamsByCompany",
     variables: {
@@ -26,20 +29,7 @@ const fetchTeamsAndMembers = async () => {
       offset: 0,
       limit: 500,
     },
-    query: `query teamsByCompany($companySlug: String!, $limit: Int!, $offset: Int!, $membersLimit: Int!) {
-      teamsByCompany(companySlug: $companySlug, limit: $limit, offset: $offset) {
-        id
-        slug
-        name
-        memberCount
-        members(limit: $membersLimit) {
-          id
-          slug
-          fullName
-          role
-        }
-      }
-    }`
+    query
   };
 
   try {
