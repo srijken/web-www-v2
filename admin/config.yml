@@ -1,8 +1,8 @@
+local_backend: true
 publish_mode: editorial_workflow
-site_url: https://beta.divd.nl
+site_url: http://localhost:3000
 backend:
-  name: github
-  repo: DIVD-NL/web-www-v2
+  name: git-gateway
   branch: main
 
 media_folder: /assets/images
@@ -685,6 +685,21 @@ collections:
             widget: "string"
             i18n: true
 
+      - label: "Donations register"
+        name: "donations"
+        widget: "list"
+        fields:
+          - label: "Date"
+            name: "date"
+            widget: "datetime"
+            date_format: "YYYY-MM-DD"
+          - label: "Amount"
+            name: "amount"
+            hint: "include currency symbol"
+            widget: "string"
+          - label: "By"
+            name: "by"
+            widget: "string"
   # PAGE:  !Partners #####################################################
 
   - name: "partners"

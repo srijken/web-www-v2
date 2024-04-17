@@ -25,4 +25,9 @@ appreciate:
 
 
     Lorem ipsum dolor sit amet consectetur. Sagittis volutpat risus euismod venenatis gravida purus non. Lectus praesent amet nunc et vestibulum.
+donations:
+  - date: 2024-04-13T21:34:29.809Z
+    amount: €1000,-
+    by: Spatial Explorers
+  - date: 2024-04-17T21:36:14.578Z
 ---

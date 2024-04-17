@@ -109,53 +109,17 @@
               </tr>
             </thead>
             <tbody>
+            {{ range .Params.donations }}
               <tr>
-                <td>March 2022</td>
-                <td>$ 10.000</td>
-                <td>MSP CFO</td>
-        </tr>
-        <tr>
-                <td>Februari 2022</td>
-                <td>€ 1.000</td>
-                <td>Stichting Information Systems Security Association NL Chapter</td>
-        </tr>
-        <tr>
-                <td>January 2022</td>
-                <td>€ 10.000</td>
-                <td>ESET</td>
-        </tr>
-        <tr>
-                <td>January 2022</td>
-                <td>$ 5.000</td>
-                <td>Unveil Security Group</td>
-        </tr>
-        <tr>
-                <td>January 2022</td>
-                <td>$ 5.000</td>
-                <td>Servosity</td>
-        </tr>
-        <tr>
-                <td>January 2022</td>
-                <td>$ 5.000</td>
-                <td>Blumira</td>
-        </tr>
-        <tr>
-                <td>December 2021</td>
-                <td>$ 100.000</td>
-                <td>Huntress</td>
-        </tr>
-        <tr>
-                <td>December 2021</td>
-                <td>€ 1.400</td>
-                <td>J.R. Prins van Os</td>
-        </tr>
-        <tr>
-                <td>April 2020</td>
-                <td>€ 10.000</td>
-                <td>Stichting SIDN fonds</td>
-        </tr>
-
-
+                <td>{{ time.Format "2 Jan 2006" .date }}</td>
+                <td>{{ .amount }}</td>
+                <td>{{ .by }}</td>
+              </tr>
+            {{ else }}
+            <tr>
+              <td colspan="3">No donations yet</td>
+            </tr>
+            {{ end }}
             </tbody>
           </table>
         </div>    

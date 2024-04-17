@@ -44,4 +44,11 @@ donatepaypal:
 donatebanktransfer:
   label: Donate via banktransfer
   link: https://bank.nl
+donations:
+  - date: 2024-04-13T21:34:29.809Z
+    amount: €1000,-
+    by: Spatial Explorers
+  - date: 2020-06-10T21:36:14.565Z
+    amount: €42,-
+    by: Arthur Dent
 ---
