@@ -60,6 +60,21 @@ donations:
   - date: 2022-01-01T13:34:20.420Z
     amount: €10.000
     by: ESET
+  - date: 2022-01-01T13:35:06.398Z
+    amount: €5.000
+    by: Unveil Security Group
+  - date: 2022-01-01T13:35:33.049Z
+    amount: $5.000
+    by: Servosity
+  - date: 2021-12-01T13:36:06.127Z
+    amount: $100.000
+    by: Huntress
+  - date: 2021-12-01T13:36:32.561Z
+    amount: "1.400"
+    by: J.R. Prins van Os
+  - date: 2024-04-19T12:36:54.588Z
+    amount: €10.000
+    by: Stichting SIDN fonds
 aliases:
   - /donate
 ---
