@@ -1036,6 +1036,14 @@ collections:
         widget: "string"
         default: "The Team"
         i18n: true
+      - label: "Opener"
+        name: "opener"
+        widget: "string"
+        i18n: true
+      - label: "Intro"
+        name: "intro"
+        widget: markdown
+        i18n: true
       - label: "Teams"
         name: "teams"
         i18n: true

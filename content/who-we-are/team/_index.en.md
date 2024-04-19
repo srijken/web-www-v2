@@ -1,6 +1,8 @@
 ---
 type: team
 title: The Team
+opener: "Meet our team"
+intro: "We're very thankful and proud of all our team members"
 teams:
   - title: Board
     description: The board of directors is responsible for strategic leadership of DIVD.
