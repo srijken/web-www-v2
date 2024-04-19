@@ -1,0 +1,304 @@
+query Company($slug: String!) {
+  company(slug: $slug) {
+    ...FullCompany
+    __typename
+  }
+}
+
+fragment FullCompany on Company {
+  id
+  name
+  slug
+  extensions
+  logoImage {
+    ...ImageFragment
+    __typename
+  }
+  social {
+    ...CompanySocialFragment
+    __typename
+  }
+  
+  location {
+    ...CompanyLocation
+    __typename
+  }
+  description
+  type
+  industry
+  status
+  private
+  teams {
+    id
+    __typename
+  }
+  meta {
+    ...MetaFragment
+    __typename
+  }
+  nodes {
+    ...PositionNode
+    __typename
+  }
+  stats {
+    ...CompanyStats
+    __typename
+  }
+  verification {
+    verificationType
+    __typename
+  }
+  adminLocked
+  stage
+  companyValues {
+    ...CompanyValue
+    __typename
+  }
+  imageGallery {
+    ...ImageFragment
+    __typename
+  }
+  testimonials {
+    ...CompanyTestimonialConnection
+    __typename
+  }
+  industries {
+    ...CompanyIndustryFragment
+    __typename
+  }
+  lastUpdate
+  permissionSettings {
+    companyId
+    restrictMembersFromEditing
+    __typename
+  }
+  __typename
+}
+
+fragment ImageFragment on Image {
+  endpoint
+  ext
+  placeholderDataUrl
+  prevailingColor
+  uri
+  versions
+  __typename
+}
+
+fragment CompanySocialFragment on CompanySocial {
+  twitterUrl
+  linkedInUrl
+  facebookUrl
+  websiteUrl
+  __typename
+}
+
+fragment CompanyLocation on CompanyLocation {
+  id
+  street
+  postalCode
+  city
+  subLocality
+  country
+  countryIso
+  state
+  locationString
+  isPrimary
+  __typename
+}
+
+fragment MetaFragment on CompanyMeta {
+  noIndex
+  importanceScore
+  tags
+  __typename
+}
+
+fragment PositionNode on OrgChartStructureNode {
+  id
+  title
+  leafMember {
+    ...FlatPositionFragment
+    __typename
+  }
+  containingNodeId
+  node {
+    ... on Vacant {
+      job {
+        id
+        slug
+        title
+        location {
+          city
+          state
+          country
+          __typename
+        }
+        atsProvider {
+          provider
+          __typename
+        }
+        createdOn
+        jobFunction
+        remote
+        manager {
+          ... on ChartNodeGroup {
+            positions {
+              ... on PositionOrgChartPosition {
+                positionId
+                fullName
+                profileImage {
+                  ...ImageFragment
+                  __typename
+                }
+                __typename
+              }
+              __typename
+            }
+            __typename
+          }
+          ... on ChartNodeSingular {
+            positionId
+            position {
+              ... on PositionOrgChartPosition {
+                profileImage {
+                  ...ImageFragment
+                  __typename
+                }
+                fullName
+                __typename
+              }
+              __typename
+            }
+            __typename
+          }
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+  order
+  parentId
+  section
+  type
+  __typename
+}
+
+fragment FlatPositionFragment on FlatPosition {
+  id
+  slug
+  fullName
+  role
+  roleFunction
+  roleAutoFunction
+  description
+  parentPositionId
+  profileImage {
+    ...ImageFragment
+    __typename
+  }
+  social {
+    ...UserSocialFragment
+    __typename
+  }
+  isAdviser
+  group {
+    ...PositionGroupFragment
+    __typename
+  }
+  companyStartDate {
+    day
+    month
+    year
+    __typename
+  }
+  roleStartDate {
+    day
+    month
+    year
+    __typename
+  }
+  location {
+    ...CompanyLocation
+    __typename
+  }
+  invitedAt
+  remote
+  lastUpdate
+  pronoun
+  invitedAt
+  claimedBy
+  __typename
+}
+
+fragment UserSocialFragment on UserSocial {
+  twitterUrl
+  linkedInUrl
+  facebookUrl
+  websiteUrl
+  __typename
+}
+
+fragment PositionGroupFragment on PositionGroup {
+  id
+  name
+  __typename
+}
+
+fragment CompanyStats on CompanyStats {
+  tags
+  employeeRange
+  followerCount
+  positionCount
+  jobsCount
+  teamsCount
+  announcementsCount
+  following
+  promptDismissals
+  latestFundingRound {
+    id
+    fundingType
+    __typename
+  }
+  __typename
+}
+
+fragment CompanyValue on CompanyValue {
+  id
+  value
+  description
+  __typename
+}
+
+fragment CompanyTestimonialConnection on CompanyTestimonialConnection {
+  testimonial {
+    id
+    question
+    answer
+    __typename
+  }
+  position {
+    id
+    slug
+    fullName
+    profileImage {
+      ...ImageFragment
+      __typename
+    }
+    role
+    parentPositionId
+    isAdviser
+    lastUpdate
+    __typename
+  }
+  __typename
+}
+
+fragment CompanyIndustryFragment on CompanyTag {
+  id
+  title
+  __typename
+}
