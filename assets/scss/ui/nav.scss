@@ -306,6 +306,8 @@ nav.sub-nav {
     background: white;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+    overflow-y: scroll;
+    max-height: 100vh;
     article {
       padding: 0;
       display: block;

@@ -837,7 +837,9 @@ nav.sub-nav {
     nav.sub-nav {
       background: white;
       border-top-right-radius: 0;
-      border-bottom-right-radius: 0; }
+      border-bottom-right-radius: 0;
+      overflow-y: scroll;
+      max-height: 100vh; }
       nav.sub-nav article {
         padding: 0;
         display: block; }
@@ -1531,7 +1533,6 @@ nav.sub-nav {
   @media (max-width: 700px) {
     .stats {
       border-radius: 0;
-      margin: 0 -32px;
       flex-wrap: wrap; }
       .stats li {
         padding: 0 16px; } }
