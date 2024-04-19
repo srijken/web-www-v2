@@ -1,0 +1,42 @@
+query teamsByCompany($companySlug: String!, $limit: Int!, $offset: Int!, $membersLimit: Int!) {
+  teamsByCompany(companySlug: $companySlug, limit: $limit, offset: $offset) {
+  ...LightTeam
+  __typename
+}
+}
+fragment LightTeam on Team {
+  id
+  slug
+  name
+  memberCount
+  members(limit: $membersLimit) {
+    ...LightPositionFragment
+    __typename
+  }
+  __typename
+}
+
+fragment LightPositionFragment on LightPosition {
+  id
+  slug
+  fullName
+  profileImage {
+    ...ImageFragment
+    __typename
+  }
+  role
+  parentPositionId
+  isAdviser
+  lastUpdate
+  __typename
+}
+
+fragment ImageFragment on Image {
+  endpoint
+  ext
+  placeholderDataUrl
+  prevailingColor
+  uri
+  versions
+  __typename
+}
