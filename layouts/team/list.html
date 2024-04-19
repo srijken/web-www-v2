@@ -13,7 +13,7 @@
                   <h3>{{ .title }} <span> </span></h3>
                   <div class="accordion-content">
                     <p>{{ .description }}</p>
-                    <div class="flex start">
+                    <div class="grid grid-3">
                       {{ range .members }}
                           {{ partial "card-person" . }}
                       {{ end }}

@@ -464,8 +464,15 @@ ol {
   gap: 20px; }
   .flex.start {
     justify-content: flex-start; }
-  .flex.flex-50 > * {
+  .flex .flex.flex-50 > * {
     flex: 0 0 50%; }
+
+.grid {
+  display: grid;
+  grid-auto-rows: auto; }
+  .grid.grid-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 32px; }
 
 ul.article-list {
   margin-bottom: 32px; }

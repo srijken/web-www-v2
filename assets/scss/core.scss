@@ -301,12 +301,23 @@ ol {
     justify-content: flex-start;
   }
 
+  &
+
   &.flex-50 {
     
     > * {
       flex: 0 0 50%;
     }
   
+  }
+}
+
+.grid {
+  display: grid;
+  grid-auto-rows: auto;
+  &.grid-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 32px;
   }
 }
 

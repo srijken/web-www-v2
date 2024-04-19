@@ -13,23 +13,19 @@ teams:
       intelligence services, cybersecurity firms, academia, and the hacker
       community.
     members:
-      - /who-we-are/team/people/arthur-dent
-      - /who-we-are/team/people/arthur-dent
-      - /who-we-are/team/people/arthur-dent
       - /who-we-are/team/people/chantal-stekelenburg
       - /who-we-are/team/people/herbert
       - /who-we-are/team/people/petra-oldengarm
   - title: Board
     description: The board of directors is responsible for strategic leadership of DIVD.
     members:
-      - /who-we-are/team/people/arthur-dent
-      - /who-we-are/team/people/arthur-dent
       - /who-we-are/team/people/chris-van-t-hof
       - /who-we-are/team/people/victor-gevers
       - /who-we-are/team/people/eleonora-petridou
       - /who-we-are/team/people/joost-hendricksen
       - /who-we-are/team/people/marinus-kuivenhoven
       - /who-we-are/team/people/shairesh-algoe
+      - /who-we-are/team/people/inge-bryan
   - title: Office
     description: >-
       Providing some sense of direction to a bunch of hackers, aka advanced cat
@@ -71,7 +67,6 @@ teams:
       hackers you have even more interesting problems. Team helpdesk is here to
       help.
     members:
-      - /who-we-are/team/people/arthur-dent
       - /who-we-are/team/people/erwin-de-zwart
       - /who-we-are/team/people/geert-langendam
       - /who-we-are/team/people/robin-blokland
@@ -81,19 +76,19 @@ teams:
       Translating l33tsp3ak to human and the other way around as well as
       maintaining this awesome website.
     members:
-      - /who-we-are/team/people/arthur-dent
       - /who-we-are/team/people/marieke-smits
       - /who-we-are/team/people/heidi
+      - /who-we-are/team/people/gerard-janssen
   - title: 'Security, Risk & compliance '
     description: >-
       Hackers need security and compliance too, and there are plenty of risks to
       manage as well as ethics to consider.
     members:
-      - /who-we-are/team/people/arthur-dent
+
   - title: Development
     description: These coders code awesome code for us.
     members:
-      - /who-we-are/team/people/arthur-dent
+
       - /who-we-are/team/people/frank-voelkel
       - /who-we-are/team/people/gerdriaan-mulder
       - /who-we-are/team/people/gertjan-roke-1
@@ -103,7 +98,6 @@ teams:
   - title: HRM
     description: Caring for our volunteers to the maximum extend.
     members:
-      - /who-we-are/team/people/arthur-dent
   - title: Research & Development
     description: ''
     members:
@@ -248,3 +242,4 @@ teams:
     description: ''
     members: []
 ---
+
