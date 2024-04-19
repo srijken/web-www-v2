@@ -29,5 +29,14 @@ donations:
   - date: 2024-04-13T21:34:29.809Z
     amount: €1000,-
     by: Spatial Explorers
-  - date: 2024-04-17T21:36:14.578Z
+  - date: 2020-06-10T21:36:14.565Z
+    amount: €42,-
+    by: Arthur Dent
+  - date: 2022-03-01T13:30:50.143Z
+    amount: $10.000
+    by: MSP CFO
+  - date: 2022-02-01T13:33:48.959Z
+    amount: €1.000
+    by: Stichting Information Systems & Security Association NL Chapter
+  - date: 2024-04-19T12:34:20.438Z
 ---

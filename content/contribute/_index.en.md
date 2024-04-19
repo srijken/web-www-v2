@@ -1,6 +1,4 @@
 ---
-aliases:
-  - /donate
 title: Contribute
 opener: "Empower our mission to help others: how you can get involved"
 intro: We are a group of volunteers that scout the web for potential cyber
@@ -53,4 +51,15 @@ donations:
   - date: 2020-06-10T21:36:14.565Z
     amount: €42,-
     by: Arthur Dent
+  - date: 2022-03-01T13:30:50.143Z
+    amount: $10.000
+    by: MSP CFO
+  - date: 2022-02-01T13:33:48.959Z
+    amount: €1.000
+    by: Stichting Information Systems & Security Association NL Chapter
+  - date: 2022-01-01T13:34:20.420Z
+    amount: €10.000
+    by: ESET
+aliases:
+  - /donate
 ---
