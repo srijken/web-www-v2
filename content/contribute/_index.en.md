@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /donate
 title: Contribute
 opener: "Empower our mission to help others: how you can get involved"
 intro: We are a group of volunteers that scout the web for potential cyber
