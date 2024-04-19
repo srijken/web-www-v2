@@ -703,7 +703,7 @@ collections:
   # PAGE:  !Partners #####################################################
 
   - name: "partners"
-    label: "Partners"
+    label: "Become a partner"
     folder: "content/contribute/partners"
     slug: "_index"
     create: false
@@ -726,6 +726,9 @@ collections:
         name: "intro"
         widget: "text"
         i18n: true
+      - label: "Sponsordeck link"
+        name: "sponsordeck"
+        widget: "string"
       - label: "Partners Title"
         name: "partnerstitle"
         widget: "string"

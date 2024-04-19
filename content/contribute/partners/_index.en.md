@@ -4,6 +4,7 @@ title: Become a partner
 opener: Friends of DIVD
 intro: Share and pursue your passion for cybersecurity with like-minded people
   while helping to create a safer digital world
+sponsordeck: https://divd.nl
 partnerstitle: Our Partners
 partnersintro: We would be nothing with our partners (we like to call them
   friends) and therefore we truly appreciate them. Let us know if you want to
