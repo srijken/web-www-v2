@@ -38,7 +38,7 @@
             <ul class="article-list">
               {{ range . }}
                 <li>
-                  {{ partial "svg/icon" "article" }}  <a href="{{ .link }}" class="external">{{ .name }} {{ partial "svg/icon" "external" }} </a>
+                  {{ partial "svg/icon" "article" }}  <a href="{{ .link }}" target="_blank" class="external">{{ .name }} {{ partial "svg/icon" "external" }} </a>
                 </li>
               {{ end }}
             </ul>
@@ -50,7 +50,7 @@
               {{ range . }}
                 <li>
                   {{ partial "link_icon" .link }}
-                  <a href="{{ .link }}" class="external">{{ .name }} {{ partial "svg/icon" "external" }} </a> 
+                  <a href="{{ .link }}" class="external" target="_blank">{{ .name }} {{ partial "svg/icon" "external" }} </a> 
                 </li>
               {{ end }}
             </ul>
