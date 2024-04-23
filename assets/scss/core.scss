@@ -27,6 +27,11 @@ body {
   .pl {
     padding-top: 24px;
   }
+
+  @media (max-width: 700px) {
+    padding-top: 64px;
+    border-bottom-left-radius: 64px; 
+  }          
 }
 
 .bg-gradient {
@@ -138,6 +143,38 @@ a.cta {
   @media(max-width: 700px) {
     grid-template-columns: 1fr;
     grid-gap: 8px;
+
+    .divd-family-item {
+      padding: 10px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      section {
+        h3 {
+          margin: 0;
+          padding: 0;
+        }
+        p {
+          display: none;
+        }
+      }
+
+      nav {
+        flex: 0 0 140px;
+        text-align: right;
+        a {
+          margin-right: 0;
+          background-color: var(--brand);
+          color: black;
+          svg {
+            fill: black;
+          }
+        }
+      }
+
+      
+    }
   }
 
 }
@@ -290,6 +327,10 @@ ol {
   p {
     max-width: 760px;
   }
+
+  @media(max-width: 700px) {
+    padding: 32px 0 50px 0;
+  }
 }
 
 .flex {
@@ -318,6 +359,14 @@ ol {
   &.grid-3 {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 32px;
+  }
+
+  @media(max-width: 700px) {
+    
+    &.grid-3 {
+      grid-template-columns: 1fr;
+      grid-gap: 4px;
+    }
   }
 }
 
@@ -428,6 +477,10 @@ ul.checklist {
 }
 .pt-md {
   padding-top: 32px;
+  @media (max-width: 700px) {
+    padding-top: 16px;
+  }
+  
 }
 .pt-lg {
   padding-top: 64px;
@@ -507,6 +560,12 @@ form.default {
 
 }
 
+.hide-mob {
+  @media (max-width: 700px) {
+    display: none;
+  }
+}
+
 
 ul.sumup {
 
@@ -526,6 +585,17 @@ ul.sumup {
       flex: 1 1 auto;
       color: #fff;
       padding: 20px 16px;
+    }
+  }
+
+  @media (max-width: 700px) { 
+    li {
+      border-radius: 10px;
+      
+      img {
+        flex: 0 0 120px;
+        max-width: 120px;
+      }
     }
   }
 }

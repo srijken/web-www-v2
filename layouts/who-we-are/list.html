@@ -1,9 +1,10 @@
 {{ define "main" }}
+
   <div class="topic-layout whoweare">
-    
+    {{ partial "breadcrumbs.html" . }} 
+
     <div class="bg-gradient bg-gradient-reverse">
       <div class="topic-intro reverse">
-        {{ partial "breadcrumbs.html" . }}
         {{ partial "p/layout_open" (dict "classes" (slice "right")) }}
           <div>
             <h1>{{ .Params.opener }}</h1>
@@ -14,6 +15,7 @@
           </div>
         {{ partial "p/layout_close" }}
       </div>
+
       <div class="intro-image">
         {{ with resources.Get "images/global/who_we_are_main.svg" }} 
           <img src="{{ .RelPermalink }}" alt="who we are" />
@@ -31,7 +33,7 @@
             <p class="pre primary">{{ .intro }}</p>
           </div>
           <div class="reverse">
-            <h2>&nbsp;</h2>
+            <h2 class="hide-mob">&nbsp;</h2>
             <p class="pre">{{ .description }}</p>
           </div>
         {{ end }}
