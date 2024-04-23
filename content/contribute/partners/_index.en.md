@@ -33,12 +33,6 @@ partnerlist:
     description: BIT is sponsoring hosting space for our websites and mail server capacity.
     website: bit.nl
     image: /images/partners/bit-360x200.jpg
-  - name: CONNECT2TRUST
-    description: Connect2Trust is a cooperation of Dutch (international) companies.
-      Chairman of the Board Raymond Bierens has been with DIVD from the start on
-      to help out and share knowledge.
-    website: https://www.connect2trust.nl/
-    image: /images/partners/connect2trust-360x200.jpg
   - description: Cryptshare supplies us with licenses for their tooling so we can
       securely share files.
     name: Cryptshare
@@ -49,16 +43,10 @@ partnerlist:
       enables us to deliver security research reports with tickets handling.
     website: https://cyver.io/
     image: /images/partners/cyver-360x200.jpg
-  - description: Remco Verhoef, Chief Hacking Officer at DTACT let’s us use their
-      Raven Data Processing Platform to process our scan data. We don’t pay in
-      licencefees, but in feedback.
-    name: DTACT
-    image: /images/partners/dtact-360x200.jpg
-    website: https://dtact.com/
-  - name: Eset
+  - name: ESET
     description: Dave Maasland, CEO of ESET sponsored DIVD in 2021 by paying most of
-      the costs of our AS. In 2022 ESET supports us with a serious donation and
-      free licenses
+      the costs of our AS. Since 2022 ESET supports us with a serious donation
+      and free licenses
     website: https://www.eset.com/nl/
     image: /images/partners/eset-360x200.jpg
   - description: We have our office at LunaVia, which also help us out with
@@ -84,10 +72,6 @@ partnerlist:
     name: SIDN Fund
     website: https://www.sidnfonds.nl/excerpt
     image: /images/partners/sidn-fund-360x200.jpg
-  - name: Speak Freak
-    description: Peter Zinn from Speak Freak provided presentation trainings to DIVD members
-    website: https://speakfreak.eu/
-    image: /images/partners/speak-freak-360x200.jpg
   - description: Schuberg Philis has provided us with support of some of their
       employees and equipment we have used for our scanning infrastructure.
     name: Schuberg Philis
