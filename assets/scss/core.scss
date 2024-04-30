@@ -364,7 +364,7 @@ ol {
   @media(max-width: 700px) {
     
     &.grid-3 {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
       grid-gap: 4px;
     }
   }

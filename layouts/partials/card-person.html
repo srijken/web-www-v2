@@ -14,7 +14,10 @@
         {{ partial "tools/rimg/img" (dict "img" . "alt" $alt) }}
           <!--- $alt --->
       {{ else }}
-        <img src="/images/global/person_placeholder.png" alt="No image" />
+        {{ with resources.Get "/images/global/person_placeholder.png" }} 
+          <img src="{{ .RelPermalink }}" alt="No image" />
+        {{ end }}
+        
       {{ end }}
     </a>
     <header>

@@ -399,6 +399,10 @@
   @media (max-width: 700px) {
     transform: translateY(80px);
     margin-top: -80px;
+
+    img {
+      max-width: 90%;
+    }
   }
 }
 
@@ -428,6 +432,14 @@
 
     a.cta {
       white-space: nowrap;
+    }
+
+    @media (max-width: 700px) {
+      display: block;
+
+      a.cta {
+        margin-bottom: 10px;
+      }
     }
   }
 }
