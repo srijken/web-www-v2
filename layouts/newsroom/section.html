@@ -28,6 +28,12 @@
       <div>
         <h2>{{ .Params.starter.title }}</h2>
         <p class="pre">{{ .Params.starter.description }}</p>
+
+        <div class="tag-list">
+          {{ range $key, $value := .Site.Taxonomies.tag }}
+            <a href="{{ $value.Page.Permalink }}" class="tag">{{ $key }}</a>
+          {{ end }}
+        </div>
       </div>
       
       <div class="newsroom-article-list">

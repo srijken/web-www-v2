@@ -298,6 +298,9 @@ body {
 p.pre {
   white-space: pre-line; }
 
+a.title-link {
+  border-bottom: 0; }
+
 a.cta {
   background-color: black;
   color: white;
@@ -689,6 +692,22 @@ table.donations {
 
 .disabled {
   display: none; }
+
+.tag-list {
+  margin-bottom: 32px; }
+  .tag-list a {
+    display: inline-block;
+    margin: 0 8px 8px 0;
+    border-radius: 16px;
+    border: 2px solid black;
+    text-align: center;
+    padding: 4px 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px; }
+    .tag-list a:hover {
+      background-color: black;
+      color: #fff; }
 
 nav.nav-container {
   position: fixed;
