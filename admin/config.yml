@@ -1061,6 +1061,7 @@ collections:
             name: "description"
             widget: "text"
             i18n: true
+            required: false
           - label: "Members"
             name: "members"
             widget: relation
@@ -1069,6 +1070,7 @@ collections:
             display_fields: ["title"]
             search_fields: ["title"]
             multiple: true
+            required: false
 
   # COLLECTION:  !People #####################################################
   - name: "people"
