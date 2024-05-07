@@ -8,6 +8,8 @@ teams:
     description: The board of directors is responsible for strategic leadership of DIVD.
     members: null
   - title: Management
+    description: Providing some sense of direction to a bunch of hackers, aka
+      advanced cat herding.
   - title: DIVD-CSIRT
     description: The CSIRT is the engineblock of DIVD. It is responsible for
       scanning the internet and notifying the system owners as well as running
@@ -37,10 +39,6 @@ teams:
     members: null
   - title: Governance, Risk & Compliance (GRC)
     description: ""
-    members: null
-  - title: Office
-    description: Providing some sense of direction to a bunch of hackers, aka
-      advanced cat herding.
     members: null
   - title: Project Office
     description: ""
