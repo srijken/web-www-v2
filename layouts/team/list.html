@@ -2,17 +2,18 @@
   <div class="article-layout">
     {{ partial "breadcrumbs" . }}
 
-    {{ partial "p/section_open" (dict "classes" (slice "default"))}} 
+    {{ partial "p/section_open" (dict "classes" (slice "article"))}} 
       {{ partial "p/layout_open" (dict "classes" (slice "article")) }}
         <div class="default-content">
-
+          <h2>{{ .Params.opener }}</h2>
+          <div class="markdown pb-md">{{ .Params.intro|markdownify }}</div>
           <div class="accordion">
               {{ range $index, $element := .Params.teams }}
                 <div class="accordion-item{{ if eq $index 0 }} active{{ end }}">
                   <h3>{{ .title }} <span> </span></h3>
                   <div class="accordion-content">
                     <p>{{ .description }}</p>
-                    <div class="flex start">
+                    <div class="grid grid-3">
                       {{ range .members }}
                           {{ partial "card-person" . }}
                       {{ end }}

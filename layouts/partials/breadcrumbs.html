@@ -2,12 +2,20 @@
   <ul>
     
     <li class="breadcrumb-item active" aria-current="page">
-      {{ .Page.Title }}
+      {{ if eq .Page.Title "Tag" }}
+        Newsroom
+      {{ else }}
+        {{ .Page.Title }}
+      {{ end }}
     </li>
     
     {{ range .Page.Ancestors }}
       <li class="breadcrumb-item">
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ if eq .Title "Tag" }}
+          <a href="{{ "/newsroom" | relLangURL }}">Newsroom</a>
+        {{ else }}
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ end }}
         <span>&gt;</span>
       </li>
     {{ end }}

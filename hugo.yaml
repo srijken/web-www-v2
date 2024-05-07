@@ -4,6 +4,12 @@ defaultContentLanguage: en
 defaultContentLanguageInSubdir: false
 paginate: 12
 
+taxonomies:
+  tag: tag
+
+permalinks:
+  tag: "/newsroom/articles/tag/:title"
+
 languages:
   en:
     disabled: false

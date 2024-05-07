@@ -543,6 +543,9 @@ collections:
     create: false
     i18n: true
     fields:
+      - label: "aliases"
+        name: "aliases"
+        widget: "list"
       - label: "Title"
         name: "title"
         widget: "string"
@@ -685,10 +688,25 @@ collections:
             widget: "string"
             i18n: true
 
+      - label: "Donations register"
+        name: "donations"
+        widget: "list"
+        fields:
+          - label: "Date"
+            name: "date"
+            widget: "datetime"
+            date_format: "YYYY-MM-DD"
+          - label: "Amount"
+            name: "amount"
+            hint: "include currency symbol"
+            widget: "string"
+          - label: "By"
+            name: "by"
+            widget: "string"
   # PAGE:  !Partners #####################################################
 
   - name: "partners"
-    label: "Partners"
+    label: "Become a partner"
     folder: "content/contribute/partners"
     slug: "_index"
     create: false
@@ -711,6 +729,9 @@ collections:
         name: "intro"
         widget: "text"
         i18n: true
+      - label: "Sponsordeck link"
+        name: "sponsordeck"
+        widget: "string"
       - label: "Partners Title"
         name: "partnerstitle"
         widget: "string"
@@ -1017,6 +1038,14 @@ collections:
         name: "title"
         widget: "string"
         default: "The Team"
+        i18n: true
+      - label: "Opener"
+        name: "opener"
+        widget: "string"
+        i18n: true
+      - label: "Intro"
+        name: "intro"
+        widget: markdown
         i18n: true
       - label: "Teams"
         name: "teams"

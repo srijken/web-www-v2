@@ -127,7 +127,7 @@
   background-color: #000;
   max-width: 270px;
   display: grid;
-  min-width: 270px;
+  min-width: 200px;
   a.figure {
     display: block;
     background-color: #fff;
@@ -171,6 +171,11 @@
       letter-spacing: 0.28px;
       text-transform: uppercase;
     }
+  }
+
+  @media(max-width: 700px) {
+    max-width: 160px;
+    min-width: 160px;
   }
 }
 

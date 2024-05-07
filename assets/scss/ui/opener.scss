@@ -178,4 +178,19 @@
   &.far-right {
     right: 0px;
   }
+
+  @media(max-width: 700px) {
+    &.bubble-large {
+      border-top-left-radius: 42px;
+      height: 42px; 
+    }
+
+    &.bubble-small-half {
+      top: 0;
+      border-top-left-radius: 64px;
+      border-bottom-left-radius: 64px;
+      width: 200px;
+      height: 64px;
+    }
+  }
 }
