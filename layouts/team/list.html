@@ -13,11 +13,27 @@
                   <h3>{{ .title }} <span> </span></h3>
                   <div class="accordion-content">
                     <p>{{ .description }}</p>
-                    <div class="grid grid-3">
-                      {{ range .members }}
-                          {{ partial "card-person" . }}
+                    
+                      {{ $firstFour := first 4 .members }}
+                      {{ $theRest := after 4 .members }}
+                      <div class="grid grid-4">
+                        {{ range $firstFour }}
+                            {{ partial "card-person" . }}
+                        {{ end }}
+                      </div>
+                      {{ with $theRest }}
+                        <details>
+                          <summary><span>Show more members</span><em>hide more members</em></summary>                          
+                          <div class="grid grid-4">
+                            {{ range . }}
+                              {{ partial "card-person" . }}
+                            {{ end }}
+                          </div>
+
+                        </details>
+                        <br /><br />
                       {{ end }}
-                    </div>
+                    
                   </div>
                 </div>
               {{ end }}

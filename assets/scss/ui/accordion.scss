@@ -5,6 +5,7 @@
     .accordion-content {
       display: none;
       padding-bottom: 8px;
+      position: relative;
     }
 
     border-bottom: 1px solid black;
@@ -48,4 +49,43 @@
       }
     }
   }
+
+
+  details {
+    margin-top: 16px;
+    summary {
+      border-radius: 22px;
+      background-color: #F2F2F2;
+      color: black;
+      text-transform: uppercase;
+      display: inline-flex;
+      font-size: 14px;
+      font-weight: bold;
+      padding: 8px 16px;
+      margin-bottom: 16px;
+      em {
+        font-style: normal;
+        display: none;
+      }
+    }
+
+  }
+
+  details[open] {
+    padding-bottom: 16px;
+    summary {                          
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      span {
+        display:none;
+      }
+
+      em {
+        display: block;
+      }
+
+    }
+  }
+  
 }

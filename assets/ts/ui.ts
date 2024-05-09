@@ -78,9 +78,12 @@ function initAccordion(el: HTMLDivElement) {
 	}
 
 	items.forEach((item) => {
-		item.addEventListener('click', () => {
-			toggleItem(item);
-		});
+		let h3 = item.querySelector('h3');
+		if (h3) {
+			h3.addEventListener('click', () => {
+				toggleItem(item);
+			});
+		}
 	});
 }
 

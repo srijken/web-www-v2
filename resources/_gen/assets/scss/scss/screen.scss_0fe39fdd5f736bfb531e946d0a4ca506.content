@@ -493,12 +493,17 @@ ol {
     justify-content: flex-start; }
   .flex .flex.flex-50 > * {
     flex: 0 0 50%; }
-
+  @media (max-width: 700px) {
+    .flex {
+      display: block; } }
 .grid {
   display: grid;
   grid-auto-rows: auto; }
   .grid.grid-3 {
     grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 32px; }
+  .grid.grid-4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 32px; }
   @media (max-width: 700px) {
     .grid.grid-3 {
@@ -570,7 +575,9 @@ ul.checklist {
   padding: 60px;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
   border-radius: 20px; }
-
+  @media (max-width: 700px) {
+    .panel {
+      padding: 16px; } }
 .fill-center {
   display: flex;
   align-items: center; }
@@ -1585,7 +1592,8 @@ nav.sub-nav {
   border-bottom: 1px solid black; }
   .accordion .accordion-item .accordion-content {
     display: none;
-    padding-bottom: 8px; }
+    padding-bottom: 8px;
+    position: relative; }
   .accordion .accordion-item > h3 {
     display: flex;
     align-items: center;
@@ -1607,6 +1615,33 @@ nav.sub-nav {
     transform: rotate(180deg); }
   .accordion .accordion-item.active .accordion-content {
     display: block; }
+
+.accordion details {
+  margin-top: 16px; }
+  .accordion details summary {
+    border-radius: 22px;
+    background-color: #F2F2F2;
+    color: black;
+    text-transform: uppercase;
+    display: inline-flex;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 16px;
+    margin-bottom: 16px; }
+    .accordion details summary em {
+      font-style: normal;
+      display: none; }
+
+.accordion details[open] {
+  padding-bottom: 16px; }
+  .accordion details[open] summary {
+    position: absolute;
+    bottom: 0px;
+    left: 0; }
+    .accordion details[open] summary span {
+      display: none; }
+    .accordion details[open] summary em {
+      display: block; }
 
 .stats {
   background-color: white;
@@ -1715,6 +1750,10 @@ footer.main {
       flex-direction: column; }
       .ethics-footer img {
         height: 140px; } }
+.subtle {
+  opacity: 0.6;
+  line-height: 22px; }
+
 .volunteer .core-values h2 {
   color: #fff; }
 
