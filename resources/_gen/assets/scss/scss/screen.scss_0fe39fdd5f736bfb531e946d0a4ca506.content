@@ -508,6 +508,9 @@ ol {
   @media (max-width: 700px) {
     .grid.grid-3 {
       grid-template-columns: 1fr 1fr;
+      grid-gap: 4px; }
+    .grid.grid-4 {
+      grid-template-columns: 1fr 1fr;
       grid-gap: 4px; } }
 ul.article-list {
   margin-bottom: 32px; }

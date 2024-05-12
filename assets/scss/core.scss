@@ -379,6 +379,11 @@ ol {
       grid-template-columns: 1fr 1fr;
       grid-gap: 4px;
     }
+
+    &.grid-4 {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 4px;
+    }
   }
 }
 
