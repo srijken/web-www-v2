@@ -8,7 +8,7 @@ intro: >-
   just started their career in cybersecurity and others have worked in cybersecurity for a
   very long time. Due to privacy reasons, which we can only encourage, not every member
   has a profile picture or is mentioned in a team.
-in_progress: yes
+in_progress: true
 teams:
   - title: Board
     description: The board of directors is responsible for strategic leadership of DIVD.
