@@ -1047,6 +1047,10 @@ collections:
         name: "intro"
         widget: markdown
         i18n: true
+      - label: "In Progress"
+        name: "in_progress"
+        widget: "boolean"
+        i18n: true
       - label: "Teams"
         name: "teams"
         i18n: true
