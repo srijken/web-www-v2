@@ -44,12 +44,14 @@ const fetchTeamsAndMembers = async () => {
     const teamsFilePath = `${argv['team-path']}/_index.en.md`;
     let existingContent = '';
     let existingTeams = [];
+    let existingFrontMatter = {};
 
     if (fs.existsSync(teamsFilePath)) {
       const fileContent = fs.readFileSync(teamsFilePath, 'utf8');
       const parsedContent = matter(fileContent);
       existingContent = parsedContent.content;
       existingTeams = parsedContent.data.teams || [];
+      existingFrontMatter = parsedContent.data;
     }
 
     const fetchedTeams = response.data.data.teamsByCompany;
@@ -90,8 +92,7 @@ const fetchTeamsAndMembers = async () => {
     }
 
     const fileData = {
-      type: 'team',
-      title: 'The Team',
+      ...existingFrontMatter,
       teams: existingTeams,
     };
 
