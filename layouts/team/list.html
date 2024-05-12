@@ -7,7 +7,10 @@
         <div class="default-content">
           <h2>{{ .Params.opener }}</h2>
           <div class="markdown pb-md">{{ .Params.intro|markdownify }}</div>
-          <div class="accordion">
+          {{ if eq .Params.in_progress true }}
+            <div class="accordion">In Progress.</div>
+          {{ else }}
+            <div class="accordion">
               {{ range $index, $element := .Params.teams }}
                 <div class="accordion-item{{ if eq $index 0 }} active{{ end }}">
                   <h3>{{ .title }} <span> </span></h3>
@@ -37,8 +40,8 @@
                   </div>
                 </div>
               {{ end }}
-
-          </div>
+            </div>
+          {{ end }}
         </div>
       {{ partial "p/layout_close" }}
     {{ partial "p/section_close" }}
