@@ -1,0 +1,1324 @@
+publish_mode: editorial_workflow
+site_url: https://beta.divd.nl
+backend:
+  name: github
+  repo: DIVD-NL/web-www-v2
+  branch: main
+
+media_folder: /assets/images
+public_folder: /images
+i18n:
+  structure: multiple_files
+  locales: [en, nl]
+  default_locale: en
+
+collections:
+  # PAGE:  !Home #####################################################
+  - name: "_index"
+    label: "Home page"
+    slug: "_index"
+    i18n: true
+    folder: "content"
+    create: false
+    fields:
+      - {
+          label: "Title",
+          name: "title",
+          widget: "string",
+          default: "home",
+          i18n: true,
+        }
+      - { label: "Opener", name: "opener", widget: "string", i18n: true }
+      - { label: "Intro", name: "intro", widget: "text", i18n: true }
+      - label: "fold"
+        name: "fold"
+        i18n: true
+        widget: "object"
+        fields:
+          - label: "Showcase"
+            name: "showcase"
+            widget: "relation"
+            collection: "articles"
+            search_fields: ["title", "case.caseid"]
+            value_field: "/newsroom/articles/{{slug}}"
+            display_fields: ["title", "case.caseid"]
+            multiple: false
+          - {
+              label: "Received an email",
+              name: "received",
+              widget: "string",
+              i18n: true,
+            }
+          - name: "received_alt"
+            label: "Alt text for received image"
+            widget: "string"
+            i18n: true
+          - { label: "Family", name: "family", widget: "string", i18n: true }
+          - name: "family_alt"
+            label: "Alt text for family image"
+            widget: "string"
+            i18n: true
+
+      - name: "whatwedo"
+        label: "What we do"
+        widget: "object"
+        collapsed: true
+        i18n: true
+        fields:
+          - { label: title, name: title, widget: string, i18n: true }
+          - { label: description, name: description, widget: text, i18n: true }
+          - { label: t1, name: t1, widget: string, i18n: true }
+          - {
+              label: "t1_Image",
+              name: "t1_image",
+              widget: "image",
+              public_folder: "/images/",
+              media_folder: "/assets/images/",
+              required: true,
+            }
+          - {
+              label: t1_alt,
+              name: "Alt text for t1 image",
+              widget: string,
+              i18n: true,
+            }
+          - { label: t2, name: t2, widget: string, i18n: true }
+          - {
+              label: "t2_Image",
+              name: "t2_image",
+              widget: "image",
+              public_folder: "/images/",
+              media_folder: "/assets/images/",
+              required: true,
+            }
+          - {
+              label: t2_alt,
+              name: "Alt text for t2 image",
+              widget: string,
+              i18n: true,
+            }
+          - { label: t3, name: t3, widget: string, i18n: true }
+          - {
+              label: "t3_Image",
+              name: "t3_image",
+              widget: "image",
+              public_folder: "/images/",
+              media_folder: "/assets/images/",
+              required: true,
+            }
+          - {
+              label: t3_alt,
+              name: "Alt text for t3 image",
+              widget: string,
+              i18n: true,
+            }
+
+      - name: "helpushelpyou"
+        label: "Help us, help you"
+        widget: "object"
+        collapsed: true
+        i18n: true
+        fields:
+          - { label: title, name: title, widget: string, i18n: true }
+          - { label: description, name: description, widget: text, i18n: true }
+
+      - label: "Volunteer"
+        name: "volunteer"
+        widget: "object"
+        collapsed: true
+        i18n: true
+        fields:
+          - { label: title, name: title, widget: string, i18n: true }
+          - {
+              label: checklist,
+              name: checklist,
+              widget: list,
+              allow_add: true,
+              i18n: true,
+              fields: [{ label: "Item", name: "item", widget: string }],
+            }
+
+  # PAGE:  !FAQ #####################################################
+
+  - name: "faq"
+    label: "FAQ"
+    file: "content/faq/_index.md"
+    folder: "content/faq"
+    slug: "_index"
+    create: false
+    i18n: true
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        default: "faq"
+        i18n: true
+      - label: "Opener"
+        name: "opener"
+        widget: "string"
+        i18n: true
+      - label: "Intro"
+        name: "intro"
+        widget: "text"
+        i18n: true
+      - label: "FAQ groups"
+        name: "faqgroups"
+        widget: list
+        i18n: true
+        fields:
+          - { label: "heading", name: "heading", widget: "string", i18n: true }
+          - {
+              label: "FAQs",
+              name: "faqs",
+              widget: list,
+              i18n: true,
+              fields:
+                [
+                  {
+                    label: "Title",
+                    name: "title",
+                    widget: "string",
+                    i18n: true,
+                  },
+                  {
+                    label: "Description",
+                    name: "description",
+                    widget: "markdown",
+                    i18n: true,
+                  },
+                ],
+            }
+
+  # PAGE:  !Testimonials #####################################################
+
+  - label: "Testimonials"
+    name: "testimonials"
+    folder: "content/testimonials"
+    slug: "_index"
+    create: false
+    i18n: true
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        i18n: true
+      - label: "Testimonials"
+        name: "testimonials"
+        widget: list
+        i18n: true
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "role", name: "role", widget: "string", i18n: true }
+          - { label: "Quote", name: "quote", widget: "text", i18n: true }
+          - {
+              label: "Image",
+              name: "image",
+              widget: "image",
+              public_folder: "/images/testimonials",
+              media_folder: "/assets/images/testimonials",
+              required: false,
+            }
+
+  # PAGE:  !Contact #####################################################
+  - name: "contact"
+    label: "Contact"
+    folder: "content/contact"
+    slug: "_index"
+    create: false
+    i18n: true
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        default: "Contact"
+        i18n: true
+      - label: "Opener"
+        name: "opener"
+        widget: "string"
+        i18n: true
+      - label: "Intro"
+        name: "intro"
+        widget: text
+        i18n: true
+      - label: "Form"
+        name: "form"
+        i18n: true
+        widget: "object"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Description"
+            name: "description"
+            widget: "markdown"
+            i18n: true
+
+  # PAGE:  !Warning email #####################################################
+  - name: "warningemail"
+    label: "Warning email"
+    folder: "content/warningemail"
+    slug: "_index"
+    create: false
+    i18n: true
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        default: "Warning e-mail"
+        i18n: true
+      - label: "Opener"
+        name: "opener"
+        widget: "string"
+        i18n: true
+      - label: "Intro"
+        name: "intro"
+        widget: markdown
+        i18n: true
+      - label: "CSIRT"
+        name: "csirt"
+        i18n: true
+        widget: "object"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Description"
+            name: "description"
+            widget: "markdown"
+            i18n: true
+          - label: "Link"
+            name: "link"
+            widget: "string"
+      - label: "STEPBYSTEP"
+        name: "stepbystep"
+        i18n: true
+        widget: "object"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Description"
+            name: "description"
+            widget: "text"
+            i18n: true
+          - label: "Link"
+            name: "link"
+            widget: "string"
+          - label: "steps"
+            name: "steps"
+            i18n: true
+            widget: "object"
+            fields:
+              - {
+                  label: "Step 1 title",
+                  name: "step1title",
+                  widget: "string",
+                  i18n: true,
+                }
+              - {
+                  label: "Step 1 description",
+                  name: "step1description",
+                  widget: "string",
+                  i18n: true,
+                }
+              - {
+                  label: "Step 2 title",
+                  name: "step2title",
+                  widget: "string",
+                  i18n: true,
+                }
+              - {
+                  label: "Step 2 description",
+                  name: "step2description",
+                  widget: "string",
+                  i18n: true,
+                }
+              - {
+                  label: "Step 3 title",
+                  name: "step3title",
+                  widget: "string",
+                  i18n: true,
+                }
+              - {
+                  label: "Step 3 description",
+                  name: "step3description",
+                  widget: "string",
+                  i18n: true,
+                }
+              - {
+                  label: "Step 4 title",
+                  name: "step4title",
+                  widget: "string",
+                  i18n: true,
+                }
+              - {
+                  label: "Step 4 description",
+                  name: "step4description",
+                  widget: "string",
+                  i18n: true,
+                }
+              - {
+                  label: "Step 4 link label",
+                  name: "step4linklabel",
+                  widget: "string",
+                  i18n: true,
+                }
+              - {
+                  label: "Step 4 link",
+                  name: "step4link",
+                  widget: "string",
+                  i18n: true,
+                }
+
+  ######################################
+  # SECTION: Newsroom
+  ####
+
+  # PAGE: !Newsroom #####################################################
+  - label: "Newsroom"
+    name: "newsroom"
+    folder: "content/newsroom"
+    slug: "_index"
+    create: false
+    i18n: true
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        default: "Newsroom"
+        i18n: true
+      - label: "Opener"
+        name: "opener"
+        widget: "string"
+        i18n: true
+      - label: "Intro"
+        name: "intro"
+        widget: text
+        i18n: true
+      - label: "Newsletter link"
+        name: "newsletter"
+        widget: "string"
+      - label: "Starter"
+        name: "starter"
+        i18n: true
+        widget: "object"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Description"
+            name: "description"
+            widget: "text"
+            i18n: true
+      - label: "highlight"
+        name: "highlight"
+        widget: "relation"
+        collection: "articles"
+        search_fields: ["title", "case.caseid"]
+        value_field: "/newsroom/articles/{{slug}}"
+        display_fields: ["title", "case.caseid"]
+
+  # COLLECTION:  !Articles #####################################################
+  - label: "Articles"
+    name: "articles"
+    i18n:
+      structure: multiple_files
+    folder: "content/newsroom/articles"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - label: "Author(s)"
+        name: "author"
+        widget: "relation"
+        collection: "people"
+        value_field: "/who-we-are/team/people/{{slug}}"
+        display_fields: ["title"]
+        search_fields: ["title"]
+        required: false
+        multiple: true
+      - {
+          label: "Tag",
+          name: "tag",
+          widget: "select",
+          options: ["case", "news", "updates", "culture"],
+        }
+      - { label: "Intro", name: "intro", widget: "text", i18n: true }
+      - {
+          label: "Image",
+          name: "image",
+          widget: "image",
+          public_folder: "/images/articles",
+          media_folder: "/assets/images/articles",
+          required: false,
+        }
+      - {
+          label: alt,
+          name: "Alt tag for image",
+          widget: string,
+          i18n: true,
+          required: false,
+        }
+      - {
+          label: "case",
+          required: false,
+          name: "case",
+          widget: "object",
+          collapsed: true,
+          fields:
+            [
+              {
+                label: "Case ID",
+                name: "caseid",
+                widget: "string",
+                required: false,
+              },
+              {
+                label: "Case closed",
+                name: "closed",
+                widget: "boolean",
+                required: false,
+              },
+              {
+                label: "Case link",
+                name: "link",
+                widget: "string",
+                required: false,
+              },
+              {
+                label: "Case lead",
+                name: "lead",
+                widget: "string",
+                required: false,
+              },
+              {
+                label: "Case lead Link",
+                name: "leadlink",
+                widget: "string",
+                required: false,
+              },
+              {
+                label: "Researchers",
+                name: "researchers",
+                widget: "list",
+                fields:
+                  [
+                    { label: "Label", name: "label", widget: "string" },
+                    {
+                      label: "Link",
+                      name: "link",
+                      widget: "string",
+                      required: false,
+                    },
+                  ],
+              },
+              {
+                label: "Researchers (linked)",
+                name: "researchers_people",
+                widget: relation,
+                collection: "people",
+                value_field: "/who-we-are/team/people/{{slug}}",
+                display_fields: ["title"],
+                search_fields: ["title"],
+                multiple: true,
+                required: false,
+              },
+            ],
+        }
+      - { label: "Body", name: "body", widget: "markdown", i18n: true }
+
+  ######################################
+  # SECTION: Contribute
+  ####
+
+  # PAGE: !Contribute #####################################################
+  - name: "contribute"
+    label: "Contribute"
+    folder: "content/contribute"
+    slug: "_index"
+    create: false
+    i18n: true
+    fields:
+      - label: "aliases"
+        name: "aliases"
+        widget: "list"
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        default: "Contribute"
+        i18n: true
+      - label: "Opener"
+        name: "opener"
+        widget: "string"
+        i18n: true
+      - label: "Intro"
+        name: "intro"
+        widget: text
+        i18n: true
+      - label: "Become a Volunteer"
+        name: "becomevolunteer"
+        i18n: true
+        widget: "object"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - {
+              label: "Image",
+              name: "image",
+              widget: "image",
+              public_folder: "/images/",
+              media_folder: "/assets/images/",
+              required: false,
+            }
+          - {
+              label: alt,
+              name: "Alt tag for image",
+              widget: string,
+              i18n: true,
+            }
+          - label: "Description"
+            name: "description"
+            widget: "text"
+            i18n: true
+      - label: "Become a Partner"
+        name: "becomepartner"
+        i18n: true
+        widget: "object"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - {
+              label: "Image",
+              name: "image",
+              widget: "image",
+              public_folder: "/images/",
+              media_folder: "/assets/images/",
+              required: false,
+            }
+          - {
+              label: alt,
+              name: "Alt tag for image",
+              widget: string,
+              i18n: true,
+            }
+          - label: "Description"
+            name: "description"
+            widget: "text"
+            i18n: true
+
+      - label: "Appreciate"
+        name: "appreciate"
+        i18n: true
+        widget: "object"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Description"
+            name: "description"
+            widget: "text"
+            i18n: true
+
+      - label: "Donate SUPP"
+        name: "donatesupp"
+        i18n: true
+        widget: "object"
+        fields:
+          - label: "SUPP"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Description"
+            name: "description"
+            widget: "text"
+            i18n: true
+          - label: "Value Links"
+            name: "links"
+            widget: "list"
+            i18n: true
+            max: 3
+            fields:
+              - label: "Label"
+                name: "label"
+                widget: "string"
+                i18n: true
+              - label: "Link"
+                name: "link"
+                widget: "string"
+                i18n: true
+          - label: "Custom amount link"
+            name: "customlink"
+            widget: "string"
+            i18n: true
+
+      - label: "Donate Paypal"
+        name: "donatepaypal"
+        i18n: true
+        widget: "object"
+        fields:
+          - label: "Label"
+            name: "label"
+            widget: "string"
+            i18n: true
+          - label: "Link"
+            name: "link"
+            widget: "string"
+            i18n: true
+
+      - label: "Donate Bank transfer"
+        name: "donatebanktransfer"
+        i18n: true
+        widget: "object"
+        fields:
+          - label: "Label"
+            name: "label"
+            widget: "string"
+            i18n: true
+          - label: "Link"
+            name: "link"
+            widget: "string"
+            i18n: true
+
+      - label: "Donations register"
+        name: "donations"
+        widget: "list"
+        fields:
+          - label: "Date"
+            name: "date"
+            widget: "datetime"
+            date_format: "YYYY-MM-DD"
+          - label: "Amount"
+            name: "amount"
+            hint: "include currency symbol"
+            widget: "string"
+          - label: "By"
+            name: "by"
+            widget: "string"
+  # PAGE:  !Partners #####################################################
+
+  - name: "partners"
+    label: "Become a partner"
+    folder: "content/contribute/partners"
+    slug: "_index"
+    create: false
+    i18n: true
+    fields:
+      - label: "type"
+        name: "type"
+        widget: "hidden"
+        value: "partners"
+      - label: "title"
+        name: "title"
+        widget: "string"
+        default: "Become a partner"
+        i18n: true
+      - label: "Opener"
+        name: "opener"
+        widget: "string"
+        i18n: true
+      - label: "Intro"
+        name: "intro"
+        widget: "text"
+        i18n: true
+      - label: "Sponsordeck link"
+        name: "sponsordeck"
+        widget: "string"
+      - label: "Partners Title"
+        name: "partnerstitle"
+        widget: "string"
+        i18n: true
+      - label: "Partners Intro"
+        name: "partnersintro"
+        widget: "text"
+        i18n: true
+      - label: "Partner Quote"
+        name: "partnerquote"
+        widget: "object"
+        i18n: true
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Website", name: "website", widget: "string" }
+          - { label: "Role", name: "role", widget: "string", i18n: true }
+          - { label: "Quote", name: "quote", widget: "text", i18n: true }
+          - {
+              label: "Image",
+              name: "image",
+              widget: "image",
+              public_folder: "/images/partners",
+              media_folder: "/assets/images/partners",
+            }
+      - label: "Partners"
+        name: "partnerlist"
+        widget: "list"
+        i18n: true
+        fields:
+          - label: "name"
+            name: "name"
+            widget: "string"
+            i18n: true
+          - label: "description"
+            name: "description"
+            widget: "text"
+            i18n: true
+          - label: "website"
+            name: "website"
+            widget: "string"
+            i18n: true
+          - label: "Image"
+            name: "image"
+            widget: "image"
+            public_folder: "/images/partners"
+            media_folder: "/assets/images/partners"
+            required: false
+
+  # PAGE:  !Volunteers #####################################################
+
+  - name: "volunteers"
+    label: "Volunteers"
+    folder: "content/contribute/volunteers"
+    slug: "_index"
+    i18n: true
+    create: false
+    fields:
+      - label: "type"
+        name: "type"
+        widget: "hidden"
+        value: "volunteers"
+      - label: "title"
+        name: "title"
+        widget: "string"
+        default: "Become a volunteer"
+        i18n: true
+      - label: "opener"
+        name: "opener"
+        widget: "string"
+        i18n: true
+      - label: "Intro"
+        name: "intro"
+        widget: "text"
+        i18n: true
+      - label: "Core Values Title"
+        name: "corevaluestitle"
+        widget: "string"
+        i18n: true
+      - label: "Core values"
+        name: "corevalues"
+        widget: "list"
+        i18n: true
+        fields:
+          - label: "title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "description"
+            name: "description"
+            widget: "text"
+            i18n: true
+
+  ######################################
+  # SECTION: What we do
+  ####
+
+  # PAGE : !What we do #####################################################
+
+  - name: "whatwedo"
+    label: "What we do"
+    folder: "content/what-we-do"
+    slug: "_index"
+    create: false
+    i18n: true
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        i18n: true
+      - label: "Intro"
+        name: "intro"
+        widget: text
+        i18n: true
+      - label: "What we do content"
+        name: "whatwedocontent"
+        i18n: true
+        widget: "object"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Description"
+            name: "description"
+            widget: "markdown"
+            i18n: true
+      - label: "Scouting"
+        name: "scouting"
+        i18n: true
+        widget: "object"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Description"
+            name: "description"
+            widget: "text"
+            i18n: true
+      - label: "Assessing"
+        name: "assessing"
+        i18n: true
+        widget: "object"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Description"
+            name: "description"
+            widget: "text"
+            i18n: true
+      - label: "Reporting"
+        name: "reporting"
+        i18n: true
+        widget: "object"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Description"
+            name: "description"
+            widget: "text"
+            i18n: true
+
+  # PAGE: !Code of Conduct #####################################################
+  - name: codeofconduct
+    label: "Code of conduct"
+    folder: "content/what-we-do/code-of-conduct"
+    slug: "_index"
+    create: false
+    i18n: true
+    fields:
+      - {
+          label: "type",
+          name: "type",
+          widget: "hidden",
+          value: "codeofconduct",
+        }
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Body", name: "body", widget: "markdown", i18n: true }
+
+  # PAGE: !Terms #####################################################
+  - name: termsandconditions
+    label: "Terms and Conditions"
+    folder: "content/toc"
+    slug: "_index"
+    create: false
+    i18n: true
+    fields:
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Body", name: "body", widget: "markdown", i18n: true }
+
+  # PAGE: !Privacy #####################################################
+  - name: privacy
+    label: "Privacy"
+    folder: "content/privacy"
+    slug: "_index"
+    create: false
+    i18n: true
+    fields:
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Body", name: "body", widget: "markdown", i18n: true }
+
+  # PAGE: !Anbi #####################################################
+  - name: anbi
+    label: "ANBI"
+    folder: "content/anbi"
+    slug: "_index"
+    create: false
+    i18n: true
+    fields:
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Body", name: "body", widget: "markdown", i18n: true }
+
+  # PAGE: !Security policy #####################################################
+  - name: security
+    label: "Security policy"
+    folder: "content/security"
+    slug: "_index"
+    create: false
+    i18n: true
+    fields:
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Body", name: "body", widget: "markdown", i18n: true }
+
+  ######################################
+  # SECTION: Who we are
+  ####
+
+  # PAGE:  !Who we are #####################################################
+
+  - name: "whoweare"
+    label: "Who we are"
+    folder: "content/who-we-are"
+    slug: "_index"
+    create: false
+    i18n: true
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        default: "Who we are"
+        i18n: true
+      - label: "Opener"
+        name: "opener"
+        widget: "string"
+        i18n: true
+      - label: "Intro"
+        name: "intro"
+        widget: text
+        i18n: true
+      - label: "Mission and History"
+        name: "missionandhistory"
+        i18n: true
+        widget: "object"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Intro"
+            name: "intro"
+            widget: "text"
+            i18n: true
+          - label: "Description"
+            name: "description"
+            widget: "text"
+            i18n: true
+      - label: "Communication Manager"
+        name: "communicationmanager"
+        i18n: true
+        widget: "object"
+        fields:
+          - label: "Name"
+            name: "name"
+            widget: "string"
+            i18n: true
+          - label: "Role"
+            name: "role"
+            widget: "string"
+            i18n: true
+          - label: "Description"
+            name: "description"
+            widget: "text"
+            i18n: true
+          - label: "Image"
+            name: "image"
+            widget: "image"
+            public_folder: "/images/whoweare"
+            media_folder: "/assets/images/whoweare"
+            required: false
+
+  # PAGE: !The Team #####################################################
+  - name: "team"
+    label: "Team"
+    folder: "content/who-we-are/team"
+    slug: "_index"
+    create: false
+    i18n: true
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        default: "The Team"
+        i18n: true
+      - label: "Opener"
+        name: "opener"
+        widget: "string"
+        i18n: true
+      - label: "Intro"
+        name: "intro"
+        widget: markdown
+        i18n: true
+      - label: "In Progress"
+        name: "in_progress"
+        widget: "boolean"
+        i18n: true
+      - label: "Teams"
+        name: "teams"
+        i18n: true
+        widget: "list"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - { label: "type", name: "type", widget: "hidden", value: "team" }
+          - label: "Description"
+            name: "description"
+            widget: "text"
+            i18n: true
+            required: false
+          - label: "Members"
+            name: "members"
+            widget: relation
+            collection: "people"
+            value_field: "/who-we-are/team/people/{{slug}}"
+            display_fields: ["title"]
+            search_fields: ["title"]
+            multiple: true
+            required: false
+
+  # COLLECTION:  !People #####################################################
+  - name: "people"
+    label: "People"
+    i18n:
+      structure: multiple_files
+    folder: "content/who-we-are/team/people"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: name
+    fields:
+      - { label: "type", name: "type", widget: "hidden", default: "people" }
+      - {
+          label: "Title",
+          name: "title",
+          widget: "string",
+          hint: "Persons name",
+        }
+      - {
+          label: "Image",
+          name: "image",
+          widget: "image",
+          public_folder: "/images/people",
+          media_folder: "/assets/images/people",
+          required: false,
+        }
+      - { label: "Role", name: "role", widget: "string", required: false }
+      - {
+          label: "intro",
+          name: "intro",
+          widget: "text",
+          required: false,
+          i18n: true,
+          hint: "Used in cards",
+        }
+      - {
+          label: "Featured Articles",
+          name: "featured_articles",
+          widget: "relation",
+          required: false,
+          multiple: true,
+          collection: "articles",
+          search_fields: ["title", "case.caseid"],
+          value_field: "/newsroom/articles/{{slug}}",
+          display_fields: ["title", "case.caseid"],
+        }
+      - {
+          label: "CSIRT Cases",
+          name: "csirt_cases",
+          required: false,
+          widget: "list",
+          fields:
+            [
+              { label: "name", name: "name", widget: "string" },
+              { label: "Link", name: "link", widget: "string" },
+            ],
+        }
+      - {
+          label: "Links",
+          name: "links",
+          hint: "Links automatically get icons if applicable",
+          widget: "list",
+          required: false,
+          fields:
+            [
+              { label: "name", name: "name", widget: "string" },
+              { label: "Link", name: "link", widget: "string" },
+            ],
+        }
+      - {
+          label: "Body",
+          name: "body",
+          widget: "markdown",
+          i18n: true,
+          required: false,
+        }
+
+  ########################################################################
+  # CONTENT BLOCKS
+  ########################################################################
+
+  - name: "blocks"
+    label: "Blocks"
+    folder: "content/block"
+    slug: "_index"
+    create: false
+    i18n: true
+    fields:
+      - name: "Title"
+        widget: "string"
+        default: "Blocks"
+      # BLOCK:  Ethics #####################################################
+      - name: "ethics"
+        label: "Ethics"
+        i18n: true
+        widget: object
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Description"
+            name: "intro"
+            widget: text
+            i18n: true
+      # BLOCK:  Proudest work #####################################################
+      - name: "proudestwork"
+        label: "Proudest work"
+        i18n: true
+        widget: object
+        fields:
+          - label: "title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Our proudest work"
+            name: "ourproudestwork"
+            widget: "relation"
+            collection: "articles"
+            search_fields: ["title", "case.caseid"]
+            value_field: "/newsroom/articles/{{slug}}"
+            display_fields: ["title", "case.caseid"]
+            multiple: true
+
+      # BLOCK:  Our mission #####################################################
+      - name: "mission"
+        label: "Our mission"
+        i18n: true
+        widget: object
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Description"
+            name: "description"
+            widget: text
+            i18n: true
+          - label: "Members"
+            name: members
+            widget: string
+          - label: "Total cases"
+            name: totalcases
+            widget: string
+          - label: "Vulnerable ips"
+            name: ips
+            widget: string
+
+      # BLOCK:  DIVD Family #####################################################
+      - name: "divdfamily"
+        label: "The DIVD family"
+        i18n: true
+        widget: object
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Description"
+            name: "description"
+            widget: text
+            i18n: true
+          - label: "DIVD Family members"
+            name: members
+            widget: list
+            i18n: true
+            fields:
+              - label: "Name"
+                name: name
+                widget: string
+                i18n: true
+              - label: "Description"
+                name: description
+                widget: text
+                i18n: true
+              - label: "link"
+                name: link
+                widget: string
+                i18n: true
+
+      # BLOCK: Family CTA #####################################################
+      - name: "familycta"
+        label: "Family CTA"
+        i18n: true
+        widget: object
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Description"
+            name: "intro"
+            widget: text
+            i18n: true
+
+      # BLOCK: CSIRT #####################################################
+      - name: "csirt"
+        label: "CSIRT"
+        i18n: true
+        widget: object
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Description"
+            name: "intro"
+            widget: text
+            i18n: true
+          - label: "Link"
+            name: "link"
+            widget: "string"
+
+      # BLOCK: Contact #####################################################
+      - name: "contact"
+        label: "Contact"
+        i18n: true
+        widget: object
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            i18n: true
+          - label: "Description"
+            name: "intro"
+            widget: markdown
+            i18n: true
+          - label: "To E-mail"
+            name: "email"
+            widget: text
+
+      # BLOCK: Footer #####################################################
+      - name: "footer"
+        label: "Footer"
+        i18n: true
+        widget: object
+        fields:
+          - label: "Title"
+            name: "title"
+            hidden: true
+            widget: "hidden"
+            default: "Footer"
+          - label: "Description"
+            name: "intro"
+            widget: text
+            i18n: true
