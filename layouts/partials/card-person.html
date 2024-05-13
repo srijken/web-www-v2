@@ -10,15 +10,18 @@
 
   <div class="card-person-large">
     <a class="figure" href="{{ .Permalink }}">
-      {{ with resources.Get $imageSource }} 
-        {{ partial "tools/rimg/img" (dict "img" . "alt" $alt) }}
-          <!--- $alt --->
-      {{ else }}
-        {{ with resources.Get "/images/global/person_placeholder.png" }} 
+      {{ warnf "Debug: Image from param is %s" $imageFromParam }}  <!-- Log the image path from parameters -->
+      {{ warnf "Debug: Image from source is %s" $imageSource }}  <!-- Log the image path from parameters -->
+
+      <picture>
+        <!-- Primary image source -->
+        <source srcset="{{ $imageFromParam }}" type="image/jpeg">
+        <!-- Fallback image -->
+        {{ with resources.Get "/images/global/person_placeholder.png" }}
+          {{ warnf "Debug: Image from asdf is %s" .RelPermalink }} 
           <img src="{{ .RelPermalink }}" alt="No image" />
         {{ end }}
-        
-      {{ end }}
+      </picture>
     </a>
     <header>
       <h3><a href="{{ .Permalink }}">{{ .Params.title }}</a></h3>
