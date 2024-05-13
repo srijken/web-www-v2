@@ -38,7 +38,7 @@
             <ul class="article-list">
               {{ range . }}
                 <li>
-                  {{ partial "svg/icon" "article" }}  <a href="{{ .link }}" target="_blank" class="external">{{ .name }} {{ partial "svg/icon" "external" }} </a>
+                  {{ partial "svg/icon" "article" }}  <a href="{{ .link }}" target="_blank" class="external">{{ .title }} {{ partial "svg/icon" "external" }} </a>
                 </li>
               {{ end }}
             </ul>
@@ -64,14 +64,8 @@
             {{ $imageSource := strings.TrimPrefix "/assets" $imageFromParam }}
             {{ $link := print "/" .Permalink }}
             {{ $alt := .Params.title }}
-            
-                {{ with resources.Get $imageSource }} 
-                  {{ partial "tools/rimg/img" (dict "img" . "alt" $alt) }}
-                    <!--- $alt --->
-                {{ else }}
-                  <img src="/images/global/person_placeholder.png" alt="No image" />
-                {{ end }}
-            
+
+            <img src="{{ $imageFromParam }}" alt="{{ $alt }}" />
           </div>
         </aside>
       </div>
