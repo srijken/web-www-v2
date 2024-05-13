@@ -1,9 +1,9 @@
 publish_mode: editorial_workflow
-site_url: https://divd.nl
+site_url: https://beta.divd.nl
 backend:
   name: github
   repo: DIVD-NL/web-www-v2
-  branch: main
+  branch: staging
 
 media_folder: /assets/images
 public_folder: /images
