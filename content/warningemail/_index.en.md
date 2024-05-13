@@ -6,10 +6,10 @@ intro: "Whenever a vulnerability is found, we open a case and create a
   and notify the owners of these systems. "
 csirt:
   title: Our researchers looking for vulnerabilities
-  description: >
+  description: >-
     CSIRT: Computer Security Incident Response Team
 
-    The CSIRT handles the scanning for and disclosing of vulnerabilities, either discovered by DIVD researchers or third parties and warning people for leaked credentials and operates our CVE Numbering Authoristy (CNA) capability.
+    The CSIRT handles the scanning for and disclosing of vulnerabilities, either discovered by DIVD researchers or third parties and warning people for leaked credentials and operates our CVE Numbering Authority (CNA) capability
 
 
     **Only owners of vulnerable instances receive a notification with the host information and mitigation steps.**
