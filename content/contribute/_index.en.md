@@ -34,12 +34,12 @@ donatesupp:
   description: iDEAL, SOFORT, Bancontact or KBC/CBC
   links:
     - label: Donate €10
-      link: https://divid.nl
+      link: https://supp.to/divdnl/donate
     - label: Donate €25
-      link: https://divd.nl
+      link: https://supp.to/divdnl/donate
     - label: Donate €50
-      link: https://divd.nl
-  customlink: https://divd.nl
+      link: https://supp.to/divdnl/donate
+  customlink: https://supp.to/divdnl/donate
 donatepaypal:
   label: Donate via Paypal
   link: https://paypal.nl/divd
