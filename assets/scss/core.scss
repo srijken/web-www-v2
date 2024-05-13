@@ -373,9 +373,14 @@ ol {
     grid-gap: 32px;
   }
 
-  @media(max-width: 700px) {
-    
+  // Mobile & tablet
+  @media(max-width: 900px) {
     &.grid-3 {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 4px;
+    }
+
+    &.grid-4 {
       grid-template-columns: 1fr 1fr;
       grid-gap: 4px;
     }

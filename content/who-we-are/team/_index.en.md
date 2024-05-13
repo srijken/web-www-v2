@@ -2,7 +2,13 @@
 type: team
 title: The Team
 opener: Meet our Team
-intro: We're very thankful.
+intro: >-
+  We're very thankful and proud of all our team members, who spend their free time to a
+  good cause, voluntarily. The people who work with us are very various people, some have
+  just started their career in cybersecurity and others have worked in cybersecurity for a
+  very long time. Due to privacy reasons, which we can only encourage, not every member
+  has a profile picture or is mentioned in a team.
+in_progress: true
 teams:
   - title: Board
     description: The board of directors is responsible for strategic leadership of DIVD.
