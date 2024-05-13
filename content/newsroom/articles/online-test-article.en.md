@@ -4,7 +4,7 @@ date: 2023-10-21T21:24:59.311Z
 tag: case
 intro: "In a cooperation with DIVD, NCSC-NL and several EU govcerts, 14,986
   global vulnerable hosts were found and notified. "
-image: /images/articles/1675785490-esxi-16_9-1.png
+image: /images/articles/divd-2023-00007-global-vmware-esxi-ransomware-attack.png
 image_alt: Picture of the entrance to a mine
 case:
   caseid: DIVD-2023-00007
