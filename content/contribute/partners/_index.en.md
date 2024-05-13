@@ -10,13 +10,13 @@ partnersintro: We would be nothing with our partners (we like to call them
   friends) and therefore we truly appreciate them. Let us know if you want to
   become a DIVD partner
 partnerquote:
-  name: Jan Dijkstra
-  website: https://a2b.nl
-  role: CEO A2B Internet
-  quote: '"I really enjoy being a volunteer for the DIVD. I can use my skills for
-    a good cause where I truly see results. Moreover, I simply find it fantastic
-    to be part of such a fun and talented team."'
-  image: /images/partners/jandijkstra.png
+  name: Dave Maasland
+  website: https://www.eset.com/nl/
+  role: "CEO ESET Nederland "
+  quote: “DIVD is not a project or a regular organisation, it’s a movement, one
+    that lives by the Credo “be the change you wish to see in the world” and we
+    need more of those to progress in the field of digital security.”
+  image: /images/partners/dave-maasland-eset.jpeg
 partnerlist:
   - name: A2B Internet
     description: Erik Bais, owner of A2B-Internet was so kind to help us out getting
