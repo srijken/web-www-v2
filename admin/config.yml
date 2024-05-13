@@ -526,6 +526,7 @@ collections:
                 display_fields: ["title"],
                 search_fields: ["title"],
                 multiple: true,
+                required: false,
               },
             ],
         }
