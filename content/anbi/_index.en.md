@@ -21,7 +21,7 @@ Doel van DIVD: We streven ernaar de digitale wereld veiliger te maken door kwets
 
 #### BESTUUR
 
-* [Overzicht bestuursleden](https://www.divd.nl/uploads/uittreksel_handelsregister_75957345.pdf)
+* [Overzicht bestuursleden](/documents/uittreksel_handelsregister_75957345.pdf)
 
 #### BELONINGSBELEID
 
@@ -29,6 +29,6 @@ Bestuursleden zijn vrijwilligers en krijgen voor hun werkzaamheden geen vergoedi
 
 #### DOCUMENTS
 
-* [Jaarverslag 2022](https://www.divd.nl/uploads/DIVD%20jaarverslag%202022.pdf)
-* [Jaarverslag 2021](https://www.divd.nl/uploads/DIVD%20jaarverslag%202021.pdf)
-* [Standaardformulier ANBI](https://www.divd.nl/uploads/Standaardformulier%20ANBI.pdf)
+* [Jaarverslag 2022](/documents/DIVD%20jaarverslag%202022.pdf)
+* [Jaarverslag 2021](/documents/DIVD%20jaarverslag%202021.pdf)
+* [Standaardformulier ANBI](/documents/Standaardformulier%20ANBI.pdf)
