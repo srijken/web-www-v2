@@ -10,15 +10,7 @@
 
   <div class="card-person-large">
     <a class="figure" href="{{ .Permalink }}">
-      {{ with resources.Get $imageSource }} 
-        {{ partial "tools/rimg/img" (dict "img" . "alt" $alt) }}
-          <!--- $alt --->
-      {{ else }}
-        {{ with resources.Get "/images/global/person_placeholder.png" }} 
-          <img src="{{ .RelPermalink }}" alt="No image" />
-        {{ end }}
-        
-      {{ end }}
+      <img src="{{ $imageFromParam }}" alt="{{ $alt }}" />
     </a>
     <header>
       <h3><a href="{{ .Permalink }}">{{ .Params.title }}</a></h3>
