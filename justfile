@@ -10,11 +10,11 @@ serve:
   npm run postbuild
 
 admin:
-  npx netlify-cms-proxy-server &
-  python3 -m http.server --directory ./admin &
+  npx decap-server &
+  python3 -m http.server --directory ./admin/development &
 
 admin-stop:
-  pkill -f "netlify-cms-proxy-server"
+  pkill -f "decap-server"
   pkill -f "http.server"
 
 fresh:
