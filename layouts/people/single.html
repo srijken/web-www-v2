@@ -47,8 +47,11 @@
             {{ end }}
           </ul>
           {{ if gt $caseCount 5 }}
-            <details>
-              <summary class="pb-sm">Show more</summary>
+            <details class="csirt-show-more pb-sm">
+              <summary>
+                <span>Show more</span>
+                <em>Show less</em>
+              </summary>
               <ul class="article-list">
                 {{ range $index, $case := $cases }}
                   {{ if ge $index 5 }}
