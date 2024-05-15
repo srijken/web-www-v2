@@ -1,13 +1,12 @@
 ---
 title: "CASE: EXPOSED BACNET DEVICES"
 date: 2023-12-19T13:42:20.205Z
-author:
-  - /people/arthur-dent
+author: []
 tag: case
 intro: During the Log4J crisis, researchers uncovered BACnet devices with open
   ports. Upon further investigation, more devices have been found running the
   BACnet protocol.
-image: /images/articles/1675785490-esxi-16_9-1.png
+image: /images/articles/bacnet-exposed-devies-divd.png
 Alt tag for image: ""
 case:
   caseid: 2022-00005
