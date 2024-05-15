@@ -59,7 +59,7 @@
         <aside>
           <div class="people-image">
 
-            {{ $defaultImage := "/images/global/person_placeholder.png" }}
+            {{ $defaultImage := "/images/divd-profilepicture-volunteer1.svg" }}
             {{ $imageFromParam := .Params.image | default $defaultImage }}
             {{ $imageSource := strings.TrimPrefix "/assets" $imageFromParam }}
             {{ $link := print "/" .Permalink }}
