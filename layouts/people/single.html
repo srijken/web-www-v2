@@ -34,15 +34,33 @@
           {{ end }}
 
           {{ with .Params.csirt_cases }}
-            <h3>{{ i18n "csirt_cases" }}</h3>
-            <ul class="article-list">
-              {{ range . }}
+          <h3>{{ i18n "csirt_cases" }}</h3>
+          <ul class="article-list">
+            {{ $cases := . }}
+            {{ $caseCount := len $cases }}
+            {{ range $index, $case := $cases }}
+              {{ if lt $index 5 }}
                 <li>
-                  {{ partial "svg/icon" "article" }}  <a href="{{ .link }}" target="_blank" class="external">{{ .title }} {{ partial "svg/icon" "external" }} </a>
+                  {{ partial "svg/icon" "article" }}  <a href="{{ $case.url }}" target="_blank" class="external">{{ $case.title }} {{ partial "svg/icon" "external" }} </a>
                 </li>
               {{ end }}
-            </ul>
+            {{ end }}
+          </ul>
+          {{ if gt $caseCount 5 }}
+            <details>
+              <summary class="pb-sm">Show more</summary>
+              <ul class="article-list">
+                {{ range $index, $case := $cases }}
+                  {{ if ge $index 5 }}
+                    <li>
+                      {{ partial "svg/icon" "article" }}  <a href="{{ $case.url }}" target="_blank" class="external">{{ $case.title }} {{ partial "svg/icon" "external" }} </a>
+                    </li>
+                  {{ end }}
+                {{ end }}
+              </ul>
+            </details>
           {{ end }}
+        {{ end }}
 
           {{ with .Params.links }}
             <h3>{{ i18n "other_links" }}</h3>
