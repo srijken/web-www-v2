@@ -93,10 +93,10 @@ faqgroups:
           send out an email to every vulnerable IP adress. 
 
 
-          O﻿ur emails are personally written by one of our researchers and contain a link to the casefile on the [csirt.divd.nl ](csirt.divd.nl)site. 
+          O﻿ur emails are personally written by one of our researchers and contain a link to the casefile on the [https://csirt.divd.nl/ ](https://csirt.divd.nl/)site. 
 
 
-          Learn more about what to do when you receive an email. \[link naar email-pagina]
+          Learn more about what to do when you receive an email. <https://www.divd.nl/warningemail/>
         title: Why did I receive an email of DIVD / CSIRT?
       - title: Who works for DIVD?
         description: >-
