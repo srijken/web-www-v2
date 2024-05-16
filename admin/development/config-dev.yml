@@ -1,9 +1,8 @@
+local_backend: true
 publish_mode: editorial_workflow
-site_url: https://beta.divd.nl
+site_url: http://localhost:1313
 backend:
-  name: github
-  repo: DIVD-NL/web-www-v2
-  branch: main
+  name: git-gateway
 
 media_folder: /assets/images
 public_folder: /images
