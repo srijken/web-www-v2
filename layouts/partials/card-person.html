@@ -8,13 +8,15 @@
   {{ $link := print "/" .Permalink }}
   {{ $alt := .Params.name }}
 
-  <div class="card-person-large">
-    <a class="figure" href="{{ .Permalink }}">
-      <img src="{{ $imageFromParam }}" alt="{{ $alt }}" />
-    </a>
-    <header>
-      <h3><a href="{{ .Permalink }}">{{ .Params.title }}</a></h3>
-      <h6>{{ .Params.role }}</h6>
-    </header>
-  </div>
+  <a class="card-link" href="{{ .Permalink }}">
+    <div class="card-person-large">
+      <div class="figure">
+        <img src="{{ $imageFromParam }}" alt="{{ $alt }}">
+      </div>
+      <header>
+        <h3>{{ .Params.title }}</h3>
+        <h6>{{ .Params.role }}</h6>
+      </header>
+    </div>
+  </a>
 {{ end }}
