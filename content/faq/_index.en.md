@@ -53,10 +53,8 @@ faqgroups:
 
           O﻿ur emails are personally written by one of our researchers and contain a link to the casefile on the [csirt.divd.nl ](csirt.divd.nl)site.
       - description: |-
-          
-
           * J﻿oin us
-          * P﻿ut sexurity.txt on your website
+          * P﻿ut security.txt on your website
           * T﻿ake actions after you've received an notification
           * b﻿ecome a partner or make a donation
         title: How can we contribute this initiative?
