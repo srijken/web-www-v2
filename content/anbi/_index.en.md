@@ -24,12 +24,10 @@ We streven ernaar de digitale wereld veiliger te maken door kwetsbaarheden die w
 
 * [Overzicht bestuursleden](https://www.divd.nl/documents/uittreksel_handelsregister_75957345.pdf)
 
-#### \
 **Beloningsbeleid**
 
 Bestuursleden zijn vrijwilligers en krijgen voor hun werkzaamheden geen vergoeding.
 
-#### \
 **Documenten**
 
 * [Jaarverslag 2022](/documents/DIVD%20jaarverslag%202022.pdf)
