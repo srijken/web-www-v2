@@ -17,17 +17,18 @@ KvK: 75957345
 
 Website: [https://www.divd.nl](https://www.divd.nl/ "https\://www.divd.nl")
 
-Doel van DIVD: We streven ernaar de digitale wereld veiliger te maken door kwetsbaarheden die we vinden in digitale systemen te melden aan de mensen die ze kunnen repareren. We hebben een wereldwijd bereik, maar doen het op zijn Hollands: open, eerlijk, samen en gratis.
+**Doel van stichting** \
+We streven ernaar de digitale wereld veiliger te maken door kwetsbaarheden die we vinden in digitale systemen te melden aan de mensen die ze kunnen repareren. We hebben een wereldwijd bereik, maar doen het op zijn Hollands: open, eerlijk, samen en gratis.
 
-#### BESTUUR[](/documents/uittreksel_handelsregister_75957345.pdf)
+#### **Bestuur**[](/documents/uittreksel_handelsregister_75957345.pdf)
 
 * [Overzicht bestuursleden](https://www.divd.nl/documents/uittreksel_handelsregister_75957345.pdf)
 
-#### BELONINGSBELEID
+**Beloningsbeleid**
 
 Bestuursleden zijn vrijwilligers en krijgen voor hun werkzaamheden geen vergoeding.
 
-#### DOCUMENTS
+**Documenten**
 
 * [Jaarverslag 2022](/documents/DIVD%20jaarverslag%202022.pdf)
 * [Jaarverslag 2021](/documents/DIVD%20jaarverslag%202021.pdf)[](/documents/Standaardformulier%20ANBI.pdf)
