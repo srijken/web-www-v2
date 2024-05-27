@@ -10,11 +10,11 @@ missionandhistory:
   intro: "This wonderful adventure started with the work of hacker Victor Gevers,
     who was already scanning and notifying the whole world for 20 years.
     Together with Parliamentarian cybermum Astrid Oosenbrug, writer/researcher
-    and talk show host Chris van ‘t Hof, he went to the notary and registered
-    DIVD as a foundation on 26 September 2019. After the launch CISO/hacker
-    Frank Breedijk and Security Analyst Lennaert Oudshoorn joined and started
-    the first case in January 2020: Citrix, notifying 546 potential victims in
-    the Netherlands. "
+    and talk show host Chris van ‘t Hof, he registered Dutch Institute of
+    Vulnerability Disclosure (DIVD) as a foundation on 26 September 2019. After
+    the launch CISO/hacker Frank Breedijk and Security Analyst Lennaert
+    Oudshoorn joined and started the first case in January 2020: Citrix,
+    notifying 546 potential victims in the Netherlands. "
   description: "After the launch CISO/hacker Frank Breedijk and Security Analyst
     Lennaert Oudshoorn joined and started the first case in January 2020:
     Citrix, notifying 546 potential victims in the Netherlands. After this first
