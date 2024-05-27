@@ -53,10 +53,8 @@ faqgroups:
 
           O﻿ur emails are personally written by one of our researchers and contain a link to the casefile on the [csirt.divd.nl ](csirt.divd.nl)site.
       - description: |-
-          
-
           * J﻿oin us
-          * P﻿ut sexurity.txt on your website
+          * P﻿ut security.txt on your website
           * T﻿ake actions after you've received an notification
           * b﻿ecome a partner or make a donation
         title: How can we contribute this initiative?
@@ -93,10 +91,10 @@ faqgroups:
           send out an email to every vulnerable IP adress. 
 
 
-          O﻿ur emails are personally written by one of our researchers and contain a link to the casefile on the [csirt.divd.nl ](csirt.divd.nl)site. 
+          O﻿ur emails are personally written by one of our researchers and contain a link to the casefile on the [https://csirt.divd.nl/ ](https://csirt.divd.nl/)site. 
 
 
-          Learn more about what to do when you receive an email. \[link naar email-pagina]
+          Learn more about what to do when you receive an email. <https://www.divd.nl/warningemail/>
         title: Why did I receive an email of DIVD / CSIRT?
       - title: Who works for DIVD?
         description: >-

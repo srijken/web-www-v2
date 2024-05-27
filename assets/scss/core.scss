@@ -400,6 +400,10 @@ ul.article-list {
     }
     a {
       border-bottom: 0;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
@@ -686,6 +690,75 @@ table.donations {
     &:hover {
       background-color: black;
       color: #fff;
+    }
+  }
+}
+
+// Style show more element on people pages
+.csirt-show-more {
+  border-radius: 22px;
+  background-color: #F2F2F2;
+  color: black;
+  display: inline-block; /* Ensure the details element is inline-block */
+  padding: 0; /* Remove padding from the details element */
+  margin-bottom: 16px;
+
+  summary {
+    background-color: #F2F2F2; /* Apply the background color to the summary */
+    padding: 8px 16px; /* Apply padding to the summary */
+    border-radius: 22px; /* Apply border-radius to the summary */
+    cursor: pointer; /* Change cursor to pointer for better UX */
+    display: inline-block; /* Use inline-flex to preserve the arrow */
+    align-items: center; /* Center align items */
+    justify-content: space-between; /* Ensure content is spaced correctly */
+    margin: 0; /* Remove default margin */
+    white-space: nowrap; /* Prevent text from wrapping */
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &:marker {
+      color: black; /* Ensure the arrow is visible */
+    }
+
+    em {
+      display: none;
+    }
+  }
+
+  /* Ensure the ul does not inherit the background color or padding */
+  ul {
+    background-color: transparent; /* No background */
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+    list-style: none; /* Remove bullet points */
+
+    li {
+      padding: 8px 0; /* Add padding to list items for spacing */
+
+      a {
+        color: black; /* Ensure the link color is black */
+        text-decoration: none; /* Remove underline from links */
+
+        &:hover {
+          text-decoration: underline; /* Add underline on hover */
+        }
+      }
+    }
+  }
+}
+
+.csirt-show-more[open] {
+  background-color: initial;
+
+  summary {
+    span {
+      display:none;
+    }
+
+    em {
+      display: block;
+      font-style: normal;
     }
   }
 }

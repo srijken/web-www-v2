@@ -3,7 +3,7 @@
 - https://gohugo.io
 - https://just.systems/ (optional)
 - npm
-- node
+- node ^16
 
 
 # Setup
@@ -21,18 +21,6 @@ open http://localhost:1313
 ```
 
 ## Local admin
-Change the toplines in `./admin/config.yaml` to:
-
-```yaml
-local_backend: true
-publish_mode: editorial_workflow
-site_url: http://localhost:1313
-backend:
-  name: git-gateway
-  branch: main
-```
-
-Run the admin
 
 ```sh
 just admin
@@ -41,8 +29,8 @@ just admin-stop #when done
 
 # equivalent to:
 
-npx netlify-cms-proxy-server
-python3 -m http.server --directory ./admin
+npx decap-server
+python3 -m http.server --directory ./admin/development
 ```
 
 ## Test production version
@@ -54,4 +42,3 @@ open http://localhost:8000
 
 python3 serve.py
 ```
-

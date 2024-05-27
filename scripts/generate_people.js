@@ -72,7 +72,7 @@ const generatePeople = async () => {
       const newPersonData = {
         type: 'people',
         title: person.fullName,
-        image: person.profileImage ? `${person.profileImage.endpoint}/${person.profileImage.uri}.${person.profileImage.ext}` : '',
+        image: person.profileImage ? `${person.profileImage.endpoint}/${person.profileImage.uri}.${person.profileImage.ext}` : ['/images/divd-profilepicture-volunteer1.svg', '/images/divd-profilepicture-volunteer2.svg', '/images/divd-profilepicture-volunteer3.svg', '/images/divd-profilepicture-volunteer4.svg'][Math.floor(Math.random() * 4)],
         role: person.role,
         intro: '',
         links: [],
