@@ -62,8 +62,7 @@
           {{ end }}
         </div>
 
-
-        {{ range first 6 $articlePage.Pages.ByDate }}
+        {{ range first 6 $articlePage.Pages.ByDate.Reverse }}
           <div class="article">
             <section>
               <div class="summary">

@@ -164,6 +164,14 @@
   }
 }
 
+.article-faq {
+  padding: 16px 42px 50px 50px;
+
+  .pl {
+    display: unset !important;
+  }
+}
+
 ul.pagination {
   margin: 32px 0;
   width: 100%;

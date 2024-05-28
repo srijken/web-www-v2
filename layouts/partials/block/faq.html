@@ -5,6 +5,16 @@
 {{ $index := 0 }}
 
 {{ $page := site.GetPage "/faq" }}
+{{ $page = $page.Params }}
+{{ $pageType := "faq" }}
+
+<!-- Set page to parent if its an article -->
+{{ if .Parent }}
+  {{ if eq .Parent.Params.type "article" }}
+    {{ $page = .Params.faq }}
+    {{ $pageType = "article" }}
+  {{ end }}
+{{ end }}
 
 {{ if isset . "context" }}
   {{/* Called with dict, so adjust context and retrieve targetHeading if exists. */}}
@@ -28,10 +38,11 @@
 
 
 {{ with $page }}
+  {{ warnf "Page Object: %#v" $page }}
   {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }} 
     <div>
       <h2>{{ .Title }}</h2>
-      <p>{{.Params.intro}}</p>
+      <p>{{.intro}}</p>
 
 
       {{ if $isContactPage }}
@@ -39,11 +50,17 @@
       {{ else }}
         <a href="{{ "contact/" | relLangURL }}" class="cta">Contact</a>
       {{ end }}
-      <a href="{{ "faq/" | relLangURL }}" class="cta inverse">All FAQ</a>
+      {{ warnf "Page Type is %s" $pageType }}
+      {{ if eq $pageType "article" }}
+        {{ warnf "Url is %s" .url }}
+        <a href="{{ .url | relLangURL }}" class="cta inverse">All FAQ</a>
+      {{ else }}
+        <a href="{{ "faq/" | relLangURL }}" class="cta inverse">All FAQ</a>
+      {{ end }}
     </div>
     <div>
       <div class="accordion">
-        {{ with index .Params.faqgroups $index }}
+        {{ with index .faqgroups $index }}
           {{ range $index, $element := .faqs }}
             <div class="accordion-item{{ if eq $index 0 }} active{{ end }}">
               <h3>{{ .title }} <span> </span></h3>
