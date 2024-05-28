@@ -11,6 +11,11 @@
           <h1>{{ .Title }}</h1>
           <p>{{ .Params.opener }}</p>
           <p>{{ .Params.intro }}</p>
+          {{ if .Params.button_text }}
+            <div class="pb-lg pt-sm">
+              <a class="cta secondary" href="{{ .Params.button_url }}">{{.Params.button_text}}</a>
+            </div>
+          {{ end }}
           {{ if .Params.faqgroups }}
             {{ range .Params.faqgroups }}
               <div class="faqgroup pb-lg">
