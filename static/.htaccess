@@ -12,24 +12,12 @@ ErrorDocument 404 /404.html
 # Rewrite rules
 RewriteEngine On
 
-# Rewrite and redirect /people requests
-
-RewriteCond %{REQUEST_URI} ^/divd-nl-2024/people/ [NC]
-RewriteRule people/(.*?)\s(.*?)\s(.*?)\s(.*?)\s(.*?)\s(.*) /who-we-are/team/people/$1-$2-$3-$4-$5-$6 [L,r=301]
-RewriteCond %{REQUEST_URI} ^/divd-nl-2024/people/ [NC]
-RewriteRule people/(.*?)\s(.*?)\s(.*?)\s(.*?)\s(.*) /who-we-are/team/people/$1-$2-$3-$4-$5 [L,r=301]
-RewriteCond %{REQUEST_URI} ^/divd-nl-2024/people/ [NC]
-RewriteRule people/(.*?)\s(.*?)\s(.*?)\s(.*) /who-we-are/team/people/$1-$2-$3-$4 [L,r=301]
-RewriteCond %{REQUEST_URI} ^/divd-nl-2024/people/ [NC]
-RewriteRule people/(.*?)\s(.*?)\s(.*) /who-we-are/team/people/$1-$2-$3 [L,r=301]
-RewriteCond %{REQUEST_URI} ^/divd-nl-2024/people/ [NC]
-RewriteRule people/(.*?)\s(.*) /who-we-are/team/people/$1-$2 [L,r=301]
-RewriteCond %{REQUEST_URI} ^/divd-nl-2024/people/ [NC]
-RewriteRule people/(.*) /who-we-are/team/people/$1 [L,r=301]
-
 # Other well known urls
 RewriteCond %{REQUEST_URI} ^/divd-nl-2024/donate [NC]
 RewriteRule .* /contribute/#donate [NE,L,r=301]
 
 RewriteCond %{REQUEST_URI} ^/divd-nl-2024/code [NC]
 RewriteRule .* /what-we-do/code-of-conduct/ [L,r=301]
+
+RewriteCond %{REQUEST_URI} ^/divd-nl-2024/join [NC]
+RewriteRule .* /contribute/volunteers/ [L,r=301]
