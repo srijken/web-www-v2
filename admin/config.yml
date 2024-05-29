@@ -601,24 +601,28 @@ collections:
               name: "title",
               widget: "string",
               default: "faq",
+              required: false,
               i18n: true
             },
             {
               label: "FAQ Opener",
               name: "opener",
               widget: "string",
+              required: false,
               i18n: true
             },
             {
               label: "FAQ Intro",
               name: "intro",
               widget: "text",
+              required: false,
               i18n: true
             },
             {
               label: "FAQ 'All FAQ' Url",
               name: "url",
               widget: "string",
+              required: false,
               i18n: true
             },
             {
@@ -626,26 +630,30 @@ collections:
               name: "faqgroups",
               widget: list,
               i18n: true,
+              required: false,
               fields:
               [
-                { label: "heading", name: "heading", widget: "string", i18n: true },
+                { label: "heading", name: "heading", widget: "string", required: false, i18n: true },
                 {
                     label: "FAQs",
                     name: "faqs",
                     widget: list,
                     i18n: true,
+                    required: false,
                     fields:
                       [
                         {
                           label: "Title",
                           name: "title",
                           widget: "string",
+                          required: false,
                           i18n: true,
                         },
                         {
                           label: "Description",
                           name: "description",
                           widget: "markdown",
+                          required: false,
                           i18n: true,
                         },
                       ],
