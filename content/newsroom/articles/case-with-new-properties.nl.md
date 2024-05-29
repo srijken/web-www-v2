@@ -1,8 +1,7 @@
 ---
 title: Case with new properties
 date: 2023-12-19T13:42:20.212Z
-author:
-  - /people/arthur-dent
+author: []
 intro: This is the introduction
 Alt tag for image: Gate to enlightenment
 case:
