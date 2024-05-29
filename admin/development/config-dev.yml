@@ -142,10 +142,59 @@ collections:
 
   - name: "faq"
     label: "FAQ"
-    file: "content/faq/_index.md"
+    files:
+      - label: "Fixed FAQ"
+        name: "fixedfaq"
+        file: "content/faq/_index.en.md"
+        slug: "_index"
+        create: false
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            default: "faq"
+            i18n: true
+          - label: "Opener"
+            name: "opener"
+            widget: "string"
+            i18n: true
+          - label: "Intro"
+            name: "intro"
+            widget: "text"
+            i18n: true
+          - label: "FAQ groups"
+            name: "faqgroups"
+            widget: list
+            i18n: true
+            fields:
+              - { label: "heading", name: "heading", widget: "string", i18n: true }
+              - {
+                  label: "FAQs",
+                  name: "faqs",
+                  widget: list,
+                  i18n: true,
+                  fields:
+                    [
+                      {
+                        label: "Title",
+                        name: "title",
+                        widget: "string",
+                        i18n: true,
+                      },
+                      {
+                        label: "Description",
+                        name: "description",
+                        widget: "markdown",
+                        i18n: true,
+                      },
+                    ],
+                }
+
+  - name: "dynamicfaq"
+    label: "Dynamic FAQ"
     folder: "content/faq"
-    slug: "_index"
-    create: false
+    create: true
+    slug: "{{slug}}"
     i18n: true
     fields:
       - label: "Title"
@@ -160,6 +209,14 @@ collections:
       - label: "Intro"
         name: "intro"
         widget: "text"
+        i18n: true
+      - label: "Button text"
+        name: "button_text"
+        widget: "string"
+        i18n: true
+      - label: "Button url"
+        name: "button_url"
+        widget: "string"
         i18n: true
       - label: "FAQ groups"
         name: "faqgroups"
@@ -544,24 +601,28 @@ collections:
               name: "title",
               widget: "string",
               default: "faq",
+              required: false,
               i18n: true
             },
             {
               label: "FAQ Opener",
               name: "opener",
               widget: "string",
+              required: false,
               i18n: true
             },
             {
               label: "FAQ Intro",
               name: "intro",
               widget: "text",
+              required: false,
               i18n: true
             },
             {
               label: "FAQ 'All FAQ' Url",
               name: "url",
               widget: "string",
+              required: false,
               i18n: true
             },
             {
@@ -569,26 +630,30 @@ collections:
               name: "faqgroups",
               widget: list,
               i18n: true,
+              required: false,
               fields:
               [
-                { label: "heading", name: "heading", widget: "string", i18n: true },
+                { label: "heading", name: "heading", widget: "string", required: false, i18n: true },
                 {
                     label: "FAQs",
                     name: "faqs",
                     widget: list,
                     i18n: true,
+                    required: false,
                     fields:
                       [
                         {
                           label: "Title",
                           name: "title",
                           widget: "string",
+                          required: false,
                           i18n: true,
                         },
                         {
                           label: "Description",
                           name: "description",
                           widget: "markdown",
+                          required: false,
                           i18n: true,
                         },
                       ],
