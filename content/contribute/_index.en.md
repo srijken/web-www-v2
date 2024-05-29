@@ -45,7 +45,7 @@ donatepaypal:
   link: https://paypal.nl/divd
 donatebanktransfer:
   label: Donate via banktransfer
-  link: https://bank.nl
+  link: "mailto: question@divd.nl"
 donations:
   - date: 2020-04-19
     amount: €10.000
