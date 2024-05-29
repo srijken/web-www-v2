@@ -68,7 +68,4 @@ donations:
   - date: 2021-12-01T13:36:06.127Z
     amount: $100.000
     by: Huntress
-  - date: 2021-12-01T13:36:32.561Z
-    amount: "1.400"
-    by: J.R. Prins van Os
 ---
