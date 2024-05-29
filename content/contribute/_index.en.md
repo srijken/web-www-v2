@@ -47,7 +47,7 @@ donatebanktransfer:
   label: Donate via banktransfer
   link: https://bank.nl
 donations:
-  - date: 2024-04-19T12:36:54.588Z
+  - date: 2020-04-19
     amount: €10.000
     by: Stichting SIDN fonds
   - date: 2022-03-01T13:30:50.143Z
