@@ -532,6 +532,72 @@ collections:
             ],
         }
       - { label: "Body", name: "body", widget: "markdown", i18n: true }
+      - { label: "Enable FAQ", name: "faq_enabled", widget: "boolean", default: false }
+      - {
+          label: "FAQ",
+          required: false,
+          name: "faq",
+          widget: "object",
+          collapsed: true,
+          fields: [
+            {
+              label: "FAQ Title",
+              name: "title",
+              widget: "string",
+              default: "faq",
+              i18n: true
+            },
+            {
+              label: "FAQ Opener",
+              name: "opener",
+              widget: "string",
+              i18n: true
+            },
+            {
+              label: "FAQ Intro",
+              name: "intro",
+              widget: "text",
+              i18n: true
+            },
+            {
+              label: "FAQ 'All FAQ' Url",
+              name: "url",
+              widget: "string",
+              i18n: true
+            },
+            {
+              label: "FAQ groups",
+              name: "faqgroups",
+              widget: list,
+              i18n: true,
+              fields:
+              [
+                { label: "heading", name: "heading", widget: "string", i18n: true },
+                {
+                    label: "FAQs",
+                    name: "faqs",
+                    widget: list,
+                    i18n: true,
+                    fields:
+                      [
+                        {
+                          label: "Title",
+                          name: "title",
+                          widget: "string",
+                          i18n: true,
+                        },
+                        {
+                          label: "Description",
+                          name: "description",
+                          widget: "markdown",
+                          i18n: true,
+                        },
+                      ],
+                  }
+              ]
+            }
+          ]
+      }
 
   ######################################
   # SECTION: Contribute
