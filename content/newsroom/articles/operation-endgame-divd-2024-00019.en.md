@@ -42,6 +42,7 @@ faq:
             a private foundation that operates under a strict [code of
             conduct](https://www.divd.nl/what-we-do/code-of-conduct/), with the
             aim to make the digital world safer.
+  url: https://www.divd.nl/faq/faq-operation-endgame/
 ---
 As part of Operation Endgame the Dutch Police and Europol have infiltrated a number of botnets, including at least Smokeloader, cedId, Pikabot, SystemBC, and Bumblebee. During this infiltration they obtained data about the victims of these botnets. DIVD is providing victim notification for civilians.
 
