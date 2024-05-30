@@ -16,7 +16,11 @@ faqgroups:
           Hack. (translation: Check your Hack) FAQ also mentiones DIVD and
           shares a link back to this casefile."
       - title: Do you have my password?
-        description: f
+        description: No, we do not have your password. We may have sent you an email
+          containing a partial password, with only the last four characters
+          visible. This is the only part of your password we possess because the
+          Dutch Police ensured that all passwords were hidden before sharing the
+          data with us.
       - description: Yes it is. Under Dutch law and European privacy regulations, we can
           process this data based on a so-called “legitimate interest.”DIVD is a
           private foundation that operates under a strict code of conduct, with
