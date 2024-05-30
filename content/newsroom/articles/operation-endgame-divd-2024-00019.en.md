@@ -43,7 +43,13 @@ faq:
             conduct](https://www.divd.nl/what-we-do/code-of-conduct/), with the
             aim to make the digital world safer.
   url: https://www.divd.nl/faq/faq-operation-endgame/
-  intro: Available in other languages (Dutch, German, Spanish and French)
+  intro: >-
+    More than 16 million victims worldwide have received a notification email.
+    It's understandable that there are questions, so we are sharing the most
+    frequently asked questions with you. 
+
+
+    The FAQ is available in English, Dutch, German, French, and Spanish.
 ---
 As part of Operation Endgame the Dutch Police and Europol have infiltrated a number of botnets, including at least Smokeloader, cedId, Pikabot, SystemBC, and Bumblebee. During this infiltration they obtained data about the victims of these botnets. DIVD is providing victim notification for civilians.
 
