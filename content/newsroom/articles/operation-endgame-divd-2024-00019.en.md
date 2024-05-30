@@ -1,5 +1,5 @@
 ---
-title: OPERATION ENDCAME DIVD-2024-00019
+title: OPERATION ENDGAME DIVD-2024-00019
 date: 2024-05-29T15:19:00.000Z
 tag: case
 intro: As part of Operation Endgame the Dutch Police and Europol have
