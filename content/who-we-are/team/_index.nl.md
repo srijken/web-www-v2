@@ -10,6 +10,5 @@ teams:
       - /people/arthur-dent
   - title: Board
     description: Never bored always on board
-    members:
-      - /people/arthur-dent
+    members: []
 ---
