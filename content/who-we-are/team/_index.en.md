@@ -2,13 +2,13 @@
 type: team
 title: The Team
 opener: Meet our Team
-intro: >-
-  We're very thankful and proud of all our team members, who spend their free time to a
-  good cause, voluntarily. The people who work with us are very various people, some have
-  just started their career in cybersecurity and others have worked in cybersecurity for a
-  very long time. Due to privacy reasons, which we can only encourage, not every member
-  has a profile picture or is mentioned in a team.
-in_progress: true
+intro: We're very thankful and proud of all our team members, who spend their
+  free time to a good cause, voluntarily. The people who work with us are very
+  various people, some have just started their career in cybersecurity and
+  others have worked in cybersecurity for a very long time. Due to privacy
+  reasons, which we can only encourage, not every member has a profile picture
+  or is mentioned in a team.
+in_progress: false
 teams:
   - title: Board
     description: The board of directors is responsible for strategic leadership of DIVD.
@@ -19,10 +19,9 @@ teams:
       - /who-we-are/team/people/marinus-kuivenhoven
       - /who-we-are/team/people/shairesh-algoe
   - title: DIVD-CSIRT
-    description: >-
-      The CSIRT is the engineblock of DIVD. It is responsible for scanning the
-      internet and notifying the system owners as well as running our CVE
-      Numbering Authority activities.
+    description: The CSIRT is the engineblock of DIVD. It is responsible for
+      scanning the internet and notifying the system owners as well as running
+      our CVE Numbering Authority activities.
     members:
       - /who-we-are/team/people/alwin-warringa
       - /who-we-are/team/people/axel
@@ -46,15 +45,15 @@ teams:
       - /who-we-are/team/people/wessel-baltus
       - /who-we-are/team/people/wessel-van-der-goot
   - title: Research & Development
-    description: >-
-      DIVD has two teams highly skilled security researchers who seek and report
-      vulnerabilities as a voluntary service next to their jobs. DIVD sees to it
-      they follow our Code of Conduct while we provide them a firewall for
-      journalists, lawyers and recruiters. Meanwhile, their research also serves
-      as an empirical base to discover trends in security, stimulate security
-      awareness and develop new methodologies in vulnerability research and
-      disclosure. So, although you will probably never meet our researchers, you
-      may hope they are checking your systems right now, before the bad guys do…
+    description: DIVD has two teams highly skilled security researchers who seek and
+      report vulnerabilities as a voluntary service next to their jobs. DIVD
+      sees to it they follow our Code of Conduct while we provide them a
+      firewall for journalists, lawyers and recruiters. Meanwhile, their
+      research also serves as an empirical base to discover trends in security,
+      stimulate security awareness and develop new methodologies in
+      vulnerability research and disclosure. So, although you will probably
+      never meet our researchers, you may hope they are checking your systems
+      right now, before the bad guys do…
     members:
       - /who-we-are/team/people/alwin-warringa
       - /who-we-are/team/people/anass-ali
@@ -101,9 +100,8 @@ teams:
       - /who-we-are/team/people/wietse-boonstra
       - /who-we-are/team/people/omer-zulaloglu
   - title: IT services
-    description: >-
-      Taking care of the IT of hackers in a non-hacky way so they don’t get
-      hacked.
+    description: Taking care of the IT of hackers in a non-hacky way so they don’t
+      get hacked.
     members:
       - /who-we-are/team/people/bart-reedijk
       - /who-we-are/team/people/bert-kiers
@@ -122,7 +120,7 @@ teams:
       - /who-we-are/team/people/waldo-de-borst
       - /who-we-are/team/people/winko
   - title: People & Culture
-    description: ''
+    description: ""
     members:
       - /who-we-are/team/people/astrid-oosenbrug
       - /who-we-are/team/people/jan-los
@@ -131,15 +129,14 @@ teams:
       - /who-we-are/team/people/manon-de-graaf
       - /who-we-are/team/people/roxane
   - title: Communications
-    description: >-
-      Translating l33tsp3ak to human and the other way around as well as
+    description: Translating l33tsp3ak to human and the other way around as well as
       maintaining this awesome website.
     members:
       - /who-we-are/team/people/gerard-janssen
       - /who-we-are/team/people/heidi
       - /who-we-are/team/people/marieke-smits
-  - title: 'Governance, Risk & Compliance (GRC)'
-    description: ''
+  - title: Governance, Risk & Compliance (GRC)
+    description: ""
     members:
       - /who-we-are/team/people/alexia-ronda
       - /who-we-are/team/people/dennis-kussendrager
@@ -148,15 +145,14 @@ teams:
       - /who-we-are/team/people/frank-breedijk
       - /who-we-are/team/people/peter-baard
   - title: Office
-    description: >-
-      Providing some sense of direction to a bunch of hackers, aka advanced cat
-      herding.
+    description: Providing some sense of direction to a bunch of hackers, aka
+      advanced cat herding.
     members:
       - /who-we-are/team/people/chris-van-t-hof
       - /who-we-are/team/people/h-meuris
       - /who-we-are/team/people/rob-gerritsen
   - title: Project Office
-    description: ''
+    description: ""
     members:
       - /who-we-are/team/people/caroline-loef
       - /who-we-are/team/people/dimitri-van-esch
@@ -167,13 +163,10 @@ teams:
       - /who-we-are/team/people/victor-gevers-1
       - /who-we-are/team/people/winko
   - title: Advisory board
-    description: ''
+    description: ""
     members:
       - /who-we-are/team/people/chantal-stekelenburg
   - title: Ethics Committee
-    description: ''
-    members:
-      - /who-we-are/team/people/hans-van-de-looy
-      - /who-we-are/team/people/lennaert
+    description: ""
+    members: []
 ---
-
