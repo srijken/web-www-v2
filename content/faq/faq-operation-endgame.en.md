@@ -47,4 +47,40 @@ faqgroups:
           access it, they can infiltrate corporate systems, cloud services, and
           email accounts, leading to the theft of sensitive data and potential
           further attacks within the organization.
+  - heading: Dutch - Nederlands
+    faqs:
+      - description: >-
+          Nee, dit is absoluut geen scam. 
+
+
+          Deze operatie is een samenwerking tussen de Nederlandse Politie, Europol, het Digital Trust Center, NCSC-NL en anderen. Wij, het Dutch Institute of Vulnerability Disclosure (DIVD), worden genoemd in de persberichten van de Nederlandse Politie en Europol. De [‘Check je Hack' FAQ](https://www.politie.nl/informatie/veel-gestelde-vragen-over-check-je-hack.html) vermeldt ook DIVD en deelt een link naar de case van ons CSIRT.
+        title: "Is dit scam of phishing? "
+      - description: Nee, we hebben je wachtwoord niet. We hebben je mogelijk een e-mail
+          gestuurd met een gedeeltelijk wachtwoord, waarbij alleen de laatste
+          vier tekens zichtbaar zijn. Dit is het enige deel van je wachtwoord
+          dat we bezitten. De Nederlandse Politie heeft alle wachtwoorden
+          gedeeltelijk verborgen voordat ze deze informatie deelden met anderen.
+        title: Hebben jullie mijn wachtwoord?
+      - title: "Jullie hebben mijn persoonlijke gegevens zonder mijn toestemming, is dat
+          legaal? "
+        description: "Ja, dat is het. Volgens de Nederlandse wet en de Europese
+          privacyregels mogen wij deze gegevens verwerken op basis van een
+          zogenaamd “gerechtvaardigd belang.” DIVD is een private stichting die
+          opereert onder een strikt gedragscode (zie: [Code of
+          Conduct](https://www.divd.nl/divd-nl-2024/what-we-do/code-of-conduct/\
+          )), met als doel de digitale wereld veiliger te maken."
+      - title: "Gaan jullie de criminelen aanpakken die mijn informatie hebben gestolen?
+          "
+        description: Nee,  dat is een taak voor de wetshandhaving. Wij analyseren online
+          bedreigingen, niet de daders. Ook notificeren wij de slachtoffers. Je
+          leest hier meer over in artikel 9 van onze [Code of
+          Conduct.](https://www.divd.nl/divd-nl-2024/what-we-do/code-of-conduct/)
+      - title: "Wat is een ADFS account en wat kunnen criminelen daarmee doen? "
+        description: Een ADFS ([Active Directory Federation
+          Services)](https://en.wikipedia.org/wiki/Active_Directory_Federation_Services)
+          account maakt single sign-on mogelijk voor meerdere applicaties. Als
+          criminelen toegang krijgen tot zo'n account, kunnen ze infiltreren in
+          bedrijfsystemen, cloudservices en e-mailaccounts. Dit kan leiden tot
+          diefstal van gevoelige gegevens en mogelijk verdere aanvallen binnen
+          de organisatie.
 ---
