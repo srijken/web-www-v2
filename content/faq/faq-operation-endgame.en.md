@@ -1,5 +1,5 @@
 ---
-title: Frequently Asked Questions - Operation Endgame
+title: F.A.Q. Operation Endgame
 opener: In case you still have any questions, we have listed the most frequently
   asked questions for you.
 intro: >-
