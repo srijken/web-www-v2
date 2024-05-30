@@ -2,8 +2,8 @@
 title: FAQ-Operation-Endgame
 opener: Frequently Asked Questions
 intro: Some Frequently Asked Questions about Operation Endgame
-button_text: Other languages
-button_url: FAQ-Operation-Endgame
+button_text: CASE FILE
+button_url: https://csirt.divd.nl/cases/DIVD-2024-00019/
 faqgroups:
   - heading: English
     faqs:
