@@ -43,7 +43,7 @@ faq:
             conduct](https://www.divd.nl/what-we-do/code-of-conduct/), with the
             aim to make the digital world safer.
 ---
-As part of Operation Endgame the Dutch Police and Europol have infiltrated a number of botnets, including at least \`Smokeloader\`, \`IcedId\`, \`Pikabot\` and \`SystemBC\`, and \`Bumblebee\`. During this infiltration they obtained data about the victims of these botnets. DIVD is providing victim notification for civilians.
+As part of Operation Endgame the Dutch Police and Europol have infiltrated a number of botnets, including at least Smokeloader, cedId, Pikabot, SystemBC, and Bumblebee. During this infiltration they obtained data about the victims of these botnets. DIVD is providing victim notification for civilians.
 
 This data has been shared with us and various other parties like [Have I Been Pwned](https://haveibeenpwned.com/), [Spam House](https://spamhouse.org), [](https://spamhouse.org)[Project No More Leaks,](https://www.politie.nl/onderwerpen/no-more-leaks.html)[ ](https://www.politie.nl/onderwerpen/no-more-leaks.html)[the (Dutch) NCSC](https://ncsc.nl), [CSIRT-DSP](https://csirtdsp.nl/) and [Digital Trust Center ](https://www.digitaltrustcenter.nl/).
 
