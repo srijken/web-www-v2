@@ -22,9 +22,9 @@ faq:
   title: Frequently Asked Questions
   faqgroups:
     - faqs:
-        - description: "It’s great that you’re skeptical. However, this is legit and
-            definitely not a scam. This operation is a collaboration between the
-            Dutch National Police, Europol, Digital Trust Center, NCSC and
+        - description: "It’s great that you’re skeptical. However, **this is legit and
+            definitely not a scam.** This operation is a collaboration between
+            the Dutch National Police, Europol, Digital Trust Center, NCSC and
             others. We, Dutch Institute of Vulnerability Disclosure (DIVD), are
             mentioned in the press releases from the Dutch Police and Europol.
             The ‘Check je Hack. (translation: Check your Hack) FAQ also
