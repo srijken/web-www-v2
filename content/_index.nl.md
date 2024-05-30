@@ -5,7 +5,7 @@ intro: "Wij maken de digitale wereld veiliger door te scannen naar
   kwetsbaarheden in digitale systemen en deze vervolgens te melden aan de mensen
   die deze kunnen oplossen. "
 fold:
-  showcase: /newsroom/articles/test-article-with-image
+  showcase: /newsroom/articles/operation-endcame-divd-2024-00019
   received: Heb je een email van ons csirt team ontvangen? Lees hier verder
   received_alt: Afbeelding van een enveloppe
   family: Wordt onderdeel van de DIVD en help ons de digitale wereld veiliger te maken

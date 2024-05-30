@@ -4,7 +4,7 @@ opener: A watchful eye in the digital world
 intro: "We aim to make the digital world safer by reporting vulnerabilities we
   find in digital systems to the people who can fix them. "
 fold:
-  showcase: /newsroom/articles/online-test-article
+  showcase: /newsroom/articles/operation-endcame-divd-2024-00019
   received: Received an E-mail from us? Don’t worry! Learn more here.
   received_alt: Image of an envelope
   family: Become part of DIVD and help us protect the digital world
