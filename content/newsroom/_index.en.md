@@ -7,5 +7,5 @@ newsletter: https://divd.nl/newsletter
 starter:
   title: Stay up to date
   description: Here you can find updates, articles about our culture, cases and much more!
-highlight: /newsroom/articles/case-atlassian-confluence
+highlight: /newsroom/articles/operation-endcame-divd-2024-00019
 ---

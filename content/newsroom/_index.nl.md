@@ -6,5 +6,5 @@ intro: We are a group of volunteers that scout the web for potential cyber
 starter:
   title: Stay up to date
   description: Here you can find updates, articles about our culture, cases and much more!
-highlight: /newsroom/article/case-atlassian-confluence
+highlight: []
 ---
