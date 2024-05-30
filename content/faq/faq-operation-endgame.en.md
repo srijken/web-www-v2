@@ -83,4 +83,59 @@ faqgroups:
           bedrijfsystemen, cloudservices en e-mailaccounts. Dit kan leiden tot
           diefstal van gevoelige gegevens en mogelijk verdere aanvallen binnen
           de organisatie.
+  - heading: German - Deutsch
+  - heading: French - Français
+  - heading: Spanish - Español (AI generated)
+    faqs:
+      - description: "Es genial que seas escéptico. Sin embargo, esto es legítimo y
+          definitivamente no es una estafa. Esta operación es una colaboración
+          entre la Policía Nacional de los Países Bajos, Europol, el Digital
+          Trust Center, NCSC y otros. Nosotros, el Instituto Neerlandés de
+          Divulgación de Vulnerabilidades (DIVD), somos mencionados en los
+          comunicados de prensa de la Policía Neerlandesa y Europol. La sección
+          de preguntas frecuentes ‘Check je Hack’ (traducción: Verifica tu Hack)
+          también menciona al DIVD y comparte un enlace a este caso."
+        title: ¿Es esto una estafa?
+      - title: ¿Tienes mi contraseña?
+        description: No, no tenemos tu contraseña. Es posible que te hayamos enviado un
+          correo electrónico con una parte de tu contraseña, con solo los
+          últimos cuatro caracteres visibles. Esta es la única parte de tu
+          contraseña que poseemos porque la Policía Neerlandesa se aseguró de
+          que todas las contraseñas estuvieran ocultas antes de compartir los
+          datos con nosotros.
+      - description: Sí, lo es. Según la ley neerlandesa y las regulaciones europeas de
+          privacidad, podemos procesar estos datos en base a un “interés
+          legítimo”. El DIVD es una fundación privada que opera bajo un estricto
+          código de conducta, con el objetivo de hacer el mundo digital más
+          seguro.
+        title: ¿Estás procesando mis datos personales sin mi consentimiento, es eso
+          legal?
+      - description: "No, no lo haremos. Eso es una cuestión para las fuerzas del orden.
+          Según el artículo 9 de nuestro código de conducta: Analizamos las
+          amenazas en línea, no a los actores de las amenazas. Somos
+          investigadores y no servimos a los intereses de los gobiernos o las
+          fuerzas del orden."
+        title: ¿Vas a perseguir a los criminales que robaron mi información?
+      - title: ¿Qué es una cuenta ADFS y qué pueden hacer los criminales con ella?
+        description: Una cuenta ADFS (Active Directory Federation Services) permite el
+          inicio de sesión único para múltiples aplicaciones. Si los criminales
+          acceden a ella, pueden infiltrarse en sistemas corporativos, servicios
+          en la nube y cuentas de correo electrónico, lo que puede llevar al
+          robo de datos sensibles y a posibles ataques adicionales dentro de la
+          organización.
+      - description: No, no conocemos los detalles, pero sabemos que la Operación
+          Endgame contiene información de varios botnets.
+        title: ¿Sabes cómo obtuvo la información la Policía Nacional de los Países
+          Bajos?
+      - description: >-
+          Actuar sobre este conjunto de datos está directamente en línea con el
+          artículo 3 de nuestro código de conducta: Analizar bases de datos con
+          credenciales filtradas e informar a las organizaciones o personas
+          comprometidas para que tomen medidas adecuadas.
+
+
+          Analizamos todas las bases de datos que recibimos, incluidas las de las fuerzas del orden. Sin embargo, lo hacemos de forma independiente, sin ninguna obligación o intención de compartir ninguna información específica a cambio
+        title: Si "no sirven a los intereses de los gobiernos o las fuerzas del orden",
+          ¿por qué están cooperando con la Policía Nacional de los Países Bajos
+          en este caso?
 ---
