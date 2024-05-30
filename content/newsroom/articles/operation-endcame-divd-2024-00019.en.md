@@ -35,7 +35,7 @@ The data we have received consists of the following data sets: 
 \
 **RECOMMENDATIONS**
 
-If you received a notification from us, members of your organisation or your customers had their password stolen or system infected by a botnet. Detailed recommendations are found on the case page of csirt.divd.nl
+If you received a notification from us, members of your organisation or your customers had their password stolen or system infected by a botnet. Detailed recommendations are found here: [https://csirt.divd.nl/cases/DIVD-2024-00019 ](https://csirt.divd.nl/cases/DIVD-2024-00019)
 
 \
 **WHAT YOU CAN DO**
@@ -48,6 +48,8 @@ Check our CSIRT website case here: <https://csirt.divd.nl/cases/DIVD-2024-00019>
 **WHAT WE ARE DOING**
 
 We have received the discovered data from the police, and are sending out notification to individuals and organizations that have fallen victim to compromise. To effectively do this, we are in close cooperation with the Dutch National Police as well as the NCSC, CSIRT-DSP and DTC.
+
+**PRESS RELEASES**
 
 Press release Dutch Nationale Police: <https://www.politie.nl/nieuws/2024/mei/30/11-meerdere-botnets-ontmanteld-in-grootste-internationale-operatie-tegen-ransomware-ooit.html>
 
