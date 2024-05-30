@@ -1,7 +1,11 @@
 ---
-title: FAQ-Operation-Endgame
-opener: Frequently Asked Questions
-intro: Some Frequently Asked Questions about Operation Endgame
+title: Frequently Asked Questions - Operation Endgame
+opener: In case you still have any questions, we have listed the most frequently
+  asked questions for you.
+intro: More than 16 million victims worldwide have received a notification
+  email. It's understandable that there are questions, so we are sharing the
+  most frequently asked questions with you. The FAQ is available in English,
+  Dutch, German, French, and Spanish.
 button_text: CASE FILE
 button_url: https://csirt.divd.nl/cases/DIVD-2024-00019/
 faqgroups:
