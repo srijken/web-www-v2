@@ -24,7 +24,7 @@ faq:
 ---
 As part of Operation Endgame the Dutch Police and Europol have infiltrated a number of botnets, including at least \`Smokeloader\`, \`IcedId\`, \`Pikabot\` and \`SystemBC\`, and \`Bumblebee\`. During this infiltration they obtained data about the victims of these botnets. DIVD is providing victim notification for civilians.
 
-This data has been shared with us and various other parties like \[Have I Been Pwned] (https://haveibeenpwned.com/), \[Spam House] (https://spamhouse.org), \[Project No More Leaks] (https://www.politie.nl/onderwerpen/no-more-leaks.html), the (Dutch) \[ NCSC] (https://ncsc.nl),  \[CSIRT-DSP](https://csirtdsp.nl/), and \[Digital Trust Center] (https://www.digitaltrustcenter.nl/).
+This data has been shared with us and various other parties like [Have I Been Pwned](https://haveibeenpwned.com/), [Spam House](https://spamhouse.org), [](https://spamhouse.org)[Project No More Leaks,](https://www.politie.nl/onderwerpen/no-more-leaks.html)[ ](https://www.politie.nl/onderwerpen/no-more-leaks.html)[the (Dutch) NCSC](https://ncsc.nl), [CSIRT-DSP](https://csirtdsp.nl/) and [Digital Trust Center ](https://www.digitaltrustcenter.nl/).
 
 The data we have received consists of the following data sets: 
 
@@ -48,8 +48,6 @@ Check our CSIRT website case here: <https://csirt.divd.nl/cases/DIVD-2024-00019>
 **WHAT WE ARE DOING**
 
 We have received the discovered data from the police, and are sending out notification to individuals and organizations that have fallen victim to compromise. To effectively do this, we are in close cooperation with the Dutch National Police as well as the NCSC, CSIRT-DSP and DTC.
-
-
 
 Press release Dutch Nationale Police: <https://www.politie.nl/nieuws/2024/mei/30/11-meerdere-botnets-ontmanteld-in-grootste-internationale-operatie-tegen-ransomware-ooit.html>
 
