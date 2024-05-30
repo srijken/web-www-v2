@@ -69,6 +69,10 @@ faqgroups:
           opereert onder een strikt gedragscode (zie: [Code of
           Conduct](https://www.divd.nl/divd-nl-2024/what-we-do/code-of-conduct/\
           )), met als doel de digitale wereld veiliger te maken."
+      - title: "Weten jullie hoe de Nederlandse Politie aan deze informatie is gekomen?
+          "
+        description: Nee, we hebben die informatie niet. We weten dat Operatie Endgame
+          informatie bevat van verschillende botnets.
       - title: "Gaan jullie de criminelen aanpakken die mijn informatie hebben gestolen?
           "
         description: Nee,  dat is een taak voor de wetshandhaving. Wij analyseren online
@@ -83,6 +87,16 @@ faqgroups:
           bedrijfsystemen, cloudservices en e-mailaccounts. Dit kan leiden tot
           diefstal van gevoelige gegevens en mogelijk verdere aanvallen binnen
           de organisatie.
+      - title: Als jullie niet in opdracht van overheden of autoriteiten werkt, waarom
+          werken jullie dan samen met de politie in deze zaak?
+        description: >-
+          Het handelen op basis van deze dataset is direct in lijn met artikel 3
+          van onze gedragscode: *Analyseer databases met gelekte inloggegevens
+          en rapporteer aan de organisaties of personen die zijn
+          gecompromitteerd om passende maatregelen te nemen.*
+
+
+          We analyseren elke database die we ontvangen, inclusief die van wetshandhaving instanties. We doen dit echter onafhankelijk, zonder enige verplichting of intentie om specifieke informatie in ruil daarvoor te delen.
   - heading: German - Deutsch
   - heading: French - Français
   - heading: Spanish - Español (AI generated)
