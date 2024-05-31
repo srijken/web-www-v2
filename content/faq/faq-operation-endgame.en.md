@@ -9,6 +9,8 @@ intro: >-
 
 
   The FAQ is available in English, Dutch, German, French, and Spanish.
+
+  The Spanish translation is AI generated, there might be some translation flaws. 
 button_text: CASE FILE
 button_url: https://csirt.divd.nl/cases/DIVD-2024-00019/
 faqgroups:
@@ -153,6 +155,59 @@ faqgroups:
           nicht dienen“, warum arbeiten Sie dann in diesem Fall mit der
           niederländischen Nationalpolizei zusammen?
   - heading: French - Français
+    faqs:
+      - description: "C'est bien que vous soyez sceptique. Cependant, ceci est légitime
+          et définitivement pas une arnaque. Cette opération est une
+          collaboration entre la Police Nationale Néerlandaise, Europol, le
+          Digital Trust Center, le NCSC et d'autres. Nous, Dutch Institute of
+          Vulnerability Disclosure (DIVD), sommes mentionnés dans les
+          communiqués de presse de la Police Néerlandaise et d'Europol. La FAQ
+          ‘Check je Hack’ (traduction : Vérifiez votre Hack) mentionne également
+          le DIVD et partage un lien vers ce dossier."
+        title: Est-ce une arnaque ?
+      - title: Avez-vous mon mot de passe ?
+        description: Non, nous n'avons pas votre mot de passe. Nous avons peut-être
+          envoyé un e-mail contenant un mot de passe partiel, avec seulement les
+          quatre derniers caractères visibles. C'est la seule partie de votre
+          mot de passe que nous possédons parce que la Police Néerlandaise a
+          veillé à ce que tous les mots de passe soient masqués avant de
+          partager les données avec nous.
+      - description: Oui, c'est légal. Selon la loi néerlandaise et les réglementations
+          européennes en matière de confidentialité, nous pouvons traiter ces
+          données sur la base d'un « intérêt légitime ». Le DIVD est une
+          fondation privée qui opère sous un code de conduite strict, avec pour
+          objectif de rendre le monde numérique plus sûr.
+        title: Traitez-vous mes données personnelles sans mon consentement, est-ce légal
+          ?
+      - description: "Non, ce n'est pas notre rôle. C'est une affaire pour les forces de
+          l'ordre. Selon l'article 9 de notre code de conduite: *Nous analysons
+          les menaces en ligne, pas les acteurs de ces menaces. Nous sommes des
+          chercheurs et ne répondons pas aux besoins des gouvernements ou des
+          forces de l'ordre.*"
+        title: Allez-vous poursuivre les criminels qui ont volé mes informations ?
+      - description: Un compte ADFS (Active Directory Federation Services) permet une
+          authentification unique pour plusieurs applications. Si des criminels
+          y accèdent, ils peuvent infiltrer les systèmes d'entreprise, les
+          services cloud et les comptes de messagerie, ce qui peut entraîner le
+          vol de données sensibles et des attaques potentielles supplémentaires
+          au sein de l'organisation.
+        title: Qu'est-ce qu'un compte ADFS et que peuvent faire les criminels avec ?
+      - description: Non, nous ne connaissons pas les détails, mais nous savons que
+          l'Opération Endgame contient des informations provenant de plusieurs
+          botnets.
+        title: Savez-vous comment la police nationale néerlandaise a obtenu ces
+          informations ?
+      - description: >-
+          Agir sur cet ensemble de données est directement en ligne avec
+          l'article 3 de notre code de conduite : Analyser les bases de données
+          contenant des identifiants divulgués et signaler aux organisations ou
+          aux personnes compromises afin de prendre les mesures appropriées.
+
+
+          Nous analysons chaque base de données que nous recevons, y compris celles des forces de l'ordre. Cependant, nous le faisons de manière indépendante, sans aucune obligation ni intention de partager des informations spécifiques en retour.
+        title: Si vous « ne servez pas les besoins des gouvernements ou des forces de
+          l'ordre », pourquoi coopérez-vous avec la police nationale
+          néerlandaise dans cette affaire ?
   - heading: Spanish - Español (AI generated)
     faqs:
       - description: "Es genial que seas escéptico. Sin embargo, esto es legítimo y
