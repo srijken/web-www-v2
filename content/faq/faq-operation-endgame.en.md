@@ -208,7 +208,7 @@ faqgroups:
         title: Si vous « ne servez pas les besoins des gouvernements ou des forces de
           l'ordre », pourquoi coopérez-vous avec la police nationale
           néerlandaise dans cette affaire ?
-  - heading: Spanish - Español (AI generated)
+  - heading: "Spanish - Español "
     faqs:
       - description: "Es genial que seas escéptico. Sin embargo, esto es legítimo y
           definitivamente no es una estafa. Esta operación es una colaboración
