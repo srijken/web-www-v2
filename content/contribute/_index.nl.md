@@ -26,12 +26,6 @@ appreciate:
 
     Lorem ipsum dolor sit amet consectetur. Sagittis volutpat risus euismod venenatis gravida purus non. Lectus praesent amet nunc et vestibulum.
 donations:
-  - date: 2024-04-13T21:34:29.809Z
-    amount: €1000,-
-    by: Spatial Explorers
-  - date: 2020-06-10T21:36:14.565Z
-    amount: €42,-
-    by: Arthur Dent
   - date: 2022-03-01T13:30:50.143Z
     amount: $10.000
     by: MSP CFO
@@ -50,8 +44,9 @@ donations:
   - date: 2021-12-01T13:36:06.127Z
     amount: $100.000
     by: Huntress
-  - date: 2021-12-01T13:36:32.561Z
-    amount: "1.400"
-    by: J.R. Prins van Os
-  - date: 2024-04-19T12:36:54.608Z
+  - date: 2020-04-19
+    amount: €10.000
+    by: Stichting SIDN fonds
+  - date: 2024-06-04
+  - date: 2024-06-04
 ---
