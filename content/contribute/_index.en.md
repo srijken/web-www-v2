@@ -47,6 +47,12 @@ donatebanktransfer:
   label: Donate via banktransfer
   link: "mailto: question@divd.nl"
 donations:
+  - date: 2024-03-27
+    amount: € 5.000,-
+    by: Cyber Defence Group / ESET Netherlands
+  - date: 2024-02-14
+    amount: € 3.000,-
+    by: Kloris BV
   - date: 2022-03-01T13:30:50.143Z
     amount: $10.000
     by: MSP CFO
