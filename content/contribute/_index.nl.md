@@ -27,16 +27,16 @@ appreciate:
     Lorem ipsum dolor sit amet consectetur. Sagittis volutpat risus euismod venenatis gravida purus non. Lectus praesent amet nunc et vestibulum.
 donations:
   - date: 2024-03-27
-    amount: € 5.000,-
+    amount: € 5.000
     by: Cyber Defence Group / ESET Netherlands
   - date: 2024-02-14
-    amount: € 3.000,-
+    amount: € 3.000
     by: Kloris BV
   - date: 2024-01-02
-    amount: € 1.000,-
+    amount: € 1.000
     by: Secura
   - date: 2023-12-30
-    amount: € 1.000,-
+    amount: € 1.000
     by: Secura
   - date: 2022-03-01T13:30:50.143Z
     amount: $10.000
@@ -59,5 +59,8 @@ donations:
   - date: 2020-04-19
     amount: €10.000
     by: Stichting SIDN fonds
+  - date: 2023-09-21
+    amount: € 20.000
+    by: Kloris BV
   - date: 2024-06-04
 ---

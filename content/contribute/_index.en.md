@@ -59,6 +59,12 @@ donations:
   - date: 2023-12-30
     amount: € 1.000
     by: Secura
+  - date: 2023-09-21
+    amount: € 20.000
+    by: Kloris BV
+  - date: 2023-07-13
+    amount: €10.000
+    by: Cyber Defense Group / ESET Netherlands
   - date: 2022-03-01T13:30:50.143Z
     amount: $10.000
     by: MSP CFO
@@ -80,7 +86,4 @@ donations:
   - date: 2020-04-19
     amount: €10.000
     by: Stichting SIDN fonds
-  - date: 2023-09-21
-    amount: € 20.000
-    by: Kloris BV
 ---
