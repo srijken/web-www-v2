@@ -45,8 +45,11 @@ donatepaypal:
   link: https://paypal.nl/divd
 donatebanktransfer:
   label: Donate via banktransfer
-  link: https://bank.nl
+  link: "mailto: question@divd.nl"
 donations:
+  - date: 2020-04-19
+    amount: €10.000
+    by: Stichting SIDN fonds
   - date: 2022-03-01T13:30:50.143Z
     amount: $10.000
     by: MSP CFO
@@ -65,10 +68,4 @@ donations:
   - date: 2021-12-01T13:36:06.127Z
     amount: $100.000
     by: Huntress
-  - date: 2021-12-01T13:36:32.561Z
-    amount: "1.400"
-    by: J.R. Prins van Os
-  - date: 2024-04-19T12:36:54.588Z
-    amount: €10.000
-    by: Stichting SIDN fonds
 ---
