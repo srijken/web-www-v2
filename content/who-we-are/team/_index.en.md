@@ -12,12 +12,7 @@ in_progress: false
 teams:
   - title: Board
     description: The board of directors is responsible for strategic leadership of DIVD.
-    members:
-      - /who-we-are/team/people/eleonora-petridou
-      - /who-we-are/team/people/inge-bryan
-      - /who-we-are/team/people/joost-hendricksen
-      - /who-we-are/team/people/marinus-kuivenhoven
-      - /who-we-are/team/people/shairesh-algoe
+    members: []
   - title: Management
   - title: DIVD-CSIRT
     description: The CSIRT is the engineblock of DIVD. It is responsible for
@@ -110,15 +105,7 @@ teams:
       - /who-we-are/team/people/rob-gerritsen
   - title: Project Office
     description: ""
-    members:
-      - /who-we-are/team/people/caroline-loef
-      - /who-we-are/team/people/dimitri-van-esch
-      - /who-we-are/team/people/dirk-maij
-      - /who-we-are/team/people/henry-schokkenbroek
-      - /who-we-are/team/people/marten-gerssen
-      - /who-we-are/team/people/tirza-dijkstra
-      - /who-we-are/team/people/victor-gevers-1
-      - /who-we-are/team/people/winko
+    members: []
   - title: Advisory board
     description: ""
     members: []
