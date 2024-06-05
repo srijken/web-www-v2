@@ -18,7 +18,7 @@ faqgroups:
         description: >-
           If we find a vulnerability, we'll set up a case with all the details
           we know and how to patch this vulnerability. Then we scan known IP
-          adresses to see if they're vulernable and if that's the case we'll
+          adresses to see if they're vulnerable and if that's the case we'll
           send out an email to every vulnerable IP adress. 
 
 
@@ -47,7 +47,7 @@ faqgroups:
         description: >-
           If we find a vulnerability, we'll set up a case with all the details
           we know and how to patch this vulnerability. Then we scan known IP
-          adresses to see if they're vulernable and if that's the case we'll
+          adresses to see if they're vulnerable and if that's the case we'll
           send out an email to every vulnerable IP adress. 
 
 
@@ -87,7 +87,7 @@ faqgroups:
       - description: >-
           If we find a vulnerability, we'll set up a case with all the details
           we know and how to patch this vulnerability. Then we scan known IP
-          adresses to see if they're vulernable and if that's the case we'll
+          adresses to see if they're vulnerable and if that's the case we'll
           send out an email to every vulnerable IP adress. 
 
 
