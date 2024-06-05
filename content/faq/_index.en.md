@@ -22,7 +22,7 @@ faqgroups:
           send out an email to every vulnerable IP adress. 
 
 
-          O﻿ur emails are personally written by one of our researchers and contain a link to the casefile on the [csirt.divd.nl ](csirt.divd.nl)site.
+          O﻿ur emails are personally written by one of our researchers and contain a link to the casefile on the [csirt.divd.nl](https://csirt.divd.nl/) site.
       - title: Who works for DIVD?
         description: >-
           Most of our volunteers work in cybersecurity as their daily job, this
