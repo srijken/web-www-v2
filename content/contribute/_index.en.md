@@ -42,7 +42,7 @@ donatesupp:
   customlink: https://supp.to/divdnl/donate
 donatepaypal:
   label: Donate via Paypal
-  link: https://paypal.nl/divd
+  link: https://paypal.com/donate/?hosted_button_id=U5MRM5XSH36BG
 donatebanktransfer:
   label: Donate via banktransfer
   link: "mailto: question@divd.nl"
