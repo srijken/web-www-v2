@@ -26,12 +26,12 @@ faqgroups:
       - title: Who works for DIVD?
         description: >-
           Most of our volunteers work in cybersecurity as their daily job, this
-          could be at a comercial security company, government or as a
+          could be at a commercial security company, government, or as a
           freelancer. Some of our volunteers don't work in security at all but
           have great interest in making the digital world safer. 
 
 
-          A﻿ll of our volunteers are screened and provided an certificate of conduct. Our code of conduct is sacred, we do not deviate from it.
+          A﻿ll our volunteers are screened, and have provided a certificate of conduct. Our code of conduct is sacred, we do not deviate from it.
       - description: Anything that is classified as high risk / high impact. We
           prioritize the vulnerabilities we work on by various metrics, for
           instance how big the exposure on the internet is and if it is being
