@@ -2,12 +2,14 @@
 type: team
 title: The Team
 opener: Meet our Team
-intro: We're very thankful and proud of all our team members, who spend their
-  free time to a good cause, voluntarily. The people who work with us are very
-  various people, some have just started their career in cybersecurity and
-  others have worked in cybersecurity for a very long time. Due to privacy
-  reasons, which we can only encourage, not every member has a profile picture
-  or is mentioned in a team.
+intro: >-
+  We're very grateful and proud of all our team members, who voluntary dedicate
+  their free time for a great cause. Our team is a mix of different people; some
+  are just starting out in cybersecurity, while others have been in it for a
+  long time. 
+
+
+  Not every member has a profile picture or is listed in a team. Privacy matters!
 in_progress: false
 teams:
   - title: Board
@@ -99,10 +101,7 @@ teams:
   - title: Office
     description: Providing some sense of direction to a bunch of hackers, aka
       advanced cat herding.
-    members:
-      - /who-we-are/team/people/chris-van-t-hof
-      - /who-we-are/team/people/h-meuris
-      - /who-we-are/team/people/rob-gerritsen
+    members: []
   - title: Project Office
     description: ""
     members: []
