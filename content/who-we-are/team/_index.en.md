@@ -20,28 +20,7 @@ teams:
     description: The CSIRT is the engineblock of DIVD. It is responsible for
       scanning the internet and notifying the system owners as well as running
       our CVE Numbering Authority activities.
-    members:
-      - /who-we-are/team/people/alwin-warringa
-      - /who-we-are/team/people/axel
-      - /who-we-are/team/people/barre-dijkstra
-      - /who-we-are/team/people/boaz-braaksma
-      - /who-we-are/team/people/celistine-oosting
-      - /who-we-are/team/people/edwin-van-vliet
-      - /who-we-are/team/people/fabian-bron
-      - /who-we-are/team/people/finn-van-der-knaap
-      - /who-we-are/team/people/jelle-ursem
-      - /who-we-are/team/people/jeroen-ellermeijer
-      - /who-we-are/team/people/jeroen-de-baare
-      - /who-we-are/team/people/kaj-koole
-      - /who-we-are/team/people/laurent-de-vries
-      - /who-we-are/team/people/lennaert
-      - /who-we-are/team/people/max-van-der-horst
-      - /who-we-are/team/people/oscar-vlugt
-      - /who-we-are/team/people/ralph-horn
-      - /who-we-are/team/people/stan-plasmeijer
-      - /who-we-are/team/people/victor-pasman
-      - /who-we-are/team/people/wessel-baltus
-      - /who-we-are/team/people/wessel-van-der-goot
+    members: []
   - title: Research & Development
     description: DIVD has two teams highly skilled security researchers who seek and
       report vulnerabilities as a voluntary service next to their jobs. DIVD
@@ -91,13 +70,7 @@ teams:
       - /who-we-are/team/people/marieke-smits
   - title: Governance, Risk & Compliance (GRC)
     description: ""
-    members:
-      - /who-we-are/team/people/alexia-ronda
-      - /who-we-are/team/people/dennis-kussendrager
-      - /who-we-are/team/people/filip-chyla
-      - /who-we-are/team/people/ferdinand-uittenbogaard
-      - /who-we-are/team/people/frank-breedijk
-      - /who-we-are/team/people/peter-baard
+    members: []
   - title: Office
     description: Providing some sense of direction to a bunch of hackers, aka
       advanced cat herding.
