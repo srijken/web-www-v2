@@ -1,5 +1,6 @@
 ---
-title: "CASE: IVANTI"
+title: "CASE: Attackers exploit zero day vulnerabilities in Ivanti software, and
+  hack the Norwegian governement"
 date: 2024-07-03T19:27:00.000Z
 tag: case
 intro: "An unknown attacker exploited several zero-day vulnerabilities in two
