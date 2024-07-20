@@ -12,6 +12,8 @@ faq:
 ---
 On Monday, July 24, 2023, it became clear that the Norwegian government had fallen victim to a cyberattack. The Norwegian Government Security and Service Organisation (DSS) and the Norwegian National Security Authority (NSM) reported that they had been targeted in an attack on an ICT platform used by 12 ministries. And they were not the only victims, as revealed by the story of Tor Bjørsted and Erlend Leiknes, two researchers from the company Memnonic (1). 
 
+###### zerodays
+
 Bjørsted and Leiknes could not share the names of other affected entities. 
 
 The Norwegian government contacted Memnonic's incident response team. Researchers from Memnonic discovered that an unknown attacker had exploited several zero-day vulnerabilities in two Ivanti services: Ivanti EPMM and Avanti Sentry.
