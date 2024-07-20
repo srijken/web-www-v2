@@ -2,8 +2,8 @@
 type: volunteers
 title: Become a volunteer
 opener: Become a volunteer
-intro: DIVD is a non-profit organisation run by volunteers and a network of
-  likeminded organisations. So please signup as a volunteer.
+intro: DIVD is a non-profit organisation run by volunteers, and a network of
+  likeminded organisations. We’d love for you to sign up as a volunteer.
 corevaluestitle: Core values
 corevalues:
   - title: Ethical Integrity

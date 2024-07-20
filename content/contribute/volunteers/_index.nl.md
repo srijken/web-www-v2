@@ -2,8 +2,9 @@
 type: volunteers
 title: Vrijwilliger worden
 opener: Vrijwilliger worden
-intro: DIVD is een non-profitorganisatie die wordt gerund door vrijwilligers en
-  een netwerk van gelijkgestemde organisaties. Meld je aan als vrijwilliger.
+intro: DIVD is een non-profit organisatie gerund door vrijwilligers en een
+  netwerk van gelijkgestemde organisaties. We zouden het leuk vinden als je je
+  aanmeldt als vrijwilliger.
 corevaluestitle: Core values (kernwaarden)
 corevalues:
   - title: Ethical Integrity (ethische integriteit)
