@@ -36,7 +36,7 @@ CVE-2023-35081 is a path traversal vulnerability, which, when combined with CVE-
 
 To avoid suspicion, the attacker first hacked a router belonging to ordinary Norwegian citizens, from there, they contacted the vulnerable EPMM server, which was used as a pivot to gain access to the Sentry server, which gives access to, for example, the Microsoft Exchange server. The attacker first hacked routers belonging to ordinary Norwegians, so the attack did not come from a suspicious IP-address. The attacker used the first vulnerability to gather information from the Ivanti server and used the path traversal vulnerability (CVE-35081) to run code on the EPMM server, which allowed the attacker through CVE-38035 to access Ivanti Sentry. The Sentry server is a high-value target for a threat actor. It is the system that, in the case of the Norwegian government, was used to gain access to the Microsoft Exchange server. On August 21, 2023, Ivanti warned its customers that a critical Sentry API bypass vulnerability was being exploited in the wild.
 
-###### Vulnerable devices in the netherlands
+#### Vulnerable devices in the Netherlands
 
 On July 25th, the DIVD initiated a scan for CVE-2023-35078. An initial query on Shodan revealed 2,900 devices worldwide as vulnerable. A subsequent scan conducted on July 26th identified 1209 vulnerable devices, including some located in the Netherlands. The DIVD has notified the owners of these vulnerable systems and is also communicating with trusted information-sharing partners for targeted notifications. By July 28th, the number of vulnerable devices had decreased to 933.
 
