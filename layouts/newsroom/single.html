@@ -69,7 +69,7 @@
         </aside>
       </div>
       <!-- Check if the FAQ is required as per the setting in the CMS -->
-      {{ if isset .Params "faq_enabled" }}
+      {{ if and (isset .Params "faq_enabled") (.Params.faq_enabled) }}
         <div class="article-faq">
           {{ partial "block/faq" . }}
         </div>
