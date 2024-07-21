@@ -19,7 +19,7 @@ teams:
       crisis manager.
     members: []
   - title: Management
-  - title: "DIVD-CSIRT "
+  - title: DIVD-CSIRT
     description: The CSIRT (Computer Security Incident Response Team) is the beating
       heart of DIVD, responsible for scanning the Internet and notifying system
       owners of the vulnerabilities found in their systems. Within the CSIRT,
