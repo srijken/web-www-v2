@@ -3,15 +3,13 @@ title: Waarschuwingsmail
 opener: We rapporteren kwetsbaarheden om problemen te voorkomen
 intro: >-
   Wanneer een kwetsbaarheid wordt gevonden, openen we een case en maken we een
-  fingerpint. 
+  fingerprint*. Daarna beginnen we met scannen, zodat we kwetsbare instanties
+  kunnen identificeren en de eigenaren van deze systemen op de hoogte kunnen
+  stellen. Deze gestructureerde aanpak helpt ervoor te zorgen dat kwetsbaarheden
+  systematisch worden opgespoord, gedocumenteerd, en verholpen.
 
 
-  * Een case is een record of bestand dat wordt aangemaakt om het proces van het aanpakken van de specifieke kwetsbaarheid te documenteren en te beheren.  
-
-  * Een fingerprint (vingerafdruk) is een verzameling van unieke eigenschappen die specifiek behoren tot de kwetsbaarheid. Een fingerprint kan ons vervolgens helpen bij het identificeren van getroffen systemen. 
-
-
-  Daarna beginnen we met scannen, zodat we kwetsbare instanties kunnen identificeren en de eigenaren van deze systemen op de hoogte kunnen stellen. Deze gestructureerde aanpak helpt ervoor te zorgen dat kwetsbaarheden systematisch worden opgespoord, gedocumenteerd, en verholpen.
+  \* Een case is een record of bestand dat wordt aangemaakt om het proces van het aanpakken van de specifieke kwetsbaarheid te documenteren en te beheren. Een fingerprint (vingerafdruk) is een verzameling van unieke eigenschappen die specifiek behoren tot de kwetsbaarheid. Een fingerprint kan ons vervolgens helpen bij het identificeren van getroffen systemen.
 csirt:
   title: Onze onderzoekers zoeken naar kwetsbaarheden
   description: >-
@@ -24,7 +22,7 @@ csirt:
     **Alleen eigenaren van kwetsbare systemen ontvangen een waarschuwing met hostinformatie en mitigatiestappen.**
   link: https://csirt.divd.nl
 stepbystep:
-  title: Wat je stap voor stap moet doen
+  title: Een stap-voor-stap handleiding die beschrijft wat je moet doen
   description: "Als je een melding (e-mail) hebt ontvangen van ons CSIRT,
     controleer dan of het e-mailadres @divd.nl is. Dit kan csirt@divd.nl,
     divd-case-number@csirt.divd.nl of een name-of-researcher@divd.nl zijn (omdat
