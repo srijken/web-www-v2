@@ -8,7 +8,7 @@ intro: >-
   vulnerabilities are tracked, managed, and resolved systematically.
 
 
-  \*A case is a record or file, created to document and manage the process of addressing the specific vulnerability.  A fingerprint is a unique identifier or signature for the vulnerability to help in identifying affected systems.
+  A case is a record or file, created to document and manage the process of addressing the specific vulnerability.  A fingerprint is a unique identifier or signature for the vulnerability to help in identifying affected systems.
 csirt:
   title: Our researchers search for vulnerabilities
   description: >-
