@@ -68,10 +68,6 @@ teams:
       Security Office, the GRC department includes privacy officers, a crisis
       manager, and the Ethical Committee.
     members: []
-  - title: Office
-    description: Providing some sense of direction to a bunch of hackers, aka
-      advanced cat herding.
-    members: []
   - title: Project Office
     description: The Project Office is a centralized entity within the DIVD
       responsible for standardizing and overseeing project management practices
