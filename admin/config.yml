@@ -1158,6 +1158,7 @@ collections:
             public_folder: "/images/whoweare"
             media_folder: "/assets/images/whoweare"
             required: false
+            i18n: true
 
   # PAGE: !The Team #####################################################
   - name: "team"
