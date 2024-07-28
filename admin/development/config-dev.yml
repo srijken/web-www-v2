@@ -458,6 +458,7 @@ collections:
       - label: "Newsletter link"
         name: "newsletter"
         widget: "string"
+        i18n: true
       - label: "Starter"
         name: "starter"
         i18n: true
