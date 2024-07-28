@@ -7,7 +7,7 @@ At DIVD the security of our systems is top priority. No matter how much effort w
 
 **Please do the following:**
 
-Submit your findings by using the following URL: <https://app.zerocopter.com/en/rd/f9afbf32-ce59-48ed-96f2-ac4410595aa4.>
+Submit your findings by using the following URL: <https://app.zerocopter.com/en/rd/f9afbf32-ce59-48ed-96f2-ac4410595aa4>.
 
 **Do’s:**
 
