@@ -76,6 +76,7 @@ collections:
               public_folder: "/images/",
               media_folder: "/assets/images/",
               required: true,
+              i18n: true
             }
           - {
               label: t1_alt,
@@ -91,6 +92,7 @@ collections:
               public_folder: "/images/",
               media_folder: "/assets/images/",
               required: true,
+              i18n: true
             }
           - {
               label: t2_alt,
@@ -106,6 +108,7 @@ collections:
               public_folder: "/images/",
               media_folder: "/assets/images/",
               required: true,
+              i18n: true
             }
           - {
               label: t3_alt,
