@@ -59,7 +59,7 @@
           <article>
             <h1>{{ .Params.contenttitle | markdownify }}</h1>
     
-              {{ .Content | markdownify }}
+              {{ .Content }}
           </article>
         </div>
       {{ partial "p/layout_close" }}
@@ -71,7 +71,9 @@
       {{ partial "p/layout_open" (dict "classes" (slice "article" )) }}
         <div class="article-body">
           <article>
-              {{ .Params.belowwoordenboek | markdownify }}
+              <p>
+                {{ .Params.belowwoordenboek | markdownify }}
+              </p>
           </article>
         </div>
       {{ partial "p/layout_close" }}
