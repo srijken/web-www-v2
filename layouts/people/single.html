@@ -86,13 +86,7 @@
             {{ $link := print "/" .Permalink }}
             {{ $alt := .Params.title }}
 
-            {{ with resources.Get "/images/divd-profilepicture-volunteer2.svg" }} 
-              {{ partial "tools/rimg/img" (dict "img" . "alt" $alt) }}
-            <!--- $alt --->
-            {{ end }}
-            
-
-            <!-- <img src="{{ $imageFromParam }}" alt="{{ $alt }}" /> -->
+            <img src="{{ $imageFromParam }}" alt="{{ $alt }}" />
           </div>
         </aside>
       </div>
