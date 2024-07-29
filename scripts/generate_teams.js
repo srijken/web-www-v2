@@ -66,12 +66,24 @@ const fetchTeamsAndMembers = async () => {
         if (!existingTeam.members) existingTeam.members = [];
 
         const existingMemberSlugs = new Set(existingTeam.members?.map((member) => member.split('/').pop()));
+        let foundWinko = false;
+
         fetchedTeam.members.forEach((member) => {
           const memberSlug = `/who-we-are/team/people/${member.slug}`;
           if (!existingMemberSlugs.has(member.slug)) {
-            existingTeam.members.push(memberSlug);
+            if (member.slug === 'winko') {
+              foundWinko = memberSlug; // Store the slug if it is "winko"
+            } else {
+              existingTeam.members.push(memberSlug);
+            }
           }
         });
+
+        // Move "winko" to the front if found
+        if (foundWinko) {
+          // eslint-disable-next-line no-param-reassign
+          existingTeam.members = [foundWinko, ...existingTeam.members];
+        }
       }
     });
 
