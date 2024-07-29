@@ -65,7 +65,9 @@
       {{ partial "p/layout_close" }}
 
       {{ partial "p/layout_open" (dict "classes" (slice "article" )) }}
-        <iframe width="1200" height="750" src="https://cyberveilignederland.nl/woordenboek.iframe?mainColor=ffd735&secondaryColor=111111" title="Cyberveilig woordenboek" frameborder="0"></iframe>
+        <div class="iframe-container">
+          <iframe width="1200" height="750" src="https://cyberveilignederland.nl/woordenboek.iframe?mainColor=ffd735&secondaryColor=111111" title="Cyberveilig woordenboek" frameborder="0"></iframe>
+        </div>
       {{ partial "p/layout_close" }}
 
       {{ partial "p/layout_open" (dict "classes" (slice "article" )) }}
