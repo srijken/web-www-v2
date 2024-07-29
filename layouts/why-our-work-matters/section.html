@@ -57,10 +57,9 @@
       {{ partial "p/layout_open" (dict "classes" (slice "article" )) }}
         <div class="article-body">
           <article>
-            <h1>{{ .Params.main.Title }}</h1>
+            <h1>{{ .Params.contenttitle | markdownify }}</h1>
     
-            
-              {{ .Content }}
+              {{ .Content | markdownify }}
           </article>
         </div>
       {{ partial "p/layout_close" }}
