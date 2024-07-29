@@ -6,11 +6,10 @@
       {{ partial "breadcrumbs" . }}
       {{ partial "p/layout_open" (dict "classes" (slice "right" "vcenter")) }}
         <div>
-          <h1>{{ .Params.opener }}</h1>
+          <h1>{{ .Params.title }}</h1>
         </div>
         <div>
-          <p>{{ .Params.intro}}</p>
-          <a class="cta secondary" href="#donate">{{ i18n "donate" }}</a>
+          <p>{{ .Params.intro | markdownify }}</p>
         </div>  
       {{ partial "p/layout_close" }}
     </div>
@@ -26,7 +25,7 @@
           <article>
             <header>
               <h3>{{ .Params.leftblock.title }}</h3>
-              <p>{{ .Params.leftblock.content }}</p>
+              <p>{{ .Params.leftblock.content | markdownify }}</p>
             </header>
             {{ if .Params.leftblock.learnmore }}
               <nav>
@@ -43,7 +42,7 @@
           <article>
             <header>
               <h3>{{ .Params.rightblock.title }}</h3>
-              <p>{{ .Params.rightblock.content }}</p>
+              <p>{{ .Params.rightblock.content | markdownify }}</p>
             </header>
             {{ if .Params.rightblock.learnmore }}
               <nav>
@@ -67,7 +66,15 @@
       {{ partial "p/layout_close" }}
 
       {{ partial "p/layout_open" (dict "classes" (slice "article" )) }}
-        <iframe width="560" height="315" src="https://cyberveilignederland.nl/woordenboek.iframe?mainColor=ffd735&secondaryColor=111111" title="Cyberveilig woordenboek" frameborder="0"></iframe>
+        <iframe width="1200" height="750" src="https://cyberveilignederland.nl/woordenboek.iframe?mainColor=ffd735&secondaryColor=111111" title="Cyberveilig woordenboek" frameborder="0"></iframe>
+      {{ partial "p/layout_close" }}
+
+      {{ partial "p/layout_open" (dict "classes" (slice "article" )) }}
+        <div class="article-body">
+          <article>
+              {{ .Params.belowwoordenboek | markdownify }}
+          </article>
+        </div>
       {{ partial "p/layout_close" }}
 
     </div>
