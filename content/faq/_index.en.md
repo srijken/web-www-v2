@@ -9,11 +9,10 @@ faqgroups:
   - heading: Home
     faqs:
       - title: Is it legal what DIVD is doing?
-        description: "The Dutch jurisprudence is clear: if you serve a societal need
-          with appropriate means, you are allowed to perform these small hacks
-          in order to prevent the real damaging hacks. Our way of working is
-          approved by the Dutch Public Prosecution Office the National Cyber
-          Security Center."
+        description: "Dutch jurisprudence is clear: if you address a societal need using
+          appropriate methods, you are permitted to execute minor hacks to
+          prevent more damaging ones. The Dutch Public Prosecution Office and
+          the National Cyber Security Center endorse our approach."
       - title: Why did I receive an email from DIVD / CSIRT?
         description: >-
           If we find a vulnerability, we'll set up a case with all the details
