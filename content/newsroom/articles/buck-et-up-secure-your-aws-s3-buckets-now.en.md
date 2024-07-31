@@ -2,10 +2,11 @@
 title: Buck-et up! Secure your AWS S3 Buckets now!
 date: 2024-07-31T14:43:00.000Z
 tag: news
-intro: 1.5 million files stored unprotected on the public internet, does this
+intro: "1.5 million files stored unprotected on the public internet, does this
   still happen? Unfortunately, yes, it still happens. Despite our familiarity
   with security policies, controls, and best practices. In this article, you can
   read how you can secure your AWS S3 buckets and why it is important to do it.
+  "
 faq_enabled: false
 faq:
   title: faq
