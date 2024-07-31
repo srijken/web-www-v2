@@ -61,7 +61,7 @@ Activate logging and monitoring features like AWS CloudTrail and Amazon S3 serve
 * [Logging requests with server access logging](https://docs.aws.amazon.com/AmazonS3/latest/userguide/ServerLogs.html)
 * [Logging Amazon S3 API calls using AWS CloudTrail](https://docs.aws.amazon.com/AmazonS3/latest/userguide/cloudtrail-logging.html)
 
-✅ Encrypt your data at rest and in transit
+### ✅ Encrypt your data at rest and in transit
 
 Use server-side encryption (SSE) or client-side encryption to protect your data at rest. Ensure data in transit is encrypted using HTTPS to prevent interception.
 
