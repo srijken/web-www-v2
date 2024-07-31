@@ -73,4 +73,4 @@ Regular security audits can be used to identify and remediate potential vulnerab
 
 Proactively detect the presence of sensitive data with [Amazon Macie](https://docs.aws.amazon.com/macie/latest/user/what-is-macie.html). Amazon Macie uses machine learning and pattern matching to provide visibility into data security risks, and enables automated protection against those risks. 
 
-By following these steps, you can significantly enhance the security of your S3 buckets and protect your data from unauthorised access and potential breaches. If you happen to forget to secure your S3 bucket, let’s hope & pray that one of DIVD’s finest finds the misconfiguration and reports it to your organisation as soon as it’s discovered!
+✨ By following these steps, you can significantly enhance the security of your S3 buckets and protect your data from unauthorised access and potential breaches. If you happen to forget to secure your S3 bucket, let’s hope & pray that one of DIVD’s finest finds the misconfiguration and reports it to your organisation as soon as it’s discovered!
