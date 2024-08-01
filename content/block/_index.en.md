@@ -8,7 +8,7 @@ proudestwork:
   ourproudestwork:
     - /newsroom/articles/over-1-million-notifications
     - /newsroom/articles/test-case
-    - /newsroom/articles/test-article-with-image
+    - /newsroom/articles/operation-endgame-divd-2024-00019
 mission:
   title: Our mission
   description: |-
