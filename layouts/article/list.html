@@ -11,7 +11,7 @@
     {{ template "_internal/pagination.html" . }}
       <div class="newsroom-article-list">
         
-        {{ range .Paginator.Pages }}
+        {{ range .Paginator.Pages.ByDate.Reverse }}
         <div class="article">
           <section>
             <div class="summary">
