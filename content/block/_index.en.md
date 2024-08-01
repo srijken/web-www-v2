@@ -6,9 +6,9 @@ ethics:
 proudestwork:
   title: Our proudest work
   ourproudestwork:
+    - /newsroom/articles/over-1-million-notifications
     - /newsroom/articles/test-case
     - /newsroom/articles/test-article-with-image
-    - /newsroom/articles/over-1-million-notifications
 mission:
   title: Our mission
   description: |-
