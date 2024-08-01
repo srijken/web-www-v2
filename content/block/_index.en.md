@@ -45,15 +45,15 @@ divdfamily:
       link: https://divd.nl
 familycta:
   title: Want to become part of the family?
-  intro: We are a organisation that consists of volutneers, we are always looking for new talent that wants to join our cause or potential partners and donations. Check out our contribute page to learn more about what you can do for us.
+  intro: We are a organisation that consists of volunteers, we are always looking for new talent that wants to join our cause or potential partners and donations. Check out our contribute page to learn more about what you can do for us.
 csirt:
   title: "CSIRT: Computer Security Incident Response Team"
-  intro: The CSIRT handles the scanning for and disclosing of vulnerabilities, either discovered by DIVD researchers or third parties and warning people for leaked credentials and operates our CVE Numbering Authoristy (CNA) capability.
+  intro: The CSIRT handles the scanning for and disclosing of vulnerabilities, either discovered by DIVD researchers or third parties and warning people for leaked credentials and operates our CVE Numbering Authority (CNA) capability.
   link: https://csirt.divd.nl/
 contact:
   title: Not a regular office
   intro: |-
-    We are a network of security researchers who mainly work online. If you want to contact us, you can send us an e mail to question@divd.nl or use our contact form. You can also meet us at cyber security conferences and hacker events or just follow us on [X](https://x.com/DIVDnl) (formerly known as Twitter). 
+    We are a network of security researchers who mainly work online. If you want to contact us, you can send us an e mail to question@divd.nl or use our contact form. You can also meet us at cyber security conferences and hacker events or just follow us on [X](https://x.com/DIVDnl) (formerly known as Twitter).
 
     For questions related to our CSIRT you can email [csirt@divd.nl](mailto:csirt@divd.nl) .
   email: contact@divd.nl
