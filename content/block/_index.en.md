@@ -6,7 +6,6 @@ ethics:
 proudestwork:
   title: Our proudest work
   ourproudestwork:
-    - /newsroom/articles/online-test-article
     - /newsroom/articles/test-case
     - /newsroom/articles/test-article-with-image
     - /newsroom/articles/over-1-million-notifications
