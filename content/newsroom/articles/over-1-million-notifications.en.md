@@ -16,6 +16,8 @@ DIVD aims to make the digital world safer by reporting vulnerabilities we find i
 
 Because of the notifications, organizations become aware of weaknesses and accidental misconfigurations in their systems, allowing them to address these issues **before** cybercriminals can exploit them. This approach helps in preventing cyber attacks and contributes to a safer digital world.
 
-Also a big shoutout to our [partners](https://www.divd.nl/contribute/partners/) and [volunteers](https://www.divd.nl/contribute/volunteers/). We couldn't have done this without them!  
+Also a big shoutout to our [partners](https://www.divd.nl/contribute/partners/) and [volunteers](https://www.divd.nl/contribute/volunteers/). We couldn't have done this without them! 
 
-Make sure to [follow](https://www.linkedin.com/company/divd-nl/?) us on LinkedIn and never miss an important update.
+If you would like to contribute to DIVD's mission, your donations are more than welcome. You can also [sign up](https://www.divd.nl/contribute/volunteers/) as a volunteer and offer your time and skills here. 
+
+Make sure to [follow](https://www.linkedin.com/company/divd-nl/?) us on LinkedIn and [X](https://x.com/DIVDnl) (formerly known as Twitter) and take notice of every important update.
