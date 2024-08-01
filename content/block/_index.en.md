@@ -9,6 +9,7 @@ proudestwork:
     - /newsroom/articles/online-test-article
     - /newsroom/articles/test-case
     - /newsroom/articles/test-article-with-image
+    - /newsroom/articles/over-1-million-notifications
 mission:
   title: Our mission
   description: |-
