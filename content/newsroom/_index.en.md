@@ -5,6 +5,6 @@ intro: Here, you'll find the latest updates, announcements, and stories from DIV
 newsletter: https://divd.nl/newsletter
 starter:
   title: Stay up to date
-  description: Here you can find updates, articles about our culture, cases and much more!
+  description: Here, you'll find updates, articles about our culture, case studies, and much more!
 highlight: /newsroom/articles/over-1-million-notifications
 ---
