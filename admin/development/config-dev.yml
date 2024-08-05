@@ -1290,6 +1290,124 @@ collections:
           required: false,
         }
 
+  ######################################
+  # SECTION: Why our work matters
+  ####
+
+  # PAGE: !Why our work matters #####################################################
+  - name: "why-our-work-matters"
+    label: "Why our work matters"
+    folder: "content/why-our-work-matters"
+    slug: "_index"
+    create: false
+    i18n: true
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        default: "Why our work matters"
+        required: false
+        i18n: true
+      - label: "Intro"
+        name: "intro"
+        widget: "markdown"
+        required: false
+        i18n: true
+      - label: "Left content block"
+        name: "leftblock"
+        i18n: true
+        widget: "object"
+        fields:
+          - label: "Content"
+            name: "content"
+            widget: "markdown"
+            i18n: true
+          - {
+              label: "Image",
+              name: "image",
+              widget: "image",
+              public_folder: "/images/",
+              media_folder: "/assets/images/",
+              required: false,
+            }
+          - {
+              label: alt,
+              name: "Alt tag for image",
+              widget: string,
+              required: false,
+              i18n: true,
+            }
+          - label: "Learn More"
+            name: "learnmore"
+            widget: "string"
+            required: false
+            i18n: true
+      - label: "Right content block"
+        name: "rightblock"
+        i18n: true
+        widget: "object"
+        fields:
+          - label: "Content"
+            name: "content"
+            widget: "markdown"
+            i18n: true
+          - {
+              label: "Image",
+              name: "image",
+              widget: "image",
+              public_folder: "/images/",
+              media_folder: "/assets/images/",
+              required: false,
+            }
+          - {
+              label: alt,
+              name: "Alt tag for image",
+              widget: string,
+              required: false,
+              i18n: true,
+            }
+          - label: "Learn More"
+            name: "learnmore"
+            widget: "string"
+            required: false
+            i18n: true
+      - label: "Content Title"
+        name: "contenttitle"
+        widget: "markdown"
+        i18n: true
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+        i18n: true
+
+  ######################################
+  # SECTION: Dictionary
+  ####
+
+  # PAGE: !Dictionary #####################################################
+  - name: "dictionary"
+    label: "Dictionary"
+    folder: "content/dictionary"
+    slug: "_index"
+    create: false
+    i18n: true
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        default: "Dictionary"
+        required: false
+        i18n: true
+      - label: "Intro"
+        name: "intro"
+        widget: "markdown"
+        required: false
+        i18n: true
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+        i18n: true
+
   ########################################################################
   # CONTENT BLOCKS
   ########################################################################
