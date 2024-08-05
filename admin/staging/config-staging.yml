@@ -1313,6 +1313,11 @@ collections:
         widget: "markdown"
         required: false
         i18n: true
+      - label: "Opener"
+        name: "opener"
+        widget: "markdown"
+        required: false
+        i18n: true
       - label: "Left content block"
         name: "leftblock"
         i18n: true
