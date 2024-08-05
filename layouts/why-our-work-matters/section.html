@@ -17,6 +17,14 @@
   {{ partial "p/section_open" (dict "classes" (slice "inverse"))}} 
 
     <div class="overlap-top-lg">
+      {{ partial "p/layout_open" (dict "classes" (slice "article" "opener" )) }}
+        <div class="article-body opener-body">
+          <article>
+              {{ .Params.opener | markdownify }}
+          </article>
+        </div>
+      {{ partial "p/layout_close" }}
+
       {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2" "stretch")) }}
         <div class="intro-card">
           {{ with resources.Get .Params.leftblock.image }} 
