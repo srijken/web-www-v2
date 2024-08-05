@@ -1,22 +1,54 @@
 ---
-title: Why our work matters
-opener: Why our work matters
-intro: DIVD is a non-profit organisation run by volunteers, and a network of
-  likeminded organisations. We’d love for you to sign up as a volunteer.
+title: DIVD's work is of great importance, here is why
+intro: |-
+  DIVD aims to make the digital world safer by reporting vulnerabilities we find in digital systems to the people who can fix them. On this page, we explain why our work matters to society, partners, and other organisations. 
+
+  *"What makes DIVD amazing is the fact that we are in between these attackers and defenders. We attempt to take away attackers' weapons as quickly as possible by making people aware of these weapons. That has a lot of impact!"*
+opener: What exactly are (zero-day) security vulnerabilities, and why is it so important to find and report them as soon as possible?
 leftblock:
-    image: images/global/becomevolunteer.png
-    alt:
-    content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at enim mauris. Integer ornare dictum ultrices. In congue nunc sed dui facilisis, ac condimentum mi finibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur et orci ligula. Quisque orci velit, dapibus et libero ornare, commodo porttitor tellus. Aenean nec tempus turpis. Duis quis ipsum id risus iaculis accumsan. Nullam tempor justo sed ante rhoncus scelerisque.
-    learnmore: /
+  content: |-
+    ## **Security Vulnerability**
+
+    According to [NIST](https://csrc.nist.gov/glossary/term/vulnerability#:~:text=Definitions%3A,triggered%20by%20a%20threat%20source.) (National Institute of Standards and Technology), a vulnerability is a “w*eakness in an information system, system security procedures, internal controls, or implementation that could be exploited or triggered by a threat source.*”
+
+    Essentially, a security vulnerability is a weakness or flaw in a computer system, network, or software that can be exploited by cybercriminals to gain unauthorized access to systems and/or cause damage. Common examples of vulnerabilities are misconfigurations, unpatched software or firmware, the use of weak or default passwords, and the use of old protocols and standards.
+
+    When cybercriminals discover a vulnerability on a system,  they will try to create a way to *exploit* it, to achieve actions on objectives. An *exploit* is basically a malicious piece of code or script that can be used to take advantage of a system's vulnerability.
+
+    When cybercriminals are able to exploit a vulnerability in a system to gain access to critical systems, they can potentially view, modify, delete and/or extract sensitive data. As soon as an intruder gets in, secrets are no longer secret. If an organisation doesn't find and mitigate vulnerabilities in time, the consequences can be severe, ranging from financial losses to irreparable damage to the organisation's reputation.
+
+    *Cybercriminals often prefer to create exploits for big, well-known issues because they can use those exploits to create powerful, cheap attacks that work for many years and on many systems.*
+  image: ""
+  Alt tag for image: ""
+  learnmore: /
+  alt: null
 rightblock:
-    image: images/global/becomevolunteer.png
-    alt:
-    content: Quisque eleifend bibendum nibh, id auctor sem feugiat eu. Duis aliquet dolor eu scelerisque consequat. Proin sagittis elit sed arcu euismod auctor. Mauris quis semper tellus. Etiam porttitor augue at sem vulputate gravida sed et libero. Curabitur urna metus, tempus in semper vitae, consequat vel libero. Etiam a quam interdum, feugiat dui eget, ullamcorper magna. Maecenas eu libero varius lorem blandit convallis quis in magna. Praesent a odio lacinia, dignissim eros eget, iaculis libero. Mauris bibendum pretium rutrum. Curabitur ultricies mollis consequat. Ut a purus est. Sed ac convallis odio, eget placerat justo. Morbi gravida ipsum eget imperdiet ultrices. Pellentesque semper sem eget augue imperdiet mollis. Quisque sollicitudin cursus nulla eu accumsan.
-    learnmore:
+  content: |-
+    ## **Zero-day Vulnerability**
+
+    A zero-day (0-day) vulnerability is a specific type of security flaw. It defines a vulnerability that is *unknown* to the software developers and the security community at the time it is discovered by hackers. Against popular belief, this does not necessarily make a zero-day vulnerability a 'critical'  or 'highly exploitable' vulnerability. It only means that there is no fix released for it yet.
+
+    DIVD actively searches for vulnerable systems online. A discovered vulnerability is directly reported to the vendor. The vendor or partner agrees with DIVD to keep the software vulnerability a secret, so that the vulnerability can remain secret. This gives the vendor a little time to create and release a security update (a so-called 'patch' or 'hotfix') to fix the vulnerability. Thus, the vendor is aware of the issue and provides a fix.
+
+    However, there are times when DIVD researchers uncover a vulnerability that has *never* been discovered before. For example, this could be a flaw in core components of operating systems (such as Windows, macOS, or Linux) or a vulnerability in a widely used network protocol that has previously gone unnoticed.
+
+    Since this vulnerability is *unknown*, no one is adequately protected against it. The vendor needs to disclose information about the vulnerability to it's partners, but in doing so, they also unintentionally but unavoidably inform cybercriminals about the occurrence of a weakness in their software. This is when a race against the clock begins. Who works faster, the software vendor crafting and distributing a patch, or the cybercriminals crafting and deploying an exploit? 
+
+    🤓 *Eternal Blue is a very infamous zero-day exploit that was originally was developed by the NSA and later leaked by a hacking group. It was used in the [WannaCry ransomware attack](https://en.wikipedia.org/wiki/WannaCry_ransomware_attack), which affected hundreds of thousands of computers worldwide.*
+  image: images/global/becomevolunteer.png
+  Alt tag for image: ""
+  learnmore: ""
+  alt: null
+contenttitle: "## Why our work matters"
 main:
-    title: More text here
+  title: More text here
 ---
+✨  DIVD focuses on identifying and responsibly disclosing vulnerabilities in software and systems before they can be exploited by cybercriminals. 
 
-Quisque dolor ex, venenatis a vestibulum eget, egestas vitae justo. Aenean laoreet ex metus, eget consequat enim malesuada et. Donec tincidunt justo in condimentum commodo. Vestibulum ullamcorper tempus nisi quis suscipit. Ut id ante odio. Phasellus consequat vel ex id tristique. Phasellus est nulla, pulvinar vel massa iaculis, placerat tempus urna. Sed fringilla odio quis dapibus interdum. Nunc consectetur quam et ligula sagittis, vitae finibus velit congue. Aenean feugiat faucibus dignissim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+✨ DIVD scans for both regular security vulnerabilities *and* zero-day vulnerabilities. DIVD requests the assignment of new unique identifiers (CVEs) when new (previously unknown) vulnerabilities are identified.
 
-Morbi et sollicitudin tortor. Sed et ipsum consequat, pretium ligula vitae, tincidunt massa. Vestibulum tincidunt orci arcu, vitae suscipit orci mollis et. Maecenas convallis eu lorem a blandit. Suspendisse fringilla ante nunc, ut aliquam mauris pharetra semper. Suspendisse leo libero, facilisis nec finibus eu, cursus et nisl. Cras eget nibh nunc. Curabitur congue magna in sem imperdiet imperdiet sit amet at nulla. Aliquam placerat urna magna, dignissim maximus nisi vehicula vel. Vestibulum ipsum elit, fermentum nec lacinia ut, pharetra in mauris. Curabitur volutpat semper nisi, et accumsan dolor elementum non. Morbi tincidunt sodales risus et suscipit.
+✨ DIVD is known for its transparency in reporting vulnerabilities and the steps taken to address them. This openness builds trust within the cybersecurity community and with the public.
+
+✨ DIVD focused on proactive vulnerability disclosure and awareness, therefore  complementing the work of other CSIRTs. Unlike many cybersecurity organizations that operate for profit, DIVD is a non-profit entity.
+
+✨ DIVD actively engages with the cybersecurity community, including researchers, ethical hackers, and other stakeholders, to share knowledge and improve collective security efforts.
