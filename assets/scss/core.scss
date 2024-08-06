@@ -783,3 +783,17 @@ table.donations {
 .debug-info {
   display: none;
 }
+
+blockquote {
+  font-style: italic;
+  color: #545454;
+  padding: 10px 20px;
+  margin: 20px 0;
+  border-left: 5px solid #545454;
+  margin-left: 40px;  /* Indent the blockquote */
+  margin-right: 40px; /* Indent the blockquote */
+
+  p {
+    margin-bottom: 0px;
+  }
+}
