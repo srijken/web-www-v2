@@ -1,6 +1,6 @@
 ---
-title: Buck-et up! Secure your AWS S3 Buckets now!
-date: 2024-07-31T16:43
+title: How to secure your AWS S3 buckets
+date: 2024-07-31T16:43:00+02:00
 tag: news
 intro: 1.5 million files stored unprotected on the public internet, does this still happen? Unfortunately, yes, it still happens. Despite our familiarity with security policies, controls, and best practices. In this article, you can read how you can secure your AWS S3 buckets and why it is important to do it.
 Alt tag for image: ""
