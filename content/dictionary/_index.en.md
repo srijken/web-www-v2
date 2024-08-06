@@ -23,7 +23,13 @@ At DIVD, we work with sensitive data every day. Think about lists of IP addresse
 **(Ethical) Hacker / White Hat Hacker**
 DIVD members belong to the “white hat” hackers. A white hat hacker is someone who breaks into a computer system with positive intentions, without disrupting any services or processes. The motivation of a white hat hacker is to detect security vulnerabilities, without misusing or exploiting them. A white hat hacker is sometimes also referred to as an ethical hacker. Our members are skilled professionals that must always operate within legal boundaries. Please read our [Code of Conduct](https://www.divd.nl/what-we-do/code-of-conduct/) for more information. *The term ‘white hat’ comes from cowboy movies in which the hero always wore a white hat.*
 
-**Exploit**\
+**High-risk vulnerability**
+
+DIVD reports every [security vulnerability](https://www.divd.nl/why-our-work-matters/) that falls under the category of high risk or high impact. A high-risk vulnerability is a security flaw in a system, application, or network that poses a significant threat to an organization's operations, data, or users. High-risk vulnerabilities are typically characterized by being relatively easy for cybercriminals to exploit and are often found in widely used software or systems. Successful exploitation can result in severe consequences such as unauthorized access, data breaches, significant data loss, system downtime, financial loss, or damage to an organization's reputation.
+
+The sequence in which DIVD handles vulnerabilities is influenced by multiple metrics, including the level of exposure online and whether the vulnerability is under active exploitation.
+
+**Exploit**
 An exploit is a malicious application, piece of code or script that can be used to take advantage of a system's vulnerability. At DIVD, we don’t use or run intrusive exploits to verify the existence of a vulnerability in a system. Destructive commands like “$ rm -rf /” or testing for denial of service are not permitted in any scenario. If several means are available to meet the need, we opt for the one which has the least impact on the availability of the systems and services.
 
 **Responsible disclosure**
