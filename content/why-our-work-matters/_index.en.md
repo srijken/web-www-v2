@@ -49,7 +49,7 @@ main:
 ---
 ✨  DIVD focuses on identifying and responsibly disclosing vulnerabilities in software and systems before they can be exploited by cybercriminals. 
 
-✨ DIVD scans for both regular security vulnerabilities *and* zero-day vulnerabilities. DIVD requests the assignment of new unique identifiers (CVEs) when new (previously unknown) vulnerabilities are identified.
+✨ DIVD scans for both regular security vulnerabilities *and* zero-day vulnerabilities. DIVD requests [the assignment of new unique identifiers (CVEs)](https://csirt.divd.nl/cna/) when new (previously unknown) vulnerabilities are identified.
 
 ✨ DIVD is known for its transparency in reporting vulnerabilities and the steps taken to address them. This openness builds trust within the cybersecurity community and with the public.
 
