@@ -22,7 +22,7 @@ leftblock:
     *Cybercriminals often prefer to create exploits for big, well-known issues because they can use those exploits to create powerful, cheap attacks that work for many years and on many systems.*
   image: ""
   Alt tag for image: ""
-  learnmore: /what-we-do/
+  learnmore: /dictionary/
   alt: null
 rightblock:
   content: |-
