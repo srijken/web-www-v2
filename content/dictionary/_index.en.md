@@ -18,6 +18,8 @@ An exploit is a malicious application, piece of code or script that can be used 
 
 At DIVD, we adhere to the ‘Principle of Proportionality’ and the ‘Principle of Subsidiarity’, as described in our [Code of Conduct](https://www.divd.nl/what-we-do/code-of-conduct/). This means that our research should increase and not decrease the integrity and availability of any and all online systems. If several means are available to meet the need, we opt for the one which has the least impact on the availability of the systems and services.
 
+#### 
+
 #### **Case**
 
 When DIVD talks about a “case” we refer to a record or file created to document and manage the process of addressing a specific vulnerability. It typically includes details such as:
@@ -26,7 +28,8 @@ When DIVD talks about a “case” we refer to a record or file created to docum
 - Fingerprint Creation: A unique identifier or signature for the vulnerability to help in identifying affected systems.
 - Scanning and Identification: The process of scanning systems to find instances that are vulnerable.
 - Notification: Informing the owners of the vulnerable systems about the issue so they can take corrective action.
-- This structured approach helps ensure that vulnerabilities are tracked, managed, and resolved systematically.
+
+This structured approach helps ensure that vulnerabilities are tracked, managed, and resolved systematically.
 
 #### **Confidentiality**
 
@@ -42,7 +45,8 @@ Responsible disclosure helps protect users, maintains trust between (DIVD) resea
 
 Security.txt is a proposed standard for websites to provide a clear and consistent way for security researchers to report security vulnerabilities. It involves placing a simple text file named security.txt in the well-known location /.well-known/ directory of a website (e.g., [https://example.com/.well-known/security.txt)](https://example.com/.well-known/security.txt)). This file contains contact information and other details that guide researchers on how to responsibly disclose security issues to the organization. Wanna make DIVD’s work easier? Put our [security.txt](https://securitytxt.org/) in the code of your website and our IP 194.5.73.0-255 on your allow list.
 
-## 
+#### 
+
 
 ## Vulnerabilities
 
