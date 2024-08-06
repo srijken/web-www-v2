@@ -6,7 +6,7 @@ intro: On this page, the DIVD Dictionary, you can find a clarification of the cy
 
 #### **(Ethical) Hacker**
 
-DIVD members belong to the ethical hackers. An ethical hacker is someone who breaks into a computer system with positive intentions, without disrupting any services or processes. The motivation of an ethical  hacker is to detect security vulnerabilities, without misusing or exploiting them. Our members are skilled professionals that must always operate within legal boundaries. Please read our [Code of Conduct](https://www.divd.nl/what-we-do/code-of-conduct/) for more information.
+DIVD members belong to the ethical hackers. An ethical hacker is someone who breaks into a computer system with positive intentions, without disrupting any services or processes. The motivation of an ethical  hacker is to detect security vulnerabilities, without abusing or exploiting them. Our members are skilled professionals that must always operate within legal boundaries. Please read our [Code of Conduct](https://www.divd.nl/what-we-do/code-of-conduct/) for more information.
 
 #### **Exploit**
 
@@ -46,7 +46,6 @@ Responsible disclosure helps protect users, maintains trust between (DIVD) resea
 Security.txt is a proposed standard for websites to provide a clear and consistent way for security researchers to report security vulnerabilities. It involves placing a simple text file named security.txt in the well-known location /.well-known/ directory of a website (e.g., [https://example.com/.well-known/security.txt)](https://example.com/.well-known/security.txt)). This file contains contact information and other details that guide researchers on how to responsibly disclose security issues to the organization. Wanna make DIVD’s work easier? Put our [security.txt](https://securitytxt.org/) in the code of your website and our IP 194.5.73.0-255 on your allow list.
 
 #### 
-
 
 ## Vulnerabilities
 
