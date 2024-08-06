@@ -1,9 +1,6 @@
 ---
-title: Dictionary
-intro: |-
-  Working for DIVD, we aim to make the digital world safer by reporting vulnerabilities we find in digital systems to the people who can mitigate them.
-
-  But what are exactly are (zero-day) vulnerabilities, and why is it so important to find them as soon as possible? Find these (and other) frequently used cyber security definitions on this page.
+title: DIVDictionary
+intro: On this page, the DIVD Dictionary, you can find a clarification of the cyber security words and phrases you can find on our website. The DIVDictionary intends to explain what each of the words specifically means for DIVD.
 ---
 ## Hacking
 
