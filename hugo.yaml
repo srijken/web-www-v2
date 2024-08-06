@@ -24,6 +24,8 @@ languages:
     languageName: NL
     weight: 2
 
+timezone: "Europe/Amsterdam"
+
 server:
   headers:
     - for: /**
