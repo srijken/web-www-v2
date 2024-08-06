@@ -1384,6 +1384,19 @@ collections:
         name: "body"
         widget: "markdown"
         i18n: true
+      - label: "Case highlight"
+        name: "casehighlight"
+        i18n: true
+        widget: "object"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "markdown"
+            i18n: true
+          - label: "Content"
+            name: "content"
+            widget: "markdown"
+            i18n: true
 
   ######################################
   # SECTION: Dictionary
@@ -1412,6 +1425,7 @@ collections:
         name: "body"
         widget: "markdown"
         i18n: true
+
   ########################################################################
   # CONTENT BLOCKS
   ########################################################################
