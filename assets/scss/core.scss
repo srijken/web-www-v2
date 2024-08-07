@@ -797,3 +797,35 @@ blockquote {
     margin-bottom: 0px;
   }
 }
+
+.callout {
+  padding: 15px;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+}
+
+.callout.info {
+  border-left-color: #3DDCEB;
+  background-color: #E0F7FA; /* lighter shade of #3DDCEB */
+  color: #000000;
+}
+
+.callout.warning {
+  border-left-color: #FFD736;
+  background-color: #FFF9E5; /* lighter shade of #FFD736 */
+  color: #000000;
+}
+
+.callout.error {
+  border-left-color: #FF5733; /* custom bright red */
+  background-color: #FFDAD4; /* darker shade for better readability */
+  color: #000000;
+}
+
+.callout.success {
+  border-left-color: #3DDC9A; /* custom bright green */
+  background-color: #E5FFF2; /* lighter shade of the custom bright green */
+  color: #000000;
+}
