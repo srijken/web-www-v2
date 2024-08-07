@@ -15,14 +15,12 @@ leftblock:
 
     When cybercriminals discover a vulnerability on a system,  they will try to create a way to *exploit* it, to achieve actions on objectives. An *exploit* is basically a malicious piece of code or script that can be used to take advantage of a system's vulnerability.
 
-    **The Consequences of Unpatched Vulnerabilities**
-
     When cybercriminals are able to exploit a vulnerability in a system to gain access to critical systems, they can potentially view, modify, delete and/or extract sensitive data. As soon as an intruder gets in, secrets are no longer secret. If an organisation doesn't find and mitigate vulnerabilities in time, the consequences can be severe, ranging from financial losses to irreparable damage to the organisation's reputation.
 
     *Cybercriminals often prefer to create exploits for big, well-known issues because they can use those exploits to create powerful, cheap attacks that work for many years and on many systems.*
   image: ""
   Alt tag for image: ""
-  learnmore: /dictionary/
+  learnmore: /
   alt: null
 rightblock:
   content: |-
@@ -34,11 +32,9 @@ rightblock:
 
     However, there are times when DIVD researchers uncover a vulnerability that has *never* been discovered before. For example, this could be a flaw in core components of operating systems (such as Windows, macOS, or Linux) or a vulnerability in a widely used network protocol that has previously gone unnoticed.
 
-    **Patch or Exploit: Who Wins?**
-
     Since this vulnerability is *unknown*, no one is adequately protected against it. The vendor needs to disclose information about the vulnerability to it's partners, but in doing so, they also unintentionally but unavoidably inform cybercriminals about the occurrence of a weakness in their software. This is when a race against the clock begins. Who works faster, the software vendor crafting and distributing a patch, or the cybercriminals crafting and deploying an exploit? 
 
-    *Eternal Blue is a very infamous zero-day exploit that was originally was developed by the NSA and later leaked by a hacking group. It was used in the [WannaCry ransomware attack](https://en.wikipedia.org/wiki/WannaCry_ransomware_attack), which affected hundreds of thousands of computers worldwide.*
+    🤓 *Eternal Blue is a very infamous zero-day exploit that was originally was developed by the NSA and later leaked by a hacking group. It was used in the [WannaCry ransomware attack](https://en.wikipedia.org/wiki/WannaCry_ransomware_attack), which affected hundreds of thousands of computers worldwide.*
   image: ""
   Alt tag for image: ""
   learnmore: ""
@@ -47,12 +43,12 @@ contenttitle: "## Why our work matters"
 main:
   title: More text here
 ---
-✨  DIVD focuses on identifying and responsibly disclosing vulnerabilities in software and systems before they can be exploited by cybercriminals. 
+✨  DIVD focuses on identifying and responsibly disclosing vulnerabilities in software and systems before they can be exploited by cybercriminals. While typical vulnerability scans only inform a victim if they have a system containing a vulnerability, DIVD researchers also check if the vulnerability is actually exploitable (in a passive, non-intrusive manner and in [compliance](https://www.divd.nl/what-we-do/code-of-conduct/) with laws and regulations). When you get a notification email from DIVD, there is less chance of it being a so-called false positive. This is where DIVD goes the extra mile and what makes DIVD stand out above similar organisations. 
 
 ✨ DIVD scans for both regular security vulnerabilities *and* zero-day vulnerabilities. DIVD requests [the assignment of new unique identifiers (CVEs)](https://csirt.divd.nl/cna/) when new (previously unknown) vulnerabilities are identified.
 
 ✨ DIVD is known for its transparency in reporting vulnerabilities and the steps taken to address them. This openness builds trust within the cybersecurity community and with the public.
 
-✨ DIVD focused on proactive vulnerability disclosure and awareness, therefore  complementing the work of other CSIRTs. Unlike many cybersecurity organizations that operate for profit, DIVD is a non-profit entity.
+✨ Unlike many cybersecurity organizations, DIVD is a non-profit entity.
 
 ✨ DIVD actively engages with the cybersecurity community, including researchers, ethical hackers, and other stakeholders, to share knowledge and improve collective security efforts.
