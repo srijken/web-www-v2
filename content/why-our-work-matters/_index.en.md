@@ -40,10 +40,13 @@ rightblock:
   learnmore: ""
   alt: null
 contenttitle: "## Why our work matters"
+casehighlight:
+  title: .
+  content: .
 main:
   title: More text here
 ---
-✨  DIVD focuses on identifying and responsibly disclosing vulnerabilities in software and systems before they can be exploited by cybercriminals. While typical vulnerability scans only inform a victim if they have a system containing a vulnerability, DIVD researchers also check if the vulnerability is actually exploitable (in a passive, non-intrusive manner and in [compliance](https://www.divd.nl/what-we-do/code-of-conduct/) with laws and regulations). When you get a notification email from DIVD, there is less chance of it being a so-called false positive. This is where DIVD goes the extra mile and what makes DIVD stand out above similar organisations. 
+✨  DIVD focuses on identifying and responsibly disclosing vulnerabilities in software and systems before they can be exploited by cybercriminals. 
 
 ✨ DIVD scans for both regular security vulnerabilities *and* zero-day vulnerabilities. DIVD requests [the assignment of new unique identifiers (CVEs)](https://csirt.divd.nl/cna/) when new (previously unknown) vulnerabilities are identified.
 
