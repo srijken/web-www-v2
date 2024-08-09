@@ -13,7 +13,7 @@ leftblock:
 
     Essentially, a security vulnerability is a weakness or flaw in a computer system, network, or software that can be exploited by cybercriminals to gain unauthorized access to systems and/or cause damage. Common examples of vulnerabilities are misconfigurations, unpatched software or firmware, the use of weak or default passwords, and the use of old protocols and standards.
 
-    When cybercriminals discover a vulnerability in a system,  they will try to create a way to *exploit* it, to achieve actions on objectives. An *exploit* is a malicious piece of code or script that can be used to take advantage of a system's vulnerability.
+    When cybercriminals discover a vulnerability in a system,  they will try to create a way to exploit it, to achieve actions on objectives. An *[exploit](https://www.divd.nl/dictionary/)* is a malicious piece of code or script that can be used to take advantage of a system's vulnerability.
 
     When cybercriminals can exploit a vulnerability in a system to gain access to critical systems, they can potentially view, modify, delete, and/or extract sensitive data. As soon as an intruder gets in, secrets are no longer secret. If an organisation doesn't find and mitigate vulnerabilities in time, the consequences can be severe, ranging from financial losses to irreparable damage to the organisation's reputation.
 
