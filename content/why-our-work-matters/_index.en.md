@@ -1,9 +1,9 @@
 ---
 title: DIVD's work is of great importance, here is why
 intro: |-
-  DIVD aims to make the digital world safer by reporting vulnerabilities we find in digital systems to the people who can fix them. On this page, we explain why our work matters to society, partners, and other organisations. 
+  DIVD aims to make the digital world safer by reporting vulnerabilities we find in digital systems to those who can fix them. This page explains why our work matters to society, partners, and other organisations. 
 
-  *"What makes DIVD amazing is the fact that we are in between these attackers and defenders. We attempt to take away attackers' weapons as quickly as possible by making people aware of these weapons. That has a lot of impact!"*
+  *"What makes DIVD amazing is the fact that we are in between these attackers and defenders. We attempt to take away attackers' weapons as quickly as possible by making people aware of these weapons. That has a lot of impact!" -  Max van der Horst (Researcher CSIRT)*
 opener: What exactly are (zero-day) security vulnerabilities, and why is it so important to find and report them as soon as possible?
 leftblock:
   content: |-
