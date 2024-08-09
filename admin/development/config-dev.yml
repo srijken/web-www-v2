@@ -1387,15 +1387,18 @@ collections:
       - label: "Case highlight"
         name: "casehighlight"
         i18n: true
+        required: false
         widget: "object"
         fields:
           - label: "Title"
             name: "title"
             widget: "markdown"
+            required: false
             i18n: true
           - label: "Content"
             name: "content"
             widget: "markdown"
+            required: false
             i18n: true
 
   ######################################
