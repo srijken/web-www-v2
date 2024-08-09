@@ -4,7 +4,7 @@ intro: |-
   This page explains why our work matters to society, partners, and other organisations. 
 
   *"What makes DIVD amazing is the fact that we are in between these attackers and defenders. We attempt to take away attackers' weapons as quickly as possible by making people aware of these weapons. That has a lot of impact!" -  Max van der Horst (Researcher CSIRT)*
-opener: What exactly are (zero-day) security vulnerabilities, and why is it so important to find and report them as soon as possible?
+opener: "## What exactly are (zero-day) security vulnerabilities?"
 leftblock:
   content: |-
     ## **Security Vulnerability**
