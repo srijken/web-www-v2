@@ -16,6 +16,8 @@ leftblock:
     When cybercriminals discover a vulnerability in a system,  they will try to create a way to *exploit* it, to achieve actions on objectives. An *exploit* is a malicious piece of code or script that can be used to take advantage of a system's vulnerability.
 
     When cybercriminals can exploit a vulnerability in a system to gain access to critical systems, they can potentially view, modify, delete, and/or extract sensitive data. As soon as an intruder gets in, secrets are no longer secret. If an organisation doesn't find and mitigate vulnerabilities in time, the consequences can be severe, ranging from financial losses to irreparable damage to the organisation's reputation.
+
+    Cybercriminals often prefer to create exploits for big, well-known issues because they can use those exploits to create powerful, cheap attacks that have worked for many years and on many systems.
   image: ""
   Alt tag for image: ""
   learnmore: /dictionary/
@@ -30,9 +32,7 @@ rightblock:
 
     However, there are times when DIVD researchers uncover a vulnerability that has *never* been discovered before. For example, this could be a flaw in core components of operating systems (such as Windows, macOS, or Linux) or a vulnerability in a widely used network protocol that has previously gone unnoticed.
 
-    Since this vulnerability is *unknown*, no one is adequately protected against it. The vendor needs to disclose information about the vulnerability to its partners, but in doing so, they also unintentionally but unavoidably inform cybercriminals about the occurrence of a weakness in their software. This is when a race against the clock begins. Who works faster, the software vendor crafting and distributing a patch, or the cybercriminals crafting and deploying an exploit? 
-
-    Cybercriminals often prefer to create exploits for big, well-known issues because they can use those exploits to create powerful, cheap attacks that have worked for many years and on many systems.
+    Since this vulnerability is *unknown*, no one is adequately protected against it. The vendor needs to disclose information about the vulnerability to its partners, but in doing so, they also unintentionally but unavoidably inform cybercriminals about the occurrence of a weakness in their software. This is when a race against the clock begins. Who works faster, the software vendor crafting and distributing a patch, or the cybercriminals crafting and deploying an exploit?
   image: ""
   Alt tag for image: ""
   learnmore: ""
