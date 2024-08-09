@@ -17,6 +17,16 @@
   {{ partial "p/section_open" (dict "classes" (slice "inverse"))}} 
 
     <div class="overlap-top-lg">
+      {{ partial "p/layout_open" (dict "classes" (slice "article" )) }}
+      <div class="article-body">
+        <article>
+          <h1>{{ .Params.contenttitle | markdownify }}</h1>
+
+            {{ .Content }}
+        </article>
+      </div>
+    {{ partial "p/layout_close" }}
+
       {{ partial "p/layout_open" (dict "classes" (slice "article" "opener" )) }}
         <div class="article-body opener-body">
           <article>
@@ -60,16 +70,6 @@
           </article>
         </div>
      
-      {{ partial "p/layout_close" }}
-
-      {{ partial "p/layout_open" (dict "classes" (slice "article" )) }}
-        <div class="article-body">
-          <article>
-            <h1>{{ .Params.contenttitle | markdownify }}</h1>
-
-              {{ .Content }}
-          </article>
-        </div>
       {{ partial "p/layout_close" }}
 
       {{ if .Params.casehighlight.content }}
