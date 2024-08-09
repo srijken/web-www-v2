@@ -1,5 +1,5 @@
 .why-our-work-matters-page {
-    .overlap-top-lg .pl:first-of-type {
+    .overlap-top-lg .pl:nth-of-type(2) {
         padding-bottom: 0;
     }
 
@@ -7,7 +7,7 @@
         padding-bottom: 16px;
         text-align: center;
 
-        p:first-of-type {
+        p:nth-of-type(2) {
             margin-bottom: 0px;
         }
     }
