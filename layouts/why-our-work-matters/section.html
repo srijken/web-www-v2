@@ -72,7 +72,7 @@
         </div>
       {{ partial "p/layout_close" }}
 
-      {{ partial "p/layout_open" (dict "classes" (slice "article" "yellow" )) }}
+      {{ partial "p/layout_open" (dict "classes" (slice "article" )) }}
         <div class="article-body">
           <article>
             <h1>{{ .Params.casehighlight.title | markdownify }}</h1>
