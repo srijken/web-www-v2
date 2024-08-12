@@ -47,7 +47,7 @@ Make sure to [follow](https://www.linkedin.com/company/divd-nl/?) us on LinkedIn
 
 - [Casefile DIVD-2024-00011](https://csirt.divd.nl/DIVD-2024-00011)
 - [Security advisory from Enphase](https://enphase.com/cybersecurity/advisories/ensa-2024-6?_gl=1*ut63dx*_up*MQ..*_ga*MTU3MzcwMTgxMC4xNzIzMzY5ODY2*_ga_0L7F5QSJ7V*MTcyMzM2OTg2NS4xLjAuMTcyMzM2OTg2NS4wLjAuMA..)
-- [RVO rapport](https://topsectorenergie.nl/kennisbank/maatregelen-cyberveiligheid-zonpv/) (NL)
+- [Secura; Scenario’s en maatregelen voor cyberweerbare zonnestroominstallaties](https://topsectorenergie.nl/nl/kennisbank/maatregelen-cyberveiligheid-zonpv/) (NL)
 - [Bitdefender report](https://www.bitdefender.com/blog/labs/60-hurts-per-second-how-we-got-access-to-enough-solar-power-to-run-the-united-states/)
-- [Follow the Money article](https://www.ftm.nl/artikelen/hacker-kan-stekker-uit-zonnepanelen-trekken-en-stroomnet-platleggen) 
+- [Follow the Money](https://www.ftm.nl/artikelen/hacker-kan-stekker-uit-zonnepanelen-trekken-en-stroomnet-platleggen);[ Nederlandse hacker kon 4 miljoen zonnepaneelsystemen in 150 landen overnemen](https://www.ftm.nl/artikelen/hacker-kan-stekker-uit-zonnepanelen-trekken-en-stroomnet-platleggen)
 - [EenVandaag](https://eenvandaag.avrotros.nl/): Demonstration of the vulnerabilities in action, episode is released on  the 13th of August at 18:15 CET.
