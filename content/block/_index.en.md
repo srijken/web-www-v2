@@ -2,7 +2,7 @@
 Title: Blocks
 ethics:
   title: Ethics at the base of everything we do
-  intro: As we work on sensitive data, gathered without informed consent, we established this Code of Conduct to provide an ethical base for the work we do. This code can also be used by other researchers working on what is currently referred to as responsible disclosure, or coordinated vulnerability disclosure.
+  intro: Since we handle sensitive data collected without informed consent, we've created this Code of Conduct to establish an ethical foundation for our work. This code can also be utilized by other researchers involved in what is currently known as responsible disclosure or coordinated vulnerability disclosure.
 proudestwork:
   title: Our proudest work
   ourproudestwork:
@@ -12,10 +12,7 @@ proudestwork:
     - /newsroom/articles/operation-endgame-divd-2024-00019
 mission:
   title: Our mission
-  description: |-
-    We aim to make the digital world safer by reporting vulnerabilities we find in digital systems to the people who can fix them.
-
-    We have a global reach, but do it Dutch style: open, honest, collaborative, and for free.
+  description: We aim to enhance digital safety by reporting system vulnerabilities to the relevant authorities. With a global reach, we adopt an open, honest, and collaborative approach, providing our services for free.
   members: "150"
   totalcases: "143"
   ips: 1.295.494
