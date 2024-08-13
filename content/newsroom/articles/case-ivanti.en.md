@@ -4,6 +4,16 @@ date: 2024-07-03T21:27:00+02:00
 tag: case
 intro: "An unknown attacker exploited several zero-day vulnerabilities in two Ivanti services: Ivanti EPMM and Avanti Sentry. The DIVD helped notify users of Ivanti software."
 Alt tag for image: ""
+case:
+  caseid: DIVD-2023-00031
+  closed: false
+  link: https://csirt.divd.nl/cases/DIVD-2023-00031/
+  lead: Lennaert Oudshoorn
+  leadlink: https://www.divd.nl/who-we-are/team/people/lennaert/
+  researchers:
+    - label: Alwin Warringa
+      link: https://www.divd.nl/who-we-are/team/people/alwin-warringa/
+  researchers_people: []
 faq_enabled: false
 faq:
   title: faq
