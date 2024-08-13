@@ -33,11 +33,6 @@ partnerlist:
     description: BIT is sponsoring hosting space for our websites and mail server capacity.
     website: bit.nl
     image: /images/partners/bit-360x200.jpg
-  - description: Cryptshare supplies us with licenses for their tooling so we can
-      securely share files.
-    name: Cryptshare
-    website: https://www.cryptshare.com/en/home/
-    image: /images/partners/cryptshare-360x200.jpg
   - name: Cyver
     description: Cyver provides us with their cloud platform, Cyver Core, which
       enables us to deliver security research reports with tickets handling.
@@ -57,6 +52,7 @@ partnerlist:
   - description: Passbolt has been sponsoring the pro subscription for DIVD since 2021.
     name: Passbolt
     website: https://www.passbolt.com/
+    image: /images/partners/passbolt-black.png
   - description: Protect4S has supported DIVD with expertise on the security of SAP
       systems and resources to scan the internet for vulnerabilities related to
       SAP systems
