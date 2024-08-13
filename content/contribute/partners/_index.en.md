@@ -49,7 +49,7 @@ partnerlist:
     name: LunaVia
     image: /images/partners/lunavia-360x200.jpg
     website: https://lunavia.nl/
-  - description: Passbolt has been sponsoring the pro subscription for DIVD since 2021.
+  - description: Passbolt has been sponsoring their Pro license to provide our teams with a secure way to share their passwords since 2021.
     name: Passbolt
     website: https://www.passbolt.com/
     image: /images/partners/passbolt-black.png
