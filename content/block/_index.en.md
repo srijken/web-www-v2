@@ -9,6 +9,7 @@ proudestwork:
     - /newsroom/articles/over-1-million-notifications
     - /newsroom/articles/test-case
     - /newsroom/articles/operation-endgame-divd-2024-00019
+    - /newsroom/articles/divd-responsibly-discloses-six-new-zero-day-vulnerabilities-to-vendor
 mission:
   title: Our mission
   description: |-
