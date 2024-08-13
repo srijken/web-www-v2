@@ -13,7 +13,7 @@ case:
   leadlink: https://www.divd.nl/who-we-are/team/people/frank-breedijk/
   researchers:
     - label: Victor Pasman
-      link: https://www.divd.nl/who-we-are/team/people/victor-pasman/
+      link: ""
     - label: Pepijn van der Stap
       link: ""
     - label: Victor Gevers
