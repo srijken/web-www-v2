@@ -14,13 +14,13 @@ case:
   leadlink: https://www.divd.nl/who-we-are/team/people/frank-breedijk/
   researchers:
     - label: Wietse Boonstra
-      link: ""
+      link: https://www.divd.nl/who-we-are/team/people/wietse-boonstra/
     - label: Hidde Smit
-      link: ""
+      link: https://www.divd.nl/who-we-are/team/people/hidde-smit/
     - label: Max van der Horst
-      link: ""
+      link: https://www.divd.nl/who-we-are/team/people/max-van-der-horst/
     - label: Frank Breedijk
-      link: ""
+      link: https://www.divd.nl/who-we-are/team/people/frank-breedijk/
   researchers_people: []
 faq_enabled: false
 faq: null
