@@ -2,7 +2,7 @@
 title: How to secure your AWS S3 buckets
 date: 2024-07-31T16:43:00+02:00
 tag: news
-intro: 1.5 million files stored unprotected on the public internet, does this still happen? Unfortunately, yes, it still happens. Despite our familiarity with security policies, controls, and best practices. In this article, you can read how you can secure your AWS S3 buckets and why it is important to do it.
+intro: 1.5 million files are stored unprotected on the public internet, does this still happen? Unfortunately, yes, it still happens. Despite our familiarity with security policies, controls, and best practices. In this article, you can read how you can secure your AWS S3 buckets and why it is important to do it.
 Alt tag for image: ""
 faq_enabled: false
 faq:
@@ -11,15 +11,17 @@ faq:
   intro: ""
   url: ""
 ---
+By [Serena de Pater](https://www.divd.nl/who-we-are/team/people/serena-de-pater/)
+
 *In 2022, a group of security researchers discovered a misconfigured Amazon S3 bucket exposing 3TB of data. We are not talking about random bits and bytes, but among those [1.5 million unprotected files](https://www.skyhighsecurity.com/about/resources/intelligence-digest/unsecured-servers-can-put-lives-at-stake.html?eid=evpxmdrt&smcid=lnp&utm_source=linkedin&utm_medium=paidsocial&utm_campaign=skyhighsecuritybrandlaunch_jp&utm_content=plane&utm_term=q4_2022) were airport employee records, ID card photos, and personally identifiable information (PII) including names, photos, occupations, and national ID numbers dating back to [at least 2018](https://www.safetydetectives.com/news/securitas-leak-report/). Other information that could be extracted was in the form of Android mobile apps that are used by security personnel to help with various tasks, such as incident reporting. According to [SafetyDetectives](https://www.safetydetectives.com/news/securitas-leak-report/), the Amazon S3 bucket was left open and accessible, without any authentication procedures in place.*
 
 In this article, you can read how you can secure your AWS buckets and why it is important to do it.
 
 ## What is an AWS S3 bucket?
 
-An AWS S3 bucket is essentially a container in the cloud where you can store and manage data, such as photos, videos, documents, backups, and more. AWS Stands for Amazon Web Services, and S3 stands for Simple Storage Service.
+An AWS S3 bucket is essentially a container in the cloud where you can store and manage data, such as photos, videos, documents, backups, and more. AWS Stands for Amazon Web Services and S3 stands for Simple Storage Service.
 
-Each S3 bucket can hold a virtually unlimited number of objects. You probably would not like everyone to be able to view, modify, copy or delete your data, so you create access policies and controls to secure it. Without access policies, an AWS S3 bucket is considered "publicly accessible". This means that its permissions allow any user on the internet to view and download its contents.
+Each S3 bucket can hold a virtually unlimited number of objects. You probably would not like everyone to be able to view, modify, copy, or delete your data, so you create access policies and controls to secure it. Without access policies, an AWS S3 bucket is considered "publicly accessible". This means that its permissions allow any user on the internet to view and download its contents.
 
 When an S3 bucket is visible to everyone on the public internet when it shouldn’t be, it’s called a misconfiguration. Such misconfigurations can turn a private repository of sensitive data into a goldmine for cybercriminals. So, what happens if you accidentally forget to secure your AWS S3 bucket?
 
@@ -29,7 +31,7 @@ If an S3 bucket is left publicly accessible, anyone can access the data inside. 
 
 ### ☢️ Reputation damage
 
-If the data in your misconfigured S3 bucket contained sensitive data such as customer personal information, financial data, health records, or intellectual property, your organisation can suffer significant reputational harm. The news of the data breach spreads quickly online, damaging customer trust and potentially leading to loss of business. This is because people generally don’t like to store sensitive data, such as personal health records or credit card numbers, with a company that has previously taken the protection of other people’s data for granted. In a world where data privacy is crucial, failing to secure an S3 bucket can have long-lasting effects on a company’s reputation.
+If the data in your misconfigured S3 bucket contained sensitive data such as customer personal information, financial data, health records, or intellectual property, your organisation could suffer significant reputational harm. The news of the data breach spreads quickly online, damaging customer trust and potentially leading to loss of business. This is because people generally don’t like to store sensitive data, such as personal health records or credit card numbers, with a company that has previously taken the protection of other people’s data for granted. In a world where data privacy is crucial, failing to secure an S3 bucket can have long-lasting effects on a company’s reputation.
 
 ### ☢️ Regulatory penalties
 
@@ -45,7 +47,7 @@ Publicly accessible data can be leveraged in social engineering attacks. Social 
 
 ## How can I secure my AWS buckets?
 
-It’s clear that a data breach is one of the last things you want to happen in your organisation. So, how can you secure your S3 buckets to keep your data safe and out of the hands of cybercriminals? It’s simple! Just follow these steps:
+A data breach is one of the last things you want to happen in your organisation. So, how can you secure your S3 buckets to keep your data safe and out of the hands of cybercriminals? It’s simple! Just follow these steps:
 
 ### ✅ Implement least privilege access
 
@@ -72,6 +74,6 @@ Regular security audits can be used to identify and remediate potential vulnerab
 
 ### ✅ Proactively search for vulnerabilities or vulnerable systems
 
-Proactively detect the presence of sensitive data with [Amazon Macie](https://docs.aws.amazon.com/macie/latest/user/what-is-macie.html). Amazon Macie uses machine learning and pattern matching to provide visibility into data security risks, and enables automated protection against those risks.
+Proactively detect the presence of sensitive data with [Amazon Macie](https://docs.aws.amazon.com/macie/latest/user/what-is-macie.html). Amazon Macie uses machine learning and pattern matching to provide visibility into data security risks and enables automated protection against those risks.
 
 ✨ By following these steps, you can significantly enhance the security of your S3 buckets and protect your data from unauthorised access and potential breaches. If you happen to forget to secure your S3 bucket, let’s hope & pray that one of DIVD’s finest finds the misconfiguration and reports it to your organisation as soon as it’s discovered!
