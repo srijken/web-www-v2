@@ -1444,6 +1444,7 @@ collections:
       - name: "Title"
         widget: "string"
         default: "Blocks"
+        required: false
       # BLOCK:  Ethics #####################################################
       - name: "ethics"
         label: "Ethics"
@@ -1571,18 +1572,22 @@ collections:
         label: "Contact"
         i18n: true
         widget: object
+        required: false
         fields:
           - label: "Title"
             name: "title"
             widget: "string"
+            required: false
             i18n: true
           - label: "Description"
             name: "intro"
             widget: markdown
+            required: false
             i18n: true
           - label: "To E-mail"
             name: "email"
             widget: text
+            required: false
 
       # BLOCK: Footer #####################################################
       - name: "footer"
