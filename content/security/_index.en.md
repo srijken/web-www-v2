@@ -1,33 +1,33 @@
 ---
 title: Responsible Disclosure
 ---
-**General**
+### **General**
 
 At DIVD the security of our systems is a top priority. No matter how much effort we put into system security, there might be vulnerabilities present. If you discover a vulnerability, we would like to know about it so we can take steps to address it. We would like to ask you to help us protect our systems.
 
-**Please do the following:**
+### **Please do the following**
 
 Submit your findings by using the following URL: <https://app.zerocopter.com/en/rd/f9afbf32-ce59-48ed-96f2-ac4410595aa4>.
 
-**Do’s:**
+### **Do’s**
 
 - Report the vulnerability as quickly as is reasonably possible, to minimize the risk of hostile actors finding it and taking advantage of it.
 - Report in a manner that safeguards the confidentiality of the report so that others do not gain access to the information.
 - Provide sufficient information to reproduce the problem, so we will be able to resolve it. Usually, the IP address or the URL of the affected system and a description of the vulnerability will be sufficient. However complex vulnerabilities may require further explanation.
 
-**Don’ts:**
+### **Don’ts**
 
 - Reveal the vulnerability or problem to others until it is resolved.
 - Build your own backdoor in an information system to then use it to demonstrate the vulnerability, because doing so can cause additional damage and create unnecessary security risks.
 - Utilise a vulnerability further than necessary to establish its existence.
-- Copy, modify or delete data on the system. An alternative for doing so is making a directory listing of the system.
+- Copy, modify, or delete data on the system. An alternative for doing so is making a directory listing of the system.
 - Make changes to the system.
 - Repeatedly gain access to the system or share access with others.
 - Use brute force attacks, attacks on physical security, social engineering, distributed denial of service, spam, or applications of third parties to gain access to the system.
 - Access, or attempt to access, any data or information that does not belong to you.
 - Destroy or corrupt, or attempt to destroy or corrupt, any data or information that does not belong to you
 
-**What we promise:**
+### **What we promise**
 
 - We will respond to your report within three business days with our evaluation of the report and an expected resolution date.
 - If you have followed the instructions above, we will not take any legal action against you concerning the report.
@@ -38,9 +38,7 @@ Submit your findings by using the following URL: <https://app.zerocopter.com/en
 - We strive to resolve all problems as quickly as possible, and we would like to play an active role in the ultimate publication of the problem after it is resolved.
 - This Responsible Disclosure policy is based on an example written by Floor Terra and the Responsible Disclosure Guideline of the NCSC.
 
-**Scope**
-
-In Scope systems
+### **In Scope**
 
 Our following assets are explicitly in scope, if you find a vulnerability in a system you believe belongs to us but is not listed here we will review this on a case-by-case basis.
 
@@ -65,7 +63,7 @@ Our following assets are explicitly in scope, if you find a vulnerability in a s
 - 	divd.org
 - 	divd.observer
 
-**Out of Scope**
+### **Out of Scope**
 
 - Spam, social engineering, and physical intrusion are out of scope. This includes phishing attempts.
 - DoS/DDoS attacks or brute force attacks.
@@ -77,7 +75,7 @@ Our following assets are explicitly in scope, if you find a vulnerability in a s
 - Not following industry standards.
 - Missing best practices.
 
-**Nonqualifying vulnerabilities**
+### **Nonqualifying vulnerabilities**
 
 Reports for any vulnerabilities listed here will not be accepted.
 
