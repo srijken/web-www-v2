@@ -1085,9 +1085,9 @@ collections:
       - { label: "Title", name: "title", widget: "string", i18n: true }
       - { label: "Body", name: "body", widget: "markdown", i18n: true }
 
-  # PAGE: !Security policy #####################################################
+  # PAGE: !Coordinated Vulnerability Disclosure #####################################################
   - name: security
-    label: "Security policy"
+    label: "Coordinated Vulnerability Disclosure"
     folder: "content/security"
     slug: "_index"
     create: false
