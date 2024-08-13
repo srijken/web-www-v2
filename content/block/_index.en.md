@@ -6,10 +6,10 @@ ethics:
 proudestwork:
   title: Our proudest work
   ourproudestwork:
-    - /newsroom/articles/test-case
     - /newsroom/articles/divd-responsibly-discloses-six-new-zero-day-vulnerabilities-to-vendor
     - /newsroom/articles/over-1-million-notifications
     - /newsroom/articles/operation-endgame-divd-2024-00019
+    - /newsroom/articles/case-ivanti
 mission:
   title: Our mission
   description: We aim to enhance digital safety by reporting system vulnerabilities to the relevant authorities. With a global reach, we adopt an open, honest, and collaborative approach, providing our services for free.
