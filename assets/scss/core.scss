@@ -324,15 +324,27 @@ ol {
 }
 
 .image-header {
-  margin: -33px -33px 32px -33px;
+  margin-top: -33px;
   height: 520px;
+  width: 100%; // Ensure the container takes up the full width
   overflow: hidden;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  picture {
+    width: 100%; // Ensure the picture element takes up the full width
+    height: 100%; // Make sure it also covers the full height
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   img {
-    position: absolute;
-    min-width: 100%;
-    min-height: 520px;
-    
+    width: 100%;
+    height: 100%; // Ensures the image covers both width and height
+    object-fit: cover; // Ensures the image covers the container without distortion
   }
 }
 
