@@ -12,7 +12,9 @@ case:
   leadlink: ""
   researchers:
     - label: Jelle Ursem
-      link: https://www.divd.nl/who-we-are/team/people/jelle-ursem/
+      link: ""
+    - label: Serena de Pater
+      link: ""
   researchers_people: []
 faq_enabled: false
 faq:
