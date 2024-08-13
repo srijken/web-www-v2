@@ -5,8 +5,7 @@ ethics:
   intro: As we work on sensitive data, gathered without informed consent, we established this Code of Conduct to provide an ethical base for the work we do. This code can also be used by other researchers working on what is currently referred to as responsible disclosure, or coordinated vulnerability disclosure.
 proudestwork:
   title: Our proudest work
-  ourproudestwork:
-    - /newsroom/articles/maintain-recognition-of-divd-academy-for-vulnerable-students
+  ourproudestwork: []
 mission:
   title: DIVD is the voluntary fire brigade of the Internet
   description: DIVD scans the whole internet on the presence of Common Vulnerabilities and Exposures (CVEs) as soon as they are published and have a high score. When we find vulnerable URLs, we send them an email with notification on the vulnerability present, where we found it and what to do. We also find new vulnerabilities (zero-days) and share these with the software vendor, so they can fix it. Furthermore, when we detect instances of compromised credentials, we take swift action by alerting affected individuals via email and urging them to immediately change their passwords. Our volunteers provide these services for free because we believe every internet user deserves to be helped.
