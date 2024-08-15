@@ -13,7 +13,7 @@ mission:
   title: Our mission
   description: We aim to enhance digital safety by reporting system vulnerabilities to the relevant authorities. With a global reach, we adopt an open, honest, and collaborative approach, providing our services for free.
   members: "150"
-  totalcases: "143"
+  totalcases: "146"
   ips: 1.295.494
 divdfamily:
   title: The DIVD Family
