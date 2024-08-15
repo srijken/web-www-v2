@@ -1,44 +1,81 @@
 ---
 title: Responsible Disclosure
 ---
-### **General**
+## **General**
 
 At DIVD the security of our systems is a top priority. No matter how much effort we put into system security, there might be vulnerabilities present. If you discover a vulnerability, we would like to know about it so we can take steps to address it. We would like to ask you to help us protect our systems.
 
-### **Please do the following**
+## **Please do the following**
 
 Submit your findings by using the following URL: <https://app.zerocopter.com/en/rd/f9afbf32-ce59-48ed-96f2-ac4410595aa4>.
 
-### **Do’s**
+## **What we promise**
 
-- Report the vulnerability as quickly as is reasonably possible, to minimize the risk of hostile actors finding it and taking advantage of it.
-- Report in a manner that safeguards the confidentiality of the report so that others do not gain access to the information.
-- Provide sufficient information to reproduce the problem, so we will be able to resolve it. Usually, the IP address or the URL of the affected system and a description of the vulnerability will be sufficient. However complex vulnerabilities may require further explanation.
+We will respond to your report within three business days with our evaluation of the report and an expected resolution date. We will keep you informed of the progress towards resolving the problem.
 
-### **Don’ts**
+If you have followed the instructions above, we will not take any legal action against you concerning the report.
 
-- Reveal the vulnerability or problem to others until it is resolved.
-- Build your own backdoor in an information system to then use it to demonstrate the vulnerability, because doing so can cause additional damage and create unnecessary security risks.
-- Utilise a vulnerability further than necessary to establish its existence.
-- Copy, modify, or delete data on the system. An alternative for doing so is making a directory listing of the system.
-- Make changes to the system.
-- Repeatedly gain access to the system or share access with others.
-- Use brute force attacks, attacks on physical security, social engineering, distributed denial of service, spam, or applications of third parties to gain access to the system.
-- Access, or attempt to access, any data or information that does not belong to you.
-- Destroy or corrupt, or attempt to destroy or corrupt, any data or information that does not belong to you
+We will not pass on your personal details to third parties without your permission unless it is necessary to comply with a legal obligation.
 
-### **What we promise**
+In the public information concerning the reported problem, we will give your name as the discoverer of the problem (unless you desire otherwise). Reporting under a pseudonym or anonymously is possible.
 
-- We will respond to your report within three business days with our evaluation of the report and an expected resolution date.
-- If you have followed the instructions above, we will not take any legal action against you concerning the report.
-- We will not pass on your personal details to third parties without your permission unless it is necessary to comply with a legal obligation.
-- Reporting under a pseudonym or anonymously is possible.
-- We will keep you informed of the progress towards resolving the problem.
-- In the public information concerning the reported problem, we will give your name as the discoverer of the problem (unless you desire otherwise).
-- We strive to resolve all problems as quickly as possible, and we would like to play an active role in the ultimate publication of the problem after it is resolved.
-- This Responsible Disclosure policy is based on an example written by Floor Terra and the Responsible Disclosure Guideline of the NCSC.
+We strive to resolve all problems as quickly as possible, and we would like to play an active role in the ultimate publication of the problem after it is resolved.
 
-### **In Scope**
+This Responsible Disclosure policy is based on an example written by Floor Terra and the Responsible Disclosure Guideline of the NCSC.
+
+## **Do’s**
+
+{{< callout type="success" >}}
+Report the vulnerability as quickly as is reasonably possible, to minimize the risk of hostile actors finding it and taking advantage of it.
+{{< /callout >}}
+
+{{< callout type="success" >}}
+Report in a manner that safeguards the confidentiality of the report so that others do not gain access to the information.
+{{< /callout >}}
+
+{{< callout type="success" >}}
+Provide sufficient information to reproduce the problem, so we will be able to resolve it. Usually, the IP address or the URL of the affected system and a description of the vulnerability will be sufficient. However complex vulnerabilities may require further explanation.
+{{< /callout >}}
+
+## **Don’ts**
+
+{{< callout type="error" >}}
+Reveal the vulnerability or problem to others until it is resolved.
+{{< /callout >}}
+
+{{< callout type="error" >}}
+Build your own backdoor in an information system to then use it to demonstrate the vulnerability, because doing so can cause additional damage and create unnecessary security risks.
+{{< /callout >}}
+
+{{< callout type="error" >}}
+Utilise a vulnerability further than necessary to establish its existence.
+{{< /callout >}}
+
+{{< callout type="error" >}}
+Copy, modify, or delete data on the system. An alternative for doing so is making a directory listing of the system.
+{{< /callout >}}
+
+{{< callout type="error" >}}
+Make changes to the system.
+{{< /callout >}}
+
+{{< callout type="error" >}}
+Repeatedly gain access to the system or share access with others.
+{{< /callout >}}
+
+{{< callout type="error" >}}
+Use brute force attacks, attacks on physical security, social engineering, distributed denial of service, spam, or applications of third parties to gain access to the system.
+{{< /callout >}}
+
+{{< callout type="error" >}}
+Access, or attempt to access, any data or information that does not belong to you.
+{{< /callout >}}
+
+{{< callout type="error" >}}
+Destroy or corrupt, or attempt to destroy or corrupt, any data or information that does not belong to you.
+{{< /callout >}}
+
+## **In Scope**
 
 Our following assets are explicitly in scope, if you find a vulnerability in a system you believe belongs to us but is not listed here we will review this on a case-by-case basis.
 
@@ -63,19 +100,22 @@ Our following assets are explicitly in scope, if you find a vulnerability in a s
 - 	divd.org
 - 	divd.observer
 
-### **Out of Scope**
+## **Out of Scope**
 
-- Spam, social engineering, and physical intrusion are out of scope. This includes phishing attempts.
+Reports for any vulnerabilities listed here will not be accepted.
+
+- Spam, social engineering, and physical intrusion. This includes phishing attempts.
 - DoS/DDoS attacks or brute force attacks.
 - Vulnerabilities that only impact non-current browsers (older than 3 versions).
-- Attacks requiring the usage of shared computers, man in the middle or already compromised accounts or devices.
-- Recently disclosed zero-day vulnerabilities in products where no patch or a recent patch is available.
-- Attacks requiring unrealistic amounts of user interaction
+- Attacks requiring the usage of shared computers or man-in-the-middle.
+- Usage of already compromised accounts or devices.
+- Attacks that require unrealistic amounts of user interaction.
 - Reports from automated scanners that involve no testing specific to this program.
 - Not following industry standards.
 - Missing best practices.
+- Recently disclosed zero-day vulnerabilities in products where no patch is available or only a recent patch is available.
 
-### **Nonqualifying vulnerabilities**
+## **Nonqualifying vulnerabilities**
 
 Reports for any vulnerabilities listed here will not be accepted.
 
@@ -115,6 +155,8 @@ Reports for any vulnerabilities listed here will not be accepted.
 - Arbitrary file upload without proof of the existence of the uploaded file
 - Known vulnerabilities in techniques used without a working Proof of Concept.
 
+{{< callout type="info" >}}
 What to do if you find a vulnerability at one of our suppliers or cooperation partners?
 
 Vulnerabilities are best reported to those who can also resolve them. If you encounter any problems, we are, of course, willing to help you.
+{{< /callout >}}
