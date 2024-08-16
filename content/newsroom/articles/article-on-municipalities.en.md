@@ -1,5 +1,5 @@
 ---
-title: "NEWS: VEEL GEMEENTEN REAGEREN NOG NIET ADEQUAAT OP BEVEILIGINGSLEKKEN"
+title: "NEWS: Veel gemeenten reageren nog niet adequaat op beveiligingslekken"
 date: 2023-10-02T14:58:00+02:00
 author:
   - /who-we-are/team/people/marieke-smits
