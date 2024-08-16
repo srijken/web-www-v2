@@ -6,17 +6,17 @@ intro: On this page, the DIVD Dictionary, you can find a clarification of the cy
 
 #### **(Ethical) Hacker**
 
-DIVD members belong to the ethical hackers. An ethical hacker is someone who breaks into a computer system with positive intentions, without disrupting any services or processes. The motivation of an ethical  hacker is to detect security vulnerabilities, without abusing or exploiting them. Our members are skilled professionals that must always operate within legal boundaries. Please read our [Code of Conduct](https://www.divd.nl/what-we-do/code-of-conduct/) for more information.
+DIVD members belong to the ethical hackers. An ethical hacker is someone who breaks into a computer system with positive intentions, without disrupting any services or processes. The motivation of an ethical hacker is to detect security vulnerabilities, without abusing or exploiting them. Our members are skilled professionals who must always operate within legal boundaries. Please read our [Code of Conduct](https://www.divd.nl/what-we-do/code-of-conduct/) for more information.
 
 #### **Exploit**
 
-An exploit is a malicious application, piece of code or script that can be used to take advantage of a system’s vulnerability. At DIVD, we don’t use or run intrusive exploits to verify the existence of a vulnerability in a system. Destructive commands like “$ rm -rf /” or testing for denial of service are not permitted in any scenario. If several means are available to meet the need, we opt for the one which has the least impact on the availability of the systems and services.
+An exploit is a malicious application, piece of code or script that can be used to take advantage of a system’s vulnerability. At DIVD, we don’t use or run intrusive exploits to verify the existence of a vulnerability in a system. Destructive commands like “$ rm -rf /” or testing for denial of service are not permitted in any scenario. If several means are available to meet the need, we opt for the one that has the least impact on the availability of the systems and services.
 
 ## **Responsible Disclosure**
 
 #### **Availability**
 
-At DIVD, we adhere to the ‘Principle of Proportionality’ and the ‘Principle of Subsidiarity’, as described in our [Code of Conduct](https://www.divd.nl/what-we-do/code-of-conduct/). This means that our research should increase and not decrease the integrity and availability of any and all online systems. If several means are available to meet the need, we opt for the one which has the least impact on the availability of the systems and services.
+At DIVD, we adhere to the ‘Principle of Proportionality’ and the ‘Principle of Subsidiarity’, as described in our [Code of Conduct](https://www.divd.nl/what-we-do/code-of-conduct/). This means that our research should increase and not decrease the integrity and availability of any online systems. If several means are available to meet the need, we opt for the one that has the least impact on the availability of the systems and services.
 
 #### 
 
@@ -26,7 +26,7 @@ When DIVD talks about a “case” we refer to a record or file created to docum
 
 - Description of the Vulnerability: Information about the nature and specifics of the vulnerability.
 - Fingerprint Creation: A unique identifier or signature for the vulnerability to help in identifying affected systems.
-- Scanning and Identification: The process of scanning systems to find instances that are vulnerable.
+- Scanning and Identification: The process of scanning systems to find vulnerable instances.
 - Notification: Informing the owners of the vulnerable systems about the issue so they can take corrective action.
 
 This structured approach helps ensure that vulnerabilities are tracked, managed, and resolved systematically.
@@ -49,9 +49,13 @@ Security.txt is a proposed standard for websites to provide a clear and consiste
 
 ## Vulnerabilities
 
+#### CVE
+
+CVE stands for "Common Vulnerabilities and Exposures", a [public list](https://cve.mitre.org/cve/search_cve_list.html) of known vulnerabilities in software. DIVD scans the internet for the presence of CVEs. 
+
 #### **High-Risk Vulnerability**
 
-DIVD reports every [security vulnerability](https://www.divd.nl/why-our-work-matters/) that falls under the category of high risk or high impact. A high-risk vulnerability is a security flaw in a system, application, or network that poses a significant threat to an organization’s operations, data, or users. High-risk vulnerabilities are typically characterized by being relatively easy for cybercriminals to exploit and are often found in widely used software or systems. Successful exploitation can result in severe consequences such as unauthorized access, data breaches, significant data loss, system downtime, financial loss, or damage to an organization’s reputation.
+DIVD reports every [security vulnerability](https://www.divd.nl/why-our-work-matters/) that falls under the high-risk or high-impact category. A high-risk vulnerability is a security flaw in a system, application, or network that poses a significant threat to an organization’s operations, data, or users. High-risk vulnerabilities are typically characterized by being relatively easy for cybercriminals to exploit and are often found in widely used software or systems. Successful exploitation can result in severe consequences such as unauthorized access, data breaches, significant data loss, system downtime, financial loss, or damage to an organization’s reputation.
 
 The sequence in which DIVD handles vulnerabilities is influenced by multiple metrics, including the level of exposure online and whether the vulnerability is under active exploitation.
 
