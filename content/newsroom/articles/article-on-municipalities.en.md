@@ -6,9 +6,10 @@ author:
 tag: news
 intro: Veel gemeenten reageren te traag of niet adequaat genoeg op meldingen over beveiligingslekken. Deze zogenoemde Coordinated Vulnerability Disclosures (CVD meldingen) worden vaak gedaan door ethische hackers die zo het internet veiliger willen maken. Dit proces is de laatste jaren wel verbeterd, maar er blijft nog steeds een wereld te winnen voor de gemeenten. Dat blijkt uit een recent uitgevoerd onderzoek van de Universiteit Twente en Dutch Institute for Vulnerability Disclosure (DIVD) onder 114 Nederlandse gemeenten.
 image: /images/articles/cybersecurity-freepik-2023-mk.webp
+Alt tag for image: ""
 faq_enabled: false
 ---
-By [Koen van Hove](https://staging.divd.nl/who-we-are/team/people/koen-van-hove/)
+By [Koen van Hove](https://www.divd.nl/who-we-are/team/people/koen-van-hove/)
 
 ## Coordinated Vulnerability Disclosures bij gemeenten
 
@@ -18,7 +19,7 @@ Veel gemeenten reageren namelijk niet adequaat en/of niet snel genoeg op melding
 
 ## Het onderzoek
 
-[Koen van Hove](https://staging.divd.nl/who-we-are/team/people/koen-van-hove/), promovendus aan de Universiteit Twente, software- en onderzoeksingenieur bij NLnet Labs, en onderzoeker bij de vrijwilligersorganisatie Dutch Institute for Vulnerability Disclosure (DIVD), heeft onderzoek gedaan naar de responsiviteit en het adequaat handelen van gemeenten in Nederland. Er deden 114 gemeenten mee aan het onderzoek. Het resultaat was als volgt:
+[Koen van Hove](https://www.divd.nl/who-we-are/team/people/koen-van-hove/), promovendus aan de Universiteit Twente, software- en onderzoeksingenieur bij NLnet Labs, en onderzoeker bij de vrijwilligersorganisatie Dutch Institute for Vulnerability Disclosure (DIVD), heeft onderzoek gedaan naar de responsiviteit en het adequaat handelen van gemeenten in Nederland. Er deden 114 gemeenten mee aan het onderzoek. Het resultaat was als volgt:
 
 ### 1. Tijd tussen notificatie en eerste respons
 
