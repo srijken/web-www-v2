@@ -7,6 +7,7 @@
     "postbuild": "node ./scripts/postbuild.js",
     "gen-people": "node ./scripts/generate_people.js",
     "gen-teams": "node ./scripts/generate_teams.js",
+    "update-stats": "node ./scripts/update_stats.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Les Kleuver",
