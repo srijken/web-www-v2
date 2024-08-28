@@ -6,7 +6,7 @@ opener: "Empower our mission to help others: how you can get involved"
 intro: We are a group of volunteers that scout the web for potential cyber security risks.
 becomevolunteer:
   title: Become a volunteer
-  image: /images/1724437526298.jfif
+  image: /images/DIVD x Cyberaquad 2024-04 (1)-1.png
   Alt tag for image: An illustration of 2 people talking about code, shown by a speakingballoon filled with 010101.
   description: Are you interested in joining our diverse team of ethical hackers, researchers, IT professionals, or legal experts, and learning from the best? Please sign up.
   alt: Drawing of a group of voluteer hackers
