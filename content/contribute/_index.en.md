@@ -6,7 +6,7 @@ opener: "Empower our mission to help others: how you can get involved"
 intro: We are a group of volunteers that scout the web for potential cyber security risks.
 becomevolunteer:
   title: Become a volunteer
-  image: /images/DIVD x Cyberaquad 2024-04 (1).png
+  image: /images/1724437526298.jfif
   Alt tag for image: An illustration of 2 people talking about code, shown by a speakingballoon filled with 010101.
   description: Are you interested in joining our diverse team of ethical hackers, researchers, IT professionals, or legal experts, and learning from the best? Please sign up.
   alt: Drawing of a group of voluteer hackers
@@ -37,43 +37,43 @@ donatebanktransfer:
   label: Donate via banktransfer
   link: "mailto: question@divd.nl"
 donations:
-  - date: 2024-03-27T00:00
+  - date: 2024-03-27T00:00:00+01:00
     amount: € 5.000
     by: Cyber Defence Group / ESET Netherlands
-  - date: 2024-02-14T00:00
+  - date: 2024-02-14T00:00:00+01:00
     amount: € 3.000
     by: Kloris BV
-  - date: 2024-01-02T00:00
+  - date: 2024-01-02T00:00:00+01:00
     amount: € 1.000
     by: Secura
-  - date: 2023-12-30T00:00
+  - date: 2023-12-30T00:00:00+01:00
     amount: € 1.000
     by: Secura
-  - date: 2023-09-21T00:00
+  - date: 2023-09-21T00:00:00+02:00
     amount: € 20.000
     by: Kloris BV
-  - date: 2023-07-13T00:00
+  - date: 2023-07-13T00:00:00+02:00
     amount: €10.000
     by: Cyber Defense Group / ESET Netherlands
-  - date: 2022-03-01T14:30
+  - date: 2022-03-01T14:30:00+01:00
     amount: $10.000
     by: MSP CFO
-  - date: 2022-02-01T14:33
+  - date: 2022-02-01T14:33:00+01:00
     amount: €1.000
     by: Stichting Information Systems & Security Association NL Chapter
-  - date: 2022-01-01T14:34
+  - date: 2022-01-01T14:34:00+01:00
     amount: €10.000
     by: ESET
-  - date: 2022-01-01T14:35
+  - date: 2022-01-01T14:35:00+01:00
     amount: €5.000
     by: Unveil Security Group
-  - date: 2022-01-01T14:35
+  - date: 2022-01-01T14:35:00+01:00
     amount: $5.000
     by: Servosity
-  - date: 2021-12-01T14:36
+  - date: 2021-12-01T14:36:00+01:00
     amount: $100.000
     by: Huntress
-  - date: 2020-04-19T00:00
+  - date: 2020-04-19T00:00:00+02:00
     amount: €10.000
     by: Stichting SIDN fonds
 ---
