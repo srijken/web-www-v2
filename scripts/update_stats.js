@@ -20,26 +20,28 @@ async function updateMarkdown() {
       totalIps += stats.ips;
     });
 
-    // Read the existing markdown file
-    const filePath = 'content/block/_index.en.md';
-    const fileContent = fs.readFileSync(filePath, 'utf8');
+    ['en', 'nl'].forEach((lang) => {
+      // Read the existing markdown file
+      const filePath = `content/block/_index.${lang}.md`;
+      const fileContent = fs.readFileSync(filePath, 'utf8');
 
-    // Parse the front matter
-    const parsed = matter(fileContent);
-    const frontMatter = parsed.data;
+      // Parse the front matter
+      const parsed = matter(fileContent);
+      const frontMatter = parsed.data;
 
-    // Update the front matter with the aggregated data
-    frontMatter.mission.members = totalMembers.toString();
-    frontMatter.mission.totalcases = totalCases.toString();
-    frontMatter.mission.ips = totalIps;
+      // Update the front matter with the aggregated data
+      frontMatter.mission.members = totalMembers.toLocaleString('nl-NL');
+      frontMatter.mission.totalcases = totalCases.toLocaleString('nl-NL');
+      frontMatter.mission.ips = totalIps.toLocaleString('nl-NL');
 
-    // Convert back to markdown with updated front matter
-    const newContent = matter.stringify(parsed.content, frontMatter);
+      // Convert back to markdown with updated front matter
+      const newContent = matter.stringify(parsed.content, frontMatter);
 
-    // Write the updated content back to the file
-    fs.writeFileSync(filePath, newContent, 'utf8');
+      // Write the updated content back to the file
+      fs.writeFileSync(filePath, newContent, 'utf8');
 
-    console.log('Markdown file updated successfully!');
+      console.log(`${lang} file updated successfully!`);
+    });
   } catch (error) {
     console.error('Error fetching data:', error);
   }
