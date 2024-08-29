@@ -12,7 +12,7 @@ becomevolunteer:
   alt: Drawing of a group of voluteer hackers
 becomepartner:
   title: Become a partner
-  image: images/global/becomepartner.png
+  image: /images/DIVD Become a partner.webp
   Alt tag for image: An illustration of 2 people talking and exchanging information
   description: "As an organization dedicated to serving the entire internet community, we extend our assistance not only to your customers but also to their suppliers. You may perceive us as the volunteer fire brigade: while you protect your own infrastructure, we stand ready to aid your neighbors, thereby indirectly safeguarding your establishment as well."
   alt: Drawing of a DIVD voluteer shaking the hand of a DIVD partner
