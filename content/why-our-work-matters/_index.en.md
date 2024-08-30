@@ -1,5 +1,5 @@
 ---
-title: DIVD's work is of great importance, here is why
+title: Our work is of great importance, here is why
 intro: |-
   This page explains why our work matters to society, partners, and other organisations. 
 
