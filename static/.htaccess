@@ -40,7 +40,6 @@ RewriteRule .* /contribute/#donate [NE,L,r=301,QSA]
 
 RewriteCond %{REQUEST_URI} ^/divd-nl-2024/code [NC]
 RewriteRule .* /what-we-do/code-of-conduct/ [L,r=301,QSA]
-RewriteRule .* /what-we-do/code-of-ethics/ [L,r=301,QSA]
 
 RewriteCond %{REQUEST_URI} ^/divd-nl-2024/join [NC]
 RewriteRule .* /contribute/volunteers/ [L,r=301,QSA]
