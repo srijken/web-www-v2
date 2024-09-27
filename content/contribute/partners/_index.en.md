@@ -23,7 +23,7 @@ partnerlist:
     image: /images/partners/atom86-360x200.jpg
   - name: BIT
     description: BIT is sponsoring hosting space for our websites and mail server capacity.
-    website: bit.nl
+    website: https://www.bit.nl/
     image: /images/partners/bit-360x200.jpg
   - name: Cyver
     description: Cyver provides us with their cloud platform, Cyver Core, which enables us to deliver security research reports with ticket handling.
