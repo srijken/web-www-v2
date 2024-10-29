@@ -45,6 +45,10 @@ partnerlist:
     description: Protect4S has supported DIVD with expertise in the security of SAP systems and resources to scan the internet for vulnerabilities related to SAP systems.
     website: https://www.protect4s.com/
     image: /images/partners/protect-4s-360x200.jpg
+  - name: RED SIFT
+    description: Red Sift supports DIVD by offering their service 'OnDMARC' to improve our email security.
+    website: https://redsift.com/pulse-platform/ondmarc
+    image: /images/logo_redsift_400.png
   - name: Schouten Zekerheid
     description: Schouten Zekerheid Makelaars in Assurantiën is our insurance intermediary and supports us and our cause.
     website: https://www.schoutenzekerheid.nl/
